@@ -1,0 +1,307 @@
+\ProvidesPackage{mercuryseven}		%nome del pacchetto
+
+%-----package per i margini---
+%\usepackage[top=3.2cm, bottom=3.2cm, left=2.8cm, right=2.8cm]{geometry}
+\usepackage[top=3.2cm, bottom=3.2cm, footskip = 1.25cm, headheight = 1.25cm, headsep = 0.5cm, left=2.8cm, right=2.8cm]{geometry}
+
+%----package per l'appendice----
+\usepackage{appendix}
+
+%----package per la copertina---
+\usepackage[table]{xcolor}
+\usepackage{eso-pic, tikz}
+\usepackage{geometry}
+
+%------COPERTINA DI OGNI DOCUMENTO------
+\newcommand{\copertina}{
+	\begin{titlepage}
+		\begin{center}
+			
+			%----IMMAGINE DI SFONDO DELLA COPERTINA----
+			\AddToShipoutPictureBG*{
+  				\AtPageLowerLeft{
+    				\begin{tikzpicture}
+    					\node[opacity=0.1] at (0,0) 
+    						{\includegraphics[scale=4]{../Stile/Logo_blank.png}};
+    				\end{tikzpicture}
+  				}
+			}
+			
+			%----BOX TITOLO----
+			\begin{tikzpicture}			
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
+				node[opacity = 1] at (\textwidth/2, 2.5) 
+					{\begin{Huge}
+						\textbf{\Titolo{}} %<---Titolo
+					\end{Huge}}
+				node[opacity = 1] at (\textwidth/2,1.5)	
+					{\begin{large}
+						\begin{tabular}{rL{3cm}}
+							\textbf{\Gruppo{}} & \textbf{\NomeProgetto{}} %<---Gruppo e nomeprogetto
+						\end{tabular}					
+					\end{large}}
+				node[opacity = 1] at (\textwidth/2,0.5)	
+					{\begin{large}
+						\textbf{\Mail{}} %<---E-Mail					
+					\end{large}}		
+				;
+			\end{tikzpicture}
+			
+		\end{center}
+		
+		%----BOX VERSIONE E REDAZIONE----		
+		
+		\begin{flushleft}
+		
+			\vspace{10pt}		
+			
+			\begin{tikzpicture}	
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (0,0) rectangle ++(\textwidth/2-10pt,\textheight/6);
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (\textwidth/2 + 10pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6)
+				
+				%----BOX VERSIONE----
+				node[opacity = 1] at (\textwidth/4,1.8)	
+					{
+						\begin{tabular}{R{\textwidth/6} L{\textwidth/4-10pt}}
+							\textbf{Versione} & \VersioneDocumento{} \\[5pt]
+							\textbf{Uso} & \Uso \\[5pt]
+							\textbf{Distribuzione} & \Distribuzione{}
+						\end{tabular}	
+					}
+				
+				%----BOX REDAZIONE----
+				node[opacity = 1] at (\textwidth/2 + \textwidth/4,1.8)	
+					{
+						\begin{tabular}{R{\textwidth/6} L{\textwidth/4-10pt}}
+							\textbf{Redazione} & \ACapoRedazione{} \\[5pt]
+							\textbf{Verifica} & \Verifica{} \\ 
+						\end{tabular}	
+					};
+				
+			\end{tikzpicture}
+			
+			
+		
+		\end{flushleft}
+		
+		%----BOX DESCRIZIONE----		
+		
+		\begin{center}
+			\vspace{10pt}
+			
+			\begin{tikzpicture}			
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
+				node[opacity = 1, text width = \textwidth - 20pt] at (\textwidth/2, 2.5) 
+					{
+						\begin{center}
+							\textbf{Descrizione} \\
+						
+							\DescrizioneDoc{}
+						\end{center}
+					}		
+				;
+			\end{tikzpicture}
+				
+		
+			\vspace{10pt}	
+			\includegraphics[scale=1]{../Stile/Logo.png}
+		
+		\end{center}
+		
+			
+	\end{titlepage}
+}
+
+
+%------INTESTAZIONE E PIE PAGINA------
+\usepackage{lastpage} %info sul # dell'ultima pagina del documento
+\usepackage{fancyhdr} %per modificare dimensioni,margini, intestazioni e righe a piè di pagina
+
+\fancypagestyle{plain}{
+    % cancella tutti i campi di intestazione e piè di pagina
+    \fancyhf{}
+	
+	% header
+	\lhead{
+		\begin{tikzpicture}
+			\draw[rounded corners, overlay] (1,0.25) -- (1,1) -- (0,1) -- (0,0) -- (\textwidth,0)
+			node at (0.5,0.5){
+				\includegraphics[scale=0.08]{../Stile/Logo_blank.png}
+			}
+			node at (\textwidth-\textwidth/2,0.2){
+				\begin{tabular}{R{\textwidth}}			
+					\leftmark \\
+				\end{tabular}
+			}		
+			;
+		\end{tikzpicture}
+	}
+	
+	%footer
+	\lfoot{
+		\begin{tikzpicture}
+			\draw[rounded corners, overlay] (\textwidth- 0.25cm,0.5) -- (\textwidth - 1cm,0.5) -- (\textwidth - 1cm,0) -- (\textwidth,0) -- (\textwidth,1) -- (0,1)
+			node at (\textwidth - 0.5cm, 0.475){
+				\begin{tabular}{C{0.6cm}}
+					\thepage{} \\
+					\pageref{LastPage}\\
+				\end{tabular}
+			}
+			node at (0+\textwidth/4,0.6){
+				\begin{tabular}{L{\textwidth/2}}			
+					\Titolo{} \ - \textit{\Gruppo{}} \\
+				\end{tabular}
+			};
+		\end{tikzpicture}	
+	}
+	
+	
+	
+    \renewcommand{\headrulewidth}{0.0pt}  
+    \renewcommand{\footrulewidth}{0.0pt}
+}
+\pagestyle{plain}
+
+
+%Variabili per ruoli
+\newcommand{\adm}{\emph{Amministratore}}
+\newcommand{\adms}{\emph{Amministratori}}
+\newcommand{\ana}{\emph{Analista}}
+\newcommand{\anas}{\emph{Analisti}}
+\newcommand{\prog}{\emph{Progettista}}
+\newcommand{\progs}{\emph{Progettisti}}
+\newcommand{\RdP}{\emph{Responsabile di Progetto}}
+\newcommand{\Res}{\emph{Responsabile}}
+\newcommand{\progr}{\emph{Programmatore}}
+\newcommand{\progrs}{\emph{Programmatori}}
+\newcommand{\ver}{\emph{Verificatore}}
+\newcommand{\vers}{\emph{Verificatori}}
+
+\newcommand{\tabRes}{\textbf{Re}}
+\newcommand{\tabAdm}{\textbf{Am}}
+\newcommand{\tabAna}{\textbf{An}}
+\newcommand{\tabPrj}{\textbf{Pj}}
+\newcommand{\tabPrg}{\textbf{Pr}}
+\newcommand{\tabVer}{\textbf{Ve}}
+
+
+
+%variabili per documenti
+\newcommand{\AdR}{\emph{Analisi dei Requisiti}}
+\newcommand{\docAdR}{\emph{analisi\_requisiti}}
+\newcommand{\SdF}{\emph{Studio di Fattibilità}}
+\newcommand{\docSdF}{\emph{studio\_fattibilita}}
+\newcommand{\VI}{\emph{Verbale Interno}}
+\newcommand{\docVI}{\emph{verbale\_interno}}
+\newcommand{\NdP}{\emph{Norme di Progetto}}
+\newcommand{\docNdP}{\emph{norme\_progetto}}
+\newcommand{\PdP}{\emph{Piano di Progetto}}
+\newcommand{\docPdP}{\emph{piano\_progetto}}
+\newcommand{\PdQ}{\emph{Piano di Qualifica}}
+\newcommand{\docPdQ}{\emph{piano\_qualifica}}
+\newcommand{\DdP}{\emph{Definizioni di Prodotto}}
+\newcommand{\G}{\emph{Glossario}}
+\newcommand{\docG}{\emph{glossario}}
+\newcommand{\MU}{\emph{Manuale Utente}}
+\newcommand{\docMU}{\emph{manuale\_utente}}
+\newcommand{\MS}{\emph{Manuale Sviluppatore}}
+\newcommand{\docMS}{\emph{manuale\_sviluppatore}}
+\newcommand{\VE}{\emph{Verbale Esterno}}
+\newcommand{\docVE}{\emph{verbale\_esterno}}
+\newcommand{\TB}{\emph{Tecnology Baseline}}
+\newcommand{\PB}{\emph{Product Baseline}}
+
+
+%Variabili generiche
+\newcommand{\emailgruppo}{mercuryseven.swe@gmail.com}
+\newcommand{\proponente}{\emph{proponente}} 
+\newcommand{\committenti}{prof. Tullio Vardanega e prof. Riccardo Cardin}
+\newcommand{\gruppo}{\emph{MercurySeven}}
+\newcommand{\progetto}{\emph{progetto}}
+
+%Variabili per i colori
+\definecolor{darkgreen}{RGB}{49, 135, 23}
+\definecolor{AzzurroGruppo}{RGB}{151,162,255}
+\newcommand{\verde}[1]{\textcolor{darkgreen}{#1}}
+\newcommand{\rosso}[1]{\textcolor{red}{#1}}
+
+%----Glossario---
+\newcommand{\glo}[1]{\textit{#1}\ped{G}}
+
+%----Versioni---
+\newcommand{\versAdR}{\textit{v0}}
+\newcommand{\versGlo}{\textit{v0}}
+\newcommand{\versNdP}{\textit{v0}}
+\newcommand{\versPdP}{\textit{v0}}
+\newcommand{\versPdQ}{\textit{v0}}
+\newcommand{\versMU}{\textit{v0}}
+\newcommand{\versMS}{\textit{v0}}
+
+
+%-----package per la LINGUA---- 
+\usepackage[english, italian]{babel} %l'ultima lingua è quella generale
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%------package per le IMMAGINI-----
+\usepackage{graphicx}
+
+%------package per le TABELLE-----
+\usepackage{tabularx} %tabelle larghe
+\usepackage{longtable} %una tabella può continuare su più pagine
+\usepackage{booktabs} %toprule e midrule usati al posto di hline
+\usepackage{multirow} %utile per visualizzare una cella su più righe
+\usepackage{float}
+\usepackage{array}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%------package per i PDF-----
+\usepackage{pdfpages}
+
+%-----packeage per i link----
+\usepackage{url}
+\usepackage[colorlinks=true]{hyperref}
+\renewcommand{\UrlBreaks}{\do\/\do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j\do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t\do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D\do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N\do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X\do\Y\do\Z\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\0}
+\hypersetup{
+    colorlinks=true,
+    citecolor=black,
+    filecolor=black,
+    linkcolor=black, % colore dei link interni
+    urlcolor=blue  % colore dei link interniesterni
+}
+
+%------ paragrafi ---
+\setcounter{secnumdepth}{5} % numera i sottoparagrafi
+\setcounter{tocdepth}{5} % aggiunge all'indice i sottoparagrafi
+\newcommand{\aCapo}{ ~ \vspace{0.25cm} \\} % per andare a capo dopo paragraph e subparagraph
+\makeatletter
+\renewcommand\subparagraph{\@startsection{subparagraph}{5}{\z@}{-2ex\@plus -1ex}{0ex}{\normalfont\normalsize\bfseries}}
+\makeatother%{0.0001pt \@plus .2ex}{-3.25ex\@plus -1ex \@minus -.2ex}
+
+%---- simbolo euro ---
+\usepackage{eurosym}
+
+%-----per il glossario-----
+\newcommand{\gloSection}[1]{\subsection*{#1} \addcontentsline{toc}{subsection}{#1}}
+
+% ----per il codice -----
+\definecolor{backGroundGreen}{RGB}{204, 255, 204}
+\definecolor{backGroundGrey}{RGB}{242, 242, 242}
+
+\definecolor{commandGreen}{RGB}{0, 153, 0}
+
+\usepackage{listings}
+\lstset{
+	backgroundcolor=\color{AzzurroGruppo!10},
+	basicstyle=\ttfamily,
+	columns=flexible,
+	breaklines=true,
+	classoffset=1,
+	keywordstyle=\color{blue},
+	morekeywords={\NomeProgetto{}},
+	% classoffset=2,
+	% keywordstyle=\color{commandGreen},
+	% morekeywords={help, init, run, deploy, search, createConfig, delete, logout, list}
+}
