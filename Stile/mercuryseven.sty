@@ -1,5 +1,11 @@
 \ProvidesPackage{mercuryseven}		%nome del pacchetto
 
+%------package per le IMMAGINI-----
+\usepackage{graphicx}
+
+%-----path per le immagini----
+\graphicspath{{./}{../Stile/}{../../Stile/}{../../../Stile/}}
+
 %-----package per i margini---
 %\usepackage[top=3.2cm, bottom=3.2cm, left=2.8cm, right=2.8cm]{geometry}
 \usepackage[top=3.2cm, bottom=3.2cm, footskip = 1.25cm, headheight = 1.25cm, headsep = 0.5cm, left=2.8cm, right=2.8cm]{geometry}
@@ -22,7 +28,7 @@
   				\AtPageLowerLeft{
     				\begin{tikzpicture}
     					\node[opacity=0.1] at (0,0) 
-    						{\includegraphics[scale=4]{../Stile/Logo_blank.png}};
+    						{\includegraphics[scale=4]{Logo_blank.png}};
     				\end{tikzpicture}
   				}
 			}
@@ -104,7 +110,7 @@
 				
 		
 			\vspace{10pt}	
-			\includegraphics[scale=1]{../Stile/Logo.png}
+			\includegraphics[scale=1]{Logo.png}
 		
 		\end{center}
 		
@@ -126,7 +132,7 @@
 		\begin{tikzpicture}
 			\draw[rounded corners, overlay] (1,0.25) -- (1,1) -- (0,1) -- (0,0) -- (\textwidth,0)
 			node at (0.5,0.5){
-				\includegraphics[scale=0.08]{../Stile/Logo_blank.png}
+				\includegraphics[scale=0.08]{Logo_blank.png}
 			}
 			node at (\textwidth-\textwidth/2,0.2){
 				\begin{tabular}{R{\textwidth}}			
@@ -242,9 +248,6 @@
 \usepackage[english, italian]{babel} %l'ultima lingua è quella generale
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-
-%------package per le IMMAGINI-----
-\usepackage{graphicx}
 
 %------package per le TABELLE-----
 \usepackage{tabularx} %tabelle larghe
