@@ -66,13 +66,14 @@
 				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (\textwidth/2 + 10pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6)
 				
 				%----BOX VERSIONE----
-				node[opacity = 1] at (\textwidth/4,1.8)	
+				node[opacity = 1] at (\textwidth/4-6pt,1.8)	
 					{
 						\renewcommand{\arraystretch}{1.5}
-						\begin{tabular}{R{\textwidth/6} L{\textwidth/4-10pt}}
+						\begin{tabular}{R{\textwidth/6} L{\textwidth/4}}
 							\textbf{Versione} & \VersioneDocumento{} \\
+							\hline
 							\textbf{Uso} & \Uso \\
-							\textbf{Distribuzione} & \Distribuzione{}
+							\textbf{Distribuzione} & \Distribuzione{} \\
 						\end{tabular}	
 					}
 				
