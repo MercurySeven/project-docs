@@ -1,0 +1,75 @@
+\section{Capitolato C7}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+\item \textbf{Nome:} SSD: Soluzioni di sincronizzazione desktop
+\item \textbf{Proponente:} ZEXTRAS
+\item \textbf{Committenti:} prof. Tullio Vardanega e prof. Riccardo Cardin
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+Il capitolato richiede lo sviluppo di un algoritmo e di un frontend per sincronizzare file tra server e client appoggiandosi sul sevizio Zextras Drive.
+L'interfaccia deve essere multipiattaforma e il prodotto deve essere sviluppato aderendo al pattern MVC.
+
+\subsection{Finalità del progetto}
+Il capitolato pone i 3 seguenti obiettivi:
+\begin{itemize}
+\item \textbf{Sviluppo di un algoritmo di sincronizzazione solido ed efficiente}: deve garantire la sincronizzazione ottimale tra cloud e desktop utilizzando il quantitativo minimale di risorse.
+\item \textbf{Sviluppo di un interfaccia multipiattaforma}: deve fornire l'interfaccia necessaria per interagire con i servizi messi a disposizione 
+dall'algoritmo e essere utilizzabile almeno sui tre sistemi operativi più popolari (Linux, MacOS, Windows). 
+La soluzione sviluppata non deve dipendere da installazioni di framework di terze parti da parte dell'utente finale.
+\item \textbf{Integrazione con Zextras Drive}: sia l'algoritmo che l'interfaccia devono essere integrati con il servizio di gestione file Zextras Drive.
+\end{itemize}
+Oltre al raggiungimento degli obbiettivi precedentemente riportati le seguenti funzionalità dovrebbero essere aggiunte:
+\begin{itemize}
+\item Configurazione e autenticazione dell'utente.
+\item Gestione dei file da sincronizzare o ignorare sia dal lato cloud che dal lato desktop e la possibilità di modificare in ogni momento la configurazione.
+\item Sincronizzazione costante dei cambiamenti, sia locali che remoti.
+\item Sistema di notifica dei cambiamenti.
+\item Funzionalità presenti in altre soluzioni attualmente disponibili:
+	\begin{itemize}
+	\item Gestione delle condivisioni.
+	\item Integrazione con il protocollo MAPI per permettere l'integrazione con applicazioni di IM.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+Le seguenti tecnologie possono essere impiegate nello sviluppo del progetto
+\begin{itemize}
+\item \textbf{Tecnologie consigliate}:
+\begin{itemize}
+	\item \textbf{Framework Qt}: framework consigliato per lo sviluppo di interfacce grafiche basato su C++.
+	\item \textbf{Python}: linguaggio consigliato per lo sviluppo del modello. Molto flessibile. Supportato dalla maggior parte dei framework per lo sviluppo di interfacce grafiche. 
+	Semplifica il processo di integrazione con le API di Zextras Drive.
+	\end{itemize}
+\item \textbf{Tecnologie necessarie}:
+	\begin{itemize}
+	\item \textbf{Zimbra}: sistema collaborativo per la gestione della posta elettronica.
+	\item \textbf{Zextras Drive}: servizio proprietario di gestione file in cloud con funzionalità di:
+		\begin{itemize}
+		\item Versionamento.
+		\item Gestione degli accessi e della condivisione dei file.
+		\item Modifica collaborativa di file documentali.
+		\end{itemize}
+	Il servizio espone inoltre delle API sviluppate utilizzando il framework GraphQL.
+\end{itemize}
+\item \textbf{Altre tecnologie}:
+	\begin{itemize}
+	\item \textbf{GraphQL}: linguaggio di query per API utilizzato dalle API di Zextras Drive.	
+	\item \textbf{Apollo per GraphQL}: implementazione di GraphQL utilizzata dalle API di Zextras Drive.
+	\end{itemize}
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item Il progetto offre l'opportunità di approfondire delle tecnologie fondamentali per la collaborazione a distanza, un aspetto che sarà sempre più rilevante negli ambienti lavorativi futuri.
+\item Il team ha già familiarità con il framework Qt e Python.
+\end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+\item Mancanza di documentazione dettagliata pubblicamente accessibile sulle API del prodotto Zextras Drive.
+\item Rischio di doversi appoggiare eccessivamente sul committente per la corretta integrazione del prodotto sviluppato con il loro servizio.
+\end{itemize}
+
+\subsection{Valutazione finale}
