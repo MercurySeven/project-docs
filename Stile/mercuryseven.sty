@@ -68,19 +68,21 @@
 				%----BOX VERSIONE----
 				node[opacity = 1] at (\textwidth/4,1.8)	
 					{
+						\renewcommand{\arraystretch}{1.5}
 						\begin{tabular}{R{\textwidth/6} L{\textwidth/4-10pt}}
-							\textbf{Versione} & \VersioneDocumento{} \\[5pt]
-							\textbf{Uso} & \Uso \\[5pt]
+							\textbf{Versione} & \VersioneDocumento{} \\
+							\textbf{Uso} & \Uso \\
 							\textbf{Distribuzione} & \Distribuzione{}
 						\end{tabular}	
 					}
 				
 				%----BOX REDAZIONE----
-				node[opacity = 1] at (\textwidth/2 + \textwidth/4,1.8)	
+				node[opacity = 1] at (\textwidth/2 + \textwidth/4,1.9)	
 					{
+						\renewcommand{\arraystretch}{1.5}
 						\begin{tabular}{R{\textwidth/6} L{\textwidth/4-10pt}}
-							\textbf{Approvazione} & \Responsabile{} \\[5pt]
-							\textbf{Redazione} & \ACapoRedazione{} \\[5pt]
+							\textbf{Approvazione} & \Responsabile{} \\
+							\textbf{Redazione} & \ACapoRedazione{} \\
 							\textbf{Verifica} & \Verifica{} \\ 
 						\end{tabular}	
 					};
@@ -98,11 +100,10 @@
 			
 			\begin{tikzpicture}			
 				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
-				node[opacity = 1, text width = \textwidth - 20pt] at (\textwidth/2, 2.5) 
+				node[opacity = 1, text width = \textwidth - 20pt] at (\textwidth/2, 2) 
 					{
 						\begin{center}
-							\textbf{Descrizione} \\
-						
+							\textbf{Descrizione} \\~\\
 							\DescrizioneDoc{}
 						\end{center}
 					}		
