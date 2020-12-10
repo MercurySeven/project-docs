@@ -14,15 +14,22 @@ In particolare, si chiede di usare AWS GameLift per la sincronizzazione del gioc
 I giocatori non si sfideranno direttamente ma potranno vedere in real-time il progresso dell'avversario.
 
 \subsection{Finalità del progetto}
+Il capitolato chiede di sviluppare i seguenti punti:
+\begin{itemize}
+\item Analizzare le tecnologie AWS per capire quale si può adattare meglio ad un gioco con requisiti di realtime, raccogliendo le motivazioni che supportano la scelta di una tecnologia rispetto ad un'altra.
+\item Implementazione della componente server.
+\item Implementazione del gioco in una piattaforma mobile.
+\end{itemize}
 
 \subsection{Tecnologie interessate}
 Le tecnologie consigliate sono:
 \begin{itemize}
 \item L'utilizzo del servizio AWS GameLift per gestire il multiplayer all'interno del gioco.
 \item L'utilizzo di AWS DynamoDB per il salvataggio dei dati cloud attraverso un database NoSQL.
-\item L'uso di NodeJS per creare il server che avrà il compito di fornire delle API utili al gioco.
+\item L'uso di NodeJS per creare il server che avrà il compito di fornire le API utili al gioco per chiedere informazioni sullo stato degli altri giocatori.
 \item L'uso di tecnologie native per la progettazione del gioco, Swift per Apple e Kotlin per Android.
 \end{itemize}
+Un aspetto molto importante per il proponente è che l'architettura server deve essere scalabile.
 
 \subsection{Aspetti positivi}
 \begin{itemize}
@@ -37,3 +44,4 @@ Si è valutato inoltre di sviluppare su Unity, ma il linguaggio supportato è C\
 \end{itemize}
 
 \subsection{Valutazione finale}
+Per le tecnologie proposte il gruppo \Gruppo{} ha deciso di scegliere questo capitolato come seconda scelta tra i capitolati proposti.
