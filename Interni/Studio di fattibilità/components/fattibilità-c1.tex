@@ -1,0 +1,73 @@
+\section{Capitolato C1}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+\item \textbf{Nome:} BlockCOVID
+\item \textbf{Proponente:} Imola Informatica
+\item \textbf{Committenti:} prof. Tullio Vardanega e prof. Riccardo Cardin
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+Il capitolato vuole realizzare un sistema che permetta di tutelare la salute e la sicurezza dei lavoratori dal rischio contagio e garantire la salubrità dell’ambiente di lavoro. E' chiesto dunque di realizzare un apparato che soddisfi:
+\begin{itemize}
+\item il tracciamento immutabile e certificato delle presenze in tempo reale nelle postazioni di lavoro di un laboratorio informatico, contrassegnate tramite dei tag RFID
+\item il tracciamento immutabile e certificato della pulizia delle postazioni.
+\end{itemize}
+\subsection{Finalità del progetto}
+Il prodotto e' composto dalle seguenti parti:
+\begin{itemize}
+\item Il server centrale, gestisce le varie stanze e postazioni, deve poter:
+\begin{itemize}
+\item sapere in ogni momento se la postazione è occupata, prenotata oppure da pulire (condizioni per cui
+lo studente/dipendente non può utilizzarla)
+\item controllare quali postazioni sono prenotate (da chi) e bloccare le prenotazioni per una determinata
+stanza
+\item prevedere una tracciatura autenticata e tutti i cambiamenti di stato relativi alla pulizia della
+postazione, nonché le informazioni su chi ha igienizzato la postazione, devono essere salvate su
+memoria immutabile e certificata.
+\item Deve essere possibile prenotare una postazione con granularità di 1 ora.
+\item Il motore di calcolo che si occupa solamente di trovare il migliore percorso da far percorrere alla singola unità, in base a diversi algoritmi di ricerca operativa per l'ottimizzazione del percorso.
+\end{itemize}
+\item GUI lato amministratore:
+\begin{itemize}
+\item Definisce stanze e postazioni 
+\item Crea le utenze ai dipendenti
+\item Inserisce i tag RFID e li associa alle rispettive postazioni
+\end{itemize}
+\item GUI lato utente, deve permettere:
+\begin{itemize}
+\item Recupero lista delle postazioni libere
+\item Prenotazione di una postazione
+\item Tracciamento in tempo reale tramite tag RFID
+\item Pulizia di una postazione
+\item Storico delle postazioni occupate
+\item Storico delle postazioni igienizzate
+\end{itemize}
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+Il capitolato offre libera scelta su come implementare l'applicazione, anche se consigliano caldamente alcuni linguaggi, in modo da poter usufruire al meglio dei referenti aziendali:
+\begin{itemize}
+\item Java (versione 8 o superiori), Pythoni o nodejs per lo sviluppo del server back-end
+\item protocolli asincroni per le comunicazioni app mobile-server
+\item Un sistema blockchain per salvare con opponibilità a terzi i dati di sanificazione;
+\item IAAS Kubernetes o di un PAAS, Openshift o Rancher, per il rilascio delle componenti del server e la
+gestione della scalabilità orizzontale.
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item Chiarezza e completezza del capitolato ( sono gia presenti i casi d'uso principali con relativo risparmio di tempo )
+\item Stimolante per interfacciarsi con altre tecnologie 
+\item Non vi sono algoritmi complessi da sviluppare
+\end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+\item Struttura block chain sconosciuta ai componenti del gruppo 
+\item Elevato carico di lavoro, bisogna svilupparesia app che server
+\item Comunicazioni tra app e server hanno necessita' di encription
+\end{itemize}
+
+\subsection{Valutazione finale}
+Le criticita' trovate non sono insormontabili, ma dato il grande interesse di altri gruppi per questo capitolato si e' deciso di non considerarlo.

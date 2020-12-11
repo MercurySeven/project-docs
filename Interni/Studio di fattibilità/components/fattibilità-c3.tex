@@ -1,0 +1,55 @@
+\section{Capitolato C3}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+\item \textbf{Nome:}  Gathering Detection Platform 
+\item \textbf{Proponente:} Sync Lab 
+\item \textbf{Committenti:} prof. Tullio Vardanega e prof. Riccardo Cardin
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+Il capitolato vuole realizzare un sistema che permetta non solo di rappresentare mediante visualizzazione grafica zone potenzialmente a rischio di assembramento, ma addirittura cercare di prevenirle. E' quindi richiesto lo sviluppo di software per acquisire, monitorare, utilizzare e correlare tra loro tutti i dati e le informazioni generate dai sistemi e dai dispositivi installati ed operativi in specifiche zone, con l’intento di identificare i possibili eventi che concorrono all’insorgere di variazioni di flussi di utenti. 
+\subsection{Finalità del progetto}
+La finalità del progetto è:
+\begin{itemize}
+\item Realizzazione di motori software ‘contapersone’ che, date le immagini/stream delle videocamere installate sui mezzi misurino quante persone ci sono a bordo
+\item Realizzazione di simulatori di altre sorgenti dati sia dei dati storici/in monitoraggio che dati previsionali
+(ad esempio valutando nei prossimi 10 minuti il dato che arriverà un autobus con 20 persone presenti
+in una specifica fermata lungo il suo tragitto)
+\item Capacità di acquisizione continuativa nel tempo e in modalità a bassa latenza delle informazioni
+raccolte dai suddetti sistemi e dispositivi.
+\item Elaborazione in tempo reale dei dati acquisiti
+\item Identificazione, a partire dai dati acquisiti ed elaborati, di eventi che nel tempo sono risultati aver
+concorso ad esempio all’insorgere di alterazioni significative del flusso di utenti
+\item Previsione dell’insorgenza futura di variazioni significative di flussi di persone
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+Il capitolato non impone obblighi specifici per le tecnologie da utilizzare, ma ne consiglia comunque alcune:
+\begin{itemize}
+\item Utilizzo di Java e Angular per lo sviluppo delle parti di Back-end e di Front-end della componente Web
+Application del sistema;
+\item Per la gestione delle mappe (heatmap ecc.) il framework Leaflet
+\item Utilizzo di protocolli asincroni per le comunicazioni tra le diverse componenti;
+\item Utilizzo del pattern Publisher/Subscriber, e adozione del protocollo MQTT (‘MQ Telemetry Transport
+or Message Queue Telemetry Transport’), caratterizzato per essere open, di facile implementazione
+e ampia diffusione in applicazioni M2M (MachineToMachine) e IoT (InternetOfThings).
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item Il gruppo trova le tecnologie proposte innovative ed interessanti 
+\item L'azienda assicura l'affiancamento di profesionisti per il corretto sviluppo del progetto
+\end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+\item Non è spiegato come implementare l'intelligenza artificiale per il riconoscimento delle facce
+\item L'elaborazione dei dati e correlazione degli stessi spaventa il gruppo per la potenziale difficoltà
+\item Nessun componente del gruppo ha conoscenza delle tecnologie proposte
+\item La fase di test potrebbe essere complessa
+\item In generale la proposta del capitolato pare complessa
+\end{itemize}
+
+\subsection{Valutazione finale}
+Le criticità trovate, unito alla complessità con cui appare il progetto hanno spinto i componenti del gruppo a non optare per tale capitolato	
