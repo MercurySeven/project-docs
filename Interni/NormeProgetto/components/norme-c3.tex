@@ -324,11 +324,12 @@ Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di
 
 \subsubsection{Descrizione}
 
-\subsection{Aspettative}
+\subsubsection{Aspettative}
 
 \subsubsection{Versionamento}
 
 \paragraph{Codice di versionamento}
+\label{cod-versionamento}
 
 
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
@@ -364,10 +365,31 @@ Il repository \textbf{\repoDoc} è invece strutturato nel seguente modo:
 Si è optato per questa soluzione per poter avere una documentazione in continua evoluzione, senza categorizzarla e bloccarla negli stati delle revisioni tramite sottocartelle contenenti le versioni delle documentazioni durante una specifica revisione.
 
 \paragraph{Tipi di file}
+Nelle singole cartelle dei documenti sono inclusi:
+\begin{itemize}
+\item file \textit{README.md};
+\item file \textit{.tex} per i sorgenti in \LaTeX; 
+\item file \textit{.png} per i loghi del gruppo da inserire nei documenti.
+\end{itemize}
+Il file \textit{.gitignore} contiene al suo interno un riferimento a tutti i file che non verranno versionati; il file è posizionato al livello più esterno del repository.
 
 \paragraph{Norme di branching}
+\label{NormeBranching}
 
-\paragraph{Modifiche}
+Il repository inerente alla documentazione sarà composto da diversi \textit{branch}:
+\begin{itemize}
+
+	\item \textbf{Master:} \textit{branch} principale che viene aggiornato solamente quando un documento arriva in fase di rilascio, essa avviene quando incrementa la \textbf{[X]} di una versione del documento (\hyperref[cod-versionamento]{3.2.4.1})
+	
+	\item un \textit{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficente per un rilascio, verrà eseguito una operazione di \textit{merge} con il \textbf{master}
+
+\end{itemize}
+
+\paragraph{Modifiche ai repository}
+
+Tutti i membri del gurppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\hyperref[NormeBranching]{3.2.4.6}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
+Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \textbf{Responsabile di Progetto} per il file in questione.\newline
+Ogni modifica deve poter essere giustificata davanti a tutto il team.
 
 \subsection{Gestione della qualità}
 
