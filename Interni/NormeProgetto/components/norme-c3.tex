@@ -324,20 +324,44 @@ Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di
 
 \subsubsection{Descrizione}
 
-
-\subsubsection{Implementazione dei processi}
-
-\subsubsection{Identificazione della configurazione}
+\subsection{Aspettative}
 
 \subsubsection{Versionamento}
 
 \paragraph{Codice di versionamento}
 
+
+La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
+\centerline{\textbf{[X].[Y].[Z]}}\newline
+
 \paragraph{Tecnologie adottate}
+
+Per la gestione delle versioni è stato scelto di utilizzare il sistema di versionamento distrubuito \textit{Git} con due repository remoti presenti su \textit{GitHub}.
 
 \paragraph{Repository}
 
+Il gruppo \textit{\Gruppo{}} ha scelto di creare due repository per il progetto:
+
+\begin{itemize}
+	\item \textbf{filler} per il versionamento del codice realizzato(\url{filler})
+	\item \textbf{\repoDoc{}} per il versionamento dei documenti redatti (\url{https://github.com/MercurySeven/project-docs})
+\end{itemize}
+
+Il gruppo ha deciso di optare per una separazione logica del codice e della documentazione per poter avere una struttura ed una organizzazione migliore. I due repo sono comunque entrambi facilmente reperibili nella pagina dell'organizzazione (\url{https://github.com/MercurySeven})
+
 \paragraph{Struttura del repository}
+
+Per entrambi i repository, esiste una versione \textbf{locale} sul computer di ogni membro ed una versione \textbf{remota} su \textit{GitHub}\newline
+Il repository \textbf{filler} risulta avere una struttura ancora indefinita data l'assenza di codice.\newline
+Il repository \textbf{\repoDoc} è invece strutturato nel seguente modo:
+\begin{itemize}
+
+	\item \textbf{Tutorial:} cartella contenente un esempio di documento \LaTeX che elenca anche le basi del linguaggio e del suo utilizzo; 
+	\item \textbf{Stile:} cartella contenente i file del template in linguaggio \LaTeX usato per produrre tutti i documenti;
+	\item Una cartella per ogni documento necessario per la \textit{Revisione dei requisiti}
+
+\end{itemize}
+Si è optato per questa soluzione per poter avere una documentazione in continua evoluzione, senza categorizzarla e bloccarla negli stati delle revisioni tramite sottocartelle contenenti le versioni delle documentazioni durante una specifica revisione.
 
 \paragraph{Tipi di file}
 
