@@ -199,7 +199,7 @@ Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX, l'ed
 Per la stesura dei documenti è stato scelto \LaTeX, un linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinatata, templetizzata e collaborativa dei documenti.
 \paragraph{Texmaker}
 L'editor scelto per la stesura dei documenti è \textit{Texmaker}, adottato da tutti i membri del gruppo. \textit{Texmaker} è un editor intuitivo che permette una facile compilazione e visualizzazione dei documenti.\newline
-https://www.xm1math.net/texmaker/
+\url(https://www.xm1math.net/texmaker/)
 \subsection{Processo di configurazione}
 \subsubsection{Scopo}
 Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di documenti e codice, oltre che a renderli facilmente reperibili. Un elemento soggetto a configurazione ha una collocazione, una denominazione ed uno stato definiti; per ogni oggetto configurato sono garantiti la modifica normata ed il versionamento.
@@ -288,26 +288,75 @@ Con il perseguimento della qualità in mente, il gruppo \Gruppo{} ha deciso di a
 	\item ogni processo deve essere pianificato correttamente tramite una opportuna analisi dei rischi;
 	\item ogni processo al termine della pianificazione deve avere una durata ben definita.
 \end{itemize}
-
 \subsection{Processo di verifica}
-
 \subsubsection{Scopo}
-
+Il processo di Verifica si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Sono soggetti a verifica sia il software che la documentazione.
 \subsubsection{Descrizione}
-
+Il processi di Verifica si compone di due attività che permettono di verificare che il prodotto sia confome alle aspettative:
+\begin{itemize}
+	\item analisi;
+	\item test.
+\end{itemize}
+Inoltre esso viene applicato su ogni processo in esecuzione:
+\begin{itemize}
+	\item al raggiungimento di un livello di maturità sufficiente;
+	\item successivamente a cambiamenti inerenti lo stato.
+\end{itemize}
 \subsubsection{Aspettative}
-
+Il processo di Verifica si occupa di prendere ciò che è stato prodotto e di restituirlo in uno stato confome alle aspettative. Per assicurare il corretto funzionamento di tale processo devono essere rispettate alcune regole:
+\begin{itemize}
+	\item seguire procedure definite;
+	\item seguire criteri chiari ed affidabili;
+	\item i prodotti devono passare attraverso fasi successive opportunemente verificate;
+	\item il prodotto deve trovarsi in uno stato stabile dopo la verifica;
+	\item alla fine del processo deve essere possibile procedere alla fase di validazione.
+\end{itemize}
 \subsubsection{Attività}
-
 \paragraph{Analisi}
-
+Il processo di analisi si suddivide in Analisi statica ed Analisi dinamica.
+\subparagraph{Analisi statica}
+L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
+\begin{itemize}
+	\item \textbf{Walkthrough:} tecnica di verifica consistente nella lettura da parte del team dell'intero documento o codice in cerca di anomalie. \textit{Verrà applicata principalmente nella fase iniziale del progetto, quando il team ancora non conosce i possibili errori che si possono incontrare}. Questa tecnica risulta molto onerosa in termini di efficenza ed efficacia.
+	\item \textbf{Inspection:} tecnica di verifica attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo.
+\end{itemize}
+\subparagraph{Analisi dinamica}
+L'analisi dinamica prevede l'esecuzione del prodotto software e la sua analisi tramite l'utilizzo di test che verificano se il prodotto funziona o se vi sono presenti anomalie.
 \paragraph{Test}
-
+I test rappresentano l'attività sulla quale si basa l'analisi dinamica. Essi permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. Per ogni test devono essere definiti i seguenti parametri:
+\begin{itemize}
+	\item \textbf{ambiente:} sistema hardware e software sulla quale viene eseguito il test;
+	\item \textbf{stato iniziale:} stato iniziale dal quale parte il test;
+	\item \textbf{input:} tutti i dati ammessi in ingresso;
+	\item \textbf{output:} tutti i dati attesi in uscita;
+	\item \textbf{istruzioni aggiuntive:} istruzioni opzionali che permettono di impostare come il test deve essere eseguito e come i risultati devono essere interpretati.
+\end{itemize}
+Dei test ben progettati e scritti devono:
+\begin{itemize}
+	\item essere ripetibili;
+	\item definire correttamente ed identificare i parametri già elencati;
+	\item avvertire la presenza di effetti indesiderati nel codice;
+	\item fornire informazioni sui risultati e sull'esecuzione stessa tramite file di log.
+\end{itemize}
+Le tipologie di test utilizzate sono le seguenti.
+\subparagraph{Test di unità}
+//DESCRIZIONE
+\subparagraph{Test di integrazione}
+//DESCRIZIONE
+\subparagraph{Test di sistema}
+//DESCRIZIONE
+\subparagraph{Test di regressione}
+//DESCRIZIONE
+\subparagraph{Test di accettazione}
+//DESCRIZIONE
 \paragraph{Codice identificativo dei test}
+//////////TODO///////////////
 
 \subsubsection{Metriche}
+/////////TODO///////////
 
 \subsubsection{Verifica ortografica}
+Per la verifica ortografica dei documenti scritti in \LaTeX si utilizzerà  \textbf{GNU aspell}.
 
 \subsection{Processi di validazione}
 
