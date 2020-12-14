@@ -1,0 +1,129 @@
+\section{Tutorial}
+\subsection{Tabelle}
+\subsubsection{Esempio tabella}
+Codice che genera una tabella a 2 colonne
+\begin{lstlisting}
+\renewcommand{\arraystretch}{1}
+	\begin{table}[H]
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzuroGruppo!10}{white}
+			\begin{tabular}{ c c }
+				\rowcolor{AzzuroGruppo!30} 
+				\textbf{Prima colonna} & \textbf{Seconda colonna}  \\
+				\toprule
+				Prima colonna della prima riga & Seconda colonna della prima riga \\
+				Prima colonna della seconda riga & Seconda colonna della seconda riga \\
+				\bottomrule
+			\end{tabular}
+			\caption{Tabella di esempio}
+		\end{center}
+	\end{table}
+\end{lstlisting}
+Codice compilato
+\renewcommand{\arraystretch}{1}
+	\begin{table}[H]
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzurroGruppo!10}{white}
+			\begin{tabular}{ c c }
+				\rowcolor{AzzurroGruppo!30} 
+				\textbf{Prima colonna} & \textbf{Seconda colonna}  \\
+				\toprule
+				Prima colonna della prima riga & Seconda colonna della prima riga \\
+				Prima colonna della seconda riga & Seconda colonna della seconda riga \\
+				\bottomrule
+			\end{tabular}
+			\caption{Tabella di esempio}
+		\end{center}
+	\end{table}
+
+\subsubsection{Spiegazione tabella}
+L'espressione seguente inizializza la tabella
+\begin{lstlisting}
+\begin{tabular}{ c c }
+\end{lstlisting}
+\begin{itemize}
+\item Il numero di c presenti all'interno delle parentesi graffe determina il numero di colonne presenti nella tabella.
+\item La lettera c determina l'allineamento del testo, in questo caso al centro.
+\item Ci sono altre opzioni di allineamento
+
+\begin{table}[H]
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzurroGruppo!10}{white}
+			\begin{tabular}{ r l c }
+				\rowcolor{AzzurroGruppo!30} 
+				\textbf{Allineamento a destra} & \textbf{Allineamento a sinistra} & \textbf{Allineamento al centro}  \\
+				\toprule
+				r & l & c \\
+				\bottomrule
+			\end{tabular}
+			\caption{Opzioni allineamento del testo}
+		\end{center}
+	\end{table}
+
+\end{itemize}
+L'espressione seguente determina il testo presente nella prima riga
+\begin{lstlisting}
+\textbf{Prima colonna} & \textbf{Seconda colonna}  \\
+\end{lstlisting}
+\begin{itemize}
+\item Come norma usiamo il comando \lstinline[columns=fixed]{textbf} per evidenziare il testo della prima riga
+\item Per separare il contenuto di una colonna dall'altra si usa il carattere \lstinline[columns=fixed]{&}
+\item Dopo ogni riga bisogna aggiungere \lstinline[columns=fixed]{\\} per andare a capo
+\end{itemize}
+
+\subsection{Immagini}
+\subsubsection{Esempio di inclusione di un immagine}
+Codice per includere un immagine
+\begin{lstlisting}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.25]{../Stile/Logo.png}
+    \caption{Il nostro logo}
+    \label{fig:logo}
+\end{figure}
+\end{lstlisting}
+Codice compilato
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{../Stile/Logo.png}
+    \caption{Il nostro logo}
+    \label{fig:logo}
+\end{figure}
+\subsubsection{Spiegazione dell' inclusione dell'immagine}
+\begin{itemize}
+\item L'attributo \lstinline[columns=fixed]{scale} determina la grandezza dell'immagine
+\item Il comando \lstinline[columns=fixed]{caption} definisce la didascalia
+\item Il comando \lstinline[columns=fixed]{label} definisce un etichetta attraverso la quale si potrà fare riferimento all'immagine con il comando \lstinline[columns=fixed]{ref} \\
+\qquad Ecco un riferimento all'immagine \ref{fig:logo}
+\end{itemize}
+
+\subsection{Codice}
+\subsubsection{Esempio di inclusione di codice}
+Codice per includere del codice
+\begin{lstlisting}
+begin{lstlisting}
+Testo di esempio
+end{lstlisting}
+\end{lstlisting}
+Codice compilato
+\begin{lstlisting}
+Testo di esempio
+\end{lstlisting}
+
+\subsection{Url}
+\subsubsection{Esempio di inclusione di un url}
+Codice per includere un url
+\begin{lstlisting}
+\url{https://www.unipd.it/}
+\end{lstlisting}
+Codice compilato\\
+\url{https://www.unipd.it/}
