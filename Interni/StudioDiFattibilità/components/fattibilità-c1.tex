@@ -16,7 +16,7 @@ Il capitolato vuole realizzare un sistema che permetta di tutelare la salute e l
 \subsection{Finalità del progetto}
 Il prodotto e' composto dalle seguenti parti:
 \begin{itemize}
-\item Il server centrale, gestisce le varie stanze e postazioni, deve poter:
+\item Il server centrale, che gestisce le varie stanze e postazioni, deve:
 \begin{itemize}
 \item sapere in ogni momento se la postazione è occupata, prenotata oppure da pulire (condizioni per cui
 lo studente/dipendente non può utilizzarla);
@@ -24,22 +24,21 @@ lo studente/dipendente non può utilizzarla);
 \item prevedere una tracciatura autenticata e tutti i cambiamenti di stato relativi alla pulizia della
 postazione, nonché le informazioni su chi ha igienizzato la postazione, devono essere salvate su
 memoria immutabile e certificata;
-\item Deve essere possibile prenotare una postazione con granularità di 1 ora.
+\item garantire di poter prenotare una postazione con granularità di 1 ora.
 \end{itemize}
-\item GUI lato amministratore:
+\item GUI lato amministratore, che permette di:
 \begin{itemize}
-\item Definisce stanze e postazioni;
-\item Crea le utenze ai dipendenti;
+\item Definire le stanze e postazioni;
+\item Creare le utenze ai dipendenti;
 \item Inserisce i tag RFID e li associa alle rispettive postazioni.
 \end{itemize}
 \item GUI lato utente, deve permettere:
 \begin{itemize}
-\item Recupero lista delle postazioni libere;
-\item Prenotazione di una postazione;
-\item Tracciamento in tempo reale tramite tag RFID;
-\item Pulizia di una postazione;
-\item Storico delle postazioni occupate;
-\item Storico delle postazioni igienizzate.
+\item Il recupero della lista con le postazioni libere;
+\item Di prenotare una postazione;
+\item Di segnare come pulita la postazione;
+\item La visone dello storico delle postazioni occupate dall'utente;
+\item La visone dello storico delle postazioni igienizzate dall'utente.
 \end{itemize}
 \end{itemize}
 
