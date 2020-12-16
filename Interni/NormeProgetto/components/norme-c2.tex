@@ -76,26 +76,204 @@ I documenti forniti riguardano:
 
 \subsubsection{Strumenti}
 
-/////// DA SCRIVERE 
+Di seguito sono riportati gli strumenti utilizzati dal gruppo durante il processo di fornitura.
+
+\paragraph{Microsoft Excel}
+
+\paragraph{Gantt Project}
 
 \subsection{Sviluppo}
 
 \subsubsection{Scopo}
 
+Il processo di Sviluppo ha come scopo il descrivere attività e compiti da svolgere,  in modo da realizzare il prodotto finale richiesto dal proponente.
+
 \subsubsection{Descrizione}
+
+Il processo di Sviluppo è caratterizzato da varie attività,  quali:
+\begin{itemize}
+
+\item \AdR;
+
+\item Progettazione;
+
+\item Codifica.
+
+\end{itemize}
 
 \subsubsection{Aspettative}
 
+Le aspettative sono le seguenti:
+\begin{itemize}
+
+\item fissare gli obiettivi di sviluppo;
+
+\item fissare i vincoli tecnologici;
+
+\item fissare i vincoli di design;
+
+\item realizzare un prodotto finale che,  oltre a superare i test,  soddisfi i requisiti e le richieste del proponente.
+
+\end{itemize}
+
 \subsubsection{Analisi dei Requisiti}
 
-da aggiungere altre sezioni
+\paragraph{Scopo}
+
+Gli \textit{Analisti} hanno il compito di redigere il documento di \AdR, individuando tutti i requisiti che il proponente richiede per la realizzazione del prodotto.  Lo scopo,  quindi,  è quello di:
+\begin{itemize}
+
+\item definire lo scopo del lavoro;
+
+\item fornire ai \textit{Progettisti} riferimenti precisi e affidabili;
+
+\item fissare le funzionalità e i requisiti concordati col cliente;
+
+\item fornire una base per raffinamenti successivi al fine di garantire un miglioramento continuo del prodotto e del processo di sviluppo;
+
+\item fornire ai \textit{Verificatori} riferimenti per l'attività di controllo dei test;
+
+\item tracciare riferimenti sulla mole di lavoro in modo da avere una stima dei costi.
+
+\end{itemize}
+
+\paragraph{Descrizione}
+
+I requisiti vengono ricavati da diverse fonti,  tra cui:
+\begin{itemize}
+
+\item \textbf{Capitolati d'Appalto}: grazie alla lettura approfondita del capitolato scelto vengono individuati dei requisiti;
+
+\item \textbf{Casi d'uso}: requisiti estrapolati da uno o più casi d'uso; 
+
+\item \textbf{Verbali}: i requisiti possono emergere sia dalle riunioni interne effettuate dagli \textit{Analisti},  sia da contatti o incontri con i rappresentanti dell'azienda proponente.
+
+\end{itemize}
+
+\paragraph{Aspettative}
+
+L'obiettivo dell'attività di analisi è la creazione della documentazione formale contenente tutti i requisiti richiesti dal proponente.
+
+\paragraph{Struttura}
+
+La struttura che contraddistingue l'\AdR  è:
+\begin{itemize}
+
+\item \textbf{Descrizione}: contiene informazioni riguardanti il prodotto,  le componenti presenti all'interno del sistema,  la piattaforma d'esecuzione e i vincoli di progettazione individuati;
+
+\item \textbf{Casi d'uso}: vengono identificati gli attori che interagiscono con le componenti del sistema e le interazioni tra sistema,  attori ed elementi esterni.  Approfondimento nel paragrafo §2.2.4.6;
+\item \textbf{Requisiti}: rappresentati in una tabella che contiene:
+ \begin{itemize}
+ 
+ \item tracciamento dei requisiti,  suddivisi in obbligatori,  desiderabili e opzionali,  individuati nel sistema durante l'analisi; approfondimento nel paragrafo §2.2.4.5;
+ 
+ \item tracciamento fonte-requisiti e requisiti-fonte.
+ 
+ \end{itemize}
+
+\end{itemize}
+
+\paragraph{Classificazione dei requisiti}
+
+//// DA FARE
+
+\paragraph{Classificazione dei casi d'uso}
+
+//// DA FARE
+
+\paragraph{Tracciamento di requisiti e casi d'uso}
+
+//// DA FARE
+
+\paragraph{Metriche}
+
+//// DA FARE
 
 \subsubsection{Progettazione}
 
-da aggiungere altre sezioni
+\paragraph{Scopo}
+
+L'attività di progettazione definisce, in funzione dei requisiti specificati nel documento \AdR, le caratteristiche che il prodotto richiesto deve avere in modo di fornire la soluzione migliore che soddisfi i requisiti degli stakeholders.  Questa fase provvede a:
+\begin{itemize}
+
+\item garantire la qualità del prodotto applicando un approccio sistematico ai problemi;
+
+\item suddividere compiti implementativi,  così da provvedere alla diminuzione della complessità del problema originale e rendere più semplice la codifica da parte dei \textit{Programmatori};
+
+\item ottimizzare l'utilizzo delle risorse.
+
+\end{itemize}
+
+\paragraph{Descrizione}
+
+Le parti principali sono due:
+\begin{itemize}
+
+\item \textbf{Technology baseline}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti,  l'elenco dei diagrammi UML che saranno utilizzati per la realizzazione dell'architettura e i test di verifica;
+\item \textbf{Product baseline}: rende ancora più dettagliata l'attività di progettazione,  integrando ciò che è riportato nella Technology baseline.  Inoltre,  definisce i test necessari alla verifica.
+
+\end{itemize}
+
+\paragraph{Aspettative}
+
+Il compito di ogni \textit{Progettista} è quello di definire l'architettura logica del sistema.  Quest'ultima,  in particolare,  dovrà avere le seguenti caratteristiche:
+\begin{itemize}
+
+\item soddisfare i requisiti segnati nel documento \AdR;
+
+\item adattarsi a ogni modifica effettuata nell' \AdR;
+
+\item essere comprensibile,  modulare e robusta;
+
+\item risultare affidabile,  quindi svolgere i propri compiti ogni qual volta venga richiesto ;
+
+\item rispettare le caratteristiche di safety e security rispetto ai malfunzionamenti;
+
+\item essere disponibile;
+
+\item mostrare un utilizzo efficiente delle risorse necessarie;
+
+\item garantire riusabilità;
+
+\item presentare componenti semplici e coese nel raggiungimento degli obiettivi,  incapsilate e con un basso livello di accoppiamento.
+
+\end{itemize}
+
+\paragraph{Design Patterns}
+
+////DA FARE
+
+\paragraph{Diagrammi UML 2.0}
+
+//// DA FARE
+
+\paragraph{Test}
+
+//// DA FARE
+
 
 \subsubsection{Codifica}
 
+\paragraph{Scopo}
+
+La codifica ha come scopo quello di normare l'effettiva realizzazione del prodotto software richiesto.  In questa fase,  di fatto, si concretizza l'architettura di alto livello pensata dai \textit{Progettisti}.  I \textit{Programmatori} dovranno attenersi a queste norme durante la fase di programmazione e implementazione.
+
+\paragraph{Descrizione}
+
+La scrittura del codice dovrà rispettare quanto stabilito nella documentazione di prodotto.  Dovrà perseguire gli obiettivi di qualità definiti all'interno del documento \PdQ  per poter garantire una buona qualità del codice.
+
+\paragraph{Aspettative}
+
+l'Obiettivo dell'attività di codifica è la creazione di un prodotto software conforme alle richieste prefissate con il proponente.  L'uso di norme e convenzioni in questa fase è fondamentale per permettere la generazione di codice leggibile e uniforme,  agevolare le fasi di manutenzione,  verifica e validazione e migliorare la qualità del prodotto.
+
+\paragraph{Stile di codifica}
+
 \subsubsection{Metriche}
 
+//// DA FARE
+
+\paragraph{•}
+
 \subsubsection{Strumenti}
+
+//// DA FARE
