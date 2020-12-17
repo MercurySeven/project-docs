@@ -4,7 +4,7 @@
 \usepackage{graphicx}
 
 %-----path per le immagini----
-\graphicspath{{./}{../Stile/}{../../Stile/}{../../../Stile/}}
+\graphicspath{{./}{../Stile/}{../../Stile/}{../../../Stile/}{../../../../Stile}}
 
 %-----package per i margini---
 %\usepackage[top=3.2cm, bottom=3.2cm, left=2.8cm, right=2.8cm]{geometry}
@@ -36,13 +36,13 @@
 			%----BOX TITOLO----
 			\begin{tikzpicture}			
 				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
-				node[opacity = 1] at (\textwidth/2, 2.5) 
+				node[opacity = 1] at (\textwidth/2, 2.75) 
 					{\begin{Huge}
 						\textbf{\Titolo{}} %<---Titolo
 					\end{Huge}}
 				node[opacity = 1] at (\textwidth/2,1.5)	
 					{\begin{large}
-						\begin{tabular}{rL{3cm}}
+						\begin{tabular}{R{7cm}L{7cm}}
 							\textbf{\Gruppo{}} & \textbf{\NomeProgetto{}} %<---Gruppo e nomeprogetto
 						\end{tabular}					
 					\end{large}}
