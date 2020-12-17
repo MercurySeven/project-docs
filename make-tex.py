@@ -4,8 +4,11 @@ import sys
 import re
 import typing
 from pathlib import Path
+import firebase_admin
+from firebase_admin import credentials
+from firebase_admin import db
 
-# TODO refactor to function
+
 ARGUMENT_PARSER = argparse.ArgumentParser()
 
 ARGUMENT_PARSER.add_argument(
@@ -44,12 +47,15 @@ def findSectionEnd(lines: typing.List[str]) -> int:
 
 
 def main() -> None:
-    jsonFilePath = Path(".", "Esterni", "Glossario", "glossario.json")
+    # Fetch the service account key JSON file contents
+    cred = credentials.Certificate('glossarioChiave.json')
 
-    with jsonFilePath.open(
-        "r", encoding="utf-8", errors="strict", newline="\n"
-    ) as jsonFile:
-        glossary = json.load(jsonFile)
+    # Initialize the app with a service account, granting admin privileges
+    firebase_admin.initialize_app(cred, {
+        'databaseURL': 'https://glossario-765f4-default-rtdb.firebaseio.com/'
+    })
+
+    ref = db.reference('/')
 
     texFilePath = Path(".", "Esterni", "Glossario", "Glossario.tex")
 
@@ -67,29 +73,30 @@ def main() -> None:
 
     contents: typing.List[str] = []
 
-    for letter, entries in glossary.items():
-        if len(entries) != 0:
-            definitions = []
+    if ref.get() and len(ref.get().items()) > 0:
+        for letter, entries in ref.get().items():
+            if len(entries) > 0:
+                definitions = []
 
-            for name, description in entries.items():
-                if description:
-                    definitions.append("  \\item[" + name + "] " + description + "\n")
-                else:
-                    print(f"ignored term {name}.")
+                for name, description in entries.items():
+                    if description:
+                        definitions.append("  \\item[" + name + "] " + description + "\n")
+                    else:
+                        print(f"ignored term {name}.")
 
-            if definitions:
-                contents.append("\\section{" + letter + "}\n")
-                contents.append("\\begin{description}\n")
+                if definitions:
+                    contents.append("\\section{" + letter + "}\n")
+                    contents.append("\\begin{description}\n")
 
-                contents.extend(definitions)
+                    contents.extend(definitions)
 
-                contents.append("\\end{description}\n")
-                contents.append("\\newpage\n")
+                    contents.append("\\end{description}\n")
+                    contents.append("\\newpage\n")
 
-    with texFilePath.open(
-        "w", encoding="utf-8", errors="strict", newline="\n"
-    ) as texFile:
-        texFile.write("".join(preamble + contents + ending))
+        with texFilePath.open(
+            "w", encoding="utf-8", errors="strict", newline="\n"
+        ) as texFile:
+            texFile.write("".join(preamble + contents + ending))
 
 
 if __name__ == "__main__":
