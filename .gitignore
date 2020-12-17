@@ -300,5 +300,4 @@ esterni/manuale-sviluppatore/diagrams/**/img
 # ignora subfolder dove teniamo le release compilate
 .releases/
 
-# questa non so perché sia qui :/
-node_modules/
+glossarioChiave.json
