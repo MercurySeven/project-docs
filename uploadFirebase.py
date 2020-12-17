@@ -62,7 +62,7 @@ def main() -> None:
 
                     try:
                         if capitalizedEntry not in dictionary.keys():
-                            refLocal.child(capitalizedEntry).set("\\placeholder{scrivere o ignorare questa definizione}")
+                            refLocal.child(capitalizedEntry).set("{scrivere o ignorare questa definizione}")
                             print(f"Aggiungo {capitalizedEntry}")
 
                     except KeyError:
