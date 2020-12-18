@@ -93,10 +93,10 @@ def main() -> None:
                     contents.append("\\end{description}\n")
                     contents.append("\\newpage\n")
 
-        with texFilePath.open(
-            "w", encoding="utf-8", errors="strict", newline="\n"
-        ) as texFile:
-            texFile.write("".join(preamble + contents + ending))
+    with texFilePath.open(
+        "w", encoding="utf-8", errors="strict", newline="\n"
+    ) as texFile:
+        texFile.write("".join(preamble + contents + ending))
 
 
 if __name__ == "__main__":
