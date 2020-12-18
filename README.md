@@ -20,4 +20,4 @@ Assicurarsi che nella root principale ci sia il file `glossarioChiave.json` (dis
 Una volta collegati si potrà modificare la descrizione delle parole aggiunte.
 4. Per creare il glossario bisogna eseguire lo script `python3 make-glossario.py`.
 5. Per cercare tutte le parole che non sono racchiuse in `\glo{ }` lanciate lo script `python3 check-glossario.py`  
-CONSIGLIO DI EFFETTUARE UN COMMIT PRIMA DI QUESTO COMANDO, COSi' DA VEDERE QUALI PAROLE SONO STATE CAMBIATE.
+CONSIGLIO DI EFFETTUARE UN COMMIT PRIMA DI QUESTO COMANDO, COSÌ DA VEDERE QUALI PAROLE SONO STATE CAMBIATE.
