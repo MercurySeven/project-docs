@@ -40,13 +40,13 @@ def main() -> None:
          ) as openedFile:
             for lineNumber, line in enumerate(openedFile):
                 curr_line = line
-                #if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None)):
-                for name in parole:
-                    for match in re.finditer(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", line):
-                        curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", curr_line)
-                    lowerCaseName = name[0].lower() + name[1:]
-                    for match in re.finditer(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", line):
-                        curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", curr_line)
+                if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None)):
+                    for name in parole:
+                        for match in re.finditer(r"(?<!\\glo{)" + name, line):
+                            curr_line = re.sub(r"(?<!\\glo{)" + name, r"\\glo{" + name +r"}", curr_line)
+                        lowerCaseName = name[0].lower() + name[1:]
+                        for match in re.finditer(r"(?<!\\glo{)" + lowerCaseName, line):
+                            curr_line = re.sub(r"(?<!\\glo{)" + lowerCaseName, r"\\glo{" + lowerCaseName +r"}", curr_line)
 
                 newfile.append(curr_line)
 
