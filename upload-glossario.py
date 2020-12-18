@@ -1,27 +1,9 @@
-import argparse
 import json
 import re
-import sys
 from pathlib import Path
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
-
-
-
-ARGUMENT_PARSER = argparse.ArgumentParser()
-
-# TODO define a path argument so as to call this script with
-# python ./make-json.py ../path-to-target-folder
-ARGUMENT_PARSER.add_argument(
-    "-v", "--version", help="show program version and exit", action="store_true"
-)
-
-PARSED_ARGS = ARGUMENT_PARSER.parse_args()
-
-if PARSED_ARGS.version:
-    print("make-json.py version 1.0.1\nLicensed under the GPLv3.0")
-    sys.exit()
 
 
 def main() -> None:
@@ -63,7 +45,7 @@ def main() -> None:
                     try:
                         if capitalizedEntry not in dictionary.keys():
                             refLocal.child(capitalizedEntry).set("{scrivere o ignorare questa definizione}")
-                            print(f"Aggiungo {capitalizedEntry}")
+                            print(f"Uploaded {capitalizedEntry}")
 
                     except KeyError:
                         print("This entry is not a suitable dictionary key.")

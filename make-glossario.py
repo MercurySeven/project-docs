@@ -1,25 +1,9 @@
-import argparse
-import json
-import sys
 import re
 import typing
 from pathlib import Path
 import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import db
-
-
-ARGUMENT_PARSER = argparse.ArgumentParser()
-
-ARGUMENT_PARSER.add_argument(
-    "-v", "--version", help="show program version and exit", action="store_true"
-)
-
-PARSED_ARGS = ARGUMENT_PARSER.parse_args()
-
-if PARSED_ARGS.version:
-    print("make-json.py version 1.0.1\nLicensed under the GPLv3.0")
-    sys.exit()
 
 
 START_EXPRESSION = "INIZIO_SEZIONE_GENERATA_AUTOMATICAMENTE"
@@ -81,6 +65,7 @@ def main() -> None:
                 for name, description in entries.items():
                     if description:
                         definitions.append("  \\item[" + name + "] " + description + "\n")
+                        print(f"Inserted {name}")
                     else:
                         print(f"ignored term {name}.")
 
