@@ -20,10 +20,13 @@ def main() -> None:
     })
 
     ref = db.reference('/')
+    dbitems = ref.get().items()
+    parole = []
+    for letter, entries in dbitems:
+        for name, description in entries.items():
+            parole.append(name)
 
     newfile: typing.List[str] = []
-
-    dbitems = ref.get().items()
 
     filepaths = Path(".").glob("**/*.tex")
 
@@ -37,19 +40,18 @@ def main() -> None:
          ) as openedFile:
             for lineNumber, line in enumerate(openedFile):
                 curr_line = ""
-                for letter, entries in dbitems:
-                    for name, description in entries.items():
-                        for match in re.finditer(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", line):
-                            if(len(curr_line)>0):
-                                curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", curr_line)
-                            else:
-                                curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", line)
-                        lowerCaseName = name[0].lower() + name[1:]
-                        for match in re.finditer(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", line):
-                            if(len(curr_line)>0):
-                                curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", curr_line)
-                            else:
-                                curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", line)
+                for name in parole:
+                    for match in re.finditer(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", line):
+                        if(len(curr_line)>0):
+                            curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", curr_line)
+                        else:
+                            curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", line)
+                    lowerCaseName = name[0].lower() + name[1:]
+                    for match in re.finditer(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", line):
+                        if(len(curr_line)>0):
+                            curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", curr_line)
+                        else:
+                            curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", line)
                 if(len(curr_line)>0):
                     if(curr_line != line):
                         newfile.append(curr_line)
