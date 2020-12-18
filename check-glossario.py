@@ -39,24 +39,16 @@ def main() -> None:
             "r", encoding="utf-8", errors="strict", newline="\n"
          ) as openedFile:
             for lineNumber, line in enumerate(openedFile):
-                curr_line = ""
+                curr_line = line
+                #if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None)):
                 for name in parole:
                     for match in re.finditer(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", line):
-                        if(len(curr_line)>0):
-                            curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", curr_line)
-                        else:
-                            curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", line)
+                        curr_line = re.sub(r"(?<!\\glo{)\b" + name + r"\b(?![\w\s]*[}])", r"\\glo{" + name +r"}", curr_line)
                     lowerCaseName = name[0].lower() + name[1:]
                     for match in re.finditer(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", line):
-                        if(len(curr_line)>0):
-                            curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", curr_line)
-                        else:
-                            curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", line)
-                if(len(curr_line)>0):
-                    if(curr_line != line):
-                        newfile.append(curr_line)
-                else:
-                    newfile.append(line)
+                        curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", curr_line)
+
+                newfile.append(curr_line)
 
         with file.open(
             "w", encoding="utf-8", errors="strict", newline="\n"
