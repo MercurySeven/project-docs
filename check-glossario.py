@@ -18,24 +18,24 @@ def main() -> None:
     firebase_admin.initialize_app(cred, {
         'databaseURL': 'https://glossario-765f4-default-rtdb.firebaseio.com/'
     })
-    
+
     ref = db.reference('/')
-    
+
     newfile: typing.List[str] = []
-    
+
     dbitems = ref.get().items()
-    
+
     filepaths = Path(".").glob("**/*.tex")
-    
+
     blacklist = ["informazioni.tex","registro_modifiche.tex","Glossario.tex"]
-    
+
     result = [file for file in filepaths if os.path.basename(file) not in blacklist]
 
     for file in result:
         with file.open(
             "r", encoding="utf-8", errors="strict", newline="\n"
          ) as openedFile:
-             for lineNumber, line in enumerate(openedFile):
+            for lineNumber, line in enumerate(openedFile):
                 curr_line = ""
                 for letter, entries in dbitems:
                     for name, description in entries.items():
@@ -51,11 +51,11 @@ def main() -> None:
                             else:
                                 curr_line = re.sub(r"(?<!\\glo{)\b" + lowerCaseName + r"\b(?![\w\s]*[}])", r"\\glo{" + lowerCaseName +r"}", line)
                 if(len(curr_line)>0):
-                     if(curr_line != line):
-                         newfile.append(curr_line)
+                    if(curr_line != line):
+                        newfile.append(curr_line)
                 else:
-                     newfile.append(line)
-                                        
+                    newfile.append(line)
+
         with file.open(
             "w", encoding="utf-8", errors="strict", newline="\n"
         ) as openedFile:
