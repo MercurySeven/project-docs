@@ -39,11 +39,11 @@ def main() -> None:
                 curr_line = line
                 if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None)):
                     for name in parole:
-                        regex = r"(?<!\\glo{)" + name +r"(?=[},\W])"
+                        regex = r"(?<!\\glo{)\b" + name +r"\b(?=[},\W])"
                         for match in re.finditer(regex, line):
                             curr_line = re.sub(regex, r"\\glo{" + name +"}", curr_line)
                         lowerCaseName = name[0].lower() + name[1:]
-                        regex = r"(?<!\\glo{)" + lowerCaseName +r"(?=[},\W])"
+                        regex = r"(?<!\\glo{)\b" + lowerCaseName +r"\b(?=[},\W])"
                         for match in re.finditer(regex, line):
                             curr_line = re.sub(regex, r"\\glo{" + lowerCaseName +"}", curr_line)
 
