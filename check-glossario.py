@@ -21,7 +21,7 @@ def main() -> None:
     parole = []
     for letter, entries in dbitems:
         for name, description in entries.items():
-            parole.append(name)
+            parole.append(decodeFromFirebase(name))
 
     newfile: typing.List[str] = []
 
@@ -53,6 +53,11 @@ def main() -> None:
             openedFile.write("".join(newfile))
         newfile: typing.List[str] = []
         print("Checked " + str(file))
+
+def decodeFromFirebase(stringa) -> str :
+    stringaPulita = stringa.replace(",", ".")#Firebase non accetta il . come carattere nella chiave
+    stringaPulita = stringaPulita.replace("\\", "/")#Doppio slash per evitare di creare figli
+    return stringaPulita
 
 if __name__ == "__main__":
     main()
