@@ -63,11 +63,12 @@ def main() -> None:
                 definitions = []
 
                 for name, description in entries.items():
+                    decodedName = decodeFromFirebase(name)
                     if description:
-                        definitions.append("  \\item[" + name + "] " + description + "\n")
-                        print(f"Inserted {name}")
+                        definitions.append("  \\item[" + decodedName + "] " + description + "\n")
+                        print(f"Inserted {decodedName}")
                     else:
-                        print(f"ignored term {name}.")
+                        print(f"ignored term {decodedName}.")
 
                 if definitions:
                     contents.append("\\section{" + letter + "}\n")
@@ -83,6 +84,11 @@ def main() -> None:
     ) as texFile:
         texFile.write("".join(preamble + contents + ending))
 
+
+def decodeFromFirebase(stringa) -> str :
+    stringaPulita = stringa.replace(",", ".")#Firebase non accetta il . come carattere nella chiave
+    stringaPulita = stringaPulita.replace("\\", "/")#Doppio slash per evitare di creare figli
+    return stringaPulita
 
 if __name__ == "__main__":
     main()

@@ -42,8 +42,8 @@ def main() -> None:
                     capitalizedEntry = initial + entry[1:]
 
                     try:
-                        if capitalizedEntry not in dictionary.keys():
-                            refLocal.child(capitalizedEntry).set("{scrivere o ignorare questa definizione}")
+                        if encodeForFirebase(capitalizedEntry) not in dictionary.keys():
+                            refLocal.child(encodeForFirebase(capitalizedEntry)).set("{scrivere o ignorare questa definizione}")
                             print(f"Uploaded {capitalizedEntry}")
 
                     except KeyError:
@@ -52,6 +52,11 @@ def main() -> None:
                         print(f"Line number: {lineNumber}")
                         print(f"Line: {line}")
                         print(f"Entry: {capitalizedEntry}")
+
+def encodeForFirebase(stringa) -> str :
+    stringaPulita = stringa.replace(".", ",")#Firebase non accetta il . come carattere nella chiave
+    stringaPulita = stringaPulita.replace("/", "\\")#Doppio slash per evitare di creare figli
+    return stringaPulita
 
 if __name__ == "__main__":
     main()
