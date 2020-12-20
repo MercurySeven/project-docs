@@ -36,15 +36,17 @@
 			%----BOX TITOLO----
 			\begin{tikzpicture}			
 				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
-				node[opacity = 1] at (\textwidth/2, 2.5) 
+				node[opacity = 1] at (\textwidth/2, 3) 
 					{\begin{Huge}
 						\textbf{\Titolo{}} %<---Titolo
 					\end{Huge}}
-				node[opacity = 1] at (\textwidth/2,1.5)	
+				node[opacity = 1] at (\textwidth/2,2)	
 					{\begin{large}
-						\begin{tabular}{rL{3cm}}
-							\textbf{\Gruppo{}} & \textbf{\NomeProgetto{}} %<---Gruppo e nomeprogetto
-						\end{tabular}					
+						\textbf{\Gruppo{}} %<---Gruppo
+					\end{large}}
+				node[opacity = 1] at (\textwidth/2,1.25)	
+					{\begin{large}
+						\textbf{\NomeProgetto{}} %<---Nomeprogetto	
 					\end{large}}
 				node[opacity = 1] at (\textwidth/2,0.5)	
 					{\begin{large}
@@ -57,13 +59,11 @@
 		
 		%----BOX VERSIONE E REDAZIONE----		
 		
-		\begin{flushleft}
-		
+		\begin{center}
 			\vspace{10pt}		
-			
 			\begin{tikzpicture}	
-				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (0,0) rectangle ++(\textwidth/2-10pt,\textheight/6);
-				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (\textwidth/2 + 10pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6)
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (0-5pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6);
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (\textwidth/2 + 5pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6)
 				
 				%----BOX VERSIONE----
 				node[opacity = 1] at (\textwidth/4-6pt,1.8)	
@@ -91,13 +91,12 @@
 			
 			
 		
-		\end{flushleft}
+		\end{center}
 		
 		%----BOX DESCRIZIONE----		
 		
 		\begin{center}
 			\vspace{10pt}
-			
 			\begin{tikzpicture}			
 				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
 				node[opacity = 1, text width = \textwidth - 20pt] at (\textwidth/2, 2) 
@@ -238,7 +237,7 @@
 
 %----Versioni---
 \newcommand{\versAdR}{\textit{v0}}
-\newcommand{\versGlo}{\textit{v0}}
+\newcommand{\versGlo}{\textit{v1.0.0}}
 \newcommand{\versNdP}{\textit{v0}}
 \newcommand{\versPdP}{\textit{v0}}
 \newcommand{\versPdQ}{\textit{v0}}
