@@ -39,11 +39,14 @@ def main() -> None:
                 curr_line = line
                 if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None)):
                     for name in parole:
-                        regex = r"(?<!\\glo{)\b" + name +r"\b(?=[},\W])"
+                        #regex = r"(?<!\\glo{)\b" + name +r"\b(?=[},\W])"
+                        #https://stackoverflow.com/questions/4213800/is-there-something-like-a-counter-variable-in-regular-expression-replace/4214173#4214173
+                        regex = r"(?=(?=\w)(?<!\w)(?<!\\glo{))" + sistemaCaratteriSpeciali(name) +r"(?=(?<=\w)(?!\w)|(?=[},\W]))"
+
                         for match in re.finditer(regex, line):
                             curr_line = re.sub(regex, r"\\glo{" + name +"}", curr_line)
                         lowerCaseName = name[0].lower() + name[1:]
-                        regex = r"(?<!\\glo{)\b" + lowerCaseName +r"\b(?=[},\W])"
+                        regex = r"(?=(?=\w)(?<!\w)(?<!\\glo{))" + sistemaCaratteriSpeciali(lowerCaseName) +r"(?=(?<=\w)(?!\w)|(?=[},\W]))"
                         for match in re.finditer(regex, line):
                             curr_line = re.sub(regex, r"\\glo{" + lowerCaseName +"}", curr_line)
 
@@ -59,6 +62,10 @@ def main() -> None:
 def decodeFromFirebase(stringa) -> str :
     stringaPulita = stringa.replace(",", ".")#Firebase non accetta il . come carattere nella chiave
     stringaPulita = stringaPulita.replace("\\", "/")#Doppio slash per evitare di creare figli
+    return stringaPulita
+
+def sistemaCaratteriSpeciali(stringa) -> str:
+    stringaPulita = stringa.replace("+","\+")
     return stringaPulita
 
 if __name__ == "__main__":
