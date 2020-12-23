@@ -53,7 +53,7 @@ Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeD
 	\item La denominazione dei documenti formali sarà la seguente \newline
 	\textbf{[NomeDocumento]\_v[X].[Y].[Z]}
 	\begin{itemize}
-		\item \textbf{NomeDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convensione PascalCase);
+		\item \textbf{NomeDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convenzione PascalCase);
 		\item \textbf{v[X].[Y].[Z]} con \textbf{v} che abbrevia la parola versione, \textbf{[X]} indica il numero incrementale di revisione del responsabile di progetto, \textbf{[Y]} indica il numero incrementale della verifica, \textbf{[Z]} indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni verifica ed approvazione.
 	\end{itemize}
 	\item La denominazione dei verbali sarà la seguente\newline
@@ -89,15 +89,15 @@ Ogni documento presenta subito dopo il frontespizio il registro modifiche, esso 
 \begin{itemize}
 	\item \textbf{Versione:} numero versione documento dopo la modifica;
 	\item \textbf{Data:} data in cui è stata effettuata la modifica;
-	\item \textbf{Autore:} nome e cogmome dell'autore della modifica;
+	\item \textbf{Autore:} nome e cognome dell'autore della modifica;
 	\item \textbf{Ruolo:} Ruolo dell'autore che ha apportato la modifica;
-	\item \textbf{Descrizione:} sintentica descrizione delle modifiche apportate.
+	\item \textbf{Descrizione:} sintetica descrizione delle modifiche apportate.
 \end{itemize}
 \paragraph{Indici}     
-In ogni documento è presente un indice che fornisce una visione sintetica della struttura del documento. L'indice è strutturato in sezioni, sottosezioni e paragrafi aventi numeri progressivi seperati tra loro da un punto.\newline
+In ogni documento è presente un indice che fornisce una visione sintetica della struttura del documento. L'indice è strutturato in sezioni, sottosezioni e paragrafi aventi numeri progressivi separati tra loro da un punto.\newline
 Dove necessario,saranno presenti anche un indice delle illustrazioni ed uno delle tabelle presenti.
 \paragraph{Corpo del documento}       
-Ogni pagina del corpo del docomento è strutturata nel seguente modo:
+Ogni pagina del corpo del documento è strutturata nel seguente modo:
 \begin{itemize}
 	\item L'intestazione, composta nel seguente modo:
 	\begin{itemize}
@@ -196,7 +196,7 @@ Questa sezione definisce le norme per l'uso di elementi grafici quali immagini, 
 \subsubsection{Strumenti di stesura}
 Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX, l'editor \textit{Texmaker} e \textit{filler}.
 \paragraph{\LaTeX}
-Per la stesura dei documenti è stato scelto \LaTeX, un linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinatata, templetizzata e collaborativa dei documenti.
+Per la stesura dei documenti è stato scelto \LaTeX, un linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti.
 \paragraph{Texmaker}
 L'editor scelto per la stesura dei documenti è \textit{Texmaker}, adottato da tutti i membri del gruppo. \textit{Texmaker} è un editor intuitivo che permette una facile compilazione e visualizzazione dei documenti.\newline
 \url(https://www.xm1math.net/texmaker/)
@@ -211,7 +211,7 @@ Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
 \centerline{\textbf{[X].[Y].[Z]}}\newline
 \paragraph{Tecnologie adottate}
-Per la gestione delle versioni è stato scelto di utilizzare il sistema di versionamento distrubuito \textit{Git} con due repository remoti presenti su \textit{GitHub}.
+Per la gestione delle versioni è stato scelto di utilizzare il sistema di versionamento distribuito \textit{Git} con due repository remoti presenti su \textit{GitHub}.
 \paragraph{Repository}
 Il gruppo \textit{\Gruppo{}} ha scelto di creare due repository per il progetto:
 \begin{itemize}
@@ -242,10 +242,10 @@ Il file \textit{.gitignore} contiene al suo interno un riferimento a tutti i fil
 Il repository inerente alla documentazione sarà composto da diversi \textit{branch}:
 \begin{itemize}
 	\item \textbf{Master:} \textit{branch} principale che viene aggiornato solamente quando un documento arriva in fase di rilascio, essa avviene quando incrementa la \textbf{[X]} di una versione del documento (\hyperref[cod-versionamento]{3.2.4.1})	;
-	\item un \textit{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficente per un rilascio, verrà eseguito una operazione di \textit{merge} con il \textbf{master}.
+	\item un \textit{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficiente per un rilascio, verrà eseguito una operazione di \textit{merge} con il \textbf{master}.
 \end{itemize}
 \paragraph{Modifiche ai repository}
-Tutti i membri del gurppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\hyperref[NormeBranching]{3.2.4.6}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
+Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\hyperref[NormeBranching]{3.2.4.6}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \textbf{Responsabile di Progetto} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il team.
 \subsection{Gestione della qualità}
@@ -264,7 +264,7 @@ Le aspettative di questo processo sono:
 	\item raggiungimento della piena soddisfazione del proponente.
 \end{itemize}
 \subsubsection{Controllo di qualità}
-Il gruppo \textit{\Gruppo{}} ritiene fondamentale stabilire delle regole che tutti i membri vadano a rispoettare per il pieno raggiungimento di un sistema di qualità predisposto al miglioramento continuo.
+Il gruppo \textit{\Gruppo{}} ritiene fondamentale stabilire delle regole che tutti i membri vadano a rispettare per il pieno raggiungimento di un sistema di qualità predisposto al miglioramento continuo.
 Le attività che ciascun membro deve svolgere sono:
 \begin{itemize}
 	\item comprensione degli obiettivi da raggiungere;
@@ -284,7 +284,7 @@ Con il perseguimento della qualità in mente, il gruppo \Gruppo{} ha deciso di a
 \begin{itemize}
 	\item un singolo processo deve essere più atomico possibile;
 	\item l'obiettivo di un processo non può entrare in conflitto con quello di altri processi;
-	\item l'affidamento di risorse umane,temporali e materiali ai singoli processi deve tenere conto tutti gli altri processi e deve puntare ad essere più efficente possibile;
+	\item l'affidamento di risorse umane,temporali e materiali ai singoli processi deve tenere conto tutti gli altri processi e deve puntare ad essere più efficiente possibile;
 	\item ogni processo deve essere pianificato correttamente tramite una opportuna analisi dei rischi;
 	\item ogni processo al termine della pianificazione deve avere una durata ben definita.
 \end{itemize}
@@ -292,7 +292,7 @@ Con il perseguimento della qualità in mente, il gruppo \Gruppo{} ha deciso di a
 \subsubsection{Scopo}
 Il processo di Verifica si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Sono soggetti a verifica sia il software che la documentazione.
 \subsubsection{Descrizione}
-Il processi di Verifica si compone di due attività che permettono di verificare che il prodotto sia confome alle aspettative:
+Il processi di Verifica si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative:
 \begin{itemize}
 	\item analisi;
 	\item test.
@@ -303,11 +303,11 @@ Inoltre esso viene applicato su ogni processo in esecuzione:
 	\item successivamente a cambiamenti inerenti lo stato.
 \end{itemize}
 \subsubsection{Aspettative}
-Il processo di Verifica si occupa di prendere ciò che è stato prodotto e di restituirlo in uno stato confome alle aspettative. Per assicurare il corretto funzionamento di tale processo devono essere rispettate alcune regole:
+Il processo di Verifica si occupa di prendere ciò che è stato prodotto e di restituirlo in uno stato conforme alle aspettative. Per assicurare il corretto funzionamento di tale processo devono essere rispettate alcune regole:
 \begin{itemize}
 	\item seguire procedure definite;
 	\item seguire criteri chiari ed affidabili;
-	\item i prodotti devono passare attraverso fasi successive opportunemente verificate;
+	\item i prodotti devono passare attraverso fasi successive opportunamente verificate;
 	\item il prodotto deve trovarsi in uno stato stabile dopo la verifica;
 	\item alla fine del processo deve essere possibile procedere alla fase di validazione.
 \end{itemize}
@@ -317,7 +317,7 @@ Il processo di analisi si suddivide in Analisi statica ed Analisi dinamica.
 \subparagraph{Analisi statica}
 L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
 \begin{itemize}
-	\item \textbf{Walkthrough:} tecnica di verifica consistente nella lettura da parte del team dell'intero documento o codice in cerca di anomalie. \textit{Verrà applicata principalmente nella fase iniziale del progetto, quando il team ancora non conosce i possibili errori che si possono incontrare}. Questa tecnica risulta molto onerosa in termini di efficenza ed efficacia.
+	\item \textbf{Walkthrough:} tecnica di verifica consistente nella lettura da parte del team dell'intero documento o codice in cerca di anomalie. \textit{Verrà applicata principalmente nella fase iniziale del progetto, quando il team ancora non conosce i possibili errori che si possono incontrare}. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia.
 	\item \textbf{Inspection:} tecnica di verifica attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo.
 \end{itemize}
 \subparagraph{Analisi dinamica}
@@ -384,7 +384,7 @@ Devono essere rispettati i seguenti punti:
 L'attività di validazione consiste nel:
 \begin{itemize}
 	\item preparare i requisiti per i test selezionati e le specifiche per analizzarne i risultati;
-	\item assicurarsi che i requisit, i casi e le specifiche dei test soddisfino i requisiti attesi;
+	\item assicurarsi che i requisiti, i casi e le specifiche dei test soddisfino i risultati attesi;
 	\item svolgere i test.
 \end{itemize}
 
