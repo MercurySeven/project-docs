@@ -235,18 +235,18 @@ Il file \textit{.gitignore} contiene al suo interno un riferimento a tutti i fil
 \label{NormeBranching}
 Il repository inerente alla documentazione sarà composto da diversi \glo{branch}:
 \begin{itemize}
-	\item \textbf{Main:} \glo{branch} principale che viene aggiornato solamente quando un documento arriva in fase di rilascio, essa avviene quando incrementa la \textbf{[X]} di una versione del documento (\hyperref[cod-versionamento]{\S{}3.2.4.1})	;
+	\item \textbf{Main:} \glo{branch} principale che viene aggiornato solamente quando un documento arriva in fase di rilascio, essa avviene quando incrementa la \textbf{[X]} di una versione del documento (\S{}\ref{cod-versionamento});
 	\item un \glo{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficiente per un rilascio, verrà eseguito una operazione di \glo{merge} con il \textbf{main}.
 \end{itemize}
 \paragraph{Modifiche ai repository}
-Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\hyperref[NormeBranching]{\S{}3.2.4.6}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
+Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il team.
 \subsection{Gestione della qualità}
 \subsubsection{Scopo}
 Lo scopo del processo di gestione della qualità è garantire che il prodotto finale rispetti i requisiti di qualità individuati dagli stakeholderG, che le esigenze espresse dal proponente siano soddisfatte e che la qualità sia nel complesso soddisfacente. Si mira inoltre ad un maggior controllo di prodotti e processi.
 \subsubsection{Descrizione}
-Alla gestione della qualità è dedicato il \textit{Piano di qualifica}, documento che descrive le metriche e le modalità usate per valutare il livello di qualità di prodotti e processi.
+Alla gestione della qualità è dedicato il \PdQ{}, documento che descrive le metriche e le modalità usate per valutare il livello di qualità di prodotti e processi.
 //////////////////////////TODO DOPO PIANO DI QUALIFICA/////////////
 ////////AGGIUNGERE ARTICOLAZIONE PIANO QUALIFICA/////////
 \subsubsection{Aspettative}
@@ -286,7 +286,7 @@ Con il perseguimento della qualità in mente, il gruppo \textit{\Gruppo{}} ha de
 \subsubsection{Scopo}
 Il processo di Verifica si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Sono soggetti a verifica sia il software che la documentazione.
 \subsubsection{Descrizione}
-Il processi di Verifica si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi () e di test (). Esso viene applicato su ogni processo in esecuzione:
+Il processi di Verifica si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi (\S{}\ref{Analisi}) e di test (\S{}\ref{Test}). Esso viene applicato su ogni processo in esecuzione:
 \begin{itemize}
 	\item al raggiungimento di un livello di maturità sufficiente;
 	\item successivamente a cambiamenti inerenti lo stato.
@@ -302,6 +302,7 @@ Il processo di Verifica si occupa di prendere ciò che è stato prodotto e di re
 \end{itemize}
 \subsubsection{Attività}
 \paragraph{Analisi}
+\label{Analisi}
 Il processo di analisi si suddivide in Analisi statica ed Analisi dinamica.
 \subparagraph{Analisi statica}
 L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
@@ -312,6 +313,7 @@ L'analisi statica permette di effettuare controlli su documenti e codice, verifi
 \subparagraph{Analisi dinamica}
 L'analisi dinamica prevede l'esecuzione del prodotto software e la sua analisi tramite l'utilizzo di test che verificano se il prodotto funziona o se vi sono presenti anomalie.
 \paragraph{Test}
+\label{Test}
 I test rappresentano l'attività sulla quale si basa l'analisi dinamica. Essi permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. Per ogni test devono essere definiti i seguenti parametri:
 \begin{itemize}
 	\item \textbf{ambiente:} sistema hardware e software sulla quale viene eseguito il test;
