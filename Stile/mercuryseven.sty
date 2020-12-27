@@ -36,15 +36,17 @@
 			%----BOX TITOLO----
 			\begin{tikzpicture}			
 				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
-				node[opacity = 1] at (\textwidth/2, 2.75) 
+				node[opacity = 1] at (\textwidth/2, 3) 
 					{\begin{Huge}
 						\textbf{\Titolo{}} %<---Titolo
 					\end{Huge}}
-				node[opacity = 1] at (\textwidth/2,1.5)	
+				node[opacity = 1] at (\textwidth/2,2)	
 					{\begin{large}
-						\begin{tabular}{R{7cm}L{7cm}}
-							\textbf{\Gruppo{}} & \textbf{\NomeProgetto{}} %<---Gruppo e nomeprogetto
-						\end{tabular}					
+						\textbf{\Gruppo{}} %<---Gruppo
+					\end{large}}
+				node[opacity = 1] at (\textwidth/2,1.25)	
+					{\begin{large}
+						\textbf{\NomeProgetto{}} %<---Nomeprogetto	
 					\end{large}}
 				node[opacity = 1] at (\textwidth/2,0.5)	
 					{\begin{large}
@@ -57,13 +59,11 @@
 		
 		%----BOX VERSIONE E REDAZIONE----		
 		
-		\begin{flushleft}
-		
+		\begin{center}
 			\vspace{10pt}		
-			
 			\begin{tikzpicture}	
-				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (0,0) rectangle ++(\textwidth/2-10pt,\textheight/6);
-				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (\textwidth/2 + 10pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6)
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (0-5pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6);
+				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] (\textwidth/2 + 5pt,0) rectangle ++(\textwidth/2-10pt,\textheight/6)
 				
 				%----BOX VERSIONE----
 				node[opacity = 1] at (\textwidth/4-6pt,1.8)	
@@ -91,13 +91,12 @@
 			
 			
 		
-		\end{flushleft}
+		\end{center}
 		
 		%----BOX DESCRIZIONE----		
 		
 		\begin{center}
 			\vspace{10pt}
-			
 			\begin{tikzpicture}			
 				\fill [fill = AzzurroGruppo, opacity= 0.2, rounded corners] rectangle (\textwidth,\textheight/6)
 				node[opacity = 1, text width = \textwidth - 20pt] at (\textwidth/2, 2) 
@@ -221,11 +220,13 @@
 
 
 %Variabili generiche
-\newcommand{\emailgruppo}{mercuryseven.swe@gmail.com}
+\newcommand{\Gruppo}{MercurySeven}
+\newcommand{\Mail}{mercuryseven.swe@gmail.com}
 \newcommand{\proponente}{\emph{proponente}} 
-\newcommand{\committenti}{\textit{prof. Tullio Vardanega} e \textit{prof. Riccardo Cardin}}
-\newcommand{\gruppo}{\emph{Mercury Seven}}
-\newcommand{\progetto}{\emph{progetto}}
+\newcommand{\committenti}{prof. Tullio Vardanega e prof. Riccardo Cardin}
+\newcommand{\gruppo}{\emph{MercurySeven}}
+\newcommand{\progetto}{\emph{SSD: Soluzioni di sincronizzazione desktop}}
+\newcommand{\NomeProgetto}{\emph{SSD: Soluzioni di sincronizzazione desktop}}
 
 %Variabili per i colori
 \definecolor{darkgreen}{RGB}{49, 135, 23}
@@ -239,9 +240,9 @@
 %----Versioni---
 \newcommand{\versAdR}{\textit{v0}}
 \newcommand{\versGlo}{\textit{v1.0.0}}
-\newcommand{\versSdF}{\textit{v1.0.0}}
 \newcommand{\versNdP}{\textit{v0}}
 \newcommand{\versPdP}{\textit{v0}}
+\newcommand{\versSdF}{\textit{v0}}
 \newcommand{\versPdQ}{\textit{v0}}
 \newcommand{\versMU}{\textit{v0}}
 \newcommand{\versMS}{\textit{v0}}
