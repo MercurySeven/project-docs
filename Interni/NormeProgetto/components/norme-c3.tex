@@ -330,21 +330,13 @@ Dei test ben progettati e scritti devono:
 	\item fornire informazioni sui risultati e sull'esecuzione stessa tramite file di log.
 \end{itemize}
 Le tipologie di test utilizzate sono le seguenti.
-\subparagraph{Test di unità}
-I test di unità hanno lo scopo di verificare il funzionamento della parte più piccola di software testabile, chiamata unità. Ogni singola unità deve essere sottoposta a test prima di poter procedere alla sua integrazione. Questa tipologia di test non garantisce la piena correttezza dell'unità ed inoltre non può garantire che l'integrazione di due unità sia senza errori.
-\subparagraph{Test di integrazione}
-I test di integrazione avvengono subito dopo i test di unità e si occupano di verificare la sinergia tra le varie componenti del software prodotto. Ogni test prevede almeno un paio di componenti correlate.
-\subparagraph{Test di sistema}
-I test di sistema caratterizzano la validazione del prodotto software finale. L'applicazione viene testata nella sua interessa e se :
 \begin{itemize}
-	\item i vari componenti del sistema risultano compatibili tra di loro;
-	\item prive di errori nello scambio di dati tra interfacce.
+	\item \glo{Test di unità};
+	\item \glo{Test di integrazione};
+	\item \glo{Test di sistema};
+	\item \glo{Test di regressione};
+	\item \glo{Test di accettazione}.
 \end{itemize}
-allora il prodotto risulta avere i requisiti soddisfatti in modo completo.
-\subparagraph{Test di regressione}
-I test di regressione vengono effettuati a seguito di modifiche al sistema. Lo scopo del test è di valutare le nuove modifiche introdotte nel codice non ancora testate.
-\subparagraph{Test di accettazione}
-I test di accettazione verificano che il prodotto soddisfi quanto richiesto dal proponente. Viene eseguito con la partecipazione dei committenti ed il suo superamento garantisce che il software è pronto per essere rilasciato.
 \paragraph{Codice identificativo dei test}
 //////////TODO///////////////
 
@@ -352,13 +344,13 @@ I test di accettazione verificano che il prodotto soddisfi quanto richiesto dal 
 /////////TODO///////////
 
 \subsubsection{Verifica ortografica}
-Per la verifica ortografica dei documenti scritti in \LaTeX si utilizzerà  \textbf{GNU aspell}.
+Per la verifica ortografica dei documenti scritti in \LaTeX si utilizzerà  \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker}.
 \subsection{Processi di validazione}
 \subsubsection{Scopo}
-Il processo di Validazione stabilisce se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se  rispetta i requisiti e le aspettative del committente.
+Il processo di validazione stabilisce se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se  rispetta i requisiti e le aspettative del committente.
 \subsubsection{Descrizione}
-Il processi di Validazione prende in esame il prodotto ottenuto dalla fase di Verifica e lo restituisce garantendo che esso sia conforme ai requisiti ed ai bisogni del committente.
-Il \textit{Responsabile di Progetto} avrà la responsabilità di controllare i risultati e decidere se:
+Il processi di validazione prende in esame il prodotto ottenuto dalla fase di Verifica e lo restituisce garantendo che esso sia conforme ai requisiti ed ai bisogni del committente.
+Il \RdP{} avrà la responsabilità di controllare i risultati e decidere se:
 \begin{itemize}
 	\item accettare ed approvare il prodotto;
 	\item rigettare il documento, rendendo necessario un nuovo processo di verifica con nuove indicazioni.
