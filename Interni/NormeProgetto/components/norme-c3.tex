@@ -80,10 +80,17 @@ Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeD
 \paragraph{Attribuzione del nome}
 \begin{itemize}
 	\item La denominazione dei documenti formali sarà la seguente \newline
-	\textbf{[NomeDocumento]\_v[X].[Y].[Z]}
+	\textbf{[NomeDocumento]\_v[X].[Y].[Z]-[a].[b]}
 	\begin{itemize}
 		\item \textbf{NomeDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convenzione PascalCase);
 		\item \textbf{v[X].[Y].[Z]} con \textbf{v} che abbrevia la parola versione, \textbf{[X]} indica il numero incrementale di revisione del responsabile di progetto, \textbf{[Y]} indica il numero incrementale della verifica, \textbf{[Z]} indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni verifica ed approvazione.
+		\item \textbf{[a].[b]} con \textbf{A} che indica una versione completa e funzionante del prodotto: le componenti software
+implementano tutti i requisiti obbligatori, i test sono stati tutti superati, le metriche
+di qualità soddisfatte, e sono presenti versioni approvate di tutti i documenti richiesti
+per il prodotto finale; viene incrementato quando il prodotto software non è più
+retrocompatibile; la numerazione parte da 0 e non viene annullata; \textbf{B} cresce al raggiungimento degli obiettivi degli incrementi pianificati nel \PdP{}: poiché tali incrementi presentano obiettivi sia documentali che
+software, la crescita di questo indice rappresenta un incremento nello sviluppo totale
+del prodotto; la numerazione parte da 0 e non viene annullata.
 	\end{itemize}
 	\item La denominazione dei verbali sarà la seguente\newline
 	\textbf{Verbale[Interno/Esterno]\_[YYYY]\_[MM]\_[DD]}\newline
@@ -234,7 +241,7 @@ Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di
 \paragraph{Codice di versionamento}
 \label{cod-versionamento}
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
-\centerline{\textbf{[X].[Y].[Z]}}\newline
+\centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline
 \paragraph{Tecnologie adottate}
 Per la gestione delle versioni è stato scelto di utilizzare il sistema di versionamento distribuito \glo{Git} con due repository remoti presenti su \glo{GitHub}.
 \paragraph{Repository}
@@ -370,10 +377,8 @@ Le tipologie di test utilizzate sono le seguenti.
 \end{itemize}
 \paragraph{Codice identificativo dei test}
 //////////TODO///////////////
-
 \subsubsection{Metriche}
 /////////TODO///////////
-
 \subsubsection{Verifica ortografica}
 Per la verifica ortografica dei documenti scritti in \LaTeX si utilizzerà  \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker}.
 \subsection{Processi di validazione}
