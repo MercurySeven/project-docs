@@ -225,6 +225,11 @@ Questa sezione definisce le norme per l'uso di elementi grafici quali immagini, 
 \item \textbf{Tabelle:} ogni tabella è contrassegnata da una didascalia e numerata in modo progressivo, a questa prassi fanno eccezione le tabelle del registro delle modifiche, che non presentano una didascalia.
 \end{itemize}
 \subsubsection{Metriche}
+\paragraph{MDC01 Indice Gulpease}
+Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana:
+La formula adottata è:\newline
+\centerline{\textbf{$Ig= 89 + \frac{300 * (n\ frasi) - 10 * (n\ lettere)}{n\ parole}$}}
+\paragraph{Errori ortografici}
 \subsubsection{Strumenti di stesura}
 Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX, l'editor \textit{Texmaker} e \textit{filler}.
 \paragraph{\LaTeX}
@@ -390,9 +395,38 @@ Le tipologie di test utilizzate sono le seguenti.
 	\item \glo{Test di accettazione}.
 \end{itemize}
 \paragraph{Codice identificativo dei test}
-//////////TODO///////////////
+Ogni test viene descritto con:
+\begin{itemize}
+	\item codice identificativo;
+	\item descrizione;
+	\item stato, che può essere:
+	\begin{itemize}
+		\item implementato;
+		\item non implementato;
+		\item non eseguito;
+		\item superato;
+		\item non superato;
+	\end{itemize}
+\end{itemize}
+Il codice identificativo presenta la seguente struttura:\newline
+\centerline{\textbf{T[Tipo][Id]}}
+\newline
+Dove:
+\begin{itemize}
+	\item \textbf{T:} indica il "Test";
+	\item \textbf{Tipo:} il tipo di test, che può essere:
+	\begin{itemize}
+		\item \textbf{U}: test di unità;
+		\item \textbf{I}: test di integrazione;
+		\item \textbf{S}: test di sistema;
+		\item \textbf{R}: test di regressione;
+		\item \textbf{A}: test di accettazione.
+	\end{itemize}
+	\item \textbf{Id:} rappresenta un codice identificativo.
+\end{itemize}
+
 \subsubsection{Metriche}
-/////////TODO///////////
+Il gruppo ritiene prematuro stabilire in questa fase delle metriche per i test in questione. La sezione sarà opportunamente integrata.
 \subsubsection{Verifica ortografica}
 Per la verifica ortografica dei documenti scritti in \LaTeX si utilizzerà  \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker}.
 \subsection{Processi di validazione}
