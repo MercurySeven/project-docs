@@ -1,0 +1,47 @@
+\section{Capitolato C6}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+\item \textbf{Nome:} \textit{RGP}: Realtime Gaming Platform;
+\item \textbf{Proponente:} zero12;
+\item \textbf{Committenti:} \textit{Prof. \Tullio{}} e \textit{Prof. \Riccardo{}}.
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+Il capitolato richiede di sviluppare un gioco sia single player che multiplayer.
+Il focus del progetto è però centrato nell'apprendere le tecnologie offerte da Amazon attraverso la loro piattaforma \glo{AWS}.
+In particolare, si chiede di usare \glo{AWS} GameLift per la sincronizzazione del gioco tra più giocatori.
+I giocatori non si sfideranno direttamente ma potranno vedere in real-time il progresso dell'avversario.
+
+\subsection{Finalità del progetto}
+Il capitolato chiede di sviluppare i seguenti punti:
+\begin{itemize}
+\item analizzare le tecnologie \glo{AWS} per capire quale si può adattare meglio ad un gioco con requisiti di real-time, raccogliendo le motivazioni che supportano la scelta di una tecnologia rispetto ad un'altra;
+\item implementazione della componente server;
+\item implementazione del gioco in una piattaforma mobile.
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+Le tecnologie consigliate sono:
+\begin{itemize}
+\item l'utilizzo del servizio \glo{AWS} GameLift per gestire il multiplayer all'interno del gioco;
+\item l'utilizzo di \glo{AWS} DynamoDB per il salvataggio dei dati cloud attraverso un database NoSQL;
+\item l'uso di Node.js per creare il server che avrà il compito di fornire le \glo{API} utili al gioco per chiedere informazioni sullo stato degli altri giocatori;
+\item l'uso di tecnologie native per la progettazione del gioco, Swift per Apple e Kotlin per Android.
+\end{itemize}
+Un aspetto molto importante per il proponente è che l'architettura server deve essere scalabile.
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item l'utilizzo dei servizi Amazon \glo{AWS}, che al giorno d'oggi sono sempre più diffusi;
+\item il mondo del videogame, soprattutto negli ultimi anni, sta avendo una crescita esponenziale, questo capitolato ci offre la possibilità di apprendere le tecnologie necessarie che servono per sviluppare un videogame multiplayer.
+\end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+\item sviluppare un gioco per iOS/iPadOS richiede obbligatoriamente un Mac;
+\item se si vuole sviluppare per Android, bisogna sviluppare su Android Studio e appoggiarsi a librerie delle quali nessun componente del gruppo è a conoscenza. Si è valutato inoltre di sviluppare su Unity, ma il linguaggio supportato è C\# e non tutti i componenti del gruppo lo conoscono.
+\end{itemize}
+
+\subsection{Valutazione finale}
+Per le tecnologie proposte il gruppo \textit{\Gruppo{}} ha tenuto in forte considerazione questo capitolato ma è stato scartato a favore del capitolato numero sette.
