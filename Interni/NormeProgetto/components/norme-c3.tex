@@ -356,11 +356,7 @@ Con il perseguimento della qualità in mente, il gruppo \textit{\Gruppo{}} ha de
 \subsubsection{Scopo}
 Il processo di verifica si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Sono soggetti a verifica sia il software che la documentazione.
 \subsubsection{Descrizione}
-Il processo di verifica si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi (\S{}\ref{Analisi}) e di test (\S{}\ref{Test}). Esso viene applicato su ogni processo in esecuzione:
-\begin{itemize}
-	\item al raggiungimento di un livello di maturità sufficiente;
-	\item successivamente a cambiamenti inerenti lo stato.
-\end{itemize}
+Il processo di verifica si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi (\S{}\ref{Analisi}) e di test (\S{}\ref{Test}). Esso viene applicato al software ed ai documenti.
 \subsubsection{Aspettative}
 Il processo di verifica si occupa di prendere ciò che è stato prodotto e di restituirlo in uno stato conforme alle aspettative. Per assicurare il corretto funzionamento di tale processo devono essere rispettate alcune regole:
 \begin{itemize}
@@ -374,13 +370,13 @@ Il processo di verifica si occupa di prendere ciò che è stato prodotto e di re
 \paragraph{Analisi}
 \label{Analisi}
 Il processo di analisi si suddivide in Analisi statica ed Analisi dinamica.
-\subparagraph{Analisi statica}
+\paragraph{Analisi statica}
 L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
 \begin{itemize}
 	\item \textbf{Walkthrough:} tecnica di verifica consistente nella lettura da parte del team dell'intero documento o codice in cerca di anomalie. \textit{Verrà applicata principalmente nella fase iniziale del progetto, quando il team ancora non conosce i possibili errori che si possono incontrare}. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia.
 	\item \textbf{Inspection:} tecnica di verifica attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo.
 \end{itemize}
-\subparagraph{Analisi dinamica}
+\paragraph{Analisi dinamica}
 L'analisi dinamica prevede l'esecuzione del prodotto software e la sua analisi tramite l'utilizzo di test che verificano se il prodotto funziona o se vi sono presenti anomalie.
 \paragraph{Test}
 \label{Test}
