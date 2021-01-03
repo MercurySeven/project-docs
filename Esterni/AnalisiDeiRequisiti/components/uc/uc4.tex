@@ -1,24 +1,15 @@
-\subsection{UC4 - Gestione delle cartelle sincronizzate}
+\subsection{UC4 - Visualizzazione messaggio di errore}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.6]{components/img/UC4.png}
-    \caption{UC4 - Gestione delle cartelle sincronizzate}
+    \includegraphics[scale = 0.9]{components/img/UC4.png}
+    \caption{UC4 - Visualizzazione messaggio di errore}
 \end{figure}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente autenticato;
-\item \textbf{Precondizione:} L'utente ha a disposizione varie funzionalità per la gestione delle cartelle sincronizzate;
-\item \textbf{Postcondizione:} Viene eseguita l'operazione richiesta dall'utente;
+\item \textbf{Precondizione:} Il sistema rileva una condizione di errore;
+\item \textbf{Postcondizione:} Viene mostrato un messaggio di errore opportuno;
 \item \textbf{Scenario principale:}
     \begin{enumerate}
-    \item L'utente può visualizzare l'elenco delle cartelle sincronizzate;
-    \item L'utente può aggiungere una cartella da sincronizzare;
-    \item L'utente può annullare la sincronizzazione per una cartella;
-    \item L'utente può mettere in pausa la sincronizzazione per una cartella;
-    \item L'utente può riprendere la sincronizzazione per una cartella.
+    \item Il sistema rileva una condizione di errore e mostra un messaggio di errore relativo al contesto nel quale si è riscontrata l'anomalia.
     \end{enumerate}
-\item \textbf{Estensioni:}
-\begin{itemize}
-\item L'utente cerca di aggiungere una cartella non idonea;
-\item L'utente cerca di aggiungere una cartella che ha lo stesso identificativo di una già sincronizzata.
-\end{itemize}
 \end{itemize}
