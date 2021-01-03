@@ -1,15 +1,15 @@
-\subsection{UC6 - Pausa trasferimenti}
+\subsection{UC6 - Visualizzazione messaggio di errore}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.4]{components/img/UC6.png}
-    \caption{UC6 - Pausa trasferimenti}
+    \includegraphics[scale = 0.7]{components/img/UC6.png}
+    \caption{UC6 - Visualizzazione messaggio di errore}
 \end{figure}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente autenticato;
-\item \textbf{Precondizione:} L'utente ha a disposizione la possibilità di mettere in pausa il trasferimento di un file;
-\item \textbf{Postcondizione:} Viene messo in pausa il trasferimento del file;
+\item \textbf{Precondizione:} Il sistema rileva una condizione di errore;
+\item \textbf{Postcondizione:} Viene mostrato un messaggio di errore opportuno;
 \item \textbf{Scenario principale:}
     \begin{enumerate}
-    \item L'utente può mettere in pausa un file che si trova nello stato di trasferimento in corso.
+    \item Il sistema rileva una condizione di errore e mostra un messaggio di errore relativo al contesto nel quale si è riscontrata l'anomalia.
     \end{enumerate}
 \end{itemize}
