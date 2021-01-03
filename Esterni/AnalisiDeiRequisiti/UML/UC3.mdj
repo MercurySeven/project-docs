@@ -1301,33 +1301,6 @@
 									"$ref": "AAAAAAF2wlVldknGqc0="
 								}
 							}
-						},
-						{
-							"_type": "UMLAssociation",
-							"_id": "AAAAAAF2wmBi+Uv0TXg=",
-							"_parent": {
-								"$ref": "AAAAAAF2wlNtUkj8EnQ="
-							},
-							"end1": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAF2wmBi+Uv1+Mw=",
-								"_parent": {
-									"$ref": "AAAAAAF2wmBi+Uv0TXg="
-								},
-								"reference": {
-									"$ref": "AAAAAAF2wlNtUkj8EnQ="
-								}
-							},
-							"end2": {
-								"_type": "UMLAssociationEnd",
-								"_id": "AAAAAAF2wmBi+Uv2Z7w=",
-								"_parent": {
-									"$ref": "AAAAAAF2wmBi+Uv0TXg="
-								},
-								"reference": {
-									"$ref": "AAAAAAF2wllRXUrW3Qg="
-								}
-							}
 						}
 					]
 				},
@@ -1346,96 +1319,6 @@
 						"$ref": "AAAAAAF2wlNPXkj3cgI="
 					},
 					"name": "Visualizzazione trasferimento in corso"
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAF2wldDRkn4XZA=",
-					"_parent": {
-						"$ref": "AAAAAAF2wlNPXkj3cgI="
-					},
-					"name": "Pausa trasferimento",
-					"ownedElements": [
-						{
-							"_type": "UMLExtend",
-							"_id": "AAAAAAF2wliykkqjzE0=",
-							"_parent": {
-								"$ref": "AAAAAAF2wldDRkn4XZA="
-							},
-							"source": {
-								"$ref": "AAAAAAF2wldDRkn4XZA="
-							},
-							"target": {
-								"$ref": "AAAAAAF2wlVldknGqc0="
-							}
-						}
-					]
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAF2wlep+0onWdw=",
-					"_parent": {
-						"$ref": "AAAAAAF2wlNPXkj3cgI="
-					},
-					"name": "Riprendi trasferimento",
-					"ownedElements": [
-						{
-							"_type": "UMLExtend",
-							"_id": "AAAAAAF2wljK8kq0xak=",
-							"_parent": {
-								"$ref": "AAAAAAF2wlep+0onWdw="
-							},
-							"source": {
-								"$ref": "AAAAAAF2wlep+0onWdw="
-							},
-							"target": {
-								"$ref": "AAAAAAF2wlVldknGqc0="
-							}
-						}
-					]
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAF2wlfmeUpWQsg=",
-					"_parent": {
-						"$ref": "AAAAAAF2wlNPXkj3cgI="
-					},
-					"name": "Annullamento operazione",
-					"ownedElements": [
-						{
-							"_type": "UMLExtend",
-							"_id": "AAAAAAF2wljhKkrFwiY=",
-							"_parent": {
-								"$ref": "AAAAAAF2wlfmeUpWQsg="
-							},
-							"source": {
-								"$ref": "AAAAAAF2wlfmeUpWQsg="
-							},
-							"target": {
-								"$ref": "AAAAAAF2wlVldknGqc0="
-							}
-						},
-						{
-							"_type": "UMLExtend",
-							"_id": "AAAAAAF2wlnqxEsMsS0=",
-							"_parent": {
-								"$ref": "AAAAAAF2wlfmeUpWQsg="
-							},
-							"source": {
-								"$ref": "AAAAAAF2wlfmeUpWQsg="
-							},
-							"target": {
-								"$ref": "AAAAAAF2wllRXUrW3Qg="
-							}
-						}
-					]
-				},
-				{
-					"_type": "UMLUseCase",
-					"_id": "AAAAAAF2wllRXUrW3Qg=",
-					"_parent": {
-						"$ref": "AAAAAAF2wlNPXkj3cgI="
-					},
-					"name": "Gestione file con trasferimento completato"
 				},
 				{
 					"_type": "UMLUseCase",
