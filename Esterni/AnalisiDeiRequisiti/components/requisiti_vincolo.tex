@@ -1,0 +1,29 @@
+\subsection{Requisiti di vincolo}
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-8\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \centering
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{C{.20\freewidth} C{.40\freewidth} C{.20\freewidth} C{.20\freewidth}}
+        \toprule 
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Requisito} & \textbf{Descrizione} & \textbf{Classificazione} & \textbf{Fonti} \\
+        \toprule
+        \endhead
+
+        RV01    & L'applicazione deve funzionare su Windows & Obbligatorio & Capitolato \\
+        RV02    & L'applicazione deve funzionare su MacOS & Obbligatorio & Capitolato \\
+        RV03    & L'applicazione deve funzionare su Linux & Obbligatorio & Capitolato \\
+        RV04    & Sviluppo di un algoritmo solido ed efficiente per gestire la sincronizzazione tra client e server & Obbligatorio & Capitolato \\
+        RV05    & L'applicazione deve poter comunicare con Zextras Drive & Obbligatorio & Capitolato \\
+        RV06    & L'utilizzatore non deve installare ulteriori pacchetti per il funzionamento dell'applicazione & Obbligatorio & Capitolato \\
+        RV07    & Utilizzo del pattern MVC per la separazione della Business logic e la UI & Obbligatorio & Capitolato \\
+        RV08    & Lo sviluppo del core dell'applicazione deve avvenire con Python & Desiderabile & Capitolato \\
+        RV09    & La GUI dell'applicazione deve essere sviluppata con PyQt & Desiderabile & Capitolato \\
+
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
+}
