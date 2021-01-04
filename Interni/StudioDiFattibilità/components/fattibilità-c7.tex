@@ -1,0 +1,71 @@
+\section{Capitolato C7}
+
+\subsection{Informazioni generali}
+\begin{itemize}
+\item \textbf{Nome:} \textit{SSD}: Soluzioni di sincronizzazione desktop;
+\item \textbf{Proponente:} ZEXTRAS;
+\item \textbf{Committenti:} \textit{Prof. \Tullio{}} e \textit{Prof. \Riccardo{}}.
+\end{itemize}
+
+\subsection{Descrizione del capitolato}
+Il capitolato richiede lo sviluppo di un algoritmo e di un front-end per sincronizzare file tra server e client appoggiandosi sul sevizio Zextras Drive.
+L'interfaccia deve essere multi piattaforma e il prodotto deve essere sviluppato aderendo al pattern \glo{MVC}.
+
+\subsection{Finalità del progetto}
+Il capitolato pone i 3 seguenti obiettivi:
+\begin{itemize}
+\item \textbf{Sviluppo di un algoritmo di sincronizzazione solido ed efficiente}: deve garantire la sincronizzazione ottimale tra cloud e desktop utilizzando il quantitativo minimale di risorse;
+\item \textbf{Sviluppo di un interfaccia multi piattaforma}: deve fornire l'interfaccia necessaria per interagire con i servizi messi a disposizione 
+dall'algoritmo e essere utilizzabile almeno sui tre sistemi operativi più popolari (Linux, MacOS, Windows);
+La soluzione sviluppata non deve dipendere da installazioni di framework di terze parti da parte dell'utente finale;
+\item \textbf{Integrazione con Zextras Drive}: sia l'algoritmo che l'interfaccia devono essere integrati con il servizio di gestione file Zextras Drive.
+\end{itemize}
+Oltre al raggiungimento degli obbiettivi precedentemente riportati le seguenti funzionalità dovrebbero essere aggiunte:
+\begin{itemize}
+\item autenticazione dell'utente;
+\item gestione dei file da sincronizzare o ignorare sia dal lato cloud che dal lato desktop e la possibilità di modificare in ogni momento la configurazione;
+\item sincronizzazione costante dei cambiamenti, sia locali che remoti.
+\end{itemize}
+
+\subsection{Tecnologie interessate}
+Le seguenti tecnologie possono essere impiegate nello sviluppo del progetto
+\begin{itemize}
+\item \textbf{Tecnologie consigliate}:
+\begin{itemize}
+    \item \textbf{\glo{Framework Qt}}: framework consigliato per lo sviluppo di interfacce grafiche basato su C++;
+    \item \textbf{Python}: linguaggio consigliato per lo sviluppo del modello. Molto flessibile. Supportato dalla maggior parte dei framework per lo sviluppo di interfacce grafiche. 
+    Semplifica il processo di integrazione con le \glo{API} di Zextras Drive;
+    \end{itemize}
+\newpage
+\item \textbf{Tecnologie necessarie}:
+    \begin{itemize}
+    \item \textbf{Zimbra}: sistema collaborativo per la gestione della posta elettronica;
+    \item \textbf{Zextras Drive}: servizio proprietario di gestione file in cloud con funzionalità di:
+        \begin{itemize}
+        \item Versionamento;
+        \item Gestione degli accessi e della condivisione dei file;
+        \item Modifica collaborativa di file documentali.
+        \end{itemize}
+    Il servizio espone inoltre delle \glo{API} sviluppate utilizzando il framework \glo{GraphQL}.
+\end{itemize}
+\item \textbf{Altre tecnologie}:
+    \begin{itemize}
+    \item \textbf{\glo{GraphQL}}: linguaggio di query per \glo{API} utilizzato dalle \glo{API} di Zextras Drive;
+    \item \textbf{Apollo per \glo{GraphQL}}: implementazione di \glo{GraphQL} utilizzata dalle \glo{API} di Zextras Drive.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Aspetti positivi}
+\begin{itemize}
+\item il progetto offre l'opportunità di approfondire delle tecnologie fondamentali per la collaborazione a distanza, un aspetto che sarà sempre più rilevante negli ambienti lavorativi futuri;
+\item il team ha già familiarità con il \glo{framework Qt} e Python.
+\end{itemize}
+
+\subsection{Criticità e fattori di rischio}
+\begin{itemize}
+\item mancanza di documentazione dettagliata pubblicamente accessibile sulle \glo{API} del prodotto Zextras Drive;
+\item rischio di doversi appoggiare eccessivamente sul committente per la corretta integrazione del prodotto sviluppato con il loro servizio.
+\end{itemize}
+
+\subsection{Valutazione finale}
+Dopo alcuni incontri per discutere sui capitolati proposti, il gruppo \textit{\Gruppo{}} ha deciso di scegliere questo capitolato valutandolo come il più interessante.
