@@ -141,6 +141,54 @@ Abbiamo suddiviso i principali fattori di rischio nelle seguenti categorie:
         \end{center}
     \end{table}
 
+\paragraph*{Interpretazione Errata O Cambio Dei Requisiti}
+\renewcommand{\arraystretch}{1}
+    \begin{table}[H]
+        \begin{center}
+            \setlength{\aboverulesep}{0pt}
+            \setlength{\belowrulesep}{0pt}
+            \setlength{\extrarowheight}{.75ex}
+            \rowcolors{2}{AzzurroGruppo!10}{white}
+            \begin{tabular}{ c p{10cm} }
+                \rowcolor{AzzurroGruppo!30} 
+                %\textbf{Prima colonna} & \textbf{Seconda colonna}  \\
+                \toprule
+                Descrizione & Durante la fase di analisi alcuni requisiti potrebbero venire equivocati e durante lo sviluppo potrebbe sorgere il bisogno di modificarne uno già fissato o aggiungerne uno non identificato in precedenza. \\
+                Conseguenze & La mal interpretazione di uno o più requisiti oppure l'aggiunta in corso d'opera potrebbe causare ritardi \\
+                Occorrenza & Bassa \\
+                Pericolosità & Alta \\
+                Precauzioni & Il \glo{team} si impegna ad avere una cosatnte comunicazione con l'azienda proponente al fine di discutere e chiarire ogni dubbio. \newline É utle, in ciascuna milestone, controllare che i requisiti siano sempre coerenti con le linee guida date dall'azienda  \\
+                Piano di contingenza & L'aggiunta o la rimozione di alcuni requisiti non è una cosa rara e al verificarsi di questa occorrenza il requisito andrà analizzato per allocargli le giuste risorse e la giusta priorità all'interno dello sviluppo. \\
+                \bottomrule
+            \end{tabular}
+            \caption{Tabella dettaglio rischio di Interpretazione Errata O Cambio Dei Requisiti}
+        \end{center}
+    \end{table}
+
+\paragraph*{Stima Errata Dei Costi}
+\renewcommand{\arraystretch}{1}
+    \begin{table}[H]
+        \begin{center}
+            \setlength{\aboverulesep}{0pt}
+            \setlength{\belowrulesep}{0pt}
+            \setlength{\extrarowheight}{.75ex}
+            \rowcolors{2}{AzzurroGruppo!10}{white}
+            \begin{tabular}{ c p{10cm} }
+                \rowcolor{AzzurroGruppo!30} 
+                %\textbf{Prima colonna} & \textbf{Seconda colonna}  \\
+                \toprule
+                Descrizione & Considerata l'inesperienza del team potrebbero venire commessi errori di stima (sottostima o sovrastima) di natura economica sul valore delle varie attività. \\
+                Conseguenze & questi errori potrebbero portare a dei ritardi e/o a spreco di risorse. \\
+                Occorrenza & Media \\
+                Pericolosità & Alta \\
+                Precauzioni & ad ogni fase del progetto, il gruppo svolgerà delle considerazioni sulle attività svolte e da svolgere per chiarire se la stima di tempistiche/costi rientra in quella preventivata. \\
+                Piano di contingenza & All’insorgere di rilevanti variazioni orarie rispetto al preventivo iniziale, queste verranno comunicate tempestivamente al proponente. \newline Se il proponente lo riterrà necessario sarà opportuno ridiscutere le proposte formulate dal gruppo, specialmente quelle considerate più lunghe da implementare. \\
+                \bottomrule
+            \end{tabular}
+            \caption{Tabella dettaglio rischio di Stima Errata Dei Costi}
+        \end{center}
+    \end{table}
+
 \subsection{Rischi legati alle persone}
 
 \paragraph*{Intesa Parziale Del Team}
@@ -179,19 +227,19 @@ Abbiamo suddiviso i principali fattori di rischio nelle seguenti categorie:
                 \rowcolor{AzzurroGruppo!30} 
                 %\textbf{Prima colonna} & \textbf{Seconda colonna}  \\
                 \toprule
-                Descrizione & TODO \\
-                Conseguenze & TODO \\
-                Occorrenza & Bassa \\
-                Pericolosità & Media \\
-                Precauzioni & TODO \\
-                Piano di contingenza & TODO \\
+                Descrizione & Potrebbero verivicarsi degli errori da parte del \RdP{} nella fase di approvazione dei documenti. \\
+                Conseguenze & La consegna di documenti errati o di bassa qualità oltre a dare un'impressione negativa al \glo{proponente} causerebbe uno spreco di risorse per scovare e risolvere tali errori \\
+                Occorrenza & Media \\
+                Pericolosità & Alta \\
+                Precauzioni & Il \RdP{} deve poter controllare il lavoro in maniera costante e organizzata evitando cosi moli di lavoro troppo onerose e a rischio di errore \\
+                Piano di contingenza & L'\RdP{} deve lavorare in maniera incrociata con i \vers{} così da poter minimizzare l'occorrenza di sviste ed errori generici. \\
                 \bottomrule
             \end{tabular}
             \caption{Tabella dettaglio rischio di Approvazione Errata Dei Documenti}
         \end{center}
     \end{table}
 
-\paragraph*{TODO}
+\paragraph*{Impegni Personali}
 \renewcommand{\arraystretch}{1}
     \begin{table}[H]
         \begin{center}
@@ -203,14 +251,14 @@ Abbiamo suddiviso i principali fattori di rischio nelle seguenti categorie:
                 \rowcolor{AzzurroGruppo!30} 
                 %\textbf{Prima colonna} & \textbf{Seconda colonna}  \\
                 \toprule
-                Descrizione & TODO \\
-                Conseguenze & TODO \\
-                Occorrenza & TODO \\
-                Pericolosità & TODO \\
-                Precauzioni & TODO \\
-                Piano di contingenza & TODO \\
+                Descrizione & Uno o più membri del \glo{team} potrebbero dover far fronte a impegni di natura personale o di salute compromettendo il lavoro di sviluppo per un periodo di tempo variabile. \\
+                Conseguenze & Questa diminuzione di risorse umane potrebbe portare a ritardi nelle attivati individuali o collaborative in cui la risorsa era assegnata. \\
+                Occorrenza & Bassa \\
+                Pericolosità & Media \\
+                Precauzioni & Ciascun componente si impegna a segnalare i propri inpegni per tempo in modo da permettere al \glo{team} di riorganizzarsi al meglio. In caso di impegni imprevisti il \RdP{} dovrà essere avvisato il prima posibile. \\
+                Piano di contingenza & Nel caso in cui il periodo di assenza si estenda per un periodo prolungato il \RdP{} dovrà ridistribuire gli incarichi scoperti ai restati membri del \glo{team}. \\
                 \bottomrule
             \end{tabular}
-            \caption{Tabella dettaglio rischio di TODO}
+            \caption{Tabella dettaglio rischio di Impegni Personali}
         \end{center}
     \end{table}
