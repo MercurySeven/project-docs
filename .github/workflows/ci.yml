@@ -23,7 +23,7 @@ jobs:
       matrix:
         include:
           - working_directory: Interni/StudioDiFattibilità
-            root_file: "StudioDiFattibilità"
+            root_file: "StudioDiFattibilità.tex"
           #- working_directory: Interni/Verbali\ Interni
           # root_file: "VI*"
  
