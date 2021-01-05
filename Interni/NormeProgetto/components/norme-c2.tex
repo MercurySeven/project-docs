@@ -84,14 +84,15 @@ L'obiettivo dell'attività di analisi è la creazione della documentazione forma
 La struttura che contraddistingue l'\AdR{} è:
 \begin{itemize}
 	\item \textbf{Descrizione}: contiene informazioni riguardanti il prodotto, le componenti presenti all'interno del sistema, la piattaforma d'esecuzione e i vincoli di progettazione individuati;
-	\item \textbf{Casi d'uso}: vengono identificati gli attori che interagiscono con le componenti del sistema e le interazioni tra sistema, attori ed elementi esterni. Approfondimento nel paragrafo §2.2.4.6;
+	\item \textbf{Casi d'uso}: vengono identificati gli attori che interagiscono con le componenti del sistema e le interazioni tra sistema, attori ed elementi esterni. Approfondimento nel paragrafo \S{}\ref{Class_uso};
 	\item \textbf{Requisiti}: rappresentati in una tabella che contiene:
 	\begin{itemize}
- 		\item tracciamento dei requisiti, suddivisi in obbligatori, desiderabili e opzionali, individuati nel sistema durante l'analisi; approfondimento nel paragrafo §2.2.4.5;
+ 		\item tracciamento dei requisiti, suddivisi in obbligatori, desiderabili e opzionali, individuati nel sistema durante l'analisi; approfondimento nel paragrafo \S{}\ref{Class_req};
 		\item tracciamento fonte-requisiti e requisiti-fonte. 
 	\end{itemize}
 \end{itemize}
 \paragraph{Classificazione dei requisiti}
+\label{Class_req}
 La classificazione dei requisiti verrà effettuata mediante la seguente codifica:\newline
 \centerline{\textbf{R[Tipo][Priorità][Numero]}}\newline
 dove:
@@ -112,6 +113,7 @@ dove:
 	\item Numero: codice identificativo dei requisiti.
 \end{itemize}
 \paragraph{Classificazione dei casi d'uso}
+\label{Class_uso}
 //// DA FARE
 \paragraph{Metriche}
 //// DA FARE
@@ -155,7 +157,7 @@ L'utilizzo dei diagrammi UML 2.0 rende le scelte progettuali adottate più compr
 \paragraph{Test}
 Ogni \prog{} avrà il compito di definire test opportuni, che dovranno essere accompagnati da eventuali classi utili ad individuare errori ed anomalie.
 \subsubsection{Codifica}
-La codifica ha come scopo quello di normare l'effettiva realizzazione del prodotto software richiesto. In questa fase, di fatto, si concretizza l'architettura di alto livello pensata dai \progs{} nel documento \PdQ{}. I \progrs{} dovranno attenersi a queste norme durante la fase di programmazione e implementazione. L'uso di norme e convenzioni in questa fase è fondamentale per permettere la generazione di codice leggibile e uniforme, agevolare le fasi di manutenzione, verifica e validazione e migliorare la qualità del prodotto.
+La codifica lo scopo di normare l'effettiva realizzazione del prodotto software richiesto. In questa fase, di fatto, si concretizza l'architettura di alto livello pensata dai \progs{} nel documento \PdQ{}. I \progrs{} dovranno attenersi a queste norme durante la fase di programmazione e implementazione. L'uso di norme e convenzioni in questa fase è fondamentale per permettere la generazione di codice leggibile e uniforme, agevolare le fasi di manutenzione, verifica e validazione e migliorare la qualità del prodotto.
 \paragraph{Convenzioni per i nomi}
 \begin{itemize}
 	\item ogni nome deve essere univoco;
