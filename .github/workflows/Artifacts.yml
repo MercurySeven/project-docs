@@ -1,9 +1,14 @@
 name: Continuos Integration for LaTeX
-
-on:
+  
+on: 
   push:
     branches:
       - master
+    paths:
+      - 'Esterni/**'
+      - 'Interni/**'
+      - 'Stile/**'
+      - '.github/**'
 jobs:
   build:
 
