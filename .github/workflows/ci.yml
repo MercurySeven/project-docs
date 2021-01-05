@@ -25,7 +25,7 @@ jobs:
           - working_directory: Interni/StudioDiFattibilità
             root_file: "StudioDiFattibilità"
           - working_directory: Interni/Verbali\ Interni
-            root_file: "VI"
+            root_file: "VI*"
  
             
 
@@ -37,7 +37,7 @@ jobs:
       - name: Find file
         id: file
         working-directory: ${{ matrix.working_directory }}
-        run:  echo "##[set-output name=file;]$(basename `ls -R | grep ${{ matrix.root_file }}` .tex)"
+        run:  echo "##[set-output name=file;]$(find -name '${{ matrix.root_file }}')"
 
       # Runs a single command using the runners shell
       - name: Tex to PDF
