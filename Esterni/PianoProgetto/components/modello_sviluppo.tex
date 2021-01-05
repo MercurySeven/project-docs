@@ -1,38 +1,39 @@
-\section{Modello di sviluppo}
+\section{Modello di sviluppo }
 
-Dobbiamo poter garantire in ogni momento la qualità del prodotto e la sua conformità rispetto ai requisiti richiesti.
-Per questo motivo abbiamo scelto il modello di sviluppo incrementale in quanto ad ogni iterazione 
-riduce il rischio di fallimento e produce nuovo valore.
+Come \glo{team} di sviluppo dobbiamo poter garantire in ogni momento la qualità del prodotto \glo{software} e la sua conformità rispetto ai \glo{requisiti}. \newline
+Il modello \glo{iterativo} permette un ciclo evolutivo più flessibile e favorisce il dialogo con gli \glo{stackholder}, adattandosi più facilmente alle esigenze. \newline 
+Per tali motivi abbiamo deciso di adottare questo tipo di modello, riducendo i rischi e producendo nuovo valore ad ogni iterazione.
 
-\subsection*{Modello incrementale}
+%info
+%https://medium.com/geekandjob-blog/scrum-cos%C3%A8-e-come-funziona-metodologia-agile-7c8988feec01
+\subsection{Modello Agile}
+Il modello di sviluppo \glo{agile} permette di progredire tramite cicli iterativi e incrementali, detti sprint.
+É un modello altamente dinamico basato su di un manifesto concepito per evitare un'eccessiva rigidità e valorizzare le risorse disponibili. \newline
+Il manifesto contiene questi quattro principi fondanti:
 
-Il modello di sviluppo incrementale permette di progredire tramite cicli di incremento, 
-ripetuti fino a quando il prodotto non soddisferà i requisiti richiesti dal cliente.
-Il ciclo di incremento risulta suddiviso nei seguenti passi:
 \begin{enumerate}
-    \item pianificazione;
-    \item analisi dei requisiti;
-    \item progettazione;
-    \item implementazione;
-    \item test;
-    \item valutazione.
+    \item \textbf{Gli individui e le interazioni più che i processi e gli strumenti}: le persone che fanno parte del progetto producono valore e sono una grande risorsa diponibile;
+    \item \textbf{Il software funzionante più che la documentazione esaustiva}: la documentazione va snellita e resa più flessibile senza però perderne in qualità, allocando più risorse al \glo{software}
+    \item \textbf{La collaborazione col cliente più che la negoziazione dei contratti}: un contratto inflessibile può essere una potenziale perdità di valore per gli \glo{attori} coinvolti. Va quindi incentivata l’interazione con gli \glo{stakeholder} durante lo sviluppo del progetto;
+    \item \textbf{Rispondere al cambiamento più che seguire un piano}: i cambiamenti sono probabili durante lo sviluppo di grandi progetti per questo pianificare tutto fin dall'inizio potrebbe essere uno spreco di risorse.
 \end{enumerate}
-Ogni ciclo di incremento permette lo sviluppo di una funzionalità aggiuntiva,
-preventivamente discussa con il cliente durante la fase iniziale del ciclo stesso.
-la ciclicità prevista dal modello incrementale facilita anche il versionamento del sistema,
-tracciando modifiche nette al software.
+
+% FIXME compila con rientro sfasato
+L’idea di base per implementare tali principi è l’utilizzo del \textbf{\glo{Product Backlog}}, che cresce man mano che il prodotto viene costruito. \newline
+Il lavoro viene quindi suddiviso in piccole funzionalità chiamate \textbf{\glo{User Story}} le quali poi vengono selezionate per essere portate a ternime negli \textbf{sprint}, venendo, di fatto, sviluppate indipendentemente in una sequenza continua dall’analisi all’integrazione. \newline
+
+Gli obiettivi strategici sono quindi:
+\begin{itemize}
+    \item poter costantemente e in ogni momento dimostrare al cliente ciò che è stato fatto;
+    \item verificare l’avanzamento tramite il progresso reale dello sviluppo;
+    \item soddisfare e motivare gli sviluppatori con risultati immediati;
+    \item assicurare e dimostrare una buona \glo{verifica} e integrazione dell’intero prodotto \glo{software}.
+\end{itemize}
+
 
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.5]{components/img/incrementale.png}
-    \caption{Rappresentazione del modello incrementale}
-    \label{fig:logo}
+    \includegraphics[scale = 0.25]{components/img/agile.png}
+    \caption{Rappresentazione del modello agile}
+    \label{fig:Rappresentazione del modello agile}
 \end{figure}
-
-l'utilizzo di questo modello permette di ottenere importanti vantaggi, quali:
-\begin{itemize}
-    \item assegnare una maggior priorità alle funzionalità primarie, in modo tale da poter essere sottoposte al cliente nel minor tempo possibile;
-    \item l'utilizzo dello sviluppo per incrementi successivi limita la modifica e le correzioni degli errori al singolo incremento, risultano meno onerose in termini di tempo e, di conseguenza, di costi;
-    \item le verifiche e i test sono circoscritti al singolo incremento, cioè alle nuove funzionalità;
-    \item possibilità di un maggior numero di feedback da parte del cliente, aumentando l'efficienza.
-\end{itemize}
