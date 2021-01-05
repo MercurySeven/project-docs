@@ -4,6 +4,11 @@ on:
   push:
     branches:
       - main
+    paths:
+      - 'Esterni/**'
+      - 'Interni/**'
+      - 'Stile/**'
+      - '.github/**'
 jobs:
   build:
 
