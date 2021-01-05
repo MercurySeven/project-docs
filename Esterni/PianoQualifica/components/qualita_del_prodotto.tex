@@ -17,86 +17,140 @@ In questa sezione vengono definite le caratteristiche di cui i membri del gruppo
 
 \textbf{Metriche}
 \begin{itemize}
-\item MPRDD001 Indice di Gulpease;
-\item Correttezza ortografica.
+\item MDC1 Indice di Gulpease;
+\item MDC2 Correttezza ortografica.
 \end{itemize}
 
 \subsubsection{Qualità del software}
 
 \paragraph{Funzionalità}
 
+Il prodotto deve fornire tutte le funzionalità determinate nel documento di \AdR{}.
+
 \textbf{Obiettivi}
 \begin{itemize}
-\item \textbf{Accuratezza}:
-\item \textbf{Adeguatezza}:
-\item \textbf{Sicurezza}:
+\item \textbf{Accuratezza}: le funzionalità del prodotto soddisfano le richieste del committente;
+\item \textbf{Adeguatezza}: le funzionalità del prodotto hanno il comportamento aspettato;
+\item \textbf{Sicurezza}: il prodotto garantisce la sicurezza dei dati sensibili gestiti.
 \end{itemize}
 
 \textbf{Metriche}
 \begin{itemize}
-\item MPRDS001 ;
-\item MPRDS001 .
+\item MPR3 Soddisfazione requisiti obbligatori;
+\item MPR4 Soddisfazione requisiti opzionali.
 \end{itemize}
 
 \paragraph{Affidabilità}
 
+Durante l'utilizzo del prodotto non si devono riscontrare errori durante l'utilizzo delle funzionalità da parte dell'utente. Eventuali errori devono essere adeguatamente gestiti.
+
 \textbf{Obiettivi}
 \begin{itemize}
-\item \textbf{Maturità}:
-\item \textbf{Tolleranza agli errori}:
+\item \textbf{Maturità}: il prodotto non deve avere malfunzionamenti;
+\item \textbf{Tolleranza agli errori}: capacità del prodotto di gestire casi di errore.
 \end{itemize}
 
 \textbf{Metriche}
 \begin{itemize}
-\item MPRDS003 ;
-\item MPRDS004 .
+\item MVR1 Percentuale di malfunzionamenti del programma in rapporto ai test eseguiti;
+\item MCD1 Percentuale degli errori gestiti.
 \end{itemize}
 
 \paragraph{Usabilità}
 
+Il prodotto deve essere intuitivo e pratico.
+
 \textbf{Obiettivi}
 \begin{itemize}
-\item \textbf{Comprensibilità}:
-\item \textbf{Apprendibilità}:
-\item \textbf{Operabilità}:
-\item \textbf{Attrattiva}:
+\item \textbf{Comprensibilità}: il prodotto deve essere quanto più intuitivo possibile per garantire che l'utente sia in grado di riconoscere e utilizzare le funzionalità offerte con uno sforzo e un investimento di tempo minimo;
+\item \textbf{Apprendibilità}: presenza di documentazione per l'utente;
+\item \textbf{Operabilità}: le funzionalità offerte dal prodotto sono in linea con le aspettative dell'utente;
+\item \textbf{Attrattiva}: il prodotto deve essere utilizzabile facilmente e avere una presentazione attraente per l'utente.
 \end{itemize}
 
 \textbf{Metriche}
 \begin{itemize}
-\item MPRDS005 ;
-\item MPRDS006 .
+\item MVR2 Comprensibilità delle funzionalità offerte;
+\item MVR3 Facilità di apprendimento e di utilizzo del prodotto.
 \end{itemize}
 
 
 \paragraph{Efficienza}
 
+La quantità di risorse utilizzate deve essere ottimale.
+
 \textbf{Obiettivi}
 \begin{itemize}
-\item \textbf{Comportamento rispetto al tempo}:
-\item \textbf{Utilizzo delle risorse}:
+\item \textbf{Complessità delle funzioni}: le funzioni codificate devono rimanere al di sotto di una specifica soglia di complessità.
+\item \textbf{Utilizzo delle risorse}: il prodotto deve essere efficiente e consumare la quantità ottimale di risorse.
 \end{itemize}
 
 \textbf{Metriche}
 \begin{itemize}
-\item MPRDS007 ;
-\item  MPRDS009 .
+\item MCD2 Complessità ciclomatica.
 \end{itemize}
 
 \paragraph{Manutenibilità}
 
+Il prodotto deve essere facilmente estendibile e adattabile.
+
 \textbf{Obiettivi}
 \begin{itemize}
-\item \textbf{Stabilità}:
-\item \textbf{Testabilità}:
-\item \textbf{Modificabilità}:
-\item \textbf{Analizzabilità}:
+\item \textbf{Stabilità}: la codifica del prodotto deve essere chiara e robusta così da facilitare l'aggiunta di funzionalità;
+\item \textbf{Testabilità}: il prodotto deve essere nella condizione di poter essere testato in modo facile e veloce;
+\item \textbf{Modificabilità}: la codifica del prodotto deve essere facilmente estensibile;
+\item \textbf{Analizzabilità}: la struttura del prodotto deve facilitare la ricerca delle cause di eventuali malfunzionamenti.
 \end{itemize}
 
 \textbf{Metriche}
 \begin{itemize}
-\item MPRDS008 ;
-\item MPRDS010 ;
-\item MPRDS011 ;
-\item MPRDS013 .
+\item MCD3 Variabili non utilizzate;
+\item MCD4 Rapporto linee di codice e linee commentate.
 \end{itemize}
+
+\subsubsection{Tabella riassuntiva delle metriche}
+\paragraph{Documenti}
+Di seguito sono riportate le metriche in forma di tabella.
+\begin{table}[H]
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzurroGruppo!10}{white}
+			\begin{tabular}{ c C{6cm} C{3cm} C{3cm} }
+				\rowcolor{AzzurroGruppo!30} 
+				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
+				\toprule
+				MDC1 & Indice di Gulpease & $ 50 < x < 100$ & $60 < x < 100$ giorni \\
+				MDC2 & Correttezza ortografica & $ 95 \%$ privi di errori & $ 100\%$ privi di errori \\
+				\bottomrule
+			\end{tabular}
+			\caption{Tabella delle metriche e degli obiettivi relativi alla documentazione}
+		\end{center}
+	\end{table}
+	
+\paragraph{Prodotto}
+\begin{table}[H]
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzurroGruppo!10}{white}
+			\begin{tabular}{ c C{6cm} C{3cm} C{3cm} }
+				\rowcolor{AzzurroGruppo!30} 
+				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
+				\toprule
+				MPR3 & Soddisfazione requisiti obbligatori & $100 \%$ & $100 \%$ giorni \\
+				MPR4 & Soddisfazione requisiti opzionali & $ 0 \%$ & $ 100\%$ \\
+				MVR1 & Percentuale di malfunzionamenti del programma in rapporto ai test eseguiti & $ 0\%$ - $5\%$  & $0\%$ \\
+				MCD1 & Percentuale degli errori gestiti & $ 95\%$ - $100\% $ & $100\%$ \\
+				MVR2 & Comprensibilità delle funzionalità offerte & $ 80\%$ - $100\% $ & $100\%$ \\
+				MVR3 & Facilità di apprendimento e di utilizzo del prodotto & $10$-$15$ minuti & $5$-$10$ minuti \\
+				MCD2 & Complessità ciclomatica & $0$ - $30$ & $0$ - $30$ \\
+				MCD3 & Variabili non utilizzate & $0$ & $0$ \\
+				MCD4 & Rapporto linee di codice e linee commentate & $5$ - $3$ & $3$ - $1$\\
+				\bottomrule
+			\end{tabular}
+			\caption{Tabella delle metriche e degli obiettivi relativi al prodotto}
+		\end{center}
+	\end{table}
