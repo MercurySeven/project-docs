@@ -22,8 +22,8 @@ jobs:
     strategy:
       matrix:
         include:
-          - working_directory: Interni/StudioDiFattibilita
-            root_file: "StudioDiFattibilita"
+          - working_directory: Interni/StudioDiFattibilità
+            root_file: "StudioDiFattibilità"
             
             - working_directory: Tutorial
             root_file: "main"
