@@ -1,20 +1,10 @@
-sudo:       required
-language:   generic
-services:   docker
-
-tex-config:
-  - tex-scheme=small
-  - push-type=none
-  - build-pattern=tests/*/main.tex
-  - packages=lipsum, blindtext
-
-env:
-  global:
-    ## When you have done the travis encrypting, then it should look
-    ## something like this
-    # secure: ENCRYPTED-GITHUBTOKEN
-    - IS_TRAVIS=true
-
+install:
+ - source ./texlive_install.sh
+cache:
+  directories:
+    - /tmp/texlive
+    - $HOME/.texlive
 script:
-  -  chmod +x .travis/travis-texbuild.sh
-  - .travis/travis-texbuild.sh
+- mkdir _build
+# Prefix command with travis_wait x so it times out after 3 mins
+- travis_wait 3 pdflatex -output-directory _build ./src/nameofmytexfile.tex
