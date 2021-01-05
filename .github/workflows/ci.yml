@@ -3,7 +3,7 @@ name: SWE Docs Artifacts
 on: 
   push:
     branches:
-      - develop
+      - main
     paths:
       - 'Esterni/**'
       - 'Interni/**'
