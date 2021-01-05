@@ -16,5 +16,5 @@ jobs:
     - name: Latex compiler
       uses: Edivad99/CILatex@v1.0
       with:
-        path_to_list: .github/files_to_compile
+        path_to_list: .github/filesToCompile
         artifact: true
