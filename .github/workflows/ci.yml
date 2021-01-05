@@ -24,8 +24,8 @@ jobs:
         include:
           - working_directory: Interni/StudioDiFattibilità
             root_file: "StudioDiFattibilità"
-          - working_directory: Interni/Verbali\ Interni
-            root_file: "VI*"
+          #- working_directory: Interni/Verbali\ Interni
+          # root_file: "VI*"
  
             
 
