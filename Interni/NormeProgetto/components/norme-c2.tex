@@ -137,8 +137,19 @@ Ogni caso d'uso possiede inoltre la seguente struttura:
 	\item \textbf{Scenario principale:} rappresentazione attraverso elenco numerato del flusso degli eventi;
 	\item \textbf{Estensioni:} opzionali, impiegati per modellare scenari alternativi. Al verificarsi di una determinata condizione, il caso d'uso ad essa collegata viene interrotto;
 \end{itemize}
-\paragraph{Metriche}
-//// DA FARE
+\paragraph{Qualità dei requisiti}
+Ciascun requisito dovrà rispettare le seguenti qualità:
+\begin {itemize}
+	\item \textbf{Completezza:} descrizione specifica e dettagliata di ogni funzionalità richiesta dal prodotto software e del suo comportamento in risposta agli input dati;
+	\item \textbf{Consistenza:} non devono crearsi situazioni di contraddizione tra requisiti;
+	\item \textbf{Correttezza:} il requisito deve risultare veramente necessario e richiesto dagli utenti finali;
+	\item \textbf{Univocità:} ogni requisito deve essere contraddistinto da un codice formale univoco;
+	\item \textbf{Modificabilità:} il requisito deve poter cambiare nel tempo in modo facile, completo, consistente e in modo da mantenere la struttura e lo stile;
+	\item \textbf{Non ambiguità:} il requisito dove avere una sola interpretazione;
+	\item \textbf{Priorità:} il requisito ha un identificatore che ne esprime l'importanza;
+	\item \textbf{Verificabilità:} si deve poter verificare che l'applicazione realizzi il requisito individuato;
+	\item \textbf{Tracciabilità:} il requisito ha un'origine chiara, un nome e un numero in modo da poterlo referenziare in futuro.
+\end{itemize}
 \subsubsection{Progettazione}
 \paragraph{Scopo}
 L'attività di progettazione definisce, in funzione dei requisiti specificati nel documento \AdR{}, le caratteristiche che il prodotto richiesto deve avere in modo da fornire la soluzione migliore che soddisfi i requisiti degli \glo{stakeholders}. Questa fase provvede a:
