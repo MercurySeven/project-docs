@@ -50,6 +50,7 @@ jobs:
         name: Costruisco Glossario
         run: |
             ls -l
+            pip -V
             pip install -r requirements.txt
             python3 make-glossario-github.py
             echo "FATTO"
