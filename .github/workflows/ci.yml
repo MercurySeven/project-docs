@@ -37,6 +37,9 @@ jobs:
           #- working_directory: Esterni/PianoQualifica
           #  root_file: "PianoQualifica"
 
+          - working_directory: Esterni/Glossario
+            root_file: "Glossario"
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -46,6 +49,11 @@ jobs:
         id: file
         working-directory: ${{ matrix.working_directory }}
         run:  echo "##[set-output name=file;]$(basename `ls | egrep ${{ matrix.root_file }}` .tex)"
+
+      - name: Costruisco Glossario
+        if: contains(${{ matrix.working_directory }}, 'Glossario')
+        run: echo "SONO NEL GLOSSARIO"
+
 
       # Runs a single command using the runners shell
       - name: Tex to PDF
