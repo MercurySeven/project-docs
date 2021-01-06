@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Consolidamento dei requisiti" company="" webLink="http://" view-date="2021-01-01" view-index="0" gantt-divider-location="407" resource-divider-location="300" version="2.8.11" locale="it_IT">
+<?xml version="1.0" encoding="UTF-8"?><project name="Consolidamento dei requisiti" company="" webLink="http://" view-date="2021-01-01" view-index="0" gantt-divider-location="407" resource-divider-location="300" version="2.8.11" locale="it">
     <description/>
     <view zooming-state="default:0" id="gantt-chart">
         <field id="tpd3" name="Nome" width="218" order="0"/>
         <field id="tpd4" name="Data d'inizio" width="93" order="1"/>
         <field id="tpd5" name="Data di fine" width="92" order="2"/>
         <option id="color.recent">
-            <![CDATA[#0000ff]]>
+            <![CDATA[#ffff33 #0000ff]]>
         </option>
     </view>
     <view id="resource-table">
@@ -42,30 +42,32 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Norme di progetto" color="#8cb6ce" meeting="false" start="2021-01-12" duration="4" complete="0" thirdDate="2020-12-22" thirdDate-constraint="0" expand="true">
-            <task id="2" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-            <task id="3" name="verifica" color="#0000ff" meeting="false" start="2021-01-13" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="4" name="Analisi dei requisiti" meeting="false" start="2021-01-12" duration="5" complete="0" expand="true">
-            <task id="5" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="4" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-            <task id="6" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="2" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="7" name="Piano di Progetto" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
-            <task id="8" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-            <task id="9" name="consuntivo" color="#8cb6ce" meeting="false" start="2021-01-15" duration="2" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-            <task id="10" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="11" name="Piano di Qualifica" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
-            <task id="12" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="5" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-            <task id="13" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="14" name="Glossario" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
-            <task id="15" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="4" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-            <task id="16" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="17" name="Presentazione" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
-            <task id="18" name="realizzazione" color="#8cb6ce" meeting="false" start="2021-01-12" duration="5" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
-            <task id="19" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+        <task id="21" name="SPRINT 5" color="#ffff33" meeting="false" start="2021-01-12" duration="6" complete="0" thirdDate="2021-01-12" thirdDate-constraint="0" expand="true">
+            <task id="0" name="Norme di progetto" color="#8cb6ce" meeting="false" start="2021-01-12" duration="4" complete="0" thirdDate="2020-12-22" thirdDate-constraint="0" expand="true">
+                <task id="2" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+                <task id="3" name="verifica" color="#0000ff" meeting="false" start="2021-01-13" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="4" name="Analisi dei requisiti" meeting="false" start="2021-01-12" duration="5" complete="0" expand="true">
+                <task id="5" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="4" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+                <task id="6" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="2" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="7" name="Piano di Progetto" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
+                <task id="8" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+                <task id="9" name="consuntivo" color="#8cb6ce" meeting="false" start="2021-01-15" duration="2" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+                <task id="10" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="11" name="Piano di Qualifica" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
+                <task id="12" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="5" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+                <task id="13" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="14" name="Glossario" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
+                <task id="15" name="incremento" color="#8cb6ce" meeting="false" start="2021-01-12" duration="4" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+                <task id="16" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="17" name="Presentazione" meeting="false" start="2021-01-12" duration="6" complete="0" expand="true">
+                <task id="18" name="realizzazione" color="#8cb6ce" meeting="false" start="2021-01-12" duration="5" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+                <task id="19" name="verifica" color="#0000ff" meeting="false" start="2021-01-15" duration="3" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
+            </task>
         </task>
         <task id="20" name="RR" color="#8cb6ce" meeting="true" start="2021-01-18" duration="0" complete="0" thirdDate="2020-12-21" thirdDate-constraint="0" expand="true"/>
     </tasks>
