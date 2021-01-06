@@ -48,7 +48,9 @@ jobs:
 
       - name: Costruisco Glossario
         if: contains(${{ matrix.working_directory }}, 'Glossario')
-        run: echo "SONO NEL GLOSSARIO"
+        steps:
+          - run: echo "SONO NEL GLOSSARIO"
+          - run: echo ${{ matrix.working_directory }}
 
       - name: Find file
         id: file
