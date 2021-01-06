@@ -58,7 +58,6 @@ jobs:
         run: |
           pip install -r requirements.txt
           python3 make-glossario-github.py
-          cat Esterni/Glossario/Glossario.tex
 
 
       - name: Find file
