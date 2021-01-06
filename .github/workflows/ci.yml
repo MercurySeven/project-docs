@@ -51,14 +51,13 @@ jobs:
 
       - if: contains(matrix.working_directory, 'Glossario')
         name: Costruisco Glossario
-        run: |
-          pip install -r requirements.txt
-          python3 make-glossario-github.py
         env:
           private_key_id: ${{ secrets.private_key_id }}
           private_key: ${{ secrets.private_key }}
           client_id: ${{ secrets.client_id }}
-          
+        run: |
+          pip install -r requirements.txt
+          python3 make-glossario-github.py
 
 
       - name: Find file
