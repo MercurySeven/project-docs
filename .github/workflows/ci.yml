@@ -48,7 +48,9 @@ jobs:
 
       - if: contains(matrix.working_directory, 'Glossario')
         name: Costruisco Glossario
-        run: echo Costruisco il dizionario
+        run: |
+          echo Costruisco il dizionario
+          python -V
 
       - name: Find file
         id: file
