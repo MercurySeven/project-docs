@@ -46,9 +46,9 @@ jobs:
       - uses: actions/checkout@v2
 
 
-      - name: Costruisco Glossario
+      - if: contains(${{ matrix.working_directory }}, 'Glossario')
+        name: Costruisco Glossario
         run: echo Costruisco il dizionario
-        if: contains(${{ matrix.working_directory }}, 'Glossario')
 
       - name: Find file
         id: file
