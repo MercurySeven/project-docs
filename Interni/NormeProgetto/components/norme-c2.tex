@@ -114,7 +114,29 @@ dove:
 \end{itemize}
 \paragraph{Classificazione dei casi d'uso}
 \label{Class_uso}
-//// DA FARE
+La convenzione prescelta per la rappresentazione dei casi d'uso è la seguente:
+UC[CodiceBase](.[CodiceSottoCaso])*
+Composta da:
+\begin{itemize}
+	\item \textbf{UC:} acronimo di "Use Case";
+	\item \textbf{CodiceBase:} identificativo del caso d'uso generico;
+	\item \textbf{CodiceSottoCaso:} identificativo opzionale per gli eventuali sotto casi del caso d'uso.
+\end{itemize}
+Ogni caso d'uso possiede inoltre la seguente struttura:
+\begin{itemize}
+	\item \textbf{Identificativo:} codice del caso d'uso prescelto secondo quanto stabilito dalla convenzione enunciata sopra;
+	\item \textbf{Nome:} stringa testuale relativa al titolo del caso d'uso posta immediatamente dopo all'identificativo;
+	\item \textbf{Descrizione grafica:} realizzata impiegando il formalismo dell'UML 2.0;
+	\item \textbf{Attori:} un attore è tutto ciò che è esterno al sistema e con il quale esso interagisce. Possono essere individuate due tipologie di attori:
+	\begin{itemize}
+		\item \textbf{Attore Primario:} interagisce con il sistema per il raggiungimento di un obiettivo specifico;
+		\item \textbf{Attore Secondario:} entità esterna al sistema che aiuta l'attore primario nel raggiungimento del suo scopo.
+	\end{itemize}
+	\item \textbf{Precondizione:} specifica le condizioni del sistema prima del verificarsi degli eventi del caso d'uso;
+	\item \textbf{Postcondizione:} specifica le condizioni del sistema dopo il verificarsi degli eventi del caso d'uso;
+	\item \textbf{Scenario principale:} rappresentazione attraverso elenco numerato del flusso degli eventi;
+	\item \textbf{Estensioni:} opzionali, impiegati per modellare scenari alternativi. Al verificarsi di una determinata condizione, il caso d'uso ad essa collegata viene interrotto;
+\end{itemize}
 \paragraph{Metriche}
 //// DA FARE
 \subsubsection{Progettazione}
