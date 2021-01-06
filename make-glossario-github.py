@@ -38,7 +38,7 @@ def main() -> None:
         "type": "service_account",
         "project_id": "glossario-765f4",
         "private_key_id": os.environ.get('private_key_id'),
-        "private_key": os.environ.get('private_key'),
+        "private_key": os.environ.get('private_key').replace("\\n", "\n"),
         "client_email": "firebase-adminsdk-lxanj@glossario-765f4.iam.gserviceaccount.com",
         "client_id": os.environ.get('client_id'),
         "auth_uri": "https://accounts.google.com/o/oauth2/auth",
