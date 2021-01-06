@@ -50,8 +50,8 @@ jobs:
         if: contains(${{ matrix.working_directory }}, 'Glossario')
         steps:
           - run: |
-          echo "SONO NEL GLOSSARIO"
-          echo ${{ matrix.working_directory }}
+            echo "SONO NEL GLOSSARIO"
+            echo ${{ matrix.working_directory }}
 
       - name: Find file
         id: file
