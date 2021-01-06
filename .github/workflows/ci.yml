@@ -56,8 +56,9 @@ jobs:
           private_key: ${{ secrets.private_key }}
           client_id: ${{ secrets.client_id }}
           run: |
-            python3 make-glossario-github.py
             pip install -r requirements.txt
+            python3 make-glossario-github.py
+            echo "FATTO"
 
 
       - name: Find file
