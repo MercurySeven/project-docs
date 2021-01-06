@@ -44,16 +44,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.1'
 
 
       - if: contains(matrix.working_directory, 'Glossario')
         name: Costruisco Glossario
         run: |
-            ls -l
-            pip -V
-            pip install -r requirements.txt
-            python3 make-glossario-github.py
-            echo "FATTO"
+          pip install -r requirements.txt
+          python3 make-glossario-github.py
         env:
           private_key_id: ${{ secrets.private_key_id }}
           private_key: ${{ secrets.private_key }}
