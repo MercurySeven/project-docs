@@ -51,6 +51,7 @@ jobs:
         run: |
           echo Costruisco il dizionario
           python3 -V
+          ls -l
 
       - name: Find file
         id: file
