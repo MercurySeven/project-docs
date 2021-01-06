@@ -45,14 +45,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+
+      - name: Costruisco Glossario
+        if: contains(${{ matrix.working_directory }}, 'Glossario')
+        run: echo "SONO NEL GLOSSARIO"
+
       - name: Find file
         id: file
         working-directory: ${{ matrix.working_directory }}
         run:  echo "##[set-output name=file;]$(basename `ls | egrep ${{ matrix.root_file }}` .tex)"
 
-      - name: Costruisco Glossario
-        if: contains(${{ matrix.working_directory }}, 'Glossario')
-        run: echo "SONO NEL GLOSSARIO"
 
 
       # Runs a single command using the runners shell
