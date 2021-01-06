@@ -47,8 +47,8 @@ jobs:
 
 
       - name: Costruisco Glossario
-        if: ${{ matrix.working_directory }} == 'Esterni/Glossario'
         run: echo ${{ matrix.working_directory }}
+        if: ${{ matrix.working_directory }} == 'Esterni/Glossario'
 
       - name: Find file
         id: file
