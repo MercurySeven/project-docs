@@ -33,6 +33,7 @@ def findSectionEnd(lines: typing.List[str]) -> int:
 
 def main() -> None:
     # Fetch the service account key JSON file contents
+    print(os.environ.get('client_id'))
     secrets = {
         "type": "service_account",
         "project_id": "glossario-765f4",
@@ -46,6 +47,7 @@ def main() -> None:
         "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-lxanj%40glossario-765f4.iam.gserviceaccount.com"
     }
 
+    
 
     cred = credentials.Certificate(secrets)
 
