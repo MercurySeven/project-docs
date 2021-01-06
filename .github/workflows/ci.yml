@@ -55,6 +55,7 @@ jobs:
           private_key_id: ${{ secrets.private_key_id }}
           private_key: ${{ secrets.private_key }}
           client_id: ${{ secrets.client_id }}
+          client_x509_cert_url: ${{ secrets.client_x509_cert_url }}
         run: |
           pip install -r requirements.txt
           python3 make-glossario-github.py
