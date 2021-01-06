@@ -49,14 +49,15 @@ jobs:
       - if: contains(matrix.working_directory, 'Glossario')
         name: Costruisco Glossario
         uses: actions/setup-python@v2
-          with:
-            python-version: '3.9.1'
-        run: pip install -r requirements.txt
-          env:
-            private_key_id: ${{ secrets.private_key_id }}
-            private_key: ${{ secrets.private_key }}
-            client_id: ${{ secrets.client_id }}
-        run: python3 make-glossario-github.py
+        with: 
+          python-version: '3.9.1'
+        env:
+          private_key_id: ${{ secrets.private_key_id }}
+          private_key: ${{ secrets.private_key }}
+          client_id: ${{ secrets.client_id }}
+          run: |
+            python3 make-glossario-github.py
+            pip install -r requirements.txt
 
 
       - name: Find file
