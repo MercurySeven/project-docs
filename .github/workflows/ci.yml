@@ -58,29 +58,30 @@ jobs:
         run: |
           pip install -r requirements.txt
           python3 make-glossario-github.py
+          cat Esterni/Glossario/Glossario.tex
 
 
-      - name: Find file
-        id: file
-        working-directory: ${{ matrix.working_directory }}
-        run:  echo "##[set-output name=file;]$(basename `ls | egrep ${{ matrix.root_file }}` .tex)"
+      # - name: Find file
+      #   id: file
+      #   working-directory: ${{ matrix.working_directory }}
+      #   run:  echo "##[set-output name=file;]$(basename `ls | egrep ${{ matrix.root_file }}` .tex)"
 
 
 
-      # Runs a single command using the runners shell
-      - name: Tex to PDF
-        uses: xu-cheng/latex-action@v2
-        with:
-          working_directory: ${{ matrix.working_directory }}
-          root_file: ${{ steps.file.outputs.file }}.tex
-          post_compile: |
-            latexmk -c
-            mv *.pdf ../
-          latexmk_shell_escape: true
+      # # Runs a single command using the runners shell
+      # - name: Tex to PDF
+      #   uses: xu-cheng/latex-action@v2
+      #   with:
+      #     working_directory: ${{ matrix.working_directory }}
+      #     root_file: ${{ steps.file.outputs.file }}.tex
+      #     post_compile: |
+      #       latexmk -c
+      #       mv *.pdf ../
+      #     latexmk_shell_escape: true
 
-      # Runs a set of commands using the runners shell
-      - uses: actions/upload-artifact@v2
-        with:
-          name: Documenti
-          path: |
-            ${{ github.workspace }}/**/*.pdf
+      # # Runs a set of commands using the runners shell
+      # - uses: actions/upload-artifact@v2
+      #   with:
+      #     name: Documenti
+      #     path: |
+      #       ${{ github.workspace }}/**/*.pdf
