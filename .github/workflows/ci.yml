@@ -48,7 +48,8 @@ jobs:
 
       - if: contains(${{ matrix.working_directory }}, 'Glossario')
         name: Costruisco Glossario
-        run: echo Costruisco il dizionario
+        steps:
+        - run: echo Costruisco il dizionario
 
       - name: Find file
         id: file
