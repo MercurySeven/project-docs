@@ -50,7 +50,7 @@ jobs:
         name: Costruisco Glossario
         run: |
           echo Costruisco il dizionario
-          python -V
+          python3 -V
 
       - name: Find file
         id: file
