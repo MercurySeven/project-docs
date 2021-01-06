@@ -33,7 +33,6 @@ def findSectionEnd(lines: typing.List[str]) -> int:
 
 def main() -> None:
     # Fetch the service account key JSON file contents
-    print(os.environ.get('client_id'))
     secrets = {
         "type": "service_account",
         "project_id": "glossario-765f4",
