@@ -25,17 +25,17 @@ jobs:
           - working_directory: Interni/StudioDiFattibilità
             root_file: "StudioDiFattibilità"
 
-          - working_directory: Interni/NormeProgetto
-            root_file: "NormeProgetto"
+          #- working_directory: Interni/NormeProgetto
+          #  root_file: "NormeProgetto"
 
-          - working_directory: Esterni/AnalisiDeiRequisiti
-            root_file: "AnalisiDeiRequisiti"
+          #- working_directory: Esterni/AnalisiDeiRequisiti
+          #  root_file: "AnalisiDeiRequisiti"
 
-          - working_directory: Esterni/PianoProgetto
-            root_file: "PianoProgetto"
+          #- working_directory: Esterni/PianoProgetto
+          #  root_file: "PianoProgetto"
 
-          - working_directory: Esterni/PianoQualifica
-            root_file: "PianoQualifica"
+          #- working_directory: Esterni/PianoQualifica
+          #  root_file: "PianoQualifica"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
