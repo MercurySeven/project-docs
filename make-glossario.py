@@ -1,4 +1,5 @@
 import re
+import os
 import typing
 from pathlib import Path
 import firebase_admin
@@ -31,8 +32,25 @@ def findSectionEnd(lines: typing.List[str]) -> int:
 
 
 def main() -> None:
+    
+    if os.path.isfile('glossarioChiave.json'):
+        secrets = 'glossarioChiave.json'
+    else:
+        secrets = {
+            "type": "service_account",
+            "project_id": "glossario-765f4",
+            "private_key_id": os.environ.get('private_key_id'),
+            "private_key": os.environ.get('private_key').replace("\\n", "\n"),
+            "client_email": "firebase-adminsdk-lxanj@glossario-765f4.iam.gserviceaccount.com",
+            "client_id": os.environ.get('client_id'),
+            "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+            "token_uri": "https://oauth2.googleapis.com/token",
+            "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+            "client_x509_cert_url": os.environ.get('client_x509_cert_url')
+        }
+
     # Fetch the service account key JSON file contents
-    cred = credentials.Certificate('glossarioChiave.json')
+    cred = credentials.Certificate(secrets)
 
     # Initialize the app with a service account, granting admin privileges
     firebase_admin.initialize_app(cred, {
