@@ -37,7 +37,7 @@ def main() -> None:
          ) as openedFile:
             for lineNumber, line in enumerate(openedFile):
                 curr_line = line
-                if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None)):
+                if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None) and (re.search("input{",line) is None)):
                     for name in parole:
                         #regex = r"(?<!\\glo{)\b" + name +r"\b(?=[},\W])"
                         #https://stackoverflow.com/questions/4213800/is-there-something-like-a-counter-variable-in-regular-expression-replace/4214173#4214173
