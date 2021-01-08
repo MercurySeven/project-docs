@@ -45,8 +45,8 @@ jobs:
           - working_directory: Interni/StudioDiFattibilità
             root_file: "StudioDiFattibilità"
 
-          #- working_directory: Interni/NormeProgetto
-          #  root_file: "NormeProgetto"
+          - working_directory: Interni/NormeDiProgetto
+            root_file: "NormeDiProgetto"
 
           - working_directory: Esterni/AnalisiDeiRequisiti
             root_file: "AnalisiDeiRequisiti"

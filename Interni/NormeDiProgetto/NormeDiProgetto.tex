@@ -1,0 +1,31 @@
+\documentclass[a4paper, oneside]{article}
+
+\makeatletter
+    \renewcommand\paragraph{%
+        \@startsection{paragraph}{4}{0mm}%
+           {-\baselineskip}%
+           {.5\baselineskip}%
+           {\normalfont\normalsize\bfseries}}
+    \makeatother
+
+
+\usepackage{../../Stile/mercuryseven}
+\usepackage{titlesec}
+\input{informazioni.tex}
+\begin{document}
+\copertina{}
+\input{components/registro_modifiche.tex}
+\newpage
+\newpage
+\tableofcontents
+\listoftables
+\newpage
+\input{components/norme-c1.tex}
+\newpage
+\input{components/norme-c2.tex}
+\newpage
+\input{components/norme-c3.tex}
+\newpage
+\input{components/norme-c4.tex}
+\newpage
+\end{document}
