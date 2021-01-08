@@ -1,13 +1,25 @@
 %ricordarsi di compilare più di una volta
 \documentclass[a4paper,12pt]{letteracdp}
 \usepackage{../Stile/mercuryseven}
-\input{informazioni.tex}
+\usepackage[demo]{graphicx}
 \usepackage{titlesec}
+
 \address{
-	\begin{center}
-		\vspace{-0.5cm}
-		\includegraphics[scale=0.50]{../Stile/Logo.png} \\
-	\end{center}
+
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.4\linewidth]{../Stile/Unipd.png}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.7\linewidth]{../Stile/Logo.png}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
 	
     \vspace{0.2cm}
 	Ingegneria del Software \\
@@ -62,7 +74,7 @@ Egregio Professore Riccardo Cardin,}
 		\item \docVE{}2020-12-31;
 		
 	\end{itemize}
-Come descritto nel documento \docPdP{}\versPdP{} ,il gruppo \gruppo{} ha preso l'impegno di consegnare il prodotto richiesto entro la prima data fissata per la Revisione di Accettazione, preventivando costi per un importo totale di \textbf{\EUR{13058}}. \newline
+Come descritto nel documento \docPdP{}\versPdP{}, il gruppo \gruppo{} ha preso l'impegno di consegnare il prodotto richiesto entro la prima data fissata per la Revisione di Accettazione, preventivando costi per un importo totale di \textbf{\EUR{13058}}. \newline
 Di seguito si riportano i nomi dei componenti del gruppo e i rispettivi numeri di matricola:
 	
 	
