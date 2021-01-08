@@ -224,17 +224,25 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto softwa
 		Complessità ciclomatica & L'annidamento di cicli sarà evitato il più possibile. In questo modo le funzioni non saranno troppo onerose da eseguire e soprattutto godranno di una maggiore leggibilità. \\  			
 		\bottomrule
 		\hiderowcolors
-		\caption{Descrizione norme sulle pratiche di codifica}
+		\caption{Descrizione delle norme delle pratiche di codifica}
 	\end{longtable}
 }
 \subsubsection{Metriche}
-\paragraph{MCD02 Facilità di comprensione}
+\textit{Il gruppo si riserva la possibilità di ampliare opportunamente la sezione in futuro.}
+\paragraph{MCD03 Variabili non utilizzate}
+Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice.
+\paragraph{MCD04 Facilità di comprensione}
 Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice.
 La formula adottata è:\newline
 \centerline{\textbf{R=$\frac{numero\ linee\ commento}{numero\ linee\ codice}$}}
-\textit{Il gruppo si riserva la possibilità di ampliare opportunamente la sezione in futuro.}
+\paragraph{MCD05 Code coverage}
+Metrica che riporta la quantità di codice coperta da test. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi.
+\paragraph{MCD06 Lunghezza della riga di codice}
+Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica.
+\paragraph{MCD07 Brevità dei metodi}
+I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva.
+
 \subsubsection{Strumenti}
 Di seguito vengono presentati gli strumenti che il gruppo ha deciso di adottare all'interno del progetto durante il processo di Sviluppo.
-\paragraph{IDE}
 \paragraph{StarUML}
 Per la generazione di diagrammi UML il gruppo ha deciso di utilizzare StarUML in quanto offre molte agevolazioni che permettono una produzione veloce dei diagrammi e risulta uno strumento di semplice apprendimento e uso.
