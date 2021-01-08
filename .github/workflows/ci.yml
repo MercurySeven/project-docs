@@ -13,8 +13,28 @@ on:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
+
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.1'
+
+      - name: Upload Parole nel Glossario
+        env:
+          private_key_id: ${{ secrets.private_key_id }}
+          private_key: ${{ secrets.private_key }}
+          client_id: ${{ secrets.client_id }}
+          client_x509_cert_url: ${{ secrets.client_x509_cert_url }}
+        run: |
+          pip install -r requirements.txt
+          python3 upload-glossario.py
+
   # This workflow contains a single job called "build"
   build:
+    needs: setup
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
@@ -28,8 +48,8 @@ jobs:
           - working_directory: Interni/NormeDiProgetto
             root_file: "NormeDiProgetto"
 
-          #- working_directory: Esterni/AnalisiDeiRequisiti
-          #  root_file: "AnalisiDeiRequisiti"
+          - working_directory: Esterni/AnalisiDeiRequisiti
+            root_file: "AnalisiDeiRequisiti"
 
           #- working_directory: Esterni/PianoProgetto
           #  root_file: "PianoProgetto"
