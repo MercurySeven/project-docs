@@ -17,7 +17,19 @@ jobs:
   setup:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "CIAO";
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.1'
+
+      - name: Upload Parole nel Glossario
+        env:
+          private_key_id: ${{ secrets.private_key_id }}
+          private_key: ${{ secrets.private_key }}
+          client_id: ${{ secrets.client_id }}
+          client_x509_cert_url: ${{ secrets.client_x509_cert_url }}
+        run: |
+          pip install -r requirements.txt
+          python3 upload-glossario.py
 
   # This workflow contains a single job called "build"
   build:
