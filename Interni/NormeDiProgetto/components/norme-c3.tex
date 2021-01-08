@@ -87,7 +87,7 @@ Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeD
 		\item \textbf{NomeDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convenzione PascalCase);
 		\item \textbf{v[X].[Y].[Z]} con \textbf{v} che abbrevia la parola versione, \textbf{[X]} indica il numero incrementale di revisione del responsabile di progetto, \textbf{[Y]} indica il numero incrementale della verifica, \textbf{[Z]} indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni verifica ed approvazione.
 		\item \textbf{[a].[b]} con \textbf{A} che indica una versione completa e funzionante del prodotto: le componenti software
-implementano tutti i requisiti obbligatori, i test sono stati tutti superati, le metriche di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto software non è più retrocompatibile; la numerazione parte da 0 e non viene annullata; \textbf{B} indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \textit{sprint}, partendo da 0 e non venendo mai annullata.
+implementano tutti i requisiti obbligatori, i test sono stati tutti superati, le metriche di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto software non è più retrocompatibile; la numerazione parte da 0 e non viene annullata; \textbf{B} indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata.
 	\end{itemize}
 	\item La denominazione dei verbali sarà la seguente\newline
 	\textbf{Verbale[Interno/Esterno]\_[YYYY]\_[MM]\_[DD]}\newline
@@ -159,7 +159,7 @@ La struttura sarà quindi la seguente:
 \end{itemize}
 \subsubsection{Norme tipografiche}
 \paragraph{Convenzioni di denominazione}   
-I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \textit{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli.
+I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli.
 \paragraph{Stili di testo}
 Gli stili di testo adottati nei documenti sono: 
 \begin{itemize}
@@ -230,7 +230,7 @@ La formula adottata è:\newline
 Indice che riporta la correttezza ortografica del testo. Questo valore deve essere il più elevato possibile come indicato nel \PdQ{}.
 
 \subsubsection{Strumenti di stesura}
-Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX, l'editor \textit{Texmaker} e \textit{GNU aspell}.
+Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX e l'editor \textit{Texmaker}.
 \paragraph{\LaTeX}
 Per la stesura dei documenti è stato scelto \LaTeX, un linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti.
 \paragraph{Texmaker}
@@ -263,16 +263,16 @@ il progetto;
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
 \centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline
 \paragraph{Tecnologie adottate}
-Per la gestione delle versioni è stato scelto di utilizzare il sistema di versionamento distribuito \glo{Git} con due repository remoti presenti su \glo{GitHub}.
+Per la gestione delle versioni è stato scelto di utilizzare il sistema di versionamento distribuito \textit{Git} con due repository remoti presenti su \textit{GitHub}.
 \paragraph{Repository}
 Il gruppo \textit{\Gruppo{}} ha scelto di creare due repository per il progetto:
 \begin{itemize}
 	\item \textbf{project-SSD} per il versionamento del codice realizzato(\url{https://github.com/MercurySeven/project-SSD});
 	\item \textbf{\repoDoc{}} per il versionamento dei documenti redatti (\url{https://github.com/MercurySeven/project-docs}).
 \end{itemize}
-Il gruppo ha deciso di optare per una separazione logica del codice e della documentazione per poter avere una struttura ed una organizzazione migliore. I due repo sono comunque entrambi facilmente reperibili nella pagina dell'organizzazione (\url{https://github.com/MercurySeven}).
+Il gruppo ha deciso di optare per una separazione logica del codice e della documentazione per poter avere una struttura ed una organizzazione migliore. I due repository sono comunque entrambi facilmente reperibili nella pagina dell'organizzazione (\url{https://github.com/MercurySeven}).
 \paragraph{Struttura del repository}
-Per entrambi i repository, esiste una versione \textbf{locale} sul computer di ogni membro ed una versione \textbf{remota} su \glo{GitHub}.\newline
+Per entrambi i repository, esiste una versione \textbf{locale} sul computer di ogni membro ed una versione \textbf{remota} su \textit{GitHub}.\newline
 Il repository \textbf{project-SSD} risulta avere una struttura ancora indefinita data l'assenza di codice.\newline
 Il repository \textbf{\repoDoc{}} è invece strutturato nel seguente modo:
 \begin{itemize}
@@ -422,7 +422,7 @@ Ogni test viene descritto con:
 		\item non implementato;
 		\item non eseguito;
 		\item superato;
-		\item non superato;
+		\item non superato.
 	\end{itemize}
 \end{itemize}
 Il codice identificativo presenta la seguente struttura:\newline
