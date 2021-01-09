@@ -237,6 +237,9 @@
 \newcommand{\gruppo}{\emph{Mercury Seven}}
 \newcommand{\progetto}{\emph{SSD: Soluzioni di sincronizzazione desktop}}
 \newcommand{\NomeProgetto}{\emph{SSD: Soluzioni di sincronizzazione desktop}}
+%comandi per un fuckuppare la lista delle tabelle
+\let\lstoftables\listoftables
+\renewcommand{\listoftables}{\setcounter{table}{0} \renewcommand{\thetable}{\arabic{table}} \lstoftables}
 
 %Variabili per i colori
 \definecolor{darkgreen}{RGB}{49, 135, 23}
