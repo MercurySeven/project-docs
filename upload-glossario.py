@@ -38,6 +38,7 @@ def main() -> None:
         with file.open(
             "r", encoding="utf-8", errors="strict", newline="\n"
         ) as openedFile:
+            print(f"Checking: {str(file)}")
             for lineNumber, line in enumerate(openedFile):
                 for match in re.finditer(r"\\glo\{(?P<entry>.*?)\}", line):
                     entry = match.group("entry")
