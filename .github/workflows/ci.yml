@@ -60,6 +60,9 @@ jobs:
           - working_directory: Esterni/Glossario
             root_file: "Glossario"
 
+          - working_directory: LetteraDiPresentazione
+            root_file: "LetteraDiPresentazione"
+
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
