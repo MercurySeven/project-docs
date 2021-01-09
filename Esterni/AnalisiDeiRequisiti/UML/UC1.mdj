@@ -1267,10 +1267,10 @@
 											},
 											"font": "Arial;13;1",
 											"left": 401.5,
-											"top": 486,
+											"top": 483.5,
 											"width": 126,
-											"height": 26,
-											"text": "Visualizza messaggio di errore",
+											"height": 52,
+											"text": "Visualizza messaggio di errore inserimento credenziali",
 											"wordWrap": true
 										},
 										{
@@ -1303,9 +1303,9 @@
 									],
 									"font": "Arial;13;0",
 									"left": 396.5,
-									"top": 479,
+									"top": 476.5,
 									"width": 136,
-									"height": 38,
+									"height": 64,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF2vp/4yMmD3Ww="
 									},
@@ -1406,7 +1406,7 @@
 							"left": 368,
 							"top": 464,
 							"width": 193,
-							"height": 69,
+							"height": 90,
 							"nameCompartment": {
 								"$ref": "AAAAAAF2vp/4yMmC0F8="
 							},
@@ -1684,7 +1684,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "Visualizza messaggio di errore",
+					"name": "Visualizza messaggio di errore inserimento credenziali",
 					"ownedElements": [
 						{
 							"_type": "UMLExtend",
