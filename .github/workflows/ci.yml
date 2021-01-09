@@ -31,8 +31,8 @@ jobs:
           #- working_directory: Esterni/AnalisiDeiRequisiti
           #  root_file: "AnalisiDeiRequisiti"
 
-          #- working_directory: Esterni/PianoProgetto
-          #  root_file: "PianoProgetto"
+          - working_directory: Esterni/PianoDiProgetto
+            root_file: "PianoDiProgetto"
 
           #- working_directory: Esterni/PianoQualifica
           #  root_file: "PianoQualifica"
