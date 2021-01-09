@@ -219,6 +219,7 @@
 %variabili per documenti
 \newcommand{\AdR}{\emph{Analisi dei Requisiti}}
 \newcommand{\docAdR}{\emph{AnalisiDeiRequisiti}}
+\newcommand{\LdP}{\emph{Lettera di Presentazione}}
 \newcommand{\SdF}{\emph{Studio di Fattibilità}}
 \newcommand{\docSdF}{\emph{StudioDiFattibilita}}
 \newcommand{\VI}{\emph{Verbale Interno}}
@@ -241,6 +242,7 @@
 \newcommand{\TB}{\emph{Tecnology Baseline}}
 \newcommand{\PB}{\emph{Product Baseline}}
 \newcommand{\repoDoc}{\emph{project-docs}}
+\newcommand{\repoCode}{\emp{project-SSD}}
 
 
 %Variabili generiche
@@ -251,6 +253,9 @@
 \newcommand{\gruppo}{\emph{Mercury Seven}}
 \newcommand{\progetto}{\emph{SSD: Soluzioni di sincronizzazione desktop}}
 \newcommand{\NomeProgetto}{\emph{SSD: Soluzioni di sincronizzazione desktop}}
+%comandi per un fuckuppare la lista delle tabelle
+\let\lstoftables\listoftables
+\renewcommand{\listoftables}{\setcounter{table}{0} \renewcommand{\thetable}{\arabic{table}} \lstoftables}
 
 %Variabili per i colori
 \definecolor{darkgreen}{RGB}{49, 135, 23}
@@ -264,8 +269,8 @@
 %----Versioni---
 \newcommand{\versAdR}{\textit{v1.0.0-0.4}}
 \newcommand{\versGlo}{\textit{v1.0.0}}
-\newcommand{\versNdP}{\textit{v0}}
-\newcommand{\versPdP}{\textit{v0}}
+\newcommand{\versNdP}{\textit{v1.0.0-0.2}}
+\newcommand{\versPdP}{\textit{v1.0.0-0.4}}
 \newcommand{\versSdF}{\textit{v1.0.0-0.3}}
 \newcommand{\versPdQ}{\textit{v0}}
 \newcommand{\versMU}{\textit{v0}}

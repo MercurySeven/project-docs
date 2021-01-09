@@ -1,0 +1,40 @@
+\documentclass[a4paper, oneside]{article}
+
+\makeatletter
+    \renewcommand\paragraph{%
+        \@startsection{paragraph}{4}{0mm}%
+           {-\baselineskip}%
+           {.5\baselineskip}%
+           {\normalfont\normalsize\bfseries}}
+    \makeatother
+
+\usepackage{../../Stile/mercuryseven}
+\usepackage{titlesec}
+\input{informazioni.tex}
+\begin{document}
+\copertina{}
+
+\input{components/registro_modifiche.tex}
+\newpage
+
+\newpage
+\tableofcontents
+\listoftables
+\listoffigures
+
+\newpage
+\input{components/Introduzione.tex}
+\newpage
+\input{components/analisi_rischi.tex}
+\newpage
+\input{components/modello_sviluppo.tex}
+\newpage
+\input{components/Pianificazione}
+\newpage
+\input{components/preventivo}
+\newpage
+\input{components/consuntivo.tex}
+\newpage
+\input{components/organigramma.tex}
+
+\end{document}
