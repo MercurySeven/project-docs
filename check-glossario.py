@@ -43,6 +43,7 @@ def main() -> None:
                 (re.search("input{",line) is None) and 
                 (re.search("includegraphics",line) is None) and 
                 (re.search("http",line) is None) and 
+                (re.search("label{",line) is None) and 
                 (re.search("caption{",line) is None)):
                     for name in parole:
                         #regex = r"(?<!\\glo{)\b" + name +r"\b(?=[},\W])"
