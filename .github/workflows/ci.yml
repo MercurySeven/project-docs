@@ -1,0 +1,107 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Continuous Integration for LaTeX
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the develop branch
+  push:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+
+  setup:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.1'
+
+      - name: Upload Parole nel Glossario
+        env:
+          private_key_id: ${{ secrets.private_key_id }}
+          private_key: ${{ secrets.private_key }}
+          client_id: ${{ secrets.client_id }}
+          client_x509_cert_url: ${{ secrets.client_x509_cert_url }}
+        run: |
+          pip install -r requirements.txt
+          python3 upload-glossario.py
+
+  # This workflow contains a single job called "build"
+  build:
+    needs: setup
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    strategy:
+      matrix:
+        include:
+          - working_directory: Interni/StudioDiFattibilità
+            root_file: "StudioDiFattibilità"
+
+          - working_directory: Interni/NormeDiProgetto
+            root_file: "NormeDiProgetto"
+
+          - working_directory: Esterni/AnalisiDeiRequisiti
+            root_file: "AnalisiDeiRequisiti"
+
+          #- working_directory: Esterni/PianoProgetto
+          #  root_file: "PianoProgetto"
+
+          #- working_directory: Esterni/PianoQualifica
+          #  root_file: "PianoQualifica"
+
+          - working_directory: Esterni/Glossario
+            root_file: "Glossario"
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+      - uses: actions/setup-python@v2
+        with:
+          python-version: '3.9.1'
+
+
+      - if: contains(matrix.working_directory, 'Glossario')
+        name: Costruisco Glossario
+        env:
+          private_key_id: ${{ secrets.private_key_id }}
+          private_key: ${{ secrets.private_key }}
+          client_id: ${{ secrets.client_id }}
+          client_x509_cert_url: ${{ secrets.client_x509_cert_url }}
+        run: |
+          pip install -r requirements.txt
+          python3 make-glossario.py
+
+
+      - name: Find file
+        id: file
+        working-directory: ${{ matrix.working_directory }}
+        run:  echo "##[set-output name=file;]$(basename `ls | egrep ${{ matrix.root_file }}` .tex)"
+
+
+
+      # Runs a single command using the runners shell
+      - name: Tex to PDF
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: ${{ matrix.working_directory }}
+          root_file: ${{ steps.file.outputs.file }}.tex
+          post_compile: |
+            latexmk -c
+            mv *.pdf ../
+          latexmk_shell_escape: true
+
+      # Runs a set of commands using the runners shell
+      - uses: actions/upload-artifact@v2
+        with:
+          name: Documenti
+          path: |
+            ${{ github.workspace }}/**/*.pdf

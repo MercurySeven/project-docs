@@ -1,4 +1,5 @@
 # Documentazione del capitolato C7 SWE 2020/2021
+![CI for LaTeX](https://github.com/MercurySeven/project-docs/workflows/Continuous%20Integration%20for%20LaTeX/badge.svg)
 
 ## Composizione del gruppo
 - Daniele Giachetto
