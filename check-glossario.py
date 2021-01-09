@@ -27,7 +27,7 @@ def main() -> None:
 
     filepaths = Path(".").glob("**/*.tex")
 
-    blacklist = ["informazioni.tex","registro_modifiche.tex","Glossario.tex"]
+    blacklist = ["informazioni.tex","registro_modifiche.tex","Glossario.tex","LetteraDiPresentazione.tex","verbale.tex"]
 
     result = [file for file in filepaths if os.path.basename(file) not in blacklist]
 
@@ -37,7 +37,13 @@ def main() -> None:
          ) as openedFile:
             for lineNumber, line in enumerate(openedFile):
                 curr_line = line
-                if((re.search("section{",line) is None) and (re.search("paragraph{",line) is None) and (re.search("input{",line) is None)):
+                if((re.search("section{",line) is None) and 
+                (re.search("paragraph{",line) is None) and 
+                (re.search(r"paragraph\*{",line) is None) and 
+                (re.search("input{",line) is None) and 
+                (re.search("includegraphics",line) is None) and 
+                (re.search("http",line) is None) and 
+                (re.search("caption{",line) is None)):
                     for name in parole:
                         #regex = r"(?<!\\glo{)\b" + name +r"\b(?=[},\W])"
                         #https://stackoverflow.com/questions/4213800/is-there-something-like-a-counter-variable-in-regular-expression-replace/4214173#4214173
