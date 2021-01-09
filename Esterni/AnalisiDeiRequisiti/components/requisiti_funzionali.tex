@@ -1,0 +1,43 @@
+\subsection{Introduzione}
+Il gruppo \gruppo{} ha classificato e assegnato i requisiti secondo quanto definito nel documento \NdP{} \versNdP{} nella sezione \S{}2.2.4.5.
+
+\subsection{Requisiti funzionali}
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-8\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \centering
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{C{.20\freewidth} C{.40\freewidth} C{.20\freewidth} C{.20\freewidth}}
+        \toprule 
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Requisito} & \textbf{Descrizione} & \textbf{Classificazione} & \textbf{Fonti} \\
+        \toprule
+        \endhead
+
+        RFO01.0  & L'utente deve poter autenticarsi all'avvio dell'applicazione & Obbligatorio & UC1 \\
+
+        RFO02.0  & L'utente deve poter decidere cosa sincronizzare e cosa ignorare nelle cartelle locali & Obbligatorio & UC2.1 \\
+        RFD02.1  & L'utente deve poter mettere in pausa la sincronizzazione dal client verso il server & Desiderabile & UC2.1 \\
+        RFD02.2  & L'utente deve poter riprendere, dopo aver messo in pausa, la sincronizzazione cominciata precedentemente dal client verso il server & Desiderabile & UC2.1 \\
+        RFD02.2  & L'utente deve poter annullare la sincronizzazione dal client verso il server & Desiderabile & UC2.1 \\
+
+        RFO03.0  & L'utente deve poter decidere cosa sincronizzare e cosa ignorare dalle cartelle remote & Obbligatorio & UC2.2 \\
+        RFD03.1  & L'utente deve poter mettere in pausa la sincronizzazione dal server verso il client & Desiderabile & UC2.2 \\
+        RFD03.2  & L'utente deve poter riprendere, dopo una messa in pausa, la sincronizzazione cominciata precedentemente dal server verso il client & Desiderabile & UC2.2 \\
+        RFD03.3  & L'utente deve poter annullare la sincronizzazione dal server verso il client & Desiderabile & UC2.2 \\
+
+        RFO04.0  & La sincronizzazione dei cambiamenti nei documenti deve essere costante sia che essi siano locali o essi siano remoti & Obbligatorio & Capitolato \\
+        RFD05.0  & L'utente deve poter modificare a posteriori i documenti che intende sincronizzare & Desiderabile & UC2.1/UC2.2 \\
+        RFF06.0  & L'utente deve essere in grado di annullare una sincronizzazione già completata & Facoltativo & UC2.1/UC2.2 \\
+        RFO07.0  & L'applicazione deve poter funzionare anche quando è in corso un trasferimento di file & Obbligatorio & Capitolato \\
+        RFF08.0  & L'utente deve essere informato tramite notifica delle sincronizzazioni in entrata che riceve dal cloud & Facoltativo & Decisione interna \\
+        RFF09.0  & L'utente deve essere in grado di aggiungere un file tramite un menu contestuale & Facoltativo & Decisione interna \\
+        RFD10.0  & L'utente deve essere in grado di nascondere l'applicazione & Desiderabile & Decisione interna \\
+        RFD11.0  & L'utente deve essere in grado di visualizzare le informazioni dell'applicativo & Desiderabile & Decisione interna \\
+
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
+}
