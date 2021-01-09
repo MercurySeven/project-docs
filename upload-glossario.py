@@ -61,9 +61,10 @@ def main() -> None:
                     capitalizedEntry = initial + entry[1:]
 
                     try:
-                        if encodeForFirebase(capitalizedEntry) not in dictionary.keys():
-                            refLocal.child(encodeForFirebase(capitalizedEntry)).set("{scrivere o ignorare questa definizione}")
-                            print(f"Uploaded {capitalizedEntry}")
+                        if checkIfValid(capitalizedEntry) :
+                            if encodeForFirebase(capitalizedEntry) not in dictionary.keys():
+                                refLocal.child(encodeForFirebase(capitalizedEntry)).set("{scrivere o ignorare questa definizione}")
+                                print(f"Uploaded {capitalizedEntry}")
 
                     except KeyError:
                         print("This entry is not a suitable dictionary key.")
@@ -76,6 +77,9 @@ def encodeForFirebase(stringa) -> str :
     stringaPulita = stringa.replace(".", ",")#Firebase non accetta il . come carattere nella chiave
     stringaPulita = stringaPulita.replace("/", "\\")#Doppio slash per evitare di creare figli
     return stringaPulita
+
+def checkIfValid(stringa) -> bool :
+    return (r"\glo" not in stringa)
 
 if __name__ == "__main__":
     main()
