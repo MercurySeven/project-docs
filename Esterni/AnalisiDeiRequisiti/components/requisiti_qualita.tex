@@ -1,0 +1,26 @@
+\subsection{Requisiti di qualità}
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-8\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \centering
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{C{.20\freewidth} C{.40\freewidth} C{.20\freewidth} C{.20\freewidth}}
+        \toprule
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Requisito} & \textbf{Descrizione} & \textbf{Classificazione} & \textbf{Fonti} \\
+        \toprule
+        \endhead
+
+        RQO01    & Il prodotto deve essere sviluppato in modo concorde a quanto stabilito nelle \NdP{} \versNdP{} & Obbligatorio & Decisione interna \\
+        RQO02    & Il manuale di manutenzione deve essere disponibile in lingua italiana & Obbligatorio & Decisione interna \\
+        RQO03    & Il manuale utente deve essere disponibile in lingua italiana & Obbligatorio & Decisione interna \\
+        RQO04    & Il codice sorgente dell'applicazione deve essere disponibile in una repository pubblica su GitHub & Obbligatorio & Decisione interna \\
+        RQD05    & Il codice sorgente deve essere testato con opportuni test e avere una copertura almeno del 80\% & Desiderabile & Decisione interna \\
+        RQD06    & All'interno del repository di GitHub deve essere presente un sistema di Continuous Integration & Desiderabile & Decisione interna \\
+
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
+}
