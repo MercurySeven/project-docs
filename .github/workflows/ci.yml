@@ -54,8 +54,8 @@ jobs:
           - working_directory: Esterni/PianoDiProgetto
             root_file: "PianoDiProgetto"
 
-          #- working_directory: Esterni/PianoQualifica
-          #  root_file: "PianoQualifica"
+          - working_directory: Esterni/PianoDiQualifica
+            root_file: "PianoDiQualifica"
 
           - working_directory: Esterni/Glossario
             root_file: "Glossario"
