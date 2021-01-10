@@ -48,12 +48,12 @@ def main() -> None:
                     for name in parole:
                         #regex = r"(?<!\\glo{)\b" + name +r"\b(?=[},\W])"
                         #https://stackoverflow.com/questions/4213800/is-there-something-like-a-counter-variable-in-regular-expression-replace/4214173#4214173
-                        regex = r"(?=(?=\w)(?<!\w)(?<!\\glo{)(?<!\\ref{)(?<!\\))" + sistemaCaratteriSpeciali(name) +r"(?=(?<=\w)(?!\w)|(?=[},\W]))"
+                        regex = r"(?=(?=\w)(?<!\w)(?<!\\glo{)(?<!\\ref{)(?<!\\ignore{)(?<!\\))" + sistemaCaratteriSpeciali(name) +r"(?=(?<=\w)(?!\w)|(?=[},\W]))"
 
                         for match in re.finditer(regex, line):
                             curr_line = re.sub(regex, r"\\glo{" + name +"}", curr_line)
                         lowerCaseName = name[0].lower() + name[1:]
-                        regex = r"(?=(?=\w)(?<!\w)(?<!\\glo{)(?<!\\ref{)(?<!\\))" + sistemaCaratteriSpeciali(lowerCaseName) +r"(?=(?<=\w)(?!\w)|(?=[},\W]))"
+                        regex = r"(?=(?=\w)(?<!\w)(?<!\\glo{)(?<!\\ref{)(?<!\\ignore{)(?<!\\))" + sistemaCaratteriSpeciali(lowerCaseName) +r"(?=(?<=\w)(?!\w)|(?=[},\W]))"
                         for match in re.finditer(regex, line):
                             curr_line = re.sub(regex, r"\\glo{" + lowerCaseName +"}", curr_line)
 
