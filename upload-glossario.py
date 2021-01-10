@@ -34,6 +34,8 @@ def main() -> None:
 
     ref = db.reference('/')
 
+    cache = []
+
     for file in Path(".").glob("**/*.tex"):
         with file.open(
             "r", encoding="utf-8", errors="strict", newline="\n"
@@ -44,37 +46,43 @@ def main() -> None:
                     entry = match.group("entry")
                     initial = entry[0].upper()
 
-
-                    if not ref.child(initial).get():#Se non è presente la lettera iniziale come figlio
-                        refLocal = ref.child(initial)
-                        dictionary = dict()
-                    else:
-                        refLocal = ref.child(initial)
-                        dictionary = dict(refLocal.get().items())
-
-                    if len(entry) < 2:
-                        print(f"skipping entry {entry}, too short")
-                        continue
-
                     # cannot use the str.capitalize() function because it lowers every
                     # other letter
                     capitalizedEntry = initial + entry[1:]
 
-                    try:
-                        if checkIfValid(capitalizedEntry) :
-                            if encodeForFirebase(capitalizedEntry) not in dictionary.keys():
-                                refLocal.child(encodeForFirebase(capitalizedEntry)).set("{scrivere o ignorare questa definizione}")
-                                print(f"Uploaded {capitalizedEntry}")
+                    if capitalizedEntry not in cache :
+                        if not ref.child(initial).get():#Se non è presente la lettera iniziale come figlio
+                            refLocal = ref.child(initial)
+                            dictionary = dict()
+                        else:
+                            refLocal = ref.child(initial)
+                            dictionary = dict(refLocal.get().items())
 
-                    except KeyError:
-                        print("This entry is not a suitable dictionary key.")
-                        print(f"File: {file}")
-                        print(f"Line number: {lineNumber}")
-                        print(f"Line: {line}")
-                        print(f"Entry: {capitalizedEntry}")
+                        if len(entry) < 2:
+                            print(f"skipping entry {entry}, too short")
+                            continue
+
+                        cache.append(capitalizedEntry)
+                        #print(cache)
+                        #print(f"Lunghezza: {len(cache)}")
+                        try:
+                            if checkIfValid(capitalizedEntry) :
+                                if encodeForFirebase(capitalizedEntry) not in dictionary.keys():
+                                    refLocal.child(encodeForFirebase(capitalizedEntry)).set("{scrivere o ignorare questa definizione}")
+                                    print(f"Uploaded {capitalizedEntry}")
+
+                        except KeyError:
+                            print("This entry is not a suitable dictionary key.")
+                            print(f"File: {file}")
+                            print(f"Line number: {lineNumber}")
+                            print(f"Line: {line}")
+                            print(f"Entry: {capitalizedEntry}")
 
 def encodeForFirebase(stringa) -> str :
-    stringaPulita = stringa.replace(".", ",")#Firebase non accetta il . come carattere nella chiave
+    #stringaPulita = re.sub(r"\\ignore{(.*?)\}", r"\1", stringa)
+    stringaPulita = stringa.replace(r"\ignore{", "")
+    stringaPulita = stringaPulita.replace("  ", " ")
+    stringaPulita = stringaPulita.replace(".", ",")#Firebase non accetta il . come carattere nella chiave
     stringaPulita = stringaPulita.replace("/", "\\")#Doppio slash per evitare di creare figli
     return stringaPulita
 

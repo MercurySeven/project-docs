@@ -3,30 +3,30 @@
 \subsection{Informazioni generali}
 \begin{itemize}
 \item \textbf{Nome:} \textit{PORTACS}: piattaforma di controllo mobilità autonoma;
-\item \textbf{Proponente:} San Marco Informatica;
+\item \textbf{\glo{Proponente}:} San Marco Informatica;
 \item \textbf{Committenti:} \textit{Prof. \Tullio{}} e \textit{Prof. \Riccardo{}}.
 \end{itemize}
 
 \subsection{Descrizione del capitolato}
-Il capitolato vuole realizzare un sistema real-time dove vengono gestite più unità che hanno un punto di partenza e più punti di interesse.
-Il server centrale dovrà indicare ad ogni unità la prossima "mossa" da fare in base ai prossimi punti di interesse e le posizioni delle altre unità. 
-Inoltre, è richiesto che ci sia una mappa in real-time che consenta la visualizzazione di tutte le unità e dei loro movimenti all'interno della struttura.
+Il capitolato vuole realizzare un \glo{sistema} real-time dove vengono gestite più \glo{unità} che hanno un punto di partenza e più punti di interesse.
+Il server centrale dovrà indicare ad ogni \glo{unità} la prossima "mossa" da fare in base ai prossimi punti di interesse e le posizioni delle altre \glo{unità}. 
+Inoltre, è richiesto che ci sia una mappa in real-time che consenta la visualizzazione di tutte le \glo{unità} e dei loro movimenti all'interno della struttura.
 
 \subsection{Finalità del progetto}
 L'azienda consiglia di suddividere il prodotto nel seguente modo:
 \begin{itemize}
-\item il motore di calcolo che si occupa solamente di trovare il migliore percorso da far percorrere alla singola unità, in base a diversi algoritmi di ricerca operativa per l'ottimizzazione del percorso;
-\item il server centrale, che gestisce la comunicazione con le unità e riceve dal motore di calcolo il percorso da far percorrere all'unità;
-\item il visualizzatore/monitor real-time che dovrà fornire all'amministratore la disposizione in tempo reale di ogni unità che attualmente sta svolgendo un compito;
-\item l'unità di lavoro dovrà ricevere dal server centrale le direzioni su dove spostarsi e informare il server su possibili ostacoli o imprevisti.
+\item il motore di calcolo che si occupa solamente di trovare il migliore percorso da far percorrere alla singola \glo{unità}, in base a diversi algoritmi di ricerca operativa per l'ottimizzazione del percorso;
+\item il server centrale, che gestisce la comunicazione con le \glo{unità} e riceve dal motore di calcolo il percorso da far percorrere all'\glo{unità};
+\item il visualizzatore/monitor real-time che dovrà fornire all'amministratore la disposizione in tempo reale di ogni \glo{unità} che attualmente sta svolgendo un compito;
+\item l'\glo{unità} di lavoro dovrà ricevere dal server centrale le direzioni su dove spostarsi e informare il server su possibili ostacoli o imprevisti.
 \end{itemize}
 
 \subsection{Tecnologie interessate}
 Il capitolato offre libera scelta su come implementare l'applicazione, il gruppo aveva pensato di usare le seguenti tecnologie:
 \begin{itemize}
 \item per il motore di calcolo si pensava di usare C++, per la sua velocità di esecuzione;
-\item per il server che manda i comandi alle unità si era scelto Java;
-\item le unità mobili anche loro usano Java così da facilitare la connessione, attraverso socket, al server;
+\item per il server che manda i comandi alle \glo{unità} si era scelto Java;
+\item le \glo{unità} mobili anche loro usano Java così da facilitare la connessione, attraverso socket, al server;
 \item la mappa con l'aggiornamento real-time era stata pensata di realizzarla con ReactJs.
 \end{itemize}
 
