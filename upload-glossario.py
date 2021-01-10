@@ -79,7 +79,10 @@ def main() -> None:
                             print(f"Entry: {capitalizedEntry}")
 
 def encodeForFirebase(stringa) -> str :
-    stringaPulita = stringa.replace(".", ",")#Firebase non accetta il . come carattere nella chiave
+    #stringaPulita = re.sub(r"\\ignore{(.*?)\}", r"\1", stringa)
+    stringaPulita = stringa.replace(r"\ignore{", "")
+    stringaPulita = stringaPulita.replace("  ", " ")
+    stringaPulita = stringaPulita.replace(".", ",")#Firebase non accetta il . come carattere nella chiave
     stringaPulita = stringaPulita.replace("/", "\\")#Doppio slash per evitare di creare figli
     return stringaPulita
 
