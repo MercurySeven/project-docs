@@ -4,6 +4,7 @@
     \includegraphics[scale = 0.7]{components/img/UC1.png}
     \caption{UC1 - Autenticazione}
 \end{figure}
+\subsubsection{UC1.1 - Inserimento credenziali}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente;
 \item \textbf{Attore Secondario:} Gestore credenziali Zextras;
@@ -16,6 +17,19 @@
     \end{enumerate}
 \item \textbf{Estensioni:}
 \begin{itemize}
-\item Visualizzazione messaggio di errore inserimento credenziali (UC4 \S{}\ref{UC4}).
+\item Visualizzazione messaggio di errore inserimento credenziali (UC1.2 \S{}\ref{UC1.2}).
 \end{itemize}
+\end{itemize}
+
+\subsubsection{UC1.2 - Visualizzazione messaggio di errore inserimento credenziali}
+\label{UC1.2}
+\begin{itemize}
+\item \textbf{Attore Primario:} Utente non autenticato;
+\item \textbf{Precondizione:} Il \glo{sistema} rileva un inserimento di credenziali errate;
+\item \textbf{Postcondizione:} L'utente viene informato che le credenziali da lui inserite sono errate;
+\item \textbf{Scenario principale:}
+    \begin{enumerate}
+    \item L'utente ha inserito delle credenziali;
+    \item Il \glo{sistema} rileva che le credenziali inserite sono sbagliate.
+    \end{enumerate}
 \end{itemize}
