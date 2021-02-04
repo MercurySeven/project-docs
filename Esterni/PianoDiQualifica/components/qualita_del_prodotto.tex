@@ -164,3 +164,17 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 			\caption{Tabella delle metriche e degli obiettivi relativi al prodotto}
 		\end{center}
 	\end{table}
+	
+\section{Approccio al testing}
+Per rendere lo sviluppo più efficace e garantire una applicazione migliore dei principi Agile è stato deciso di adottare un' approccio test driven allo sviluppo (TDD). \\
+Questo tipo di approccio allo sviluppo è composto da due fasi alternate:
+\begin{itemize}
+\item Code driven testing
+\item Refactoring
+\end{itemize}
+\subsection{Code driven testing}
+L'obbiettivo di questa fase è di assicurarsi che il codice creato soddisfi i requisiti qualitativi imposti dalle metriche. Viene quindi scritto il test assicurandosi che esso non sia soddisfatto dal codice presente al momento della creazione del test. Una volta sviluppato il test si procede a scrivere la quantità minima di codice necessaria per soddisfare il test, si passa poi alla fase di refactoring.
+\subsection{Refactoring} 
+L'obbiettivo di questa fase è migliorare la struttura del codice per allinearla con gli standard di codifica delineati, rendere più efficace ed efficiente lo svolgimento della funzione implementata e assicurarsi una maggiore manutenibilità. Una volta passato il test il codice viene ristrutturato in base alle necessità e agli standard di codifica e testato nuovamente, eventualmente aggiornando i test per prevenire regressione, fino al raggiungimento di uno standard qualitativo soddisfacente. \\
+\newline
+Queste due fasi si devono ripetere ciclicamente per ogni nuovo test e per raffinare il codice, allo scopo di evitare che scelte sub ottimali effettuate in un primo momento, con lo scopo di superare i test, si possano consolidare nella codebase.
