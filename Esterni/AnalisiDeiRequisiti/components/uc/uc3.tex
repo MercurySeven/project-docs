@@ -4,6 +4,18 @@
     \includegraphics[scale = 0.6]{components/img/UC3.png}
     \caption{UC3 - Sincronizzazione file da server a client}
 \end{figure}
+\begin{itemize}
+\item \textbf{Attore Primario:} Utente autenticato;
+\item \textbf{Attore Secondario:} \glo{Zextras Drive};
+\item \textbf{Precondizione:} L'utente ha necessità di sincronizzare uno o più file dal server verso il client;
+\item \textbf{Postcondizione:} L'utente ha sincronizzato i file dal server al client;
+\item \textbf{Scenario principale:}
+    \begin{enumerate}
+    \item L'utente vuole sincronizzare un file dal server al client;
+    \item Viene scelto l'insieme dei file che dovrà essere sincronizzato;
+    \item La sincronizzazione delle modifiche viene attivata per l'insieme scelto.
+    \end{enumerate}
+\end{itemize}
 \subsubsection{UC3.1 - Seleziona file da sincronizzare dal server al client}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente autenticato;
