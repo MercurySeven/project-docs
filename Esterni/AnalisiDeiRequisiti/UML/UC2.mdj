@@ -61,7 +61,7 @@
 											"top": 298,
 											"width": 205,
 											"height": 26,
-											"text": "UC 2 Seleziona file da sincronizzare dal client al server",
+											"text": "UC 2.1 Seleziona file da sincronizzare dal client al server",
 											"wordWrap": true
 										},
 										{
@@ -1133,6 +1133,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": -32,
 											"top": 160,
 											"height": 13
 										},
@@ -1143,11 +1144,11 @@
 												"$ref": "AAAAAAF3Y8+XGmwDhfQ="
 											},
 											"font": "Arial;13;1",
-											"left": 293,
+											"left": 277,
 											"top": 239,
 											"width": 479,
 											"height": 13,
-											"text": "SSD"
+											"text": "UC 2"
 										},
 										{
 											"_type": "LabelView",
@@ -1157,6 +1158,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": -32,
 											"top": 160,
 											"width": 73.67724609375,
 											"height": 13,
@@ -1170,13 +1172,14 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": -32,
 											"top": 160,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 288,
+									"left": 272,
 									"top": 232,
 									"width": 489,
 									"height": 25,
@@ -1195,7 +1198,7 @@
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 288,
+							"left": 272,
 							"top": 232,
 							"width": 489,
 							"height": 281,
@@ -1447,7 +1450,7 @@
 											"top": 423.5,
 											"width": 149,
 											"height": 39,
-											"text": "UC 2.1 Visualizza messaggio di errore file troppo grande",
+											"text": "UC 9 Visualizza messaggio di errore file troppo grande",
 											"wordWrap": true
 										},
 										{
@@ -1803,7 +1806,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF3Y80rI2i5aiw="
 					},
-					"name": "UC 2 Seleziona file da sincronizzare dal client al server",
+					"name": "UC 2.1 Seleziona file da sincronizzare dal client al server",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -1893,7 +1896,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF3Y80rI2i5aiw="
 					},
-					"name": "SSD"
+					"name": "UC 2"
 				},
 				{
 					"_type": "UMLUseCase",
@@ -1924,7 +1927,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF3Y80rI2i5aiw="
 					},
-					"name": "UC 2.1 Visualizza messaggio di errore file troppo grande",
+					"name": "UC 9 Visualizza messaggio di errore file troppo grande",
 					"ownedElements": [
 						{
 							"_type": "UMLExtend",
