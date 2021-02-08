@@ -12,21 +12,29 @@
 \item \textbf{Scenario principale:}
     \begin{enumerate}
     \item L'utente avvia l'applicazione;
-    \item L'utente inserisce delle credenziali;
+    \item L'utente inserisce le credenziali di \glo{Zextras Drive};
     \item L'utente effettua il login nell'applicazione.
     \end{enumerate}
 \end{itemize}
-\subsubsection{UC1.1 - Inserimento credenziali}
+\subsubsection{UC1.1 - Inserimento email}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente non autenticato;
 \item \textbf{Attore Secondario:} Gestore credenziali Zextras;
-\item \textbf{Precondizione:} L'utente non è riconosciuto dal \glo{sistema};
-\item \textbf{Postcondizione:} L'utente ha inserito delle credenziali di \glo{Zextras Drive};
-\item \textbf{Scenario principale:}
-    \begin{enumerate}
-    \item L'utente avvia l'applicazione;
-    \item L'utente inserisce le credenziali relative al suo account \glo{Zextras Drive};
-    \end{enumerate}
+\item \textbf{Precondizione:} Il campo "email" non risulta compilato;
+\item \textbf{Postcondizione:} L'utente ha compilato il campo "email";
+\item \textbf{Scenario principale:} L'utente inserisce la email del suo account \glo{Zextras Drive};
+\item \textbf{Estensioni:}
+\begin{itemize}
+\item Visualizza messaggio di errore inserimento credenziali (UC8 \S{}\ref{UC8}).
+\end{itemize}
+\end{itemize}
+\subsubsection{UC1.2 - Inserimento password}
+\begin{itemize}
+\item \textbf{Attore Primario:} Utente non autenticato;
+\item \textbf{Attore Secondario:} Gestore credenziali Zextras;
+\item \textbf{Precondizione:} Il campo "password" non risulta compilato;
+\item \textbf{Postcondizione:} L'utente ha compilato il campo "password";
+\item \textbf{Scenario principale:} L'utente inserisce la password del suo account \glo{Zextras Drive};
 \item \textbf{Estensioni:}
 \begin{itemize}
 \item Visualizza messaggio di errore inserimento credenziali (UC8 \S{}\ref{UC8}).
