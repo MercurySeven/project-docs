@@ -1,0 +1,90 @@
+%ricordarsi di compilare più di una volta
+\documentclass[a4paper,12pt]{letteracdp}
+\usepackage{../../Stile/mercuryseven}
+\usepackage[demo]{graphicx}
+\usepackage{titlesec}
+\address{
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{../../Stile/Unipd.png}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{../../Stile/Logo.png}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
+	
+    \vspace{0.2cm}
+	Ingegneria del Software \\
+	Gruppo \textit{\gruppo} \\
+}
+
+\signature{
+	\Responsabile{} \\
+	\RdP{}\\
+	\vspace{0.2cm}
+	\includegraphics[scale=0.15]{firme_membri/firma-mp.png}\par
+}
+
+\date{11 febbraio 2021}
+
+\pagenumbering{gobble}
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{letter}{
+	Prof. \Tullio{} \\
+	Prof. \Riccardo{} \\
+	Dipartimento di Matematica \\
+	Università degli Studi di Padova \\
+	Via Trieste, 63 \\
+	35121 Padova}
+	
+\opening{Egregio Professore Tullio Vardanega, \newline
+Egregio Professore Riccardo Cardin,}
+
+\begin{quotation}
+	\noindent 
+	Con la presente il gruppo \gruppo{} intende comunicarVi che sono state eseguite modifiche atte a sanare gli errori segnalati nel documento \docAdR{}\_\textit{v1.0.0-0.4}. \newline{}Nello specifico le modifiche sono state:
+	\begin{itemize}
+		\item Sezione \textit{\S{}3}:
+		\begin{itemize}
+			\item Riesaminati e riscritti tutti i casi d'uso precedentemente identificati;
+			\item Aggiunti nuovi casi d'uso;
+			\item Introdotto tracciamento dei casi d'uso con nuovi codici identificativi;
+			\item Eliminazione di sotto-casi d'uso non congruenti con le funzionalità individuate dal caso d'uso specializzato.
+		\end{itemize}
+		\item Sezione \textit{\S{}4.2}:
+		\begin{itemize}
+			\item Aggiunto RF012.0;
+			\item Aggiunto RFD13.0.
+			
+		\end{itemize}
+		\item Sezione \textit{\S{}4.3}:
+		\begin{itemize}
+			\item Specificata la versione minima dei sistemi operativi supportati dal prodotto;
+			\item Specificata la versione minima utilizzata del linguaggio di programmazione e delle librerie;
+			\item Rinominato RVO05 in RF012.0.	
+		\end{itemize}
+		\item Sezione \textit{\S{}4.6}: Aggiornato il tracciamento.	
+	\end{itemize}
+In allegato troverà il seguente documento:
+\begin{itemize}
+		\item \docAdR{}\_\versAdR;		
+	\end{itemize}
+Rimaniamo a Vostra completa disposizione per qualsiasi chiarimento.
+
+\vspace{0.5cm}
+\closing{ Cordiali Saluti,}
+
+\end{quotation}
+
+\end{letter}
+
+\end{document}
