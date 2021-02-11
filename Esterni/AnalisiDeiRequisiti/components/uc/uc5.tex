@@ -1,12 +1,12 @@
-\subsection{UC5 - Visualizzazione messaggio di errore di rete}
-\label{UC5}
+\subsection{UC5 - Logout}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente autenticato;
-\item \textbf{Precondizione:} Il \glo{sistema} prova a comunicare con \glo{Zextras Drive};
-\item \textbf{Postcondizione:} L'utente viene informato che non è stato possibile completare la sincronizzazione;
+\item \textbf{Precondizione:} L'utente si trova nell'applicativo con delle credenziali riconosciute da \glo{Zextras Drive} e vuole effettuare il logout;
+\item \textbf{Postcondizione:} L'utente ha effettuato il logout e non è più riconoscibile all'interno dell'applicazione;
 \item \textbf{Scenario principale:}
     \begin{enumerate}
-    \item L'utente ha selezionato i file da sincronizzare;
-    \item L'applicazione prova a connettersi a \glo{Zextras Drive}, ma fallisce per assenza di rete.
+    \item L'utente vuole effettuare il logout;
+    \item L'utente ha effettuato il logout;
+    \item Tutti i file che l'utente in precedenza sincronizzava non vengono più sincronizzati con il server.
     \end{enumerate}
 \end{itemize}
