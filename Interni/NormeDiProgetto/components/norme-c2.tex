@@ -180,13 +180,28 @@ Il compito di ogni \prog{} è quello di definire l'architettura logica del \glo{
 \paragraph{Design patterns}
 Devono essere descritti i design pattern utilizzati per realizzare l'architettura. Ogni design pattern deve essere accompagnato da una descrizione e da un diagramma, che ne esponga il significato e la struttura.
 \paragraph{Diagrammi UML 2.0}
-L'utilizzo dei diagrammi UML 2.0 rende le scelte progettuali adottate più comprensibili e riduce ambivalenze che possono crearsi. Tra i possibili diagrammi utilizzabili, quelli che verranno principalmente utilizzati sono:
-\begin{itemize}
-\item \textbf{Diagrammi delle attività}: descrivono tutte le operazioni di una certa attività, anche fuori dal contesto \glo{software};
-\item \textbf{Diagrammi delle classi}: mostrano attributi e metodi di classi e tipi;
-\item \textbf{Diagrammi dei package}: mostrano raggruppamenti tra le classi;
-\item \textbf{Diagrammi di sequenza}: descrivono sequenze di azioni usando scelte definite.
-\end{itemize}
+
+{
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Tipo} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		Diagrammi delle attività & mostrano tutte le operazioni di una certa attività, anche fuori dal contesto. \\
+		Diagrammi delle classi & mostrano gli attributi e i metodi di classi e tipi.\\
+		DIagrammi dei package & mostrano i raggruppamenti tra le classi. \\
+		Diagrammi di sequenza & mostrano sequenze di azioni usando scelte definite.. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione dei diagrammi UML 2.0}
+	\end{longtable}
+}
 \paragraph{Test}
 Ogni \prog{} avrà il compito di definire \glo{test} opportuni, che dovranno essere accompagnati da eventuali classi utili ad individuare errori ed anomalie.
 \subsubsection{Codifica}
@@ -229,18 +244,30 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 }
 \subsubsection{Metriche}
 \textit{Il gruppo si riserva la possibilità di ampliare opportunamente la sezione in futuro.}
-\paragraph{MCD03 Variabili non utilizzate}
-Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice.
-\paragraph{MCD04 Facilità di comprensione}
-Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice.
-La formula adottata è:\newline
-\centerline{\textbf{R=$\frac{numero\ linee\ commento}{numero\ linee\ codice}$}}
-\paragraph{MCD05 Code coverage}
-Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi.
-\paragraph{MCD06 Lunghezza della riga di codice}
-Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica.
-\paragraph{MCD07 Brevità dei metodi}
-I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva.
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.15\freewidth} L{.4\freewidth} L{.2\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione metrica} & \textbf{Formula}\\
+		\toprule
+		\endhead		
+		MCD03 & Variabili non utilizzate & Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice & - \\
+		MCD04 & Facilità di comprensione & Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice & \small{R=$\frac{n^\circ\ linee\ commento}{n^\circ\ linee\ codice}$}  \\
+		MCD05 & Code coverage & Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi & - \\
+		MCD06 & Lunghezza della riga di codice & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica & - \\
+		MCD07 & Brevità dei metodi & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva & - \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle metriche}\\
+	\end{longtable}
+}
+
+
 
 \subsubsection{Strumenti}
 Di seguito vengono presentati gli strumenti che il gruppo ha deciso di adottare all'interno del progetto durante il processo di Sviluppo.
