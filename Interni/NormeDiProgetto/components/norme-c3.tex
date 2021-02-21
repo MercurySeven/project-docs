@@ -42,12 +42,12 @@ In particolare, i documenti formali prodotti saranno:
 		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
 		\toprule
 		\endhead		
-		\NdP{} & Contiene tutte le regole stabilite dai membri alle quali attenersi durante l'intera durata del progetto. & Interno \\ 
-		\PdP{} & Contiene la pianificazione di tutte le attività previste, comprendente il preventivo delle spese e una previsione dell'impegno in ore per ogni membro del gruppo. & Esterno \\
-		\PdQ{} & Descrive i criteri di valutazione della qualità impiegate dal gruppo & Esterno \\ 
-		\SdF{} & Contiene l'analisi dei capitolati messi a disposizione, evidenziandone pregi e difetti. Contiene, inoltre, il capitolato scelto dal gruppo & Interno \\
-		\AdR{} & Descrive i \glo{requisiti} che il prodotto dovrà possedere per essere in linea con le richieste dei committenti. & Esterno \\ 	
-		\G{} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
+		\textbf{\NdP{}} & Contiene tutte le regole stabilite dai membri alle quali attenersi durante l'intera durata del progetto. & Interno \\ 
+		\textbf{\PdP{}} & Contiene la pianificazione di tutte le attività previste, comprendente il preventivo delle spese e una previsione dell'impegno in ore per ogni membro del gruppo. & Esterno \\
+		\textbf{\PdQ{}} & Descrive i criteri di valutazione della qualità impiegate dal gruppo & Esterno \\ 
+		\textbf{\SdF{}} & Contiene l'analisi dei capitolati messi a disposizione, evidenziandone pregi e difetti. Contiene, inoltre, il capitolato scelto dal gruppo & Interno \\
+		\textbf{\AdR{}} & Descrive i \glo{requisiti} che il prodotto dovrà possedere per essere in linea con le richieste dei committenti. & Esterno \\ 	
+		\textbf{\G{}} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
 		\bottomrule
 		\hiderowcolors
 		\caption{Nome, Descrizione ed uso dei documenti formali prodotti}
@@ -68,8 +68,8 @@ In particolare, i documenti informali prodotti saranno:
 		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
 		\toprule
 		\endhead		
-		Verbali interni & Contengono le informazioni e le decisioni prese durante gli incontri tra i membri del gruppo. & Interno \\ 
-		Verbali esterni & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
+		\textbf{Verbali interni} & Contengono le informazioni e le decisioni prese durante gli incontri tra i membri del gruppo. & Interno \\ 
+		\textbf{Verbali esterni} & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Nome, Descrizione ed uso dei documenti informali prodotti}
@@ -158,23 +158,37 @@ La struttura sarà quindi la seguente:
 	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}}\newline con \textbf{X} indicante il numero progressivo della decisione, a partire da 1.
 \end{itemize}
 \subsubsection{Norme tipografiche}
-\paragraph{Convenzioni di denominazione}   
-I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli.
-\paragraph{Stili di testo}
-Gli stili di testo adottati nei documenti sono: 
-\begin{itemize}
-	\item \textbf{Grassetto:} viene utilizzato nei titoli delle sezioni e dei paragrafi, per enfatizzare parole, per indicare gli elementi di un elenco puntato;
-	\item \textbf{Corsivo:} viene applicato per i nomi propri (per la precisione i membri del gruppo, il \glo{proponente}, i committenti), per citare il nome di un documento e per i termini che fanno parte del glossario;
-	\item \textbf{Monospace:} per gli snippet di codice;
-	\item \textbf{Maiuscolo:} verrà usato negli acronimi e, nel caso di nomi di documenti, per le lettere iniziali delle parole che li compongono secondo la convenzione \textit{\glo{PascalCase}}.
-\end{itemize}
-\paragraph{Glossario}  
-Al fine di evitare ambiguità fra i termini è stato realizzato un documento denominato \textit{Glossario}. I termini il cui significato può risultare ambiguo saranno contrassegnati con una \textbf{G} a pedice (e.g: \texorpdfstring{glossario\textsubscript{\textbf{G}}})) ad ogni loro occorrenza e saranno riportati in ordine alfabetico con le loro rispettive definizioni.
-\paragraph{Elenchi puntati}
+\textbf{Convenzioni di denominazione}   \newline \newline
+I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli. \newline \newline
+\textbf{Stili di testo} \newline \newline
+
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Grassetto} & viene usato nei titoli delle sezioni e dei paragrafi, per enfatizzare parole, per indicare gli elementi di un elenco puntato \\
+		\textbf{Corsivo} & viene usato per i nomi propri (membri del gruppo,  \glo{proponente} e committenti), per citare il nome di un documento e per i termini che fanno parte del glossario\\
+		\textbf{Monospace} & viene usato per gli snippet di codice \\
+		\textbf{Maiuscolo} & viene usato negli acronimi e, nel caso di nomi di documenti, per le lettere iniziali delle parole che li compongono secondo la convenzione \textit{\glo{PascalCase}} \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione stili di testo}
+	\end{longtable}
+\textbf{Glossario} \newline \newline  
+Al fine di evitare ambiguità fra i termini è stato realizzato un documento denominato \textit{Glossario}. I termini il cui significato può risultare ambiguo saranno contrassegnati con una \textbf{G} a pedice (e.g: \texorpdfstring{glossario\textsubscript{\textbf{G}}})) ad ogni loro occorrenza e saranno riportati in ordine alfabetico con le loro rispettive definizioni. \newline \newline
+\textbf{Elenchi puntati} \newline \newline
 Gli elenchi puntati al primo livello di annidamento vengono scanditi con • (pallino); al livello successivo il simbolo usato è -- (doppio trattino); all'ultimo livello è .(punto fermo).\newline
 Ogni voce contenuta all'interno degli elenchi puntati inizia con la lettera maiuscola e termina con ;(punto e virgola), tranne l'ultima voce, la quale termina con .(punto fermo).\newline
-Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale. 
-\paragraph{Formato di data e formato di ora}
+Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale.  \newline \newline
+\textbf{Formato data e ora} \newline \newline
 Le date vengono indicato usato il formato stabilito dallo standard ISO 8601:\newline
 \centerline{\textbf{[YYYY]\-[MM]\-[DD]}}
 \newline
@@ -184,50 +198,132 @@ dove:
 	\item \textbf{[MM]} indica il mese;
 	\item \textbf{[GG]} indica il giorno.
 \end{itemize}
-\paragraph{Sigle}
+\textbf{Sigle} \newline 
 \begin{itemize}
 	\item Le sigle relative ai nomi dei documenti sono:
-	\begin{itemize}
-		\item \textbf{AdR}: \textit{Analisi dei \ignore{Requisiti};}	
-		\item \textbf{SdF}: \textit{Studio di Fattibilità;}	
-		\item \textbf{NdP}: \textit{Norme di Progetto;}	
-		\item \textbf{PdP}: \textit{Piano di Progetto;}	
-		\item \textbf{PdQ}: \textit{Piano di Qualifica;}
-		\item \textbf{G}: \textit{Glossario;}
-		\item \textbf{VE}: \textit{Verbale Esterno;}	
-		\item \textbf{VI}: \textit{Verbale Interno.}
-	\end{itemize}	
+	
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.25\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		 \textbf{AdR}& Analisi dei \ignore{Requisiti} \\
+		 \textbf{SdF} & Studio di Fattibilità \\
+		 \textbf{NdP} & Norme di Progetto \\
+		 \textbf{PdP} & Piano di Progetto \\
+		 \textbf{PdQ} & Piano di Qualifica \\
+		 \textbf{G} & Glossario \\
+		 \textbf{VE} & Verbale Esterno \\
+		 \textbf{VI} & Verbale Interno \\
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Sigle nomi dei documenti}
+	\end{longtable}
+		
 	\item Le sigle relative ai ruoli di progetto sono:	
-	\begin{itemize}		
-		\item \textbf{RE}: \textit{Responsabile;}		
-		\item \textbf{AM}: \textit{Amministratore;}		
-		\item \textbf{AN}: \textit{Analista;}		
-		\item \textbf{PT}: \textit{Progettista;}		
-		\item \textbf{PT}: \textit{Programmatore;}	
-		\item \textbf{VE}: \textit{Verificatore.}	
-	\end{itemize}	
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.25\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		 \textbf{RE}& Responsabile \\
+		 \textbf{AM} & Amministratore \\
+		 \textbf{AN} & Analista \\
+		 \textbf{PR} & Progettista \\
+		 \textbf{PT} & Programmatore \\
+		 \textbf{VE} & Verificatore \\
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Sigle ruoli di progetto}
+	\end{longtable}
+	
 	\item Le sigle relative alle revisioni di progetto sono:	
-	\begin{itemize}	
-		\item \textbf{RR}:\textit{Revisione dei \ignore{requisiti};} 			
-		\item \textbf{RP}:\textit{Revisione di progettazione;} 		
-		\item \textbf{RQ}:\textit{Revisione di qualifica;} 		
-		\item \textbf{RA}:\textit{Revisione di accettazione.} 	
-	\end{itemize}	
+	
+		\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.3\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		 \textbf{RR}& Revisione dei \ignore{requisiti} \\
+		 \textbf{RP} & Revisione di Progettazione \\
+		 \textbf{RQ} & Revisione di Qualifica \\
+		 \textbf{RA} & Revisione di Accettazione \\
+		 
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Sigle revisioni di progetto}
+	\end{longtable}	
+	
+
 \end{itemize}
 \subsubsection{Elementi grafici}
-Questa sezione definisce le norme per l'uso di elementi grafici quali immagini, tabelle e diagrammi.
-\begin{itemize}
-\item \textbf{Immagini:} le figure saranno centrate ed avranno una opportuna didascalia;
-\item \textbf{Grafici UML:} i grafici in linguaggio UML saranno inseriti nel documento come immagini;
-\item \textbf{Tabelle:} ogni tabella è contrassegnata da una didascalia e numerata in modo progressivo, a questa prassi fanno eccezione le tabelle del registro delle modifiche, che non presentano una didascalia.
-\end{itemize}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.2\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		 \textbf{Immagini} & le figure saranno centrate ed avranno una opportuna didascalia \\
+		  \textbf{Grafici UML} & i grafici in linguaggio UML saranno inseriti nel documento come immagini \\
+		  \textbf{Tabelle} & ogni tabella è contrassegnata da una didascalia e numerata in modo progressivo. Fanno eccezione le tabelle del registro delle modifiche, che non presentano una didascalia \\
+		 
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione elementi grafici}
+	\end{longtable}	
+
 \subsubsection{Metriche}
-\paragraph{MDC01 Indice Gulpease}
-Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana:
-La formula adottata è:\newline
-\centerline{\textbf{$Ig= 89 + \frac{300 * (n\ frasi) - 10 * (n\ lettere)}{n\ parole}$}}
-\paragraph{MDC02 Correttezza ortografica}
-Indice che riporta la correttezza ortografica del testo. Questo valore deve essere il più elevato possibile come indicato nel \PdQ{}.
+
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.15\freewidth} L{.3\freewidth} L{.35\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione metrica} & \textbf{Formula}\\
+		\toprule
+		\endhead		
+		\textbf{MDC01} & Indice di Gulpease & Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana & \small{$Ig= 89 + \frac{300 * (n\ frasi) - 10 * (n\ lettere)}{n\ parole}$} \\
+		\textbf{MDC02} & Correttezza Ortografica & Indice che riporta la correttezza ortografica del testo. Questo valore deve essere il più elevato possibile come indicato nel \PdQ{} & - \\
+		
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle metriche}\\
+	\end{longtable}
+}
+
 
 \subsubsection{Strumenti di stesura}
 Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX e l'editor \textit{Texmaker}.
@@ -386,16 +482,33 @@ L'analisi statica permette di effettuare controlli su documenti e codice, verifi
 \end{itemize}
 \paragraph{Analisi dinamica}
 L'analisi dinamica prevede l'esecuzione del prodotto \glo{software} e la sua analisi tramite l'utilizzo di \glo{test} che verificano se il prodotto funziona o se vi sono presenti anomalie.
+
 \paragraph{Test}
-\label{Test}
-L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. Per ogni \glo{test} devono essere definiti i seguenti parametri:
-\begin{itemize}
-	\item \textbf{ambiente:} \glo{sistema} hardware e \glo{software} sulla quale viene eseguito il \glo{test};
-	\item \textbf{stato iniziale:} stato iniziale dal quale parte il \glo{test};
-	\item \textbf{input:} tutti i dati ammessi in ingresso;
-	\item \textbf{output:} tutti i dati attesi in uscita;
-	\item \textbf{istruzioni aggiuntive:} istruzioni opzionali che permettono di impostare come il \glo{test} deve essere eseguito e come i risultati devono essere interpretati.
-\end{itemize}
+L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. I parametri da definire per ogni \glo{test} sono descritti nella seguente tabella.
+{
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{ambiente} & \glo{sistema} hardware e \glo{software} sulla quale viene eseguito il \glo{test} \\
+		\textbf{stato iniziale} & stato iniziale dal quale parte il \glo{test} \\
+		 \textbf{input} & tutti i dati ammessi in ingresso \\
+		\textbf{output} & tutti i dati attesi in uscita \\
+		 \textbf{istruzioni aggiuntive} & istruzioni opzionali che permettono di impostare come il \glo{test} deve essere eseguito e come i risultati devono essere interpretati \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Parametri dei test}
+	\end{longtable}
+}
+
+
 Dei \glo{test} ben progettati e scritti devono:
 \begin{itemize}
 	\item essere ripetibili;
@@ -431,19 +544,35 @@ Il codice identificativo presenta la seguente struttura:\newline
 Dove:
 \begin{itemize}
 	\item \textbf{T:} indica il "\glo{Test}";
-	\item \textbf{Tipo:} il tipo di \glo{test}, che può essere:
-	\begin{itemize}
-		\item \textbf{U}: \glo{test di \ignore{unità}};
-		\item \textbf{I}: \glo{test di integrazione};
-		\item \textbf{S}: \glo{test di \ignore{sistema}};
-		\item \textbf{R}: \glo{test di regressione};
-		\item \textbf{A}: \glo{test di accettazione}.
-	\end{itemize}
-	\item \textbf{Id:} rappresenta un codice identificativo.
+	\item \textbf{Tipo:} tipo di \glo{test};
+		{
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.05\freewidth} L{.3\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		\textbf{U} & test di \glo{unità} \\
+		\textbf{I} & test di \glo{integrazione} \\
+		 \textbf{S} & test di \glo{sistema} \\
+		\textbf{R} & test di \glo{regressione} \\
+		 \textbf{A} & test di \glo{accettazione} \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Tipo di test}
+	\end{longtable}
+}
+	\item \textbf{Id:} codice identificativo.
 \end{itemize}
 
 \subsubsection{Metriche}
 Il gruppo ritiene prematuro stabilire in questa fase delle \glo{metriche} per i \glo{test} in questione. La sezione sarà opportunamente integrata.
+
 \subsubsection{Verifica ortografica}
 Per la \glo{verifica} ortografica dei documenti scritti in \LaTeX si utilizzerà \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker}.
 \subsection{Processo di validazione}
