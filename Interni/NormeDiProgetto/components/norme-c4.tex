@@ -58,74 +58,62 @@ In questa sezione vengono descritti i seguenti aspetti del processo di pianifica
 \item il \glo{sistema} di ticketing per la gestione degli obbiettivi a medio/corto termine.
 \end{itemize} 
 \subsubsection{Ruoli di progetto}
-Durante il progetto i membri del gruppo ricoprono i seguenti ruoli
-\begin{itemize}
-\item \RdP{};
-\item \adm{};
-\item \ana{};
-\item \prog{};
-\item \progr{};
-\item \ver{}.
-\end{itemize}
-Questi ruoli vengono ricoperti dai membri del gruppo a seconda di un calendario che assicura a tutti i membri del gruppo di ricoprire durante la durata del progetto ogni ruolo diverso.
-
-\paragraph{Responsabile di Progetto}
-Il \RdP{} è la figura centrale del progetto, esso ha il compito di coordinare il \glo{team} e il ruolo di rappresentante del progetto durante le comunicazioni con l'esterno. I suoi compiti sono riassunti nei seguenti punti:
-\begin{itemize}
+		{
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.2\freewidth} L{.4\freewidth} L{.3\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} & \textbf{Compiti} \\
+		\toprule
+		\endhead		
+		\textbf{Responsabile di Progetto} & Il \RdP{} è la figura centrale del progetto, esso ha il compito di coordinare il \glo{team} e il ruolo di rappresentante del progetto durante le comunicazioni con l'esterno &  \begin{itemize}
 \item Definizione delle scadenze interne;
 \item Allocazione delle risorse umane a seconda delle attività necessarie;
 \item Rappresentazione del gruppo e del progetto con soggetti esterni;
 \item Valutazione dei rischi e distribuzione di questi ultimi;
 \item Approvazione della documentazione.
-\end{itemize}
-
-\paragraph{Amministratore}
-L'\adm{} ha il compito di gestire e configurare adeguatamente le piattaforme utilizzate dal gruppo per lo svolgimento del progetto. Da lui dipendono l'affidabilità e l'efficacia dei mezzi scelti per lo svolgimento del progetto.
-I suoi compiti sono riassunti nei seguenti punti:
-\begin{itemize}
+\end{itemize}\\
+		\textbf{Amministratore} & L'\adm{} ha il compito di gestire e configurare adeguatamente le piattaforme utilizzate dal gruppo per lo svolgimento del progetto. Da lui dipendono l'affidabilità e l'efficacia dei mezzi scelti per lo svolgimento del progetto & \begin{itemize}
 \item Amministrazione delle infrastrutture di supporto;
 \item Assistenza nella risoluzione di problematiche relative alla gestione dei processi;
 \item Gestione e archiviazione della documentazione di progetto;
 \item Salvaguardia dell'integrità del processo di correzione e \glo{verifica} della documentazione;
 \item Manutenzione delle norme e delle procedure relative alle piattaforme coinvolte nei processi di lavoro.
 \end{itemize}
-
-\paragraph{Analista}
-L' \ana{} segue il progetto principalmente nelle fasi iniziali ed è fortemente coinvolto nella stesura dell' \AdR{}. Il suo ruolo è quello di analizzare i problemi posti dal progetto e chiarire le dipendenze e le ramificazioni di ogni attività necessaria alla consegna del prodotto.
-I suoi compiti sono riassunti nei seguenti punti:
-\begin{itemize}
+ \\
+		 \textbf{Analista} & L' \ana{} segue il progetto principalmente nelle fasi iniziali ed è fortemente coinvolto nella stesura dell' \AdR{}. Il suo ruolo è quello di analizzare i problemi posti dal progetto e chiarire le dipendenze e le ramificazioni di ogni attività necessaria alla consegna del prodotto & \begin{itemize}
 \item Redigere l'\AdR{};
 \item Studio e definizione dei problemi sollevati dallo sviluppo del progetto;
 \item Definizione di dipendenze tra differenti attività all'interno del progetto;
 \item Definizione dei potenziali \glo{casi d'uso} e delle necessità dell'utente finale.
-\end{itemize}
-
-\paragraph{Progettista}
-Il \prog{} segue lo sviluppo del progetto e, a partire dai \glo{requisiti}, definisce le scelte tecniche necessarie per lo sviluppo del prodotto. 
-I suoi compiti sono riassunti nei seguenti punti:
-\begin{itemize}
+\end{itemize} \\
+		\textbf{Progettista} & Il \prog{} segue lo sviluppo del progetto e, a partire dai \glo{requisiti}, definisce le scelte tecniche necessarie per lo sviluppo del prodotto & \begin{itemize}
 \item Analisi tecnica dei problemi posti dall' \ana{};
 \item Modellazione di soluzioni ai problemi posti dall' \ana{};
 \item Realizzazione di soluzioni sostenibili e di facile manutenzione durante la fase di sviluppo.
-\end{itemize}
-
-\paragraph{Programmatore}
-Il \progr{} ha il compito di codificare i modelli realizzati dal \prog{}. Il codice prodotto dal \progr{} deve attenersi il più possibile alle specifiche elaborate dal \prog{} e documentare opportunamente il codice creato per aumentarne la manutenibilità.
-I suoi compiti sono riassunti nei seguenti punti:
-\begin{itemize}
+\end{itemize} \\
+		 \textbf{Programmatore} & Il \progr{} ha il compito di codificare i modelli realizzati dal \prog{}. Il codice prodotto dal \progr{} deve attenersi il più possibile alle specifiche elaborate dal \prog{} e documentare opportunamente il codice creato per aumentarne la manutenibilità & \begin{itemize}
 \item Codifica dei modelli realizzati dal \prog{};
 \item Documentazione del codice prodotto per facilitarne la manutenzione;
 \item Codifica delle componenti necessarie alla \glo{verifica} e alla \glo{validazione} del prodotto durante le varie fasi dello sviluppo;
 \item Stesura del \MU{} destinato ai manutentori.
-\end{itemize}
-
-\paragraph{Verificatore}
-Il \ver{} segue l'intero ciclo di vita del progetto. Egli si assicura che la qualità della documentazione prodotta aderisca alla norme stabilite. I suoi compiti sono riassunti nei seguenti punti:
-\begin{itemize}
+\end{itemize}  \\
+	 \textbf{Verificatore} & Il \ver{} segue l'intero ciclo di vita del progetto. Egli si assicura che la qualità della documentazione prodotta aderisca alla norme stabilite & \begin{itemize}
 \item Controllo e correzione della documentazione prodotta;
 \item Controllo dell'aderenza alle norme delle attività di processo;
 \item Descrizione, ove e quando necessario, delle procedure di \glo{verifica}.
-\end{itemize}
+\end{itemize} \\
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Ruoli di progetto}
+	\end{longtable}
+}
+
 
 \subsubsection{Assegnazione dei compiti}
 Le attività necessarie al completamento di un progetto, per garantire l'efficienza e la flessibilità del processo di sviluppo, devono essere suddivise in compiti. Tali compiti possono essere svolti sequenzialmente o in parallelo a seconda delle dipendenze tra di loro. Per ottimizzare il processo di suddivisione dei compiti il gruppo utilizza il \glo{sistema} di ticket offerto dalla piattaforma \glo{GitHub}.
