@@ -48,7 +48,7 @@ Il gruppo fornisce all'azienda \proponente{} e ai committenti \textit{Prof. Tull
 		\textbf{Nome} & \textbf{Descrizione} \\
 		\toprule
 		\endhead		
-		\textit{Gantt Project} & Strumento utilizzato per la realizzazione di  diagrammi di Gantt. Questi sono utili per tenere traccia delle attività coinvolte nella realizzazione del prodotto e delle relazioni tra loro, permettendo la visualizzazione delle tempistiche di avanzamento del lavoro in maniera immediata. \\
+		\textbf{Gantt Project} & Strumento utilizzato per la realizzazione di  diagrammi di Gantt. Questi sono utili per tenere traccia delle attività coinvolte nella realizzazione del prodotto e delle relazioni tra loro, permettendo la visualizzazione delle tempistiche di avanzamento del lavoro in maniera immediata. \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Strumenti utilizzati nel processo di fornitura}
@@ -206,10 +206,10 @@ Devono essere descritti i design pattern utilizzati per realizzare l'architettur
 		\textbf{Tipo} & \textbf{Descrizione} \\
 		\toprule
 		\endhead		
-		Diagrammi delle attività & mostrano tutte le operazioni di una certa attività, anche fuori dal contesto. \\
-		Diagrammi delle classi & mostrano gli attributi e i metodi di classi e tipi.\\
-		DIagrammi dei package & mostrano i raggruppamenti tra le classi. \\
-		Diagrammi di sequenza & mostrano sequenze di azioni usando scelte definite.. \\
+		\textbf{Diagrammi delle attività} & mostrano tutte le operazioni di una certa attività, anche fuori dal contesto. \\
+		\textbf{Diagrammi delle classi} & mostrano gli attributi e i metodi di classi e tipi.\\
+		\textbf{DIagrammi dei package} & mostrano i raggruppamenti tra le classi. \\
+		\textbf{Diagrammi di sequenza} & mostrano sequenze di azioni usando scelte definite.. \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione dei diagrammi UML 2.0}
@@ -240,16 +240,16 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\textbf{Pratica} & \textbf{Descrizione norma} \\
 		\toprule
 		\endhead		
-		Indentazione & Il codice dovrà essere indentato usando 4 spazi. \\ 
-		Spaziature & Dovrà essere presente una spaziatura dopo l'apertura di una parentesi graffa.  \\
-		Commenti & Ogni commento deve essere separato con uno spazio dalla sua definizione \\ 
-		Lunghezza della riga di codice & Ogni riga di codice non deve superare i 140 caratteri di lunghezza. \\
-		Brevità dei metodi & Ogni blocco di codice non dovrà superare le 50 istruzioni. Se tuttavia questo risulta indispensabile può essere permesso, per questo la norma è consigliata e non obbligatoria.\\ 	
-		Stringhe & Ogni stringa deve essere definita con singoli apici. \\
-		Funzioni & Bisogna evitare quando possibile l'utilizzo di funzioni ricorsive.\\ 	
-		Variabili & Non definire variabili che non verranno utilizzate.\\ 	
-		Operatori & Ogni operatore dovrà essere preceduto e seguito da uno spazio.\\ 	
-		Complessità ciclomatica & L'annidamento di cicli sarà evitato il più possibile. In questo modo le funzioni non saranno troppo onerose da eseguire e soprattutto godranno di una maggiore leggibilità. \\  			
+		\textbf{Indentazione} & Il codice dovrà essere indentato usando 4 spazi. \\ 
+		\textbf{Spaziature} & Dovrà essere presente una spaziatura dopo l'apertura di una parentesi graffa.  \\
+		\textbf{Commenti} & Ogni commento deve essere separato con uno spazio dalla sua definizione \\ 
+		\textbf{Lunghezza della riga di codice} & Ogni riga di codice non deve superare i 140 caratteri di lunghezza. \\
+		\textbf{Brevità dei metodi} & Ogni blocco di codice non dovrà superare le 50 istruzioni. Se tuttavia questo risulta indispensabile può essere permesso, per questo la norma è consigliata e non obbligatoria.\\ 	
+		\textbf{Stringhe} & Ogni stringa deve essere definita con singoli apici. \\
+		\textbf{Funzioni} & Bisogna evitare quando possibile l'utilizzo di funzioni ricorsive.\\ 	
+		\textbf{Variabili} & Non definire variabili che non verranno utilizzate.\\ 	
+		\textbf{Operatori} & Ogni operatore dovrà essere preceduto e seguito da uno spazio.\\ 	
+		\textbf{Complesità ciclomatica} & L'annidamento di cicli sarà evitato il più possibile. In questo modo le funzioni non saranno troppo onerose da eseguire e soprattutto godranno di una maggiore leggibilità. \\  			
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione delle norme delle pratiche di codifica}
@@ -269,11 +269,11 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione metrica} & \textbf{Formula}\\
 		\toprule
 		\endhead		
-		MCD03 & Variabili non utilizzate & Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice & - \\
-		MCD04 & Facilità di comprensione & Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice & \small{R=$\frac{n^\circ\ linee\ commento}{n^\circ\ linee\ codice}$}  \\
-		MCD05 & Code coverage & Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi & - \\
-		MCD06 & Lunghezza della riga di codice & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica & - \\
-		MCD07 & Brevità dei metodi & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva & - \\
+		\textbf{MCD03 }& Variabili non utilizzate & Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice & - \\
+		\textbf{MCD04} & Facilità di comprensione & Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice & \small{R=$\frac{n^\circ\ linee\ commento}{n^\circ\ linee\ codice}$}  \\
+		\textbf{MCD05} & Code coverage & Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi & - \\
+		\textbf{MCD06} & Lunghezza della riga di codice & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica & - \\
+		\textbf{MCD07} & Brevità dei metodi & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva & - \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione delle metriche}\\
