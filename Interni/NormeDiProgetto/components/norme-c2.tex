@@ -159,7 +159,7 @@ Ogni caso d'uso possiede inoltre la seguente struttura:
 	\begin{longtable}{L{.15\freewidth} L{.6\freewidth} L{.080\freewidth}}
 		\toprule 
 		\rowcolor{AzzurroGruppo!30}
-		\textbf{QUalità} & \textbf{Descrizione} \\
+		\textbf{Qualità} & \textbf{Descrizione} \\
 		\toprule
 		\endhead		
 		\textbf{Completezza} &  descrizione specifica e dettagliata di ogni funzionalità richiesta dal prodotto \glo{software} e del suo comportamento in risposta agli input dati\\
@@ -177,24 +177,9 @@ Ogni caso d'uso possiede inoltre la seguente struttura:
 	\end{longtable}
 
 \subsubsection{Progettazione}
-\paragraph{Scopo}
-L'attività di progettazione definisce, in funzione dei \glo{requisiti} specificati nel documento \AdR{}, le caratteristiche che il prodotto richiesto deve avere in modo da fornire la soluzione migliore che soddisfi i \glo{requisiti} degli \glo{stakeholder}. Questa fase provvede a:
+
+L'attività di progettazione definisce le caratteristiche che il prodotto richiesto deve avere in modo da fornire una soluzione che soddisfa i \glo{requisiti} specificati nell'\AdR{}. Oltre a garantire la qualità del prodotto applicando un approccio sistematico ai problemi, i compiti vengono suddivisi in modo da ridurre la complessità del problema iniziale e rendere più semplice la codifica da parte dei \progrs{}. Il compito di questi ultimi, in particolare, è quello di definire l'architettura logica del \glo{sistema}, che si adatta a ogni modifica effettuata nell'\AdR{}. Inoltre, l'architettura definita deve:
 \begin{itemize}
-\item garantire la qualità del prodotto applicando un approccio sistematico ai problemi;
-\item suddividere compiti implementativi, così da provvedere alla diminuzione della complessità del problema originale e rendere più semplice la codifica da parte dei \progrs{};
-\item ottimizzare l'utilizzo delle risorse.
-\end{itemize}
-\paragraph{Descrizione}
-Le parti principali sono due:
-\begin{itemize}
-\item \textbf{Technology baseline}: contiene le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, l'elenco dei diagrammi UML che saranno utilizzati per la realizzazione dell'architettura e i \glo{test} di \ignore{verifica};
-\item \textbf{Product baseline}: rende ancora più dettagliata l'attività di progettazione, integrando ciò che è riportato nella Technology baseline. Inoltre, definisce i \glo{test} necessari alla \glo{verifica}.
-\end{itemize}
-\paragraph{Aspettative}
-Il compito di ogni \prog{} è quello di definire l'architettura logica del \glo{sistema}. Quest'ultima, in particolare, dovrà avere le seguenti caratteristiche:
-\begin{itemize}
-\item soddisfare i \glo{requisiti} segnati nel documento \AdR{};
-\item adattarsi a ogni modifica effettuata nell'\AdR{};
 \item essere comprensibile, modulare e robusta;
 \item risultare affidabile, quindi svolgere i propri compiti ogni qual volta venga richiesto;
 \item rispettare le caratteristiche di safety e security rispetto ai malfunzionamenti;
@@ -203,9 +188,29 @@ Il compito di ogni \prog{} è quello di definire l'architettura logica del \glo{
 \item garantire riusabilità;
 \item presentare componenti semplici e coese nel raggiungimento degli obiettivi, incapsulate e con un basso livello di accoppiamento.
 \end{itemize}
+L'attività di progettazione può essere suddivisa in due parti:
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Technology Baseline} &  descrive le specifiche della progettazione ad alto livello del prodotto e delle sue componenti, l'elenco dei diagrammi UML che saranno utilizzati per la realizzazione dell'architettura e i \glo{test} di \ignore{verifica}\\
+		\textbf{Product Baseline} & rende ancora più dettagliata l'attività di progettazione, integrando ciò che è riportato nella Technology Baseline. Inoltre, definisce i \glo{test} necessari alla \glo{verifica} \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione fasi di progettazione}
+	\end{longtable}
+
 \paragraph{Design patterns}
 Devono essere descritti i design pattern utilizzati per realizzare l'architettura. Ogni design pattern deve essere accompagnato da una descrizione e da un diagramma, che ne esponga il significato e la struttura.
-\paragraph{Diagrammi UML 2.0}
+\paragraph*{Diagrammi UML 2.0}
 
 {
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
@@ -228,18 +233,19 @@ Devono essere descritti i design pattern utilizzati per realizzare l'architettur
 		\caption{Descrizione dei diagrammi UML 2.0}
 	\end{longtable}
 }
-\paragraph{Test}
+\paragraph*{Test}
 Ogni \prog{} avrà il compito di definire \glo{test} opportuni, che dovranno essere accompagnati da eventuali classi utili ad individuare errori ed anomalie.
+
+
 \subsubsection{Codifica}
-La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{software} richiesto. In questa fase, di fatto, si concretizza l'architettura di alto livello pensata dai \progs{} nel documento \PdQ{}. I \progrs{} dovranno attenersi a queste norme durante la fase di programmazione e implementazione. L'uso di norme e convenzioni in questa fase è fondamentale per permettere la generazione di codice leggibile e uniforme, agevolare le fasi di manutenzione, \glo{verifica} e \glo{validazione} e migliorare la qualità del prodotto.
-\paragraph{Convenzioni per i nomi}
+La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{software} richiesto. In questa fase si concretizza l'architettura di alto livello pensata dai \progs{} nel documento \PdQ{}. I \progrs{} dovranno attenersi a queste norme durante la fase di programmazione e implementazione. L'uso di norme e convenzioni in questa fase è fondamentale per permettere la generazione di codice leggibile e uniforme, agevolare le fasi di manutenzione, \glo{verifica} e \glo{validazione} e migliorare la qualità del prodotto.
+\paragraph*{Convenzioni per i nomi}
 \begin{itemize}
 	\item ogni nome deve essere univoco;
 	\item ogni nome di variabile, metodo, funzione seguirà il modello \glo{Lower Camel Case};
 	\item ogni nome di classe seguirà il modello \glo{PascalCase}.
 \end{itemize}
-\newpage
-\paragraph{Convenzioni sulle pratiche}
+\paragraph*{Convenzioni sulle pratiche}
 \
 {
 	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
@@ -268,6 +274,7 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\caption{Descrizione delle norme delle pratiche di codifica}
 	\end{longtable}
 }
+\newpage
 \subsubsection{Metriche}
 \textit{Il gruppo si riserva la possibilità di ampliare opportunamente la sezione in futuro.}
 {
@@ -293,9 +300,22 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 	\end{longtable}
 }
 
-
-
 \subsubsection{Strumenti}
-Di seguito vengono presentati gli strumenti che il gruppo ha deciso di adottare all'interno del progetto durante il processo di Sviluppo.
-\paragraph{StarUML}
-Per la generazione di diagrammi UML il gruppo ha deciso di utilizzare StarUML in quanto offre molte agevolazioni che permettono una produzione veloce dei diagrammi e risulta uno strumento di semplice apprendimento e uso.
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{StarUML} & Strumento utilizzato per la creazione di diagrammi UML. Offre molte agevolazioni che permettono una produzione veloce dei diagrammi e risulta uno strumento di semplice apprendimento e uso\\ 
+					
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione strumenti utilizzati nel processo di sviluppo}
+	\end{longtable}
