@@ -1,24 +1,32 @@
 \section{Processi di supporto}
 \subsection{Processo di documentazione}
-\subsubsection{Scopo}
-L'obiettivo della sezione è quello di normare le attività di stesura e aggiornamento della documentazione svolte durante il ciclo di vita del \glo{software}, così da ottenere documenti formalmente concordi.
-\subsubsection{Descrizione}
-La sezione contiene le norme tramite le quali avviene la corretta stesura dei documenti, comprendente \glo{verifica} e approvazione. I membri del gruppo sono tenuti ad attenersi alla suddetta sezione.
-\subsubsection{Aspettative}
-Le aspettative riguardanti il processo in questione sono:
-\begin{itemize}
-	\item l'identificazione di una struttura ben organizzata comune ai prodotti del processo in questione;
-	\item la raccolta di norme da rispettare durante la stesura dei documenti.
-\end{itemize}
+Il processo di documentazione comprende le attività di stesura e aggiornamento di tutti i documenti creati durante il ciclo di vita del \glo{software} in modo da renderli formalmente concordi. In particolare, in questa sezione ne vengono normate le attività, comprendenti stesura, \glo{verifica} e approvazione. 
 \subsubsection{Ciclo di vita di un documento}
 Ogni documento redatto passa per le seguenti fasi:
-\begin{itemize}
-	\item \textbf{Creazione} del documento tramite template;
-	\item \textbf{Strutturazione} del documento tramite registro delle modifiche, indice di contenuti e/o indice delle figure e delle tabelle;
-	\item \textbf{Stesura} del corpo del documento, scritto da più membri del gruppo;
-	\item \textbf{Revisione} del documento, gestita da un \textit{Verificatore} che, regolarmente, riesamina le sezioni del suddetto;
-	\item \textbf{Approvazione} del documento, stabilita dal \textit{Responsabile di Progetto} quando la revisione risulta positiva; consente il rilascio del documento. 
-\end{itemize}
+
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} & \\
+		\toprule
+		\endhead		
+		\textbf{Creazione} & il documento viene creato tramite template \\ 
+		\textbf{Strutturazione} & viene data una struttura al documento inserendo registro delle modifiche, indice di contenuti e/o indice delle figure e delle tabelle\\
+		\textbf{Stesura} & viene steso il corpo del documento, scritto da più membri del gruppo \\ 
+		\textbf{Revisione} & il documento viene sottoposto a una revisione gestita da un \textit{Verificatore} che, regolarmente, riesamina le sezioni del suddetto \\
+		\textbf{Approvazione} & quando la revisione completa del documento risulta positiva viene approvato dal \textit{Responsabile di Progetto}; consente il rilascio del documento \\ 	
+				
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione fasi di vita del documento}
+	\end{longtable}
+
 \subsubsection{Documenti prodotti \hfil}
 
 I documenti prodotti saranno di due tipi:
@@ -29,7 +37,6 @@ I documenti prodotti saranno di due tipi:
 		\item \textbf{esterni}: di interesse ai committenti e al \glo{proponente}, vengono consegnati nell'ultima versione approvata.
 	\end{itemize} 
 In particolare, i documenti formali prodotti saranno:
-\newpage
 {
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -158,9 +165,9 @@ La struttura sarà quindi la seguente:
 	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}}\newline con \textbf{X} indicante il numero progressivo della decisione, a partire da 1.
 \end{itemize}
 \subsubsection{Norme tipografiche}
-\textbf{Convenzioni di denominazione}   \newline \newline
-I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli. \newline \newline
-\textbf{Stili di testo} \newline \newline
+\paragraph*{Convenzioni di denominazione}   
+I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli. 
+\paragraph*{Stili di testo} 
 
 
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
@@ -182,13 +189,13 @@ I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \
 		\hiderowcolors
 		\caption{Descrizione stili di testo}
 	\end{longtable}
-\textbf{Glossario} \newline \newline  
-Al fine di evitare ambiguità fra i termini è stato realizzato un documento denominato \textit{Glossario}. I termini il cui significato può risultare ambiguo saranno contrassegnati con una \textbf{G} a pedice (e.g: \texorpdfstring{glossario\textsubscript{\textbf{G}}})) ad ogni loro occorrenza e saranno riportati in ordine alfabetico con le loro rispettive definizioni. \newline \newline
-\textbf{Elenchi puntati} \newline \newline
+\paragraph*{Glossario}  
+Al fine di evitare ambiguità fra i termini è stato realizzato un documento denominato \textit{Glossario}. I termini il cui significato può risultare ambiguo saranno contrassegnati con una \textbf{G} a pedice (e.g: \texorpdfstring{glossario\textsubscript{\textbf{G}}})) ad ogni loro occorrenza e saranno riportati in ordine alfabetico con le loro rispettive definizioni. 
+\paragraph*{Elenchi puntati} 
 Gli elenchi puntati al primo livello di annidamento vengono scanditi con • (pallino); al livello successivo il simbolo usato è -- (doppio trattino); all'ultimo livello è .(punto fermo).\newline
 Ogni voce contenuta all'interno degli elenchi puntati inizia con la lettera maiuscola e termina con ;(punto e virgola), tranne l'ultima voce, la quale termina con .(punto fermo).\newline
-Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale.  \newline \newline
-\textbf{Formato data e ora} \newline \newline
+Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale.  
+\paragraph*{Formato data e ora} 
 Le date vengono indicato usato il formato stabilito dallo standard ISO 8601:\newline
 \centerline{\textbf{[YYYY]\-[MM]\-[DD]}}
 \newline
@@ -198,7 +205,7 @@ dove:
 	\item \textbf{[MM]} indica il mese;
 	\item \textbf{[GG]} indica il giorno.
 \end{itemize}
-\textbf{Sigle} \newline 
+\paragraph*{Sigle} 
 \begin{itemize}
 	\item Le sigle relative ai nomi dei documenti sono:
 	
@@ -226,7 +233,7 @@ dove:
 		\hiderowcolors
 		\caption{Sigle nomi dei documenti}
 	\end{longtable}
-		
+	\newpage
 	\item Le sigle relative ai ruoli di progetto sono:	
 
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
@@ -326,12 +333,25 @@ dove:
 
 
 \subsubsection{Strumenti di stesura}
-Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX e l'editor \textit{Texmaker}.
-\paragraph{\LaTeX}
-Per la stesura dei documenti è stato scelto \LaTeX, un linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti.
-\paragraph{Texmaker}
-L'editor scelto per la stesura dei documenti è \textit{Texmaker}, adottato da tutti i membri del gruppo. \textit{Texmaker} è un editor intuitivo che permette una facile compilazione e visualizzazione dei documenti.\newline
-\url{(https://www.xm1math.net/texmaker/)}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.75\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{\LaTeX} & linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti \\
+		\textbf{Texmaker} & editor intuitivo che permette una facile compilazione e visualizzazione dei documenti. \newline \url{(https://www.xm1math.net/texmaker/)}\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Strumenti utilizzati durante il processo di documentazione}
+	\end{longtable}
+
 \subsection{Processo di configurazione}
 \subsubsection{Scopo}
 Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di documenti e codice, oltre che a renderli facilmente reperibili. Un elemento soggetto a configurazione ha una collocazione, una denominazione ed uno stato definiti; per ogni oggetto configurato sono garantiti la modifica normata ed il versionamento.
