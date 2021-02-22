@@ -56,44 +56,16 @@ Il gruppo fornisce all'azienda \proponente{} e ai committenti \textit{Prof. Tull
 
 
 \subsection{Processo di sviluppo}
-\subsubsection{Scopo}
-Il processo di sviluppo ha come scopo il descrivere attività e compiti da svolgere, in modo da realizzare il prodotto finale richiesto dal \glo{proponente}.
-\subsubsection{Descrizione}
-Il processo di sviluppo è caratterizzato da varie attività, quali:
-\begin{itemize}
-	\item Analisi dei \ignore{Requisiti};
-	\item progettazione;
-	\item codifica.
-\end{itemize}
-\subsubsection{Aspettative}
-Le aspettative sono le seguenti:
-\begin{itemize}
-	\item fissare gli obiettivi di sviluppo;
-	\item fissare i vincoli tecnologici;
-	\item fissare i vincoli di design;
-	\item realizzare un prodotto finale che, oltre a superare i \glo{test}, soddisfi i \glo{requisiti} e le richieste del \glo{proponente}.
-\end{itemize}
+Durante il processo di sviluppo vengono descritte tutte le attività e i compiti che devono essere svolti in modo da realizzare al meglio il prodotto richiesto dal \glo{proponente}: una volta definiti i requisiti di sviluppo, i vincoli tecnologici e i vincoli di design ci si aspetta di realizzare un prodotto finale che, oltre a superare i \glo{test}, soddisfi i \glo{requisiti} e le richieste del \glo{proponente}. Le attività coinvolte riguardano l'Analisi dei \ignore{Requisiti}, la progettazione e la codifica.
 \subsubsection{Analisi dei requisiti}
-\paragraph{Scopo}
-Gli \anas{} hanno il compito di redigere il documento di \AdR{}, individuando tutti i \glo{requisiti} che il \glo{proponente} richiede per la realizzazione del prodotto. Lo scopo, quindi, è quello di:
-\begin{itemize}
-	\item definire lo scopo del lavoro;
-	\item fornire ai \progs{} riferimenti precisi e affidabili;
-	\item fissare le funzionalità e i \glo{requisiti} concordati col cliente;
-	\item fornire una base per raffinamenti successivi al fine di garantire un miglioramento continuo del prodotto e del processo di sviluppo;
-	\item fornire ai \vers{} riferimenti per l'attività di controllo dei \glo{test};
-	\item tracciare riferimenti sulla mole di lavoro in modo da avere una stima dei costi.
-\end{itemize}
-\paragraph{Descrizione}
-I \glo{requisiti} vengono ricavati da diverse fonti, tra cui:
+L' \AdR{} è un documento formale, redatto dagli \anas{}, dove vengono individuati tutti i \glo{requisiti} che il \glo{proponente} richiede per la realizzazione del prodotto. Stenderlo in maniera efficace è molto importante in quanto coinvolto in diverse fasi della realizzazione del prodotto: oltre che definire funzionalità e \glo{requisiti} individuati e concordati col cliente, fornisce ai \progs{} riferimenti precisi e affidabili, ai \vers{} riferimenti per l'attività di controllo dei \glo{test} ed è la base dalla quale partire per eventuali raffinamenti successivi, garantendo un continuo miglioramento del prodotto. 
+Ogni requisito può essere ricavato da diverse fonti: 
 \begin{itemize}
 	\item \textbf{Capitolati d'Appalto}: grazie alla lettura approfondita del capitolato scelto vengono individuati dei \glo{requisiti};
 	\item \textbf{\glo{Casi d'uso}}: \glo{requisiti} estrapolati da uno o più \glo{casi d'uso}; 
 	\item \textbf{Verbali}: i \glo{requisiti} possono emergere sia dalle riunioni interne effettuate dagli \anas{}, sia da contatti o incontri con i rappresentanti dell'azienda \glo{proponente}.
 \end{itemize}
-\paragraph{Aspettative}
-L'obiettivo dell'attività di analisi è la creazione della documentazione formale contenente tutti i \glo{requisiti} richiesti dal \glo{proponente}.
-\paragraph{Struttura}
+\paragraph*{Struttura} 
 La struttura che contraddistingue l'\AdR{} è:
 \begin{itemize}
 	\item \textbf{Descrizione}: contiene informazioni riguardanti il prodotto, le componenti presenti all'interno del \glo{sistema}, la piattaforma d'esecuzione e i vincoli di progettazione individuati;
@@ -103,38 +75,65 @@ La struttura che contraddistingue l'\AdR{} è:
  		\item tracciamento dei \glo{requisiti}, suddivisi in obbligatori, desiderabili e opzionali, individuati nel \glo{sistema} durante l'analisi; approfondimento nel paragrafo \S{}\ref{Class_req};
 		\item tracciamento fonte-\glo{requisiti} e \glo{requisiti}-fonte. 
 	\end{itemize}
-\end{itemize}
-\paragraph{Classificazione dei requisiti}
+\end{itemize} 
+\paragraph*{Classificazione dei requisiti} 
 \label{Class_req}
-La classificazione dei \glo{requisiti} verrà effettuata mediante la seguente codifica:\newline
-\centerline{\textbf{R[Tipo][Priorità][Numero]}}\newline
-dove:
-\begin{itemize}
-	\item \textbf{R:} abbrevia "Requisito";
-	\item Tipo: può assumere i seguenti valori:
-	\begin{itemize}
+La classificazione dei \glo{requisiti} verrà effettuata mediante la seguente codifica:\newline \newline
+\centerline{\textbf{R[Tipo][Priorità][Numero]}}
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{R} & abbrevia "Requisito" \\
+		\textbf{Tipo} & può essere: \begin{itemize}
 		\item \textbf{F:} requisito funzionale, ossia la definizione di una particolare caratteristica che deve essere inclusa nel \glo{software};
 		\item \textbf{Q:} requisito di qualità, relativi alle regole di qualità del \glo{software} (efficienza ed efficacia);
 		\item \textbf{V:} requisito di vincolo che rappresenta dei vincoli avanzati dal \glo{proponente}.
-	\end{itemize}
-	\item \textbf{Priorità:}
-	\begin{itemize}
+	\end{itemize}  \\
+		\textbf{Priorità} & \begin{itemize}
 		\item \textbf{O:} requisito obbligatorio;
 		\item \textbf{D:} requisito desiderabile;
 		\item \textbf{F:} requisito facoltativo.
-	\end{itemize}
-	\item Numero: codice identificativo dei \glo{requisiti}.
-\end{itemize}
-\paragraph{Classificazione dei casi d'uso}
+	\end{itemize} \\
+		\textbf{Numero } & codice identificativo \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione elementi che classificano i requisiti}
+	\end{longtable}
+
+
+\paragraph*{Classificazione dei casi d'uso} 
 \label{Class_uso}
-La convenzione prescelta per la rappresentazione dei \glo{casi d'uso} è la seguente:
-UC[CodiceBase](.[CodiceSottoCaso])*
-Composta da:
-\begin{itemize}
-	\item \textbf{UC:} acronimo di "Use Case";
-	\item \textbf{CodiceBase:} identificativo del caso d'uso generico;
-	\item \textbf{CodiceSottoCaso:} identificativo opzionale per gli eventuali sotto casi del caso d'uso.
-\end{itemize}
+La convenzione prescelta per la rappresentazione dei \glo{casi d'uso} è la seguente: \newline \newline
+\centerline{\textbf{UC[CodiceBase](.[CodiceSottoCaso])*}}
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.2\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{UC} & acronimo di "Use Case" \\
+		\textbf{CodiceBase} & identificativo del caso d'uso generico \\
+		\textbf{CodiceSottoCaso} & identificativo opzionale per gli eventuali sotto casi del caso d'uso \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione elementi che classificano i casi d'uso}
+	\end{longtable}
+
 Ogni caso d'uso possiede inoltre la seguente struttura:
 \begin{itemize}
 	\item \textbf{Identificativo:} codice del caso d'uso prescelto secondo quanto stabilito dalla convenzione enunciata sopra;
@@ -150,19 +149,33 @@ Ogni caso d'uso possiede inoltre la seguente struttura:
 	\item \textbf{Scenario principale:} rappresentazione attraverso elenco numerato del flusso degli eventi;
 	\item \textbf{Estensioni:} opzionali, impiegati per modellare scenari alternativi. Al verificarsi di una determinata condizione, il caso d'uso ad essa collegata viene interrotto.
 \end{itemize}
-\paragraph{Qualità dei requisiti}
-Ciascun requisito dovrà rispettare le seguenti qualità:
-\begin {itemize}
-	\item \textbf{Completezza:} descrizione specifica e dettagliata di ogni funzionalità richiesta dal prodotto \glo{software} e del suo comportamento in risposta agli input dati;
-	\item \textbf{Consistenza:} non devono crearsi situazioni di contraddizione tra \glo{requisiti};
-	\item \textbf{Correttezza:} il requisito deve risultare veramente necessario e richiesto dagli utenti finali;
-	\item \textbf{Univocità:} ogni requisito deve essere contraddistinto da un codice formale univoco;
-	\item \textbf{Modificabilità:} il requisito deve poter cambiare nel tempo in modo facile, completo, consistente e in modo da mantenere la struttura e lo stile;
-	\item \textbf{Non ambiguità:} il requisito deve avere una sola interpretazione;
-	\item \textbf{Priorità:} il requisito ha un identificatore che ne esprime l'importanza;
-	\item \textbf{Verificabilità:} si deve poter verificare che l'applicazione realizzi il requisito individuato;
-	\item \textbf{Tracciabilità:} il requisito ha un'origine chiara, un nome e un numero in modo da poterlo referenziare in futuro.
-\end{itemize}
+\paragraph*{Qualità dei requisiti} 
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{QUalità} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Completezza} &  descrizione specifica e dettagliata di ogni funzionalità richiesta dal prodotto \glo{software} e del suo comportamento in risposta agli input dati\\
+		\textbf{Consistenza} &  non devono crearsi situazioni di contraddizione tra \glo{requisiti}\\
+		\textbf{Correttezza} &  il requisito deve risultare veramente necessario e richiesto dagli utenti finali\\
+		\textbf{Univocità} & ogni requisito deve essere contraddistinto da un codice formale univoco \\
+		\textbf{Modificabilità} &  il requisito deve poter cambiare nel tempo in modo facile, completo, consistente e in modo da mantenere la struttura e lo stile\\
+		\textbf{Non ambiguità} &  il requisito deve avere una sola interpretazione\\
+		\textbf{Priorità} &  il requisito ha un identificatore che ne esprime l'importanza\\
+		\textbf{Verificabilità} &  si deve poter verificare che l'applicazione realizzi il requisito individuato\\
+		\textbf{Tracciabilità} &  il requisito ha un'origine chiara, un nome e un numero in modo da poterlo referenziare in futuro\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Elementi che contribuiscono alla qualità dei requisiti}
+	\end{longtable}
+
 \subsubsection{Progettazione}
 \paragraph{Scopo}
 L'attività di progettazione definisce, in funzione dei \glo{requisiti} specificati nel documento \AdR{}, le caratteristiche che il prodotto richiesto deve avere in modo da fornire la soluzione migliore che soddisfi i \glo{requisiti} degli \glo{stakeholder}. Questa fase provvede a:
