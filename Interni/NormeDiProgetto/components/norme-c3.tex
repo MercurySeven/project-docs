@@ -353,10 +353,7 @@ dove:
 	\end{longtable}
 
 \subsection{Processo di configurazione}
-\subsubsection{Scopo}
-Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di documenti e codice, oltre che a renderli facilmente reperibili. Un elemento soggetto a configurazione ha una collocazione, una denominazione ed uno stato definiti; per ogni oggetto configurato sono garantiti la modifica normata ed il versionamento.
-\subsubsection{Descrizione}
-Il processo è composto dalle seguenti attività:
+Il processo di configurazione ha come scopo il gestire in maniera ordinata e sistematica la produzione di documenti e codice. In particolare, un elemento sottoposto a configurazione ha una collocazione, una denominazione e uno stato definiti, oltre che avere garantite modifica normata e versionamento. Le attività coinvolte sono:
 \begin{enumerate}
 	\item implementazione del processo;
 	\item identificazione della configurazione;
@@ -365,14 +362,6 @@ Il processo è composto dalle seguenti attività:
 	\item valutazione della configurazione;
 	\item gestione del rilascio e consegna.
 \end{enumerate}
-\subsubsection{Aspettative}
-Le attese, per l’implementazione di questo processo, sono:
-\begin{itemize}
-	\item rendere sistematica la produzione di codice e documentazione;
-	\item unificare ed uniformare lo stato degli strumenti usati durante lo svolgimento di tutto
-il progetto;
-	\item classificare i prodotti dei vari processi implementati.
-\end{itemize}
 \subsubsection{Versionamento}
 \paragraph{Codice di versionamento}
 \label{cod-versionamento}
@@ -417,26 +406,8 @@ Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo q
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il \glo{team}.
 \subsection{Gestione della qualità}
-\subsubsection{Scopo}
-Lo scopo del processo di gestione della qualità è garantire che il prodotto finale rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder}, che le esigenze espresse dal \glo{proponente} siano soddisfatte e che la qualità sia nel complesso soddisfacente. Si mira inoltre ad un maggior controllo di prodotti e processi.
-\subsubsection{Descrizione}
-Al fine di formalizzare i metodi e gli standard adottati per assicurare la qualità della documentazione e dei prodotti è redatto il \PdQ{}.
-Il documento affronta i seguenti punti:
-\begin{itemize}
-\item Strategie di sviluppo e standard adottati dal gruppo;
-\item Obiettivi e \glo{metriche} relative ai processi adottati;
-\item Obiettivi e \glo{metriche} relative ai prodotti sviluppati.
-\end{itemize}
-Il \PdQ{}, oltre a definire i \glo{requisiti} qualitativi e le \glo{metriche} usate per tracciarli, ha lo scopo di tenere traccia di tali \glo{metriche} tramite aggiornamenti periodici al documento.
-Il documento è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
-\subsubsection{Aspettative}
-Le aspettative di questo processo sono:
-\begin{itemize}
-	\item conseguimento della qualità nel prodotto, secondo le richieste del \textit{\glo{proponente}};
-	\item prova oggettiva della qualità del prodotto;
-	\item conseguimento della qualità nell'organizzazione delle attività del gruppo e dei processi;
-	\item raggiungimento della piena soddisfazione del \glo{proponente}.
-\end{itemize}
+
+Il processo di gestione della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}, documento che fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
 \subsubsection{Controllo di qualità}
 Il gruppo \textit{\Gruppo{}} ritiene fondamentale stabilire delle regole che tutti i membri vadano a rispettare per il pieno raggiungimento di un \glo{sistema} di qualità predisposto al miglioramento continuo.
 Le attività che ciascun membro deve svolgere sono:
@@ -477,25 +448,23 @@ Con il perseguimento della qualità in mente, il gruppo \textit{\Gruppo{}} ha de
 	\item ogni processo al termine della pianificazione deve avere una durata ben definita.
 \end{itemize}
 \subsection{Processo di verifica}
-\subsubsection{Scopo}
-Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Sono soggetti a \glo{verifica} sia il \glo{software} che la documentazione.
-\subsubsection{Descrizione}
-Il processo di \glo{verifica} si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi (\S{}\ref{Analisi}) e di \glo{test} (\S{}\ref{Test}). Esso viene applicato al \glo{software} ed ai documenti.
-\subsubsection{Aspettative}
-Il processo di \glo{verifica} si occupa di prendere ciò che è stato prodotto e di restituirlo in uno stato conforme alle aspettative. Per assicurare il corretto funzionamento di tale processo devono essere rispettate alcune regole:
+Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi (\S{}\ref{Analisi}) e di \glo{test} (\S{}\ref{Test}); per questo, il corretto funzionamento del processo è garantito dal rispetto delle seguenti regole: 
 \begin{itemize}
 	\item seguire procedure definite;
 	\item seguire criteri chiari ed affidabili;
-	\item i prodotti devono passare attraverso fasi successive opportunamente verificate;
+	\item passaggio del prodotto attraverso fasi successive opportunamente verificate;
 	\item il prodotto deve trovarsi in uno stato stabile dopo la \glo{verifica};
 	\item alla fine del processo deve essere possibile procedere alla fase di \glo{validazione}.
 \end{itemize}
+Sono soggetti a \glo{verifica} sia il \glo{software} che la documentazione. 
+
 \subsubsection{Attività}
 \paragraph{Analisi}
 \label{Analisi}
 Il processo di analisi si suddivide in Analisi statica ed Analisi dinamica.
 \paragraph{Analisi statica}
 L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
+
 \begin{itemize}
 	\item \textbf{Walkthrough:} tecnica di \glo{verifica} consistente nella lettura da parte del \glo{team} dell'intero documento o codice in cerca di anomalie. Verrà applicata principalmente nella fase iniziale del progetto, quando il \glo{team} ancora non conosce i possibili errori che si possono incontrare. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia.
 	\item \textbf{Inspection:} tecnica di \glo{verifica} attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo.
@@ -594,23 +563,22 @@ Dove:
 \subsubsection{Metriche}
 Il gruppo ritiene prematuro stabilire in questa fase delle \glo{metriche} per i \glo{test} in questione. La sezione sarà opportunamente integrata.
 
-\subsubsection{Verifica ortografica}
-Per la \glo{verifica} ortografica dei documenti scritti in \LaTeX si utilizzerà \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker}.
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Verifica ortografica} & Per la \glo{verifica} ortografica dei documenti scritti in \LaTeX si utilizzerà \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker} \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche processo di verifica}
+	\end{longtable}
 \subsection{Processo di validazione}
-\subsubsection{Scopo}
-Il processo di \glo{validazione} stabilisce se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se rispetta i \glo{requisiti} e le aspettative del committente.
-\subsubsection{Descrizione}
-Il processo di \glo{validazione} prende in esame il prodotto ottenuto dalla fase di \glo{Verifica} e lo restituisce garantendo che esso sia conforme ai \glo{requisiti} ed ai bisogni del committente.
-Il \RdP{} avrà la responsabilità di controllare i risultati e decidere se:
-\begin{itemize}
-	\item accettare ed approvare il prodotto;
-	\item rigettare il documento, rendendo necessario un nuovo processo di \glo{verifica} con nuove indicazioni.
-\end{itemize}
-\subsubsection{Aspettative}
-Devono essere rispettati i seguenti punti:
-\begin{itemize}
-	\item identificazione degli oggetti da validare;
-	\item elaborazione di una strategia per rendere le procedure di \glo{verifica} riutilizzabili;
-	\item valutazione dei risultati rispetto alle attese.
-\end{itemize}
+Il processo di \glo{validazione} stabilisce se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se rispetta i \glo{requisiti} e le aspettative del committente. In particolare, prende in esame il prodotto ottenuto dalla fase di \glo{Verifica} e lo restituisce garantendo che esso sia conforme ai \glo{requisiti} e ai bisogni del committente. Sarà compito del \RdP{} controllare i risultati e decidere se approvare o rigettare il documento, con conseguente richiesta di un nuovo processo. Sarà quindi fondamentale l'elaborazione di una strategia per rendere riutilizzabili le procedure di \glo{verifica}. 
 
