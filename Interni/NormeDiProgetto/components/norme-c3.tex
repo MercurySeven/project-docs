@@ -363,20 +363,20 @@ Il processo di configurazione ha come scopo il gestire in maniera ordinata e sis
 	\item gestione del rilascio e consegna.
 \end{enumerate}
 \subsubsection{Versionamento}
-\paragraph{Codice di versionamento}
+\paragraph*{Codice di versionamento}
 \label{cod-versionamento}
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
 \centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline
-\paragraph{Tecnologie adottate}
+\paragraph*{Tecnologie adottate}
 Per la gestione delle versioni è stato scelto di utilizzare il \glo{sistema} di versionamento distribuito \textit{\glo{Git}} con due \glo{repository} remoti presenti su \textit{\glo{GitHub}}.
-\paragraph{Repository}
+\paragraph*{Repository}
 Il gruppo \textit{\Gruppo{}} ha scelto di creare due \glo{repository} per il progetto:
 \begin{itemize}
 	\item \textbf{project-SSD} per il versionamento del codice realizzato(\url{https://github.com/MercurySeven/project-SSD});
 	\item \textbf{\repoDoc{}} per il versionamento dei documenti redatti (\url{https://github.com/MercurySeven/project-docs}).
 \end{itemize}
 Il gruppo ha deciso di optare per una separazione logica del codice e della documentazione per poter avere una struttura ed una organizzazione migliore. I due repository sono comunque entrambi facilmente reperibili nella pagina dell'organizzazione (\url{https://github.com/MercurySeven}).
-\paragraph{Struttura del repository}
+\paragraph*{Struttura del repository}
 Per entrambi i \glo{repository}, esiste una versione \textbf{locale} sul computer di ogni membro ed una versione \textbf{remota} su \textit{\glo{GitHub}}.\newline
 Il \glo{repository} \textbf{project-SSD} risulta avere una struttura ancora indefinita data l'assenza di codice.\newline
 Il \glo{repository} \textbf{\repoDoc{}} è invece strutturato nel seguente modo:
@@ -386,7 +386,7 @@ Il \glo{repository} \textbf{\repoDoc{}} è invece strutturato nel seguente modo:
 	\item Una cartella per ogni documento necessario per la \textit{Revisione dei \ignore{Requisiti}}.
 \end{itemize}
 Si è optato per questa soluzione per poter avere una documentazione in continua evoluzione, senza categorizzarla e bloccarla negli stati delle revisioni tramite sottocartelle contenenti le versioni delle documentazioni durante una specifica revisione.
-\paragraph{Tipi di file}
+\paragraph*{Tipi di file}
 Nelle singole cartelle dei documenti sono inclusi:
 \begin{itemize}
 \item file \textit{README.md};
@@ -394,14 +394,14 @@ Nelle singole cartelle dei documenti sono inclusi:
 \item file \textit{.png} per le immagini da inserire nei documenti.
 \end{itemize}
 Il file \textit{.gitignore} contiene al suo interno un riferimento a tutti i file che non verranno versionati; il file è posizionato al livello più esterno del \glo{repository}.
-\paragraph{Norme di branching}
+\paragraph*{Norme di branching}
 \label{NormeBranching}
 Il \glo{repository} inerente alla documentazione sarà composto da diversi \glo{branch}:
 \begin{itemize}
 	\item \textbf{Main:} \glo{branch} principale che viene aggiornato solamente quando un documento arriva in fase di rilascio, essa avviene quando incrementa la \textbf{[X]} di una versione del documento (\S{}\ref{cod-versionamento});
 	\item un \glo{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficiente per un rilascio, verrà eseguito una operazione di \glo{merge} con il \textbf{main}.
 \end{itemize}
-\paragraph{Modifiche ai repository}
+\paragraph*s{Modifiche ai repository}
 Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il \glo{team}.
@@ -459,22 +459,20 @@ Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data
 Sono soggetti a \glo{verifica} sia il \glo{software} che la documentazione. 
 
 \subsubsection{Attività}
-\paragraph{Analisi}
-\label{Analisi}
-Il processo di analisi si suddivide in Analisi statica ed Analisi dinamica.
-\paragraph{Analisi statica}
+
+\paragraph*{Analisi statica}
 L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
 
 \begin{itemize}
 	\item \textbf{Walkthrough:} tecnica di \glo{verifica} consistente nella lettura da parte del \glo{team} dell'intero documento o codice in cerca di anomalie. Verrà applicata principalmente nella fase iniziale del progetto, quando il \glo{team} ancora non conosce i possibili errori che si possono incontrare. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia.
 	\item \textbf{Inspection:} tecnica di \glo{verifica} attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo.
 \end{itemize}
-\paragraph{Analisi dinamica}
+\paragraph*{Analisi dinamica}
 L'analisi dinamica prevede l'esecuzione del prodotto \glo{software} e la sua analisi tramite l'utilizzo di \glo{test} che verificano se il prodotto funziona o se vi sono presenti anomalie.
 
-\paragraph{Test}
+\paragraph*{Test}
 L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. I parametri da definire per ogni \glo{test} sono descritti nella seguente tabella.
-{
+
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\aboverulesep}{0pt}
@@ -495,7 +493,6 @@ L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono
 		\hiderowcolors
 		\caption{Parametri dei test}
 	\end{longtable}
-}
 
 
 Dei \glo{test} ben progettati e scritti devono:
@@ -513,7 +510,7 @@ Le tipologie di \glo{test} utilizzate sono le seguenti.
 	\item \glo{Test di regressione};
 	\item \glo{Test di accettazione}.
 \end{itemize}
-\paragraph{Codice identificativo dei test}
+\paragraph*{Codice identificativo dei test}
 Ogni \glo{test} viene descritto con:
 \begin{itemize}
 	\item codice identificativo;
