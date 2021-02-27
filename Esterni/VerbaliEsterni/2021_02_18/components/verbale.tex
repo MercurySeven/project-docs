@@ -1,0 +1,77 @@
+\section{Informazioni generali}
+
+\begin{itemize}
+
+    \item \textbf{Canale di comunicazione:} Zoom;
+
+    \item \textbf{Data:} \DataMeeting{};
+    
+    \item \textbf{Ora inizio:} 17:00;
+
+    \item \textbf{Ora fine:} 18:00;
+
+    \item \textbf{Segretario:} \Davide{};
+
+    \item \textbf{Partecipanti}: Due rappresentanti dell'azienda Zextras, Alessio Crestani e Federico Rispo,  e i membri del gruppo \Gruppo{}:
+    
+        \begin{itemize}
+            \item \Daniele{};
+            \item \Davide{};
+            \item \Francesco{};
+            \item \Giosue{};
+            \item \Lucrezia{};
+            \item \Matteo{};
+             \item \Tommaso{}.
+        \end{itemize}
+
+\section{Ordine del giorno}
+
+\begin{itemize}
+    \item\textbf{Percorso dei file;}
+    \item\textbf{Informazioni aggiuntive disponibili;}
+    \item\textbf{Accesso all'applicativo web;}
+     \item\textbf{Consigli sul PoC e gestione di conflitti;}
+      \item\textbf{Sincronizzazione.}
+\end{itemize}
+\end{itemize}
+\newpage
+
+
+\section{Resoconto}
+
+La riunione è stata concordata il tra gruppo \textit{\Gruppo{}} e l'azienda per chiarire dubbi sorti durante la stesura iniziale del codice e per discutere alcune funzionalità dell'applicativo. Di seguito vengono riportati i quesiti posti e le rispettive risposte. 
+
+\subsection{Percorso dei file}
+Il gruppo ha esposto i dubbi sulla gestione del pathing dei file da condividere, portando come esempio il fatto che, in sistemi operativi diversi, i percorsi differiscono. Alessio ha risposto dicendo che il modo migliore per gestire questa situazione è quello di prendere una cartella come root nella cui mettere i file da condividere. Upload e download quindi avverranno solo dentro la directory scelta mantenendo i vari livelli di annidamento eventualmente presenti; il tutto deve essere una esatta rappresentazione locale dell'interfaccia web Zextras Drive. Federico, inoltre, ha fornito dei consigli su come realizzare la cosa. In particolare, ha consigliato di far scegliere all'utente la directory alla quale fare riferimento col cloud al momento dell'installazione e, per gestire il pathing in sistemi operativi diversi, di fornire variabili d'ambiente che indicano la cartella a cui fare riferimento in ogni dispositivo. Il gruppo, inoltre, ha chiesto se la root directory debba essere impostata ogni volta che viene fatto il setup nel dispositivo. La risposta è stata affermativa. 
+\subsection{Informazioni aggiuntive disponibili}
+Il gruppo ha chiesto quali informazioni aggiuntive sono disponibili di un file in remoto. Federico ha risposto dicendoci che per ogni nodo (file) viene fatta una richiesta al server tramite graphql dalla la quale verranno estratti tutti i metadati disponibili del nodo, per esempio il tipo, la data dell'ultima modifica o chi l'ha creato. Nelle API fornite dall'azienda, in particolare nella sezione riferita all'oggetto node, sono presenti tutti gli attributi estraibili, che sia l'oggetto un file o una cartella. Il gruppo inoltre ha chiesto se la data dell'ultima modifica si riferisce alla scrittura in remoto o in locale. La risposta di Alessio chiarisce come l'azienda si aspetti che nell'applicazione tutto avvenga in desktop sync, quindi hanno più importanza le date di creazione e modifica in riferimento all'azione in locale. 
+\subsection{Accesso all'applicativo web}
+Il gruppo ha chiesto la possibilità di accedere alle credenziali per Zextras Drive al fine di testare più funzionalità possibili. Inizialmente, Alessio ha considerato l'idea di concederci un accesso alla vpn dell'azienda, oltre che concederci le credenziali ma, per questioni di sicurezza, ci verrà fornita una macchina esterna costruita tramite AWS sulla quale effettuare i test. Per il momento, quindi, il gruppo utilizzerà un server creato appositamente dai membri.
+\subsection{Consigli sul PoC e gestione di conflitti}
+Il gruppo chiede su cosa focalizzarsi sul PoC. Secondo Federico, la scelta migliore è mostrare un algoritmo che mantiene i file sincronizzati contenente la logica che gestisce il caricamento e la modifica in contemporanea. Da questo spunto, il gruppo chiede come gestire l'eventualità in cui modifico un file senza essere collegato alla rete e, al momento del caricamento, lo stesso file viene modificato. Secondo i due rappresentanti dell'azienda, in caso di conflitti di questo tipo l'idea è fare una copia temporanea del file modificato e lasciar decidere all'utente, magari facendo apparire dei segnali visivi, se tenere una delle due versioni o entrambe.  In particolare, si evince come programmare dei comportamenti standard nell'applicativo desktop possa portare a ingenti perdite di dati, oltre che risultare superfluo in quanto nell'interfaccia web è disponibile la lista delle modifiche, quindi ripristinare ogni versione in qualsiasi momento. 
+\subsection{Sincronizzazione}
+Il gruppo, riferendosi sempre all'applicativo, ha chiesto un consiglio su che finestra di tempo impostare per controllare le modifiche caricate sul server. Alessio ci dice che idealmente il controllo va effettuato una volta ogni 5 minuti, però sarebbe una buona idea renderlo configurabile dall'utente. Inoltre, è necessario, ai fini dell'azienda, forzare la sincronizzazione di un determinato file selezionato.
+\newpage
+
+\section{Riepilogo delle decisioni \hfil}
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-4\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.3\freewidth} L{.7\freewidth}}
+        \toprule 
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Codice} & \textbf{Decisione}\\
+        \toprule
+        \endhead
+
+        VE\_\DataMeeting{}.1 &  Si è deciso che upload e download avvengano all'interno di una root directory scelta dall'utente durante il primo setup dell'applicazione.\\
+        VE\_\DataMeeting{}.2 &  Si è deciso di utilizzare la data dell'ultima modifica in locale al momento di scegliere tra la copia del file sul server e quella in locale. \\
+        VE\_\DataMeeting{}.3 &  Si è deciso di effettuare i test dell'applicazione in un server creato dai membri del gruppo nell'attesa di poterli eseguire sul server di Zextras. \\
+        VE\_\DataMeeting{}.4 &  Si è deciso di lasciar decidere all'utente il file da mantenere nel caso di conflitti.\\
+        VE\_\DataMeeting{}.5 &  Si è deciso che la finestra di tempo dopo la quale controllare il server debba poter essere decisa dall'utente mentre,s di default, verrà impostata a 5 minuti.\\
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
