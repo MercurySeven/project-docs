@@ -460,18 +460,28 @@ Sono soggetti a \glo{verifica} sia il \glo{software} che la documentazione.
 
 \subsubsection{Attività}
 
-\paragraph*{Analisi statica}
-L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{0.35\freewidth} L{0.5\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} & padding \\
+		\toprule
+		\endhead	
+		\multirow{2}{.15\freewidth}{\textbf{Analisi statica}}
+		 & \multirow{2}{0.35\freewidth}{L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti).}&\textbf{Walkthrough:} tecnica di \glo{verifica} consistente nella lettura da parte del \glo{team} dell'intero documento o codice in cerca di anomalie. Verrà applicata principalmente nella fase iniziale del progetto, quando il \glo{team} ancora non conosce i possibili errori che si possono incontrare. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia. \\
+		 \cline{3-3} 
+		 & & \textbf{Inspection:} tecnica di \glo{verifica} attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo. \\
+		 \textbf{Analisi dinamica} & L'analisi dinamica prevede l'esecuzione del prodotto \glo{software} e la sua analisi tramite l'utilizzo di \glo{test} che verificano se il prodotto funziona o se vi sono presenti anomalie. & L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. I parametri da definire per ogni \glo{test} sono descritti nella seguente tabella. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione della attività}
+	\end{longtable}
 
-\begin{itemize}
-	\item \textbf{Walkthrough:} tecnica di \glo{verifica} consistente nella lettura da parte del \glo{team} dell'intero documento o codice in cerca di anomalie. Verrà applicata principalmente nella fase iniziale del progetto, quando il \glo{team} ancora non conosce i possibili errori che si possono incontrare. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia.
-	\item \textbf{Inspection:} tecnica di \glo{verifica} attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo.
-\end{itemize}
-\paragraph*{Analisi dinamica}
-L'analisi dinamica prevede l'esecuzione del prodotto \glo{software} e la sua analisi tramite l'utilizzo di \glo{test} che verificano se il prodotto funziona o se vi sono presenti anomalie.
-
-\paragraph*{Test}
-L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. I parametri da definire per ogni \glo{test} sono descritti nella seguente tabella.
+I parametri da definire per ogni \glo{test} sono descritti nella seguente tabella.
 
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -503,13 +513,30 @@ Dei \glo{test} ben progettati e scritti devono:
 	\item fornire informazioni sui risultati e sull'esecuzione stessa tramite file di log.
 \end{itemize}
 Le tipologie di \glo{test} utilizzate sono le seguenti.
-\begin{itemize}
-	\item \glo{Test di \ignore{unità}};
-	\item \glo{Test di integrazione};
-	\item \glo{Test di \ignore{sistema}};
-	\item \glo{Test di regressione};
-	\item \glo{Test di accettazione}.
-\end{itemize}
+
+{
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.2\freewidth} L{0.8\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		\textbf{U} & \glo{test di \ignore{unità}} \\
+		\textbf{I} & \glo{test di integrazione} \\
+		 \textbf{S} & \glo{test di \ignore{sistema}}\\
+		\textbf{R} & \glo{test di regressione} \\
+		 \textbf{A} & \glo{test di accettazione} \\
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Tipo di test}
+	\end{longtable}
+}
 \paragraph*{Codice identificativo dei test}
 Ogni \glo{test} viene descritto con:
 \begin{itemize}
@@ -531,29 +558,6 @@ Dove:
 \begin{itemize}
 	\item \textbf{T:} indica il "\glo{Test}";
 	\item \textbf{Tipo:} tipo di \glo{test};
-		{
-\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
-	\renewcommand{\arraystretch}{1.5}
-	\setlength{\aboverulesep}{0pt}
-	\setlength{\belowrulesep}{0pt}
-	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.05\freewidth} L{.3\freewidth} L{.080\freewidth}}
-		\toprule 
-		\rowcolor{AzzurroGruppo!30}
-		\textbf{Sigla} & \textbf{Nome} \\
-		\toprule
-		\endhead		
-		\textbf{U} & \glo{test di \ignore{unità}} \\
-		\textbf{I} & \glo{test di integrazione} \\
-		 \textbf{S} & \glo{test di \ignore{sistema}}\\
-		\textbf{R} & \glo{test di regressione} \\
-		 \textbf{A} & \glo{test di accettazione} \\
-
-		\bottomrule
-		\hiderowcolors
-		\caption{Tipo di test}
-	\end{longtable}
-}
 	\item \textbf{Id:} codice identificativo.
 \end{itemize}
 
