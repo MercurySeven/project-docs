@@ -242,11 +242,29 @@ Ogni \prog{} avrà il compito di definire \glo{test} opportuni, che dovranno ess
 \subsubsection{Codifica}
 La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{software} richiesto. In questa fase si concretizza l'architettura di alto livello pensata dai \progs{} nel documento \PdQ{}. I \progrs{} dovranno attenersi a queste norme durante la fase di programmazione e implementazione. L'uso di norme e convenzioni in questa fase è fondamentale per permettere la generazione di codice leggibile e uniforme, agevolare le fasi di manutenzione, \glo{verifica} e \glo{validazione} e migliorare la qualità del prodotto.
 \paragraph*{Convenzioni per i nomi}
-\begin{itemize}
-	\item ogni nome deve essere univoco;
-	\item ogni nome di variabile, metodo, funzione seguirà il modello \glo{Lower Camel Case};
-	\item ogni nome di classe seguirà il modello \glo{PascalCase}.
-\end{itemize}
+
+\
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Convenzione} & \textbf{Uso} \\
+		\toprule
+		\endhead		
+		\textbf{\glo{PascalCase}} & Dichiarazione dei nomi delle classi. \\ 
+		\textbf{\glo{Snake case}} & Dichiarazione dei nomi dei metodi e delle variabili  \\
+		\textbf{\_\_snake\_case} & Aggiunta di doppio underscore prima delle variabili o metodi privati.\\
+		\textbf{Univocità nomi} & Nello scope della dichiarazione il nome usato esso deve essere univoco. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle convenzioni nei nomi usati in codifica}
+	\end{longtable}
+}
 \paragraph*{Convenzioni sulle pratiche}
 \
 {
