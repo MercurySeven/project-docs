@@ -38,8 +38,6 @@
 	\item\textbf{Verifica del cambiamento di un file;}
 	
 	\item\textbf{Caricamento e scaricamento;}
-
-	\item\textbf{Impostazioni;}
 	
 	\item\textbf{GUI.}
 
@@ -54,21 +52,21 @@ Durante l'incontro il gruppo \gruppo{} ha deciso quali funzionalità e quali tec
 
 \subsection{Server}
 
-
-
-\subsection{Verifica del cambiamento di un file}
-
-
+Non avendo ancora a disposizione il server di Zextras, si è deciso di crearne uno apposito, in modo da permettere l'invio e la ricezione dei metadata tramite chiamate graphql. I metadata disponibili all'estrazione sono stati forniti dall'azienda ed elencati nelle API.
 
 \subsection{Caricamento e scaricamento }
 
+La gestione del download e dell'upload viene gestita da un algoritmo che effettua chiamate al server tramite graphql. In particolare, per il download si ricevono i metadati dal server, mentre per l'upload si inviano i metadati del file locale al server.  L'intero algoritmo è scritto in Python.
 
+\subsection{Watchdog e verifica}
 
-\subsection{Impostazioni}
-
-
+Per funzionare correttamente, l'applicazione ha bisogno di un watchdog, una sentinella che controlla se ci sono modifiche ai file. Il controllo è impostato ogni tot e se ci sono modifiche si accende una spia. A questo punto, il programma deve verificare il tipo di azione da eseguire, cioè se fare il download o l'upload. Si è deciso quindi di far si che la verifica effettui un controllo del metadata della root directory e, se l'ultima modifica del file in locale è diversa dall'ultima modifica del file sul server allora è cambiato qualcosa, sta al programma decidere come agire. 
 
 \subsection{GUI}
+
+SI è deciso di realizzare l'interfaccia grafica dell'applicazione con Qt. Essa mostra la root directory con i file al suo interno e le varie impostazioni implementate. 
+
+
 
 
 
@@ -89,11 +87,10 @@ Durante l'incontro il gruppo \gruppo{} ha deciso quali funzionalità e quali tec
 		\toprule
 		\endhead
 		
-		VI\_\DataMeeting{}.1 & \\
-		VI\_\DataMeeting{}.2 & \\
-		VI\_\DataMeeting{}.3 & \\
-		VI\_\DataMeeting{}.4 & \\
-		VI\_\DataMeeting{}.5 & \\
+		VI\_\DataMeeting{}.1 & Si è deciso di creare un server apposito  \\
+		VI\_\DataMeeting{}.2 & Si sono decise le modalità di download e upload\\
+		VI\_\DataMeeting{}.3 & Si è deciso come avviene la verifica dei cambiamenti in locale e sul server\\
+		VI\_\DataMeeting{}.4 & Si è deciso cosa mostrare della GUI\\
 		
 		\bottomrule
 		\hiderowcolors
