@@ -257,7 +257,7 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\endhead		
 		\textbf{\glo{PascalCase}} & Dichiarazione dei nomi delle classi. \\ 
 		\textbf{\glo{Snake case}} & Dichiarazione dei nomi dei metodi e delle variabili  \\
-		\textbf{\_\_snake\_case} & Aggiunta di doppio underscore prima delle variabili o metodi privati.\\
+		\textbf{\_snake\_case} & Aggiunta di singolo underscore prima delle variabili o metodi privati.\\
 		\textbf{Univocità nomi} & Nello scope della dichiarazione il nome usato esso deve essere univoco. \\
 		\bottomrule
 		\hiderowcolors
@@ -279,9 +279,9 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\toprule
 		\endhead		
 		\textbf{Indentazione} & Il codice dovrà essere indentato usando 4 spazi. \\ 
-		\textbf{Spaziature} & Dovrà essere presente una spaziatura dopo l'apertura di una parentesi graffa.  \\
-		\textbf{Commenti} & Ogni commento deve essere separato con uno spazio dalla sua definizione \\ 
-		\textbf{Lunghezza della riga di codice} & Ogni riga di codice non deve superare i 140 caratteri di lunghezza. \\
+		\textbf{Spaziature} & Dovrà essere presente una spaziatura prima e dopo gli operatori binari e dopo le virgole. \\
+		\textbf{Commenti} & Ogni commento deve essere separato con uno spazio dalla sua definizione e due spazi dal codice se si tratta di un commento inline. \\ 
+		\textbf{Lunghezza della riga di codice} & Ogni riga di codice non deve superare 80 caratteri di lunghezza. \\
 		\textbf{Brevità dei metodi} & Ogni blocco di codice non dovrà superare le 50 istruzioni. Se tuttavia questo risulta indispensabile può essere permesso, per questo la norma è consigliata e non obbligatoria.\\ 	
 		\textbf{Stringhe} & Ogni stringa deve essere definita con singoli apici. \\
 		\textbf{Funzioni} & Bisogna evitare quando possibile l'utilizzo di funzioni ricorsive.\\ 	
@@ -305,13 +305,13 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 	\begin{longtable}{L{.1\freewidth} L{.15\freewidth} L{.4\freewidth} L{.2\freewidth}}
 		\toprule 
 		\rowcolor{AzzurroGruppo!30}
-		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione metrica} & \textbf{Formula}\\
+		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione metrica} & \textbf{Formula/Valore}\\
 		\toprule
 		\endhead		
-		\textbf{MCD03 }& Variabili non utilizzate & Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice & - \\
+		\textbf{MCD03 }& Variabili non utilizzate & Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice & n° variabili inutilizzate == 0\\
 		\textbf{MCD04} & Facilità di comprensione & Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice & \small{R=$\frac{n^\circ\ linee\ commento}{n^\circ\ linee\ codice}$}  \\
-		\textbf{MCD05} & Code coverage & Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi & - \\
-		\textbf{MCD06} & Lunghezza della riga di codice & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica & - \\
+		\textbf{MCD05} & Code coverage & Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi & Code coverage >= 80\% \\
+		\textbf{MCD06} & Lunghezza della riga di codice & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica & lunghezza riga <= 80 caratteri\\
 		\textbf{MCD07} & Brevità dei metodi & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva & - \\
 		\bottomrule
 		\hiderowcolors
