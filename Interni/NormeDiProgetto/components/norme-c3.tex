@@ -191,24 +191,58 @@ I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \
 	\end{longtable}
 \paragraph*{Glossario}  
 Al fine di evitare ambiguità fra i termini è stato realizzato un documento denominato \textit{Glossario}. I termini il cui significato può risultare ambiguo saranno contrassegnati con una \textbf{G} a pedice (e.g: \texorpdfstring{glossario\textsubscript{\textbf{G}}})) ad ogni loro occorrenza e saranno riportati in ordine alfabetico con le loro rispettive definizioni. 
-\paragraph*{Elenchi puntati} 
-Gli elenchi puntati al primo livello di annidamento vengono scanditi con • (pallino); al livello successivo il simbolo usato è -- (doppio trattino); all'ultimo livello è .(punto fermo).\newline
-Ogni voce contenuta all'interno degli elenchi puntati inizia con la lettera maiuscola e termina con ;(punto e virgola), tranne l'ultima voce, la quale termina con .(punto fermo).\newline
-Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale.  
+\paragraph*{Elenchi puntati}
+\
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.25\freewidth} L{.75\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Simbolo} & \textbf{Uso e descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{• (pallino)} & Simbolo per scandire il primo livello di annidamento degli elenchi puntati. \\ 
+		\textbf{-- (doppio trattino)} & Simbolo per scandire il secondo livello di annidamento degli elenchi puntati.  \\
+		\textbf{. (punto fermo)} & Simbolo per scandire il terzo livello di annidamento degli elenchi puntati. Inoltre viene utilizzato al termine dell'ultima voce di un elenco puntato \\
+		\textbf{; (punto e virgola)} & Simbolo utilizzato al termine di ogni voce degli elenchi puntati salvo l'ultima\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle convenzioni usate negli elenchi puntati}
+	\end{longtable}
+}
+Ogni voce contenuta all'interno degli elenchi puntati inizia con la lettera maiuscola. Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale.
+Gli elenchi puntati dovranno essere usati solo quando necessario, preferendo le tabelle ad essi quando possibile.
 \paragraph*{Formato data e ora} 
 Le date vengono indicato usato il formato stabilito dallo standard ISO 8601:\newline
 \centerline{\textbf{[YYYY]\-[MM]\-[DD]}}
 \newline
-dove:
-\begin{itemize}
-	\item \textbf{[YYYY]} indica l'anno;
-	\item \textbf{[MM]} indica il mese;
-	\item \textbf{[GG]} indica il giorno.
-\end{itemize}
-\paragraph*{Sigle} 
-\begin{itemize}
-	\item Le sigle relative ai nomi dei documenti sono:
-	
+
+\
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.25\freewidth} L{.080\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{[YYYY]} & Indica l'anno \\ 
+		\textbf{[MM]} & Indica il mese  \\
+		\textbf{[GG]} & Indica il giorno \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle sigle indicanti la data}
+\end{longtable}
+\paragraph*{Sigle}
+Le seguenti tabelle riassumono tutte le sigle utilizzate e la loro descrizione. Le tabelle sono divise per argomento.
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\aboverulesep}{0pt}
@@ -231,11 +265,8 @@ dove:
 
 		\bottomrule
 		\hiderowcolors
-		\caption{Sigle nomi dei documenti}
+		\caption{Sigle relative ai nomi dei documenti}
 	\end{longtable}
-	\newpage
-	\item Le sigle relative ai ruoli di progetto sono:	
-
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\aboverulesep}{0pt}
@@ -258,9 +289,7 @@ dove:
 		\hiderowcolors
 		\caption{Sigle ruoli di progetto}
 	\end{longtable}
-	
-	\item Le sigle relative alle revisioni di progetto sono:	
-	
+		
 		\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\aboverulesep}{0pt}
@@ -280,11 +309,8 @@ dove:
 
 		\bottomrule
 		\hiderowcolors
-		\caption{Sigle revisioni di progetto}
+		\caption{Sigle relative alle revisioni di progetto}
 	\end{longtable}	
-	
-
-\end{itemize}
 \subsubsection{Elementi grafici}
 
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
