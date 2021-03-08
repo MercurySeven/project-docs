@@ -37,7 +37,7 @@
 	
 	\item\textbf{Verifica del cambiamento di un file;}
 	
-	\item\textbf{Caricamento e scaricamento;}
+	\item\textbf{Download e Upload;}
 	
 	\item\textbf{GUI.}
 
@@ -54,9 +54,9 @@ Durante l'incontro il gruppo \gruppo{} ha deciso quali funzionalità e quali tec
 
 Non avendo ancora a disposizione il server di Zextras, si è deciso di crearne uno apposito, in modo da permettere l'invio e la ricezione dei metadata tramite chiamate graphql. I metadata disponibili all'estrazione sono stati forniti dall'azienda ed elencati nelle API.
 
-\subsection{Caricamento e scaricamento }
+\subsection{Download e Upload}
 
-La gestione del download e dell'upload viene gestita da un algoritmo che effettua chiamate al server tramite graphql. In particolare, per il download si ricevono i metadati dal server, mentre per l'upload si inviano i metadati del file locale al server.  L'intero algoritmo è scritto in Python.
+La gestione del download e dell'upload viene gestita da un algoritmo che effettua chiamate al server tramite GraphQL. In particolare, per il download si ricevono i metadati dal server, mentre per l'upload si inviano i metadati del file locale al server.  L'intero algoritmo è scritto in Python.
 
 \subsection{Watchdog e verifica}
 
@@ -64,7 +64,7 @@ Per funzionare correttamente, l'applicazione ha bisogno di un watchdog, una sent
 
 \subsection{GUI}
 
-SI è deciso di realizzare l'interfaccia grafica dell'applicazione con Qt. Essa mostra la root directory con i file al suo interno e le varie impostazioni implementate. 
+Si è deciso di realizzare l'interfaccia grafica dell'applicazione con Qt. Essa mostra la root directory con i file al suo interno e le varie impostazioni implementate. 
 
 
 
