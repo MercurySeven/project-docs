@@ -1577,10 +1577,10 @@
 							},
 							"font": "Arial;13;0",
 							"left": 672,
-							"top": 496,
+							"top": 480,
 							"width": 161,
 							"height": 57,
-							"text": "Solo in caso l'utente abbia scelto la politica \"lascia scegliere a me\""
+							"text": "Solo in caso l'utente abbia scelto la politica \"decisione manuale\""
 						},
 						{
 							"_type": "UMLNoteLinkView",
@@ -1596,7 +1596,7 @@
 								"$ref": "AAAAAAF4EVWuGhg0w7o="
 							},
 							"lineStyle": 1,
-							"points": "607:509;671:516"
+							"points": "607:509;671:509"
 						},
 						{
 							"_type": "UMLAssociationView",
