@@ -178,3 +178,8 @@ L'obbiettivo di questa fase è di assicurarsi che il codice creato soddisfi i re
 L'obbiettivo di questa fase è migliorare la struttura del codice per allinearla con gli standard di codifica delineati, rendere più efficace ed efficiente lo svolgimento della funzione implementata e assicurarsi una maggiore manutenibilità. Una volta passato il test il codice viene ristrutturato in base alle necessità e agli standard di codifica e testato nuovamente, eventualmente aggiornando i test per prevenire regressione, fino al raggiungimento di uno standard qualitativo soddisfacente. \\
 \newline
 Queste due fasi si devono ripetere ciclicamente per ogni nuovo test e per raffinare il codice, allo scopo di evitare che scelte sub ottimali effettuate in un primo momento, con lo scopo di superare i test, si possano consolidare nella codebase.
+
+\subsection{Strumenti}
+Per facilitare la creazione dei test viene utilizzato il framework di testing "unittest".
+Viene inoltre utilizzato "wiremock" per la creazione di test di integrazione tra client e server.
+Gli script di testing sono integrati con gli strumenti di sviluppo utilizzati dal team per garantire una continua verifica della qualità del codice prodotto. \\
