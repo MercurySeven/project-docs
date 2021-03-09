@@ -16,7 +16,7 @@ I documenti prodotti devono essere facilmente leggibili e accessibili a tutti i 
 \item \textbf{Correttezza ortografica}: i documenti non devono presentare errori ortografici.
 \end{itemize}
 
-\textbf{\glo{Metriche}}
+\textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MDC01 Indice di Gulpease;
 \item MDC02 Correttezza ortografica.
@@ -35,7 +35,7 @@ Il prodotto deve fornire tutte le funzionalità determinate nel documento di \Ad
 \item \textbf{Sicurezza}: il prodotto garantisce la sicurezza dei dati sensibili gestiti.
 \end{itemize}
 
-\textbf{\glo{Metriche}}
+\textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MPR03 Soddisfazione \glo{requisiti} obbligatori;
 \item MPR04 Soddisfazione \glo{requisiti} opzionali.
@@ -51,7 +51,7 @@ Durante l'utilizzo del prodotto non si devono riscontrare errori durante l'utili
 \item \textbf{Tolleranza agli errori}: capacità del prodotto di gestire casi di errore.
 \end{itemize}
 
-\textbf{\glo{Metriche}}
+\textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MVR01 Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti;
 \item MCD01 Percentuale degli errori gestiti.
@@ -69,15 +69,11 @@ Il prodotto deve essere intuitivo e pratico. \\
 \item \textbf{Attrattiva}: il prodotto deve essere utilizzabile facilmente e avere una presentazione attraente per l'utente.
 \end{itemize}
 
-\textbf{\glo{Metriche}}
+\textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MVR02 Comprensibilità delle funzionalità offerte;
 \item MVR03 Facilità di apprendimento e di utilizzo del prodotto.
 \end{itemize}
-
-\subparagraph{Testing}
-I dati per le \glo{metriche} associate a questo particolare aspetto del \glo{software} verranno raccolti tramite sessioni di \glo{QA} svolte da di membri del gruppo \gruppo{}. \\
-
 
 \paragraph{Efficienza}
 
@@ -89,7 +85,7 @@ La quantità di risorse utilizzate deve essere ottimale. \\
 \item \textbf{Utilizzo delle risorse}: il prodotto deve essere efficiente e consumare la quantità ottimale di risorse.
 \end{itemize}
 
-\textbf{\glo{Metriche}}
+\textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MCD02 Complessità ciclomatica;
 \item MCD05 Code coverage;
@@ -109,7 +105,7 @@ Il prodotto deve essere facilmente estendibile e adattabile. \\
 \item \textbf{Analizzabilità}: la struttura del prodotto deve facilitare la ricerca delle cause di eventuali malfunzionamenti.
 \end{itemize}
 
-\textbf{\glo{Metriche}}
+\textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MCD03 Variabili non utilizzate;
 \item MCD04 Rapporto linee di codice e linee commentate.
@@ -135,7 +131,7 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 			\caption{Tabella delle metriche e degli obiettivi relativi alla documentazione}
 		\end{center}
 	\end{table}
-	
+
 \paragraph{Prodotto}
 \begin{table}[H]
 		\begin{center}
@@ -157,14 +153,14 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 				MCD03 & Variabili non utilizzate & $0$ & $0$ \\
 				MCD04 & Rapporto linee di codice e linee commentate & $5$ - $3$ & $3$ - $1$\\
 				MCD05 & Code coverage & $80\%$-$100\%$ & $100\%$ \\
-				MCD06 & Lunghezza della riga di codice & $0$-$140$ caratteri & $0$-$140$ caratteri \\
+				MCD06 & Lunghezza della riga di codice & $0$-$100$ caratteri & $0$-$80$ caratteri \\
 				MCD07 & Brevità dei metodi & $0$-$50$ istruzioni & $0$-$50$ istruzioni \\
 				\bottomrule
 			\end{tabular}
 			\caption{Tabella delle metriche e degli obiettivi relativi al prodotto}
 		\end{center}
 	\end{table}
-	
+
 \section{Approccio al testing}
 Per rendere lo sviluppo più efficace e garantire una applicazione migliore dei principi Agile è stato deciso di adottare un' approccio test driven allo sviluppo (TDD). \\
 Questo tipo di approccio allo sviluppo è composto da due fasi alternate:
@@ -179,7 +175,13 @@ L'obbiettivo di questa fase è migliorare la struttura del codice per allinearla
 \newline
 Queste due fasi si devono ripetere ciclicamente per ogni nuovo test e per raffinare il codice, allo scopo di evitare che scelte sub ottimali effettuate in un primo momento, con lo scopo di superare i test, si possano consolidare nella codebase.
 
-\subsection{Strumenti}
-Per facilitare la creazione dei test viene utilizzato il framework di testing "unittest".
-Viene inoltre utilizzato "wiremock" per la creazione di test di integrazione tra client e server.
-Gli script di testing sono integrati con gli strumenti di sviluppo utilizzati dal team per garantire una continua verifica della qualità del codice prodotto. \\
+
+\input{components/test_sistema.tex}
+
+\subsection{Test di accettazione}
+I test di accettazione devono dimostrare che il software sviluppato soddisfi i requisiti del capitolato concordati con il proponente, essi vengono eseguiti durante il collaudo finale.
+Si compongono essenzialmente dei test di sistema però eseguiti in sede aziendale.
+
+\subsection{Test di unità}
+Hanno lo scopo di testare le parti più piccole e autonome dell'applicazione sowftware. Servono per far emergere eventuali difetti, in modo che essi possano essere corretti il prima possibile.
+I test verranno sviluppati seguendo la proprietà ATRIP.
