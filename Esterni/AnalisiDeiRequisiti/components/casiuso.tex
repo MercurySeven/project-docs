@@ -15,22 +15,39 @@ Essendo il progetto finalizzato alla creazione di un applicativo per la sincroni
 \subsubsection{Attori Secondari}
 \begin{itemize}
 \item \textbf{Gestore credenziali Zextras:} Consente di verificare se le credenziali inserite dall'utente sono presenti all'interno del database di Zextras.
-\item \textbf{\glo{Zextras Drive}:} È un servizio On-premises per conservare i file online, consente di condividere i file presenti nel proprio spazio utente con altri utenti presenti nel \glo{sistema}. Fornisce delle \glo{API} con cui è possibile caricare/scaricare file, che sono utili all'applicazione per effettuare la sincronizzazione.
+\item \textbf{\glo{Zextras Drive}:} È un servizio on-premises per conservare i file online, consente di condividere i file presenti nel proprio spazio utente con altri utenti presenti nel \glo{sistema}. Fornisce delle \glo{API} con cui è possibile caricare/scaricare file, che sono utili all'applicazione per effettuare la sincronizzazione.
 \end{itemize}
 
 \newpage
 
 \input{components/uc/uc1.tex}%Autenticazione
 
-\input{components/uc/uc2.tex}%Visualizza impostazioni
+\input{components/uc/uc2.tex}%Seleziona file da sincronizzare dal client al server
 
-\input{components/uc/uc3.tex}%Visualizzazione dei trasferimenti
+\input{components/uc/uc3.tex}%Seleziona file da sincronizzare dal server al client
 
-\input{components/uc/uc4.tex}%Visualizzazione messaggio di errore inserimento credenziali
+\input{components/uc/uc4.tex}%Seleziona quota disco
 
-\input{components/uc/uc5.tex}%Visualizzazione messaggio di errore di rete
+\input{components/uc/uc5.tex}%Logout
 
-\input{components/uc/uc6.tex}%Visualizzazione messaggio di errore file troppo grande
+\input{components/uc/uc6.tex}%Visualizza dettagli file
 
-\input{components/uc/uc7.tex}
+\input{components/uc/uc7.tex}%Visualizza messaggio di errore di rete
 
+\input{components/uc/uc8.tex}%Visualizza messaggio di errore inserimento credenziali
+
+\input{components/uc/uc9.tex}%Visualizza messaggio di errore file troppo grande
+
+\input{components/uc/uc10.tex}%Visualizza messaggio di errore spazio non disponibile in locale
+
+\input{components/uc/uc11.tex}%La quota disco selezionata è minore dei file scaricati
+
+\input{components/uc/uc12.tex}%La quota disco selezionata è maggiore della dimensione libera del disco
+
+\input{components/uc/uc13.tex}%Scelta della cartella root
+
+\input{components/uc/uc14.tex}%Scelta politica di risoluzione conflitti
+
+\input{components/uc/uc15.tex}%Visualizza messaggio di opzione per il file in conflitto
+
+\input{components/uc/uc16.tex}%Impostare ogni quanto sincronizzare la cartella root

@@ -10,7 +10,7 @@ Il gruppo \gruppo{} ha classificato e assegnato i \glo{requisiti} secondo quanto
     \setlength{\belowrulesep}{0pt}
     \rowcolors{2}{AzzurroGruppo!10}{white}
     \begin{longtable}{C{.20\freewidth} C{.40\freewidth} C{.20\freewidth} C{.20\freewidth}}
-        \toprule 
+        \toprule
         \rowcolor{AzzurroGruppo!30}
         \textbf{Requisito} & \textbf{Descrizione} & \textbf{Classificazione} & \textbf{Fonti} \\
         \toprule
@@ -18,24 +18,40 @@ Il gruppo \gruppo{} ha classificato e assegnato i \glo{requisiti} secondo quanto
 
         RFO01.0  & L'utente deve poter autenticarsi all'avvio dell'applicazione & Obbligatorio & UC1 \\
 
-        RFO02.0  & L'utente deve poter decidere cosa sincronizzare e cosa ignorare nelle cartelle locali & Obbligatorio & UC2.1 \\
-        RFD02.1  & L'utente deve poter mettere in pausa la sincronizzazione dal client verso il server & Desiderabile & UC2.1 \\
-        RFD02.2  & L'utente deve poter riprendere, dopo aver messo in pausa, la sincronizzazione cominciata precedentemente dal client verso il server & Desiderabile & UC2.1 \\
-        RFD02.2  & L'utente deve poter annullare la sincronizzazione dal client verso il server & Desiderabile & UC2.1 \\
+        RFO02.0  & L'utente deve poter decidere cosa sincronizzare e cosa ignorare nelle cartelle locali & Obbligatorio & UC2 \\
+        RFD02.1  & L'utente deve poter mettere in pausa la sincronizzazione dal client verso il server & Desiderabile & UC2 \\
+        RFD02.2  & L'utente deve poter riprendere, dopo aver messo in pausa, la sincronizzazione cominciata precedentemente dal client verso il server & Desiderabile & UC2 \\
+        RFD02.3  & L'utente deve poter annullare la sincronizzazione dal client verso il server & Desiderabile & UC2 \\
 
-        RFO03.0  & L'utente deve poter decidere cosa sincronizzare e cosa ignorare dalle cartelle remote & Obbligatorio & UC2.2 \\
-        RFD03.1  & L'utente deve poter mettere in pausa la sincronizzazione dal server verso il client & Desiderabile & UC2.2 \\
-        RFD03.2  & L'utente deve poter riprendere, dopo una messa in pausa, la sincronizzazione cominciata precedentemente dal server verso il client & Desiderabile & UC2.2 \\
-        RFD03.3  & L'utente deve poter annullare la sincronizzazione dal server verso il client & Desiderabile & UC2.2 \\
+        RFO03.0  & L'utente deve poter decidere cosa sincronizzare e cosa ignorare dalle cartelle remote & Obbligatorio & UC3 \\
+        RFD03.1  & L'utente deve poter mettere in pausa la sincronizzazione dal server verso il client & Desiderabile & UC3 \\
+        RFD03.2  & L'utente deve poter riprendere, dopo una messa in pausa, la sincronizzazione cominciata precedentemente dal server verso il client & Desiderabile & UC3 \\
+        RFD03.3  & L'utente deve poter annullare la sincronizzazione dal server verso il client & Desiderabile & UC3 \\
 
-        RFO04.0  & La sincronizzazione dei cambiamenti nei documenti deve essere costante sia che essi siano locali o essi siano remoti & Obbligatorio & Capitolato \\
-        RFD05.0  & L'utente deve poter modificare a posteriori i documenti che intende sincronizzare & Desiderabile & UC2.1/UC2.2 \\
-        RFF06.0  & L'utente deve essere in grado di annullare una sincronizzazione già completata & Facoltativo & UC2.1/UC2.2 \\
+        RFO04.0  & La sincronizzazione dei cambiamenti nei documenti deve essere costante sia per i file in locale che per quelli in remoto & Obbligatorio & Capitolato \\
+        RFD05.0  & L'utente deve poter modificare a posteriori i documenti che intende sincronizzare & Desiderabile & UC2/UC3 \\
+        RFF06.0  & L'utente deve essere in grado di annullare una sincronizzazione già completata & Facoltativo & UC2/UC3 \\
         RFO07.0  & L'applicazione deve poter funzionare anche quando è in corso un trasferimento di file & Obbligatorio & Capitolato \\
         RFF08.0  & L'utente deve essere informato tramite notifica delle sincronizzazioni in entrata che riceve dal cloud & Facoltativo & Decisione interna \\
         RFF09.0  & L'utente deve essere in grado di aggiungere un file tramite un menu contestuale & Facoltativo & Decisione interna \\
         RFD10.0  & L'utente deve essere in grado di nascondere l'applicazione & Desiderabile & Decisione interna \\
         RFD11.0  & L'utente deve essere in grado di visualizzare le informazioni dell'applicativo & Desiderabile & Decisione interna \\
+        RFO12.0  & L'applicazione deve poter comunicare con \glo{Zextras Drive} & Obbligatorio & Capitolato \\
+        RFD13.0  & L'applicazione deve avviarsi in automatico all'avvio del computer & Desiderabile & Decisione interna \\
+
+        RFD14.0  & L'utente deve essere in grado di decidere quanto spazio dedicare ai file sincronizzati con il cloud & Desiderabile & UC4 \\
+        RFO15.0  & L'utente deve poter effettuare il logout dall'applicazione & Obbligatorio & UC5 \\
+        RFF16.0  & L'utente può vedere all'interno dell'applicazione i dettagli dei file sincronizzati & Facoltativo & UC6 \\
+        RFF16.1  & L'utente può richiedere all'applicazione un link da poter inviare ad altre persone per condividere dei file presenti nel cloud & Facoltativo & UC6.5 \\
+        RFO17.0  & L'utente deve poter essere informato di eventuali errori di rete durante la sincronizzazione & Obbligatorio & UC7 \\
+        RFO18.0  & L'utente deve poter essere informato di un errore nell'inserimento delle credenziali & Obbligatorio & UC8 \\
+        RFD19.0  & L'utente deve poter essere informato di un errore nella sincronizzazione del file perchè lo spazio in cloud non è sufficiente & Desiderabile & UC9 \\
+        RFD20.0  & L'utente deve poter essere informato di un errore nella sincronizzazione del file perchè lo spazio in locale non è sufficiente & Desiderabile & UC10 \\
+        RFD21.0  & L'utente deve essere informato nel caso inserisca un valore di quota disco non adatto & Desiderabile & UC11/UC12 \\
+        RFO22.0  & L'utente deve poter scegliere la cartella root, dove verranno sincronizzati tutti i file tra il client e il server & Obbligatorio & UC13 \\
+        RFD23.0  & L'applicazione deve poter lasciare all'utente la scelta di come gestire i conflitti che verranno generati durante la sincronizzazione & Desiderabile & UC14 \\
+        RFD24.0  & L'utente deve poter visualizzare un messaggio per la risoluzione del conflitto nel caso in cui avesse scelto la politica "decisione manuale" & Desiderabile & UC15 \\
+        RFD25.0  & L'utente deve poter impostare ogni quanto la cartella scelta di root viene sincronizzata con il cloud & Desiderabile & UC16 \\
 
         \bottomrule
         \hiderowcolors

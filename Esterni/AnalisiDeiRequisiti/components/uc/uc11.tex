@@ -1,0 +1,12 @@
+\subsection{UC11 - La quota disco selezionata è minore dei file scaricati}
+\label{UC11}
+\begin{itemize}
+\item \textbf{Attore Primario:} Utente autenticato;
+\item \textbf{Precondizione:} L'utente ha selezionato una quota disco;
+\item \textbf{Postcondizione:} L'utente viene informato che non è stato possibile completare l'operazione di selezione quota disco;
+\item \textbf{Scenario principale:}
+    \begin{enumerate}
+    \item L'utente ha selezionato la quota disco;
+    \item L'applicazione \ignore{verifica} la possibilità di eseguire l'operazione richiesta, ma lo spazio selezionato è minore dello spazio già occupato.
+    \end{enumerate}
+\end{itemize}

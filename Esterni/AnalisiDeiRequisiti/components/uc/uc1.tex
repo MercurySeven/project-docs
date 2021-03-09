@@ -1,21 +1,43 @@
 \subsection{UC1 - Autenticazione}
+\label{UC1}
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{components/img/UC1.png}
     \caption{UC1 - Autenticazione}
 \end{figure}
 \begin{itemize}
-\item \textbf{Attore Primario:} Utente;
+\item \textbf{Attore Primario:} Utente non autenticato;
 \item \textbf{Attore Secondario:} Gestore credenziali Zextras;
-\item \textbf{Precondizione:} L'utente non è autenticato all'interno dell'applicazione;
+\item \textbf{Precondizione:} L'utente non è riconosciuto dal \glo{sistema};
 \item \textbf{Postcondizione:} L'utente ha effettuato il login usando le credenziali di \glo{Zextras Drive};
 \item \textbf{Scenario principale:}
     \begin{enumerate}
-    \item L'utente avvia l'applicazione per la prima volta;
-    \item L'utente inserisce le credenziali \glo{Zextras Drive};
+    \item L'utente avvia l'applicazione;
+    \item L'utente inserisce le credenziali di \glo{Zextras Drive};
+    \item L'utente effettua il login nell'applicazione.
     \end{enumerate}
+\end{itemize}
+\subsubsection{UC1.1 - Inserimento email}
+\begin{itemize}
+\item \textbf{Attore Primario:} Utente non autenticato;
+\item \textbf{Attore Secondario:} Gestore credenziali Zextras;
+\item \textbf{Precondizione:} Il campo "email" non risulta compilato;
+\item \textbf{Postcondizione:} L'utente ha compilato il campo "email";
+\item \textbf{Scenario principale:} L'utente inserisce la email del suo account \glo{Zextras Drive};
 \item \textbf{Estensioni:}
 \begin{itemize}
-\item Visualizzazione messaggio di errore inserimento credenziali (UC4 \S{}\ref{UC4}).
+\item Visualizza messaggio di errore inserimento credenziali (UC8 \S{}\ref{UC8}).
+\end{itemize}
+\end{itemize}
+\subsubsection{UC1.2 - Inserimento password}
+\begin{itemize}
+\item \textbf{Attore Primario:} Utente non autenticato;
+\item \textbf{Attore Secondario:} Gestore credenziali Zextras;
+\item \textbf{Precondizione:} Il campo "password" non risulta compilato;
+\item \textbf{Postcondizione:} L'utente ha compilato il campo "password";
+\item \textbf{Scenario principale:} L'utente inserisce la password del suo account \glo{Zextras Drive};
+\item \textbf{Estensioni:}
+\begin{itemize}
+\item Visualizza messaggio di errore inserimento credenziali (UC8 \S{}\ref{UC8}).
 \end{itemize}
 \end{itemize}
