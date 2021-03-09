@@ -10,7 +10,7 @@
 
     \item \textbf{Ora fine:} 18:00;
 
-    \item \textbf{Segretario:} \Davide{};
+    \item \textbf{Segretario:} \ACapoRedazione{};
 
     \item \textbf{Partecipanti}: Due rappresentanti dell'azienda Zextras, Alessio Crestani e Federico Rispo,  e i membri del gruppo \Gruppo{}:
     
@@ -46,7 +46,7 @@ Il gruppo ha esposto i dubbi sulla gestione del pathing dei file da condividere,
 \subsection{Informazioni aggiuntive disponibili}
 Il gruppo ha chiesto quali informazioni aggiuntive sono disponibili di un file in remoto. Federico ha risposto dicendoci che per ogni nodo (file) viene fatta una richiesta al server tramite GraphQL dalla la quale verranno estratti tutti i metadati disponibili del nodo, per esempio il tipo, la data dell'ultima modifica o chi l'ha creato. Nelle API fornite dall'azienda, in particolare nella sezione riferita all'oggetto node, sono presenti tutti gli attributi estraibili, che sia l'oggetto un file o una cartella. Il gruppo inoltre ha chiesto se la data dell'ultima modifica si riferisce alla scrittura in remoto o in locale. La risposta di Alessio chiarisce come l'azienda si aspetti che nell'applicazione tutto avvenga in desktop sync, quindi hanno più importanza le date di creazione e modifica in riferimento all'azione in locale. 
 \subsection{Accesso all'applicativo web}
-Il gruppo ha chiesto la possibilità di accedere alle credenziali per Zextras Drive al fine di testare più funzionalità possibili. Inizialmente, Alessio ha considerato l'idea di concederci un accesso alla vpn dell'azienda, oltre che concederci le credenziali ma, per questioni di sicurezza, ci verrà fornita una macchina esterna costruita tramite AWS sulla quale effettuare i test. Per il momento, quindi, il gruppo utilizzerà un server creato appositamente dai membri.
+Il gruppo ha chiesto la possibilità di accedere alle credenziali per Zextras Drive al fine di testare più funzionalità possibili. Inizialmente, Alessio ha considerato l'idea di concederci un accesso alla vpn dell'azienda, oltre che concederci le credenziali ma, per questioni di sicurezza, ci verrà fornita una macchina esterna costruita tramite AWS sulla quale effettuare i test. Per il momento, quindi, il gruppo utilizzerà un server creato appositamente dai membri che simuli le risposte con GraphQL.
 \subsection{Consigli sul PoC e gestione di conflitti}
 Il gruppo chiede su cosa focalizzarsi sul PoC. Secondo Federico, la scelta migliore è mostrare un algoritmo che mantiene i file sincronizzati contenente la logica che gestisce il caricamento e la modifica in contemporanea. Da questo spunto, il gruppo chiede come gestire l'eventualità in cui modifico un file senza essere collegato alla rete e, al momento del caricamento, lo stesso file viene modificato. Secondo i due rappresentanti dell'azienda, in caso di conflitti di questo tipo l'idea è fare una copia temporanea del file modificato e lasciar decidere all'utente, magari facendo apparire dei segnali visivi, se tenere una delle due versioni o entrambe.  In particolare, si evince come programmare dei comportamenti standard nell'applicativo desktop possa portare a ingenti perdite di dati, oltre che risultare superfluo in quanto nell'interfaccia web è disponibile la lista delle modifiche, quindi ripristinare ogni versione in qualsiasi momento. 
 \subsection{Sincronizzazione}
