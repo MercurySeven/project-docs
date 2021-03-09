@@ -83,7 +83,7 @@ In particolare, i documenti informali prodotti saranno:
 \subsubsection{Directory di un documento}
 Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeDelDocumento}. Questa viene poi collocata, a seconda del tipo di contenuto, in una delle directory \textbf{Interni} o \textbf{Esterni}. 
 \subsubsection{Struttura dei documenti}
-\paragraph{Attribuzione del nome}
+\paragraph*{Attribuzione del nome}
 \begin{itemize}
 	\item La denominazione dei documenti formali sarà la seguente \newline
 	\textbf{[NomeDelDocumento]\_v[X].[Y].[Z]-[a].[b]}
@@ -102,7 +102,7 @@ implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti 
 		\item \textbf{[YYYY]-[MM]-[DD]} indica la data della riunione, \textbf{[YYYY]} indica l'anno, \textbf{[MM]} indica il mese, \textbf{[DD]} indica il giorno.
 	\end{itemize}
 \end{itemize}
-\paragraph{Frontespizio}    
+\paragraph*{Frontespizio}    
 
 \begin{figure}[H]
     \centering
@@ -111,16 +111,33 @@ implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti 
 \end{figure}
 
 
-\paragraph{Registro delle modifiche}      
+\paragraph*{Registro delle modifiche}      
 Ogni documento presenta subito dopo il frontespizio il registro modifiche, esso è una tabella che traccia tutte le modifiche significative apportate al documento durante il suo ciclo di vita. Ogni voce della tabella riporta:
-\begin{itemize}
-	\item \textbf{Versione:} numero versione documento dopo la modifica;
-	\item \textbf{Data:} data in cui è stata effettuata la modifica;
-	\item \textbf{Autore:} nome e cognome dell'autore della modifica;
-	\item \textbf{Ruolo:} ruolo dell'autore che ha apportato la modifica;
-	\item \textbf{Descrizione:} sintetica descrizione delle modifiche apportate.
-\end{itemize}
-\paragraph{Corpo del documento}       
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		
+	\textbf{Versione} & numero versione documento dopo la modifica \\
+	\textbf{Data} & data in cui è stata effettuata la modifica \\
+	\textbf{Autore} & nome e cognome dell'autore della modifica \\
+	\textbf{Ruolo} & ruolo dell'autore che ha apportato la modifica \\
+	\textbf{Descrizione} & sintetica descrizione delle modifiche apportate \\	
+		
+		\bottomrule
+		\hiderowcolors
+		\caption{Struttura registro delle modifiche}
+	\end{longtable}
+
+
+\paragraph*{Corpo del documento}       
 
 \begin{figure}[H]
     \centering
@@ -129,21 +146,37 @@ Ogni documento presenta subito dopo il frontespizio il registro modifiche, esso 
 \end{figure}
 
 
-\paragraph{Verbali}      
+\paragraph*{Verbali}      
 I verbali, sia interni che esterni, presentano una struttura fissa e sono soggetti alle stesse norme strutturali degli altri argomenti, ad eccezione del fatto che, essendo informali, non sono soggetti a versionamento.
 La struttura sarà quindi la seguente:
-\begin{itemize}
-	\item \textbf{Canale di comunicazione:} riporta il \glo{software} utilizzato per effettuare l'incontro;
-	\item \textbf{Data:} riporta la data della riunione;
-	\item \textbf{Ora inizio:} riporta l'orario di inizio della riunione;
-	\item \textbf{Ora fine:} riporta l'orario di fine della riunione;
-	\item \textbf{Segretario:} nome e cognome dell'incaricato alla stesura del verbale;
-	\item \textbf{Partecipanti:} contiene l'elenco dei presenti all'incontro;   
-	\item \textbf{Ordine del giorno:} contiene l'elenco degli argomenti trattati durante la riunione;
-	\item \textbf{Resoconto:} riporta l'esito della discussione dei singoli punti inseriti nell'ordine del giorno; per i verbali esterni, questa sezione è organizzata secondo il pattern domanda-risposta;
-	\item \textbf{Riepilogo delle decisioni:} contiene una tabella che riassume tutte le decisioni avvenute durante la riunione, numerandole con un codice univoco del tipo: \newline 
-	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}}\newline con \textbf{X} indicante il numero progressivo della decisione, a partire da 1.
-\end{itemize}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Data} & Riporta la data della riunione \\
+		\textbf{Ora inizio} & Riporta l'orario di inizio della riunione\\
+		
+		\textbf{Fine} & Riporta l'orario di fine della riunione \\
+		\textbf{Segretario} & Nome e cognome dell'incaricato alla stesura del verbale \\
+		\textbf{Partecipanti} & Contiene l'elenco dei presenti all'incontro \\  
+		\textbf{Ordine del giorno} & Contiene l'elenco degli argomenti trattati durante la riunione \\
+		\textbf{Resoconto} & Riporta l'esito della discussione dei singoli punti inseriti nell'ordine del giorno; per i verbali esterni, questa sezione è organizzata secondo il pattern domanda-risposta \\
+		\textbf{Riepilogo delle decisioni} & Contiene una tabella che riassume tutte le decisioni avvenute durante la riunione, numerandole con un codice univoco del tipo: 
+	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}} con \textbf{X} indicante il numero progressivo della decisione, a partire da 1 \\		
+		
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione struttura verbali}
+	\end{longtable}
+
+
 \subsubsection{Norme tipografiche}
 \paragraph*{Convenzioni di denominazione}   
 I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli. 
@@ -398,10 +431,11 @@ Il \glo{repository} inerente alla documentazione sarà composto da diversi \glo{
 	\item \textbf{Main:} \glo{branch} principale che viene aggiornato solamente quando un documento arriva in fase di rilascio, essa avviene quando incrementa la \textbf{[X]} di una versione del documento (\S{}\ref{cod-versionamento});
 	\item un \glo{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficiente per un rilascio, verrà eseguito una operazione di \glo{merge} con il \textbf{main}.
 \end{itemize}
-\paragraph*s{Modifiche ai repository}
+\paragraph*{Modifiche ai repository}
 Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il \glo{team}.
+\newpage
 \subsection{Gestione della qualità}
 
 Il processo di gestione della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}, documento che fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
