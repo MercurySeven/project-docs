@@ -1,0 +1,51 @@
+\subsection{Test di sistema}
+L'obiettivo dei \glo{Test di \ignore{sistema}} è dimostrare che i \glo{requisiti} elencati nel documento \AdR{} \versAdR{} vengano rispettati.
+
+
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-8\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \centering
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{C{.20\freewidth} C{.20\freewidth} C{.50\freewidth} C{.10\freewidth}}
+        \toprule 
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Codice} & \textbf{Requisito} & \textbf{Descrizione} & \textbf{Stato} \\
+        \toprule
+        \endhead
+
+        TSO01 & RFO01.0 & L'utente effettua il login all'interno dell'applicazione & NI \\
+        TSO02 & RFO02.0 & L'utente scieglie cosa sincronizzare dai file presenti nella cartella root & NI \\
+        TSO03 & RFD02.1/RFD03.1/RFO12.0 & L'utente mette in pausa la sincronizzazione con il server & NI \\
+        TSO04 & RFD02.2/RFD03.2/RFO12.0 & L'utente riprende la sincronizzazione con il server & NI \\
+        TSO05 & RFD02.3/RFD03.3/RFO12.0 & L'utente annulla la sincronizzazione con il server & NI \\
+        TSO06 & RFO03.0/RFO12.0 & L'utente scieglie cosa sincronizzare dai file presenti nel server & NI \\
+        TSO07 & RFO04.0 & L'utente controlla che lo stesso file è presente sia nel suo computer che nel server & NI \\
+        TSO08 & RFD05.0/RFO12.0 & L'utente modifica la lista dei file che sincronizza con il server, dopo aver fatto almeno una sincronizzazione & NI \\
+        TSO09 & RFF06.0 & L'utente deve ritornare alla versione precedente dei file, dopo aver annullato una sincronizzazione & NI \\
+        TSO10 & RFO07.0 & L'utente utilizza l'applicazione mentre avviene un trasferimento di file (anche pesante) & NI \\
+        TSO11 & RFF08.0 & L'utente riceve una notifica di un file modificato sul server e che è stato salvato nel suo computer & NI \\
+        TSO12 & RFF09.0 & L'utente, tramite menù contestuale, deve poter inviare quel file al server & NI \\
+        TSO13 & RFD10.0 & L'utente nasconde l'applicazione e deve poter vedere la sua icona nel system tray & NI \\
+        TSD14 & RFD11.0 & L'utente visualizza le informazioni dell'applicazione & NI \\
+        TSO15 & RFD13.0 & L'utente riavvia il computer e l'applicazione deve avviarsi in autonomia & NI \\
+        TSO16 & RFD14.0 & L'utente modifica la quota disco & NI \\
+        TSO17 & RFO15.0 & L'utente effettua il logout & NI \\
+        TSO18 & RFF16.0 & L'utente controlla le informazioni dei file contenuti nella cartella root & NI \\
+        TSO19 & RFF16.1 & L'utente richiede un link per poter condividere il file con un'altra persona & NI \\
+        TSO20 & RFO17.0 & L'utente viene informato se una sincronizzazione è fallita per assenza di rete & NI \\
+        TSO21 & RFO18.0 & L'utente viene informato se inserisce delle credenziali sbagliate & NI \\
+        TSO22 & RFD19.0/RFD20.0 & L'utente riceve un messaggio se la cartella root è piena o il server ha finito lo spazio di storage & NI \\
+        TSO23 & RFD21.0 & L'utente riceve un messaggio se il valore di quota disco inserito non è adatto & NI \\
+        TSO24 & RFO22.0 & L'utente scieglie o modifica il percorso delle cartella di root & NI \\
+        TSO25 & RFD23.0 & L'utente modifica la politica di risoluzione dei conflitti tra file & NI \\
+        TSO26 & RFD24.0 & L'utente decide che versione del file tenere, impostando la politica "decisione manuale" & NI \\
+        TSO27 & RFD25.0 & L'utente modifica ogni quanto sincronizzare la cartella root con il server & NI \\
+
+        \bottomrule
+        \hiderowcolors
+        \caption{Tabella dei test di sistema}
+    \end{longtable}
+}

@@ -1,24 +1,31 @@
 \section{Processi di supporto}
 \subsection{Processo di documentazione}
-\subsubsection{Scopo}
-L'obiettivo della sezione è quello di normare le attività di stesura e aggiornamento della documentazione svolte durante il ciclo di vita del \glo{software}, così da ottenere documenti formalmente concordi.
-\subsubsection{Descrizione}
-La sezione contiene le norme tramite le quali avviene la corretta stesura dei documenti, comprendente \glo{verifica} e approvazione. I membri del gruppo sono tenuti ad attenersi alla suddetta sezione.
-\subsubsection{Aspettative}
-Le aspettative riguardanti il processo in questione sono:
-\begin{itemize}
-	\item l'identificazione di una struttura ben organizzata comune ai prodotti del processo in questione;
-	\item la raccolta di norme da rispettare durante la stesura dei documenti.
-\end{itemize}
+Il processo di documentazione comprende le attività di stesura e aggiornamento di tutti i documenti creati durante il ciclo di vita del \glo{software} in modo da renderli formalmente concordi. In particolare, in questa sezione ne vengono normate le attività, comprendenti stesura, \glo{verifica} e approvazione. 
 \subsubsection{Ciclo di vita di un documento}
 Ogni documento redatto passa per le seguenti fasi:
-\begin{itemize}
-	\item \textbf{Creazione} del documento tramite template;
-	\item \textbf{Strutturazione} del documento tramite registro delle modifiche, indice di contenuti e/o indice delle figure e delle tabelle;
-	\item \textbf{Stesura} del corpo del documento, scritto da più membri del gruppo;
-	\item \textbf{Revisione} del documento, gestita da un \textit{Verificatore} che, regolarmente, riesamina le sezioni del suddetto;
-	\item \textbf{Approvazione} del documento, stabilita dal \textit{Responsabile di Progetto} quando la revisione risulta positiva; consente il rilascio del documento. 
-\end{itemize}
+
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.68\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Creazione} & Il documento viene creato tramite template \\ 
+		\textbf{Strutturazione} & Viene data una struttura al documento inserendo registro delle modifiche, indice di contenuti e/o indice delle figure e delle tabelle\\
+		\textbf{Stesura} & Viene steso il corpo del documento, scritto da più membri del gruppo \\ 
+		\textbf{Revisione} & Il documento viene sottoposto a una revisione gestita da un \textit{Verificatore} che, regolarmente, riesamina le sezioni del suddetto \\
+		\textbf{Approvazione} & Quando la revisione completa del documento risulta positiva viene approvato dal \textit{Responsabile di Progetto}; consente il rilascio del documento \\ 	
+				
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione fasi di vita del documento}
+	\end{longtable}
+
 \subsubsection{Documenti prodotti \hfil}
 
 I documenti prodotti saranno di due tipi:
@@ -29,7 +36,6 @@ I documenti prodotti saranno di due tipi:
 		\item \textbf{esterni}: di interesse ai committenti e al \glo{proponente}, vengono consegnati nell'ultima versione approvata.
 	\end{itemize} 
 In particolare, i documenti formali prodotti saranno:
-\newpage
 {
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -37,17 +43,16 @@ In particolare, i documenti formali prodotti saranno:
 	\setlength{\belowrulesep}{0pt}
 	\rowcolors{2}{AzzurroGruppo!10}{white}
 	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
-		\toprule 
 		\rowcolor{AzzurroGruppo!30}
 		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
 		\toprule
 		\endhead		
-		\NdP{} & Contiene tutte le regole stabilite dai membri alle quali attenersi durante l'intera durata del progetto. & Interno \\ 
-		\PdP{} & Contiene la pianificazione di tutte le attività previste, comprendente il preventivo delle spese e una previsione dell'impegno in ore per ogni membro del gruppo. & Esterno \\
-		\PdQ{} & Descrive i criteri di valutazione della qualità impiegate dal gruppo & Esterno \\ 
-		\SdF{} & Contiene l'analisi dei capitolati messi a disposizione, evidenziandone pregi e difetti. Contiene, inoltre, il capitolato scelto dal gruppo & Interno \\
-		\AdR{} & Descrive i \glo{requisiti} che il prodotto dovrà possedere per essere in linea con le richieste dei committenti. & Esterno \\ 	
-		\G{} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
+		\textbf{\NdP{}} & Contiene tutte le regole stabilite dai membri alle quali attenersi durante l'intera durata del progetto. & Interno \\ 
+		\textbf{\PdP{}} & Contiene la pianificazione di tutte le attività previste, comprendente il preventivo delle spese e una previsione dell'impegno in ore per ogni membro del gruppo. & Esterno \\
+		\textbf{\PdQ{}} & Descrive i criteri di valutazione della qualità impiegate dal gruppo & Esterno \\ 
+		\textbf{\SdF{}} & Contiene l'analisi dei capitolati messi a disposizione, evidenziandone pregi e difetti. Contiene, inoltre, il capitolato scelto dal gruppo & Interno \\
+		\textbf{\AdR{}} & Descrive i \glo{requisiti} che il prodotto dovrà possedere per essere in linea con le richieste dei committenti. & Esterno \\ 	
+		\textbf{\G{}} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
 		\bottomrule
 		\hiderowcolors
 		\caption{Nome, Descrizione ed uso dei documenti formali prodotti}
@@ -63,13 +68,12 @@ In particolare, i documenti informali prodotti saranno:
 	\setlength{\belowrulesep}{0pt}
 	\rowcolors{2}{AzzurroGruppo!10}{white}
 	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
-		\toprule 
 		\rowcolor{AzzurroGruppo!30}
 		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
 		\toprule
 		\endhead		
-		Verbali interni & Contengono le informazioni e le decisioni prese durante gli incontri tra i membri del gruppo. & Interno \\ 
-		Verbali esterni & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
+		\textbf{Verbali interni} & Contengono le informazioni e le decisioni prese durante gli incontri tra i membri del gruppo. & Interno \\ 
+		\textbf{Verbali esterni} & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Nome, Descrizione ed uso dei documenti informali prodotti}
@@ -79,13 +83,13 @@ In particolare, i documenti informali prodotti saranno:
 \subsubsection{Directory di un documento}
 Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeDelDocumento}. Questa viene poi collocata, a seconda del tipo di contenuto, in una delle directory \textbf{Interni} o \textbf{Esterni}. 
 \subsubsection{Struttura dei documenti}
-\paragraph{Attribuzione del nome}
+\paragraph*{Attribuzione del nome}
 \begin{itemize}
 	\item La denominazione dei documenti formali sarà la seguente \newline
 	\textbf{[NomeDelDocumento]\_v[X].[Y].[Z]-[a].[b]}
 	\begin{itemize}
 		\item \textbf{NomeDelDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convenzione \glo{PascalCase});
-		\item \textbf{v[X].[Y].[Z]} con \textbf{v} che abbrevia la parola versione, \textbf{[X]} indica il numero incrementale di revisione del responsabile di progetto, \textbf{[Y]} indica il numero incrementale della \glo{verifica}, \textbf{[Z]} indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione;
+		\item \textbf{v[X].[Y].[Z]} con \textbf{v} che abbrevia la parola versione, \textbf{[X]} indica il numero incrementale di revisione del responsabile di progetto, \textbf{[Y]} indica il numero incrementale della \glo{verifica}, \textbf{[Z]} indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione. Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate;
 		\item \textbf{[a].[b]} con \textbf{A} che indica una versione completa e funzionante del prodotto: le componenti \glo{software}
 implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti superati, le \glo{metriche} di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto \glo{software} non è più retrocompatibile; la numerazione parte da 0 e non viene annullata; \textbf{B} indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata.
 	\end{itemize}
@@ -98,149 +102,289 @@ implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti 
 		\item \textbf{[YYYY]-[MM]-[DD]} indica la data della riunione, \textbf{[YYYY]} indica l'anno, \textbf{[MM]} indica il mese, \textbf{[DD]} indica il giorno.
 	\end{itemize}
 \end{itemize}
-\paragraph{Frontespizio}    
-La prima pagina di ogni documento sarà strutturata nel seguente modo:
-\begin{itemize}
-	\item \textbf{Logo del gruppo}: posto in basso al centro;
-	\item \textbf{Titolo:} posto in alto al centro;
-	\item \textbf{Nome del gruppo e del progetto:} posti subito sotto il titolo, al centro;
-	\item \textbf{Recapito:} Indirizzo di posta elettronica del gruppo, posizionato sotto il nome del gruppo;
-	\item \textbf{Informazioni sul documento,} includono:
-	\begin{itemize}
-		\item \textbf{Versione:} indica la versione del documento;
-		\item \textbf{Uso:} indica se il documento sarà ad uso interno od esterno;
-		\item \textbf{Distribuzione:} indica i destinatari del documento;
-		\item \textbf{Approvazione:} nome e cognome dell'incaricato alla approvazione del documento;
-		\item \textbf{Redazione:} nome e cognome degli incaricati della redazione del documento;
-		\item \textbf{\glo{Verifica}:} nome e cognome degli incaricati della \glo{verifica} del documento;
-		\item \textbf{Descrizione:} sintetica descrizione del contenuto del documento.
-	\end{itemize}
-\end{itemize}
-\paragraph{Registro delle modifiche}      
+\paragraph*{Frontespizio}    
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{components/immagini/frontespizio.png}
+    \caption{Struttura frontespizio}
+\end{figure}
+
+
+\paragraph*{Registro delle modifiche}      
 Ogni documento presenta subito dopo il frontespizio il registro modifiche, esso è una tabella che traccia tutte le modifiche significative apportate al documento durante il suo ciclo di vita. Ogni voce della tabella riporta:
-\begin{itemize}
-	\item \textbf{Versione:} numero versione documento dopo la modifica;
-	\item \textbf{Data:} data in cui è stata effettuata la modifica;
-	\item \textbf{Autore:} nome e cognome dell'autore della modifica;
-	\item \textbf{Ruolo:} ruolo dell'autore che ha apportato la modifica;
-	\item \textbf{Descrizione:} sintetica descrizione delle modifiche apportate.
-\end{itemize}
-\paragraph{Corpo del documento}       
-Ogni pagina del corpo del documento è strutturata nel seguente modo:
-\begin{itemize}
-	\item L'intestazione, composta nel seguente modo:
-	\begin{itemize}
-		\item In alto a sinistra si trova una miniatura a colori del logo del gruppo;	
-		\item In alto a destra viene indicata la sezione corrente;
-		\item Sotto i primi due elementi elencati è presente una 	linea nera separatrice;
-	\end{itemize}		
-	\item il contenuto della pagina si trova sotto l'intestazione;	
-	\item Il piè di pagina, composto nel seguente modo:	
-	\begin{itemize}	
-		\item Sotto il contenuto della pagina è presente una linea nera separatrice;
-		\item Sotto la linea a sinistra è presente il titolo del documento ed il nome del gruppo;
-		\item Sotto la linea a destra è presente il numero della pagina corrente e quello delle pagine totali.		
-	\end{itemize}
-\end{itemize}
-\paragraph{Verbali}      
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		
+	\textbf{Versione} & Numero versione documento dopo la modifica \\
+	\textbf{Data} & Data in cui è stata effettuata la modifica \\
+	\textbf{Autore} & Nome e cognome dell'autore della modifica \\
+	\textbf{Ruolo} & Ruolo dell'autore che ha apportato la modifica \\
+	\textbf{Descrizione} & Sintetica descrizione delle modifiche apportate \\	
+		
+		\bottomrule
+		\hiderowcolors
+		\caption{Struttura registro delle modifiche}
+	\end{longtable}
+
+
+\paragraph*{Corpo del documento}       
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.6]{components/immagini/corpodocumento.png}
+    \caption{Struttura corpo del documento}
+\end{figure}
+
+
+\paragraph*{Verbali}      
 I verbali, sia interni che esterni, presentano una struttura fissa e sono soggetti alle stesse norme strutturali degli altri argomenti, ad eccezione del fatto che, essendo informali, non sono soggetti a versionamento.
 La struttura sarà quindi la seguente:
-\begin{itemize}
-	\item \textbf{Canale di comunicazione:} riporta il \glo{software} utilizzato per effettuare l'incontro;
-	\item \textbf{Data:} riporta la data della riunione;
-	\item \textbf{Ora inizio:} riporta l'orario di inizio della riunione;
-	\item \textbf{Ora fine:} riporta l'orario di fine della riunione;
-	\item \textbf{Segretario:} nome e cognome dell'incaricato alla stesura del verbale;
-	\item \textbf{Partecipanti:} contiene l'elenco dei presenti all'incontro;   
-	\item \textbf{Ordine del giorno:} contiene l'elenco degli argomenti trattati durante la riunione;
-	\item \textbf{Resoconto:} riporta l'esito della discussione dei singoli punti inseriti nell'ordine del giorno; per i verbali esterni, questa sezione è organizzata secondo il pattern domanda-risposta;
-	\item \textbf{Riepilogo delle decisioni:} contiene una tabella che riassume tutte le decisioni avvenute durante la riunione, numerandole con un codice univoco del tipo: \newline 
-	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}}\newline con \textbf{X} indicante il numero progressivo della decisione, a partire da 1.
-\end{itemize}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Data} & Riporta la data della riunione \\
+		\textbf{Ora inizio} & Riporta l'orario di inizio della riunione\\
+		
+		\textbf{Fine} & Riporta l'orario di fine della riunione \\
+		\textbf{Segretario} & Nome e cognome dell'incaricato alla stesura del verbale \\
+		\textbf{Partecipanti} & Contiene l'elenco dei presenti all'incontro \\  
+		\textbf{Ordine del giorno} & Contiene l'elenco degli argomenti trattati durante la riunione \\
+		\textbf{Resoconto} & Riporta l'esito della discussione dei singoli punti inseriti nell'ordine del giorno; per i verbali esterni, questa sezione è organizzata secondo il pattern domanda-risposta \\
+		\textbf{Riepilogo delle decisioni} & Contiene una tabella che riassume tutte le decisioni avvenute durante la riunione, numerandole con un codice univoco del tipo: 
+	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}} con \textbf{X} indicante il numero progressivo della decisione, a partire da 1 \\		
+		
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione struttura verbali}
+	\end{longtable}
+
+
 \subsubsection{Norme tipografiche}
-\paragraph{Convenzioni di denominazione}   
-I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli.
-\paragraph{Stili di testo}
-Gli stili di testo adottati nei documenti sono: 
-\begin{itemize}
-	\item \textbf{Grassetto:} viene utilizzato nei titoli delle sezioni e dei paragrafi, per enfatizzare parole, per indicare gli elementi di un elenco puntato;
-	\item \textbf{Corsivo:} viene applicato per i nomi propri (per la precisione i membri del gruppo, il \glo{proponente}, i committenti), per citare il nome di un documento e per i termini che fanno parte del glossario;
-	\item \textbf{Monospace:} per gli snippet di codice;
-	\item \textbf{Maiuscolo:} verrà usato negli acronimi e, nel caso di nomi di documenti, per le lettere iniziali delle parole che li compongono secondo la convenzione \textit{\glo{PascalCase}}.
-\end{itemize}
-\paragraph{Glossario}  
-Al fine di evitare ambiguità fra i termini è stato realizzato un documento denominato \textit{Glossario}. I termini il cui significato può risultare ambiguo saranno contrassegnati con una \textbf{G} a pedice (e.g: \texorpdfstring{glossario\textsubscript{\textbf{G}}})) ad ogni loro occorrenza e saranno riportati in ordine alfabetico con le loro rispettive definizioni.
-\paragraph{Elenchi puntati}
-Gli elenchi puntati al primo livello di annidamento vengono scanditi con • (pallino); al livello successivo il simbolo usato è -- (doppio trattino); all'ultimo livello è .(punto fermo).\newline
-Ogni voce contenuta all'interno degli elenchi puntati inizia con la lettera maiuscola e termina con ;(punto e virgola), tranne l'ultima voce, la quale termina con .(punto fermo).\newline
-Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale. 
-\paragraph{Formato di data e formato di ora}
+\paragraph*{Convenzioni di denominazione}   
+I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli. 
+\paragraph*{Stili di testo} 
+
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Grassetto} & Viene usato nei titoli delle sezioni e dei paragrafi, per enfatizzare parole, per indicare gli elementi di un elenco puntato \\
+		\textbf{Corsivo} & Viene usato per i nomi propri (membri del gruppo,  \glo{proponente} e committenti), per citare il nome di un documento e per i termini che fanno parte del glossario\\
+		\textbf{Monospace} & Viene usato per gli snippet di codice \\
+		\textbf{Maiuscolo} & Viene usato negli acronimi e, nel caso di nomi di documenti, per le lettere iniziali delle parole che li compongono secondo la convenzione \textit{\glo{PascalCase}} \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione stili di testo}
+	\end{longtable}
+\paragraph*{Glossario}  
+Al fine di evitare ambiguità fra i termini è stato realizzato un documento denominato \textit{Glossario}. I termini il cui significato può risultare ambiguo saranno contrassegnati con una \textbf{G} a pedice (e.g: \texorpdfstring{glossario\textsubscript{\textbf{G}}})) ad ogni loro occorrenza e saranno riportati in ordine alfabetico con le loro rispettive definizioni. 
+\paragraph*{Elenchi puntati}
+\
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.25\freewidth} L{.75\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Simbolo} & \textbf{Uso e descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{• (pallino)} & Simbolo per scandire il primo livello di annidamento degli elenchi puntati. \\ 
+		\textbf{-- (doppio trattino)} & Simbolo per scandire il secondo livello di annidamento degli elenchi puntati.  \\
+		\textbf{. (punto fermo)} & Simbolo per scandire il terzo livello di annidamento degli elenchi puntati. Inoltre viene utilizzato al termine dell'ultima voce di un elenco puntato \\
+		\textbf{; (punto e virgola)} & Simbolo utilizzato al termine di ogni voce degli elenchi puntati salvo l'ultima\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle convenzioni usate negli elenchi puntati}
+\end{longtable}
+}
+Ogni voce contenuta all'interno degli elenchi puntati inizia con la lettera maiuscola. Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale.
+Gli elenchi puntati dovranno essere usati solo quando necessario, preferendo le tabelle ad essi quando possibile.
+\paragraph*{Formato data e ora} 
 Le date vengono indicato usato il formato stabilito dallo standard ISO 8601:\newline
 \centerline{\textbf{[YYYY]\-[MM]\-[DD]}}
 \newline
-dove:
-\begin{itemize}
-	\item \textbf{[YYYY]} indica l'anno;
-	\item \textbf{[MM]} indica il mese;
-	\item \textbf{[GG]} indica il giorno.
-\end{itemize}
-\paragraph{Sigle}
-\begin{itemize}
-	\item Le sigle relative ai nomi dei documenti sono:
-	\begin{itemize}
-		\item \textbf{AdR}: \textit{Analisi dei \ignore{Requisiti};}	
-		\item \textbf{SdF}: \textit{Studio di Fattibilità;}	
-		\item \textbf{NdP}: \textit{Norme di Progetto;}	
-		\item \textbf{PdP}: \textit{Piano di Progetto;}	
-		\item \textbf{PdQ}: \textit{Piano di Qualifica;}
-		\item \textbf{G}: \textit{Glossario;}
-		\item \textbf{VE}: \textit{Verbale Esterno;}	
-		\item \textbf{VI}: \textit{Verbale Interno.}
-	\end{itemize}	
-	\item Le sigle relative ai ruoli di progetto sono:	
-	\begin{itemize}		
-		\item \textbf{RE}: \textit{Responsabile;}		
-		\item \textbf{AM}: \textit{Amministratore;}		
-		\item \textbf{AN}: \textit{Analista;}		
-		\item \textbf{PT}: \textit{Progettista;}		
-		\item \textbf{PT}: \textit{Programmatore;}	
-		\item \textbf{VE}: \textit{Verificatore.}	
-	\end{itemize}	
-	\item Le sigle relative alle revisioni di progetto sono:	
-	\begin{itemize}	
-		\item \textbf{RR}:\textit{Revisione dei \ignore{requisiti};} 			
-		\item \textbf{RP}:\textit{Revisione di progettazione;} 		
-		\item \textbf{RQ}:\textit{Revisione di qualifica;} 		
-		\item \textbf{RA}:\textit{Revisione di accettazione.} 	
-	\end{itemize}	
-\end{itemize}
+
+\
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.25\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{[YYYY]} & Indica l'anno \\ 
+		\textbf{[MM]} & Indica il mese  \\
+		\textbf{[GG]} & Indica il giorno \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle sigle indicanti la data}
+\end{longtable}
+\paragraph*{Sigle}
+Le seguenti tabelle riassumono tutte le sigle utilizzate e la loro descrizione. Le tabelle sono divise per argomento.
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.25\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		 \textbf{AdR}& Analisi dei \ignore{Requisiti} \\
+		 \textbf{SdF} & Studio di Fattibilità \\
+		 \textbf{NdP} & Norme di Progetto \\
+		 \textbf{PdP} & Piano di Progetto \\
+		 \textbf{PdQ} & Piano di Qualifica \\
+		 \textbf{G} & Glossario \\
+		 \textbf{VE} & Verbale Esterno \\
+		 \textbf{VI} & Verbale Interno \\
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Sigle relative ai nomi dei documenti}
+	\end{longtable}
+	\newpage{}
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.25\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		 \textbf{RE}& Responsabile \\
+		 \textbf{AM} & Amministratore \\
+		 \textbf{AN} & Analista \\
+		 \textbf{PR} & Progettista \\
+		 \textbf{PT} & Programmatore \\
+		 \textbf{VE} & Verificatore \\
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Sigle ruoli di progetto}
+	\end{longtable}
+		
+		\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.3\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Nome} \\
+		\toprule
+		\endhead		
+		 \textbf{RR}& Revisione dei \ignore{requisiti} \\
+		 \textbf{RP} & Revisione di Progettazione \\
+		 \textbf{RQ} & Revisione di Qualifica \\
+		 \textbf{RA} & Revisione di Accettazione \\
+		 
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Sigle relative alle revisioni di progetto}
+	\end{longtable}	
 \subsubsection{Elementi grafici}
-Questa sezione definisce le norme per l'uso di elementi grafici quali immagini, tabelle e diagrammi.
-\begin{itemize}
-\item \textbf{Immagini:} le figure saranno centrate ed avranno una opportuna didascalia;
-\item \textbf{Grafici UML:} i grafici in linguaggio UML saranno inseriti nel documento come immagini;
-\item \textbf{Tabelle:} ogni tabella è contrassegnata da una didascalia e numerata in modo progressivo, a questa prassi fanno eccezione le tabelle del registro delle modifiche, che non presentano una didascalia.
-\end{itemize}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.2\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		 \textbf{Immagini} & Le figure saranno centrate ed avranno una opportuna didascalia \\
+		  \textbf{Grafici UML} & I grafici in linguaggio UML saranno inseriti nel documento come immagini \\
+		  \textbf{Tabelle} & Ogni tabella è contrassegnata da una didascalia e numerata in modo progressivo. Fanno eccezione le tabelle del registro delle modifiche, che non presentano una didascalia \\
+		 
+
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione elementi grafici}
+	\end{longtable}	
+
 \subsubsection{Metriche}
-\paragraph{MDC01 Indice Gulpease}
-Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana:
-La formula adottata è:\newline
-\centerline{\textbf{$Ig= 89 + \frac{300 * (n\ frasi) - 10 * (n\ lettere)}{n\ parole}$}}
-\paragraph{MDC02 Correttezza ortografica}
-Indice che riporta la correttezza ortografica del testo. Questo valore deve essere il più elevato possibile come indicato nel \PdQ{}.
+
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.1\freewidth} L{.15\freewidth} L{.3\freewidth} L{.35\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione metrica} & \textbf{Formula/Valore}\\
+		\toprule
+		\endhead		
+		\textbf{MDC01} & Indice di Gulpease & Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana & \small{$Ig= 89 + \frac{300 * (n\ frasi) - 10 * (n\ lettere)}{n\ parole}$} \\
+		\textbf{MDC02} & Correttezza Ortografica & Indice che riporta la correttezza ortografica del testo. Questo valore deve essere il più elevato possibile come indicato nel \PdQ{} & Correttezza >= 95\% \\
+		
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle metriche}\\
+	\end{longtable}
+}
+
 
 \subsubsection{Strumenti di stesura}
-Gli strumenti usati per la stesura dei documenti sono il linguaggio \LaTeX e l'editor \textit{Texmaker}.
-\paragraph{\LaTeX}
-Per la stesura dei documenti è stato scelto \LaTeX, un linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti.
-\paragraph{Texmaker}
-L'editor scelto per la stesura dei documenti è \textit{Texmaker}, adottato da tutti i membri del gruppo. \textit{Texmaker} è un editor intuitivo che permette una facile compilazione e visualizzazione dei documenti.\newline
-\url{(https://www.xm1math.net/texmaker/)}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.75\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{\LaTeX} & Linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti \\
+		\textbf{Texmaker} & Editor intuitivo che permette una facile compilazione e visualizzazione dei documenti. \newline \url{(https://www.xm1math.net/texmaker/)}\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Strumenti utilizzati durante il processo di documentazione}
+	\end{longtable}
+
 \subsection{Processo di configurazione}
-\subsubsection{Scopo}
-Lo scopo del processo è gestire in modo ordinato e sistematico la produzione di documenti e codice, oltre che a renderli facilmente reperibili. Un elemento soggetto a configurazione ha una collocazione, una denominazione ed uno stato definiti; per ogni oggetto configurato sono garantiti la modifica normata ed il versionamento.
-\subsubsection{Descrizione}
-Il processo è composto dalle seguenti attività:
+Il processo di configurazione ha come scopo il gestire in maniera ordinata e sistematica la produzione di documenti e codice. In particolare, un elemento sottoposto a configurazione ha una collocazione, una denominazione e uno stato definiti, oltre che avere garantite modifica normata e versionamento. Le attività coinvolte sono:
 \begin{enumerate}
 	\item implementazione del processo;
 	\item identificazione della configurazione;
@@ -249,31 +393,28 @@ Il processo è composto dalle seguenti attività:
 	\item valutazione della configurazione;
 	\item gestione del rilascio e consegna.
 \end{enumerate}
-\subsubsection{Aspettative}
-Le attese, per l’implementazione di questo processo, sono:
-\begin{itemize}
-	\item rendere sistematica la produzione di codice e documentazione;
-	\item unificare ed uniformare lo stato degli strumenti usati durante lo svolgimento di tutto
-il progetto;
-	\item classificare i prodotti dei vari processi implementati.
-\end{itemize}
 \subsubsection{Versionamento}
-\paragraph{Codice di versionamento}
+\paragraph*{Codice di versionamento}
 \label{cod-versionamento}
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
 \centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline
-\paragraph{Tecnologie adottate}
+\paragraph*{Tecnologie adottate}
 Per la gestione delle versioni è stato scelto di utilizzare il \glo{sistema} di versionamento distribuito \textit{\glo{Git}} con due \glo{repository} remoti presenti su \textit{\glo{GitHub}}.
-\paragraph{Repository}
+\paragraph*{Repository}
 Il gruppo \textit{\Gruppo{}} ha scelto di creare due \glo{repository} per il progetto:
 \begin{itemize}
 	\item \textbf{project-SSD} per il versionamento del codice realizzato(\url{https://github.com/MercurySeven/project-SSD});
 	\item \textbf{\repoDoc{}} per il versionamento dei documenti redatti (\url{https://github.com/MercurySeven/project-docs}).
 \end{itemize}
 Il gruppo ha deciso di optare per una separazione logica del codice e della documentazione per poter avere una struttura ed una organizzazione migliore. I due repository sono comunque entrambi facilmente reperibili nella pagina dell'organizzazione (\url{https://github.com/MercurySeven}).
-\paragraph{Struttura del repository}
+\paragraph*{Struttura del repository}
 Per entrambi i \glo{repository}, esiste una versione \textbf{locale} sul computer di ogni membro ed una versione \textbf{remota} su \textit{\glo{GitHub}}.\newline
-Il \glo{repository} \textbf{project-SSD} risulta avere una struttura ancora indefinita data l'assenza di codice.\newline
+Il \glo{repository} \textbf{project-SSD} è strutturato nel seguente modo:
+\begin{itemize}
+	\item \textbf{docs:} cartella contenente guide per installazione ed utilizzo del prodotto;
+	\item \textbf{src:} cartella contenente il codice;
+	\item \textbf{tests:} cartella contenente i \glo{test} del codice;
+\end{itemize}
 Il \glo{repository} \textbf{\repoDoc{}} è invece strutturato nel seguente modo:
 \begin{itemize}
 	\item \textbf{Tutorial:} cartella contenente un esempio di documento \LaTeX che elenca anche le basi del linguaggio e del suo utilizzo; 
@@ -281,7 +422,7 @@ Il \glo{repository} \textbf{\repoDoc{}} è invece strutturato nel seguente modo:
 	\item Una cartella per ogni documento necessario per la \textit{Revisione dei \ignore{Requisiti}}.
 \end{itemize}
 Si è optato per questa soluzione per poter avere una documentazione in continua evoluzione, senza categorizzarla e bloccarla negli stati delle revisioni tramite sottocartelle contenenti le versioni delle documentazioni durante una specifica revisione.
-\paragraph{Tipi di file}
+\paragraph*{Tipi di file}
 Nelle singole cartelle dei documenti sono inclusi:
 \begin{itemize}
 \item file \textit{README.md};
@@ -289,38 +430,21 @@ Nelle singole cartelle dei documenti sono inclusi:
 \item file \textit{.png} per le immagini da inserire nei documenti.
 \end{itemize}
 Il file \textit{.gitignore} contiene al suo interno un riferimento a tutti i file che non verranno versionati; il file è posizionato al livello più esterno del \glo{repository}.
-\paragraph{Norme di branching}
+\paragraph*{Norme di branching}
 \label{NormeBranching}
 Il \glo{repository} inerente alla documentazione sarà composto da diversi \glo{branch}:
 \begin{itemize}
 	\item \textbf{Main:} \glo{branch} principale che viene aggiornato solamente quando un documento arriva in fase di rilascio, essa avviene quando incrementa la \textbf{[X]} di una versione del documento (\S{}\ref{cod-versionamento});
 	\item un \glo{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficiente per un rilascio, verrà eseguito una operazione di \glo{merge} con il \textbf{main}.
 \end{itemize}
-\paragraph{Modifiche ai repository}
+\paragraph*{Modifiche ai repository}
 Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il \glo{team}.
+\newpage
 \subsection{Gestione della qualità}
-\subsubsection{Scopo}
-Lo scopo del processo di gestione della qualità è garantire che il prodotto finale rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder}, che le esigenze espresse dal \glo{proponente} siano soddisfatte e che la qualità sia nel complesso soddisfacente. Si mira inoltre ad un maggior controllo di prodotti e processi.
-\subsubsection{Descrizione}
-Al fine di formalizzare i metodi e gli standard adottati per assicurare la qualità della documentazione e dei prodotti è redatto il \PdQ{}.
-Il documento affronta i seguenti punti:
-\begin{itemize}
-\item Strategie di sviluppo e standard adottati dal gruppo;
-\item Obiettivi e \glo{metriche} relative ai processi adottati;
-\item Obiettivi e \glo{metriche} relative ai prodotti sviluppati.
-\end{itemize}
-Il \PdQ{}, oltre a definire i \glo{requisiti} qualitativi e le \glo{metriche} usate per tracciarli, ha lo scopo di tenere traccia di tali \glo{metriche} tramite aggiornamenti periodici al documento.
-Il documento è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
-\subsubsection{Aspettative}
-Le aspettative di questo processo sono:
-\begin{itemize}
-	\item conseguimento della qualità nel prodotto, secondo le richieste del \textit{\glo{proponente}};
-	\item prova oggettiva della qualità del prodotto;
-	\item conseguimento della qualità nell'organizzazione delle attività del gruppo e dei processi;
-	\item raggiungimento della piena soddisfazione del \glo{proponente}.
-\end{itemize}
+
+Il processo di gestione della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}, documento che fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
 \subsubsection{Controllo di qualità}
 Il gruppo \textit{\Gruppo{}} ritiene fondamentale stabilire delle regole che tutti i membri vadano a rispettare per il pieno raggiungimento di un \glo{sistema} di qualità predisposto al miglioramento continuo.
 Le attività che ciascun membro deve svolgere sono:
@@ -361,41 +485,61 @@ Con il perseguimento della qualità in mente, il gruppo \textit{\Gruppo{}} ha de
 	\item ogni processo al termine della pianificazione deve avere una durata ben definita.
 \end{itemize}
 \subsection{Processo di verifica}
-\subsubsection{Scopo}
-Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Sono soggetti a \glo{verifica} sia il \glo{software} che la documentazione.
-\subsubsection{Descrizione}
-Il processo di \glo{verifica} si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi (\S{}\ref{Analisi}) e di \glo{test} (\S{}\ref{Test}). Esso viene applicato al \glo{software} ed ai documenti.
-\subsubsection{Aspettative}
-Il processo di \glo{verifica} si occupa di prendere ciò che è stato prodotto e di restituirlo in uno stato conforme alle aspettative. Per assicurare il corretto funzionamento di tale processo devono essere rispettate alcune regole:
+Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi e di \glo{test} (\S{}\ref{veractivity}); per questo, il corretto funzionamento del processo è garantito dal rispetto delle seguenti regole: 
 \begin{itemize}
 	\item seguire procedure definite;
 	\item seguire criteri chiari ed affidabili;
-	\item i prodotti devono passare attraverso fasi successive opportunamente verificate;
+	\item passaggio del prodotto attraverso fasi successive opportunamente verificate;
 	\item il prodotto deve trovarsi in uno stato stabile dopo la \glo{verifica};
 	\item alla fine del processo deve essere possibile procedere alla fase di \glo{validazione}.
 \end{itemize}
-\subsubsection{Attività}
-\paragraph{Analisi}
-\label{Analisi}
-Il processo di analisi si suddivide in Analisi statica ed Analisi dinamica.
-\paragraph{Analisi statica}
-L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti). Vi sono due metodologie per applicarla:
-\begin{itemize}
-	\item \textbf{Walkthrough:} tecnica di \glo{verifica} consistente nella lettura da parte del \glo{team} dell'intero documento o codice in cerca di anomalie. Verrà applicata principalmente nella fase iniziale del progetto, quando il \glo{team} ancora non conosce i possibili errori che si possono incontrare. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia.
-	\item \textbf{Inspection:} tecnica di \glo{verifica} attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo.
-\end{itemize}
-\paragraph{Analisi dinamica}
-L'analisi dinamica prevede l'esecuzione del prodotto \glo{software} e la sua analisi tramite l'utilizzo di \glo{test} che verificano se il prodotto funziona o se vi sono presenti anomalie.
-\paragraph{Test}
-\label{Test}
-L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. Per ogni \glo{test} devono essere definiti i seguenti parametri:
-\begin{itemize}
-	\item \textbf{ambiente:} \glo{sistema} hardware e \glo{software} sulla quale viene eseguito il \glo{test};
-	\item \textbf{stato iniziale:} stato iniziale dal quale parte il \glo{test};
-	\item \textbf{input:} tutti i dati ammessi in ingresso;
-	\item \textbf{output:} tutti i dati attesi in uscita;
-	\item \textbf{istruzioni aggiuntive:} istruzioni opzionali che permettono di impostare come il \glo{test} deve essere eseguito e come i risultati devono essere interpretati.
-\end{itemize}
+Sono soggetti a \glo{verifica} sia il \glo{software} che la documentazione. 
+
+\subsubsection{Attività} \label{veractivity}
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{0.35\freewidth} L{0.5\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} & \textbf{Attuazione} \\
+		\toprule
+		\endhead	
+		\multirow{2}{.15\freewidth}{\textbf{Analisi statica}}
+		 & \multirow{2}{0.35\freewidth}{L'analisi statica permette di effettuare controlli su documenti e codice, verificando così che la corretta applicazione della correttezza (intesa come assenza di errori e difetti).}&\textbf{Walkthrough:} tecnica di \glo{verifica} consistente nella lettura da parte del \glo{team} dell'intero documento o codice in cerca di anomalie. Verrà applicata principalmente nella fase iniziale del progetto, quando il \glo{team} ancora non conosce i possibili errori che si possono incontrare. Questa tecnica risulta molto onerosa in termini di efficienza ed efficacia. \\
+		 \cline{3-3} 
+		 & & \textbf{Inspection:} tecnica di \glo{verifica} attraverso il quale il \textit{Verificatore} eseguirà una lettura mirata e strutturata del documento o del codice nei punti in cui si sa già che possano essere presenti degli errori. Risulta meno dispendiosa in termini di tempo ma richiede una buona conoscenza di fondo. \\
+		 \textbf{Analisi dinamica} & L'analisi dinamica prevede l'esecuzione del prodotto \glo{software} e la sua analisi tramite l'utilizzo di \glo{test} che verificano se il prodotto funziona o se vi sono presenti anomalie. & L'attività di testing è la base dell'analisi dinamica. I \glo{test} permettono di individuare tutti i possibili errori che possono essere stati commessi e tutti i casi limite che possono risultare problematici. I parametri da definire per ogni \glo{test} sono descritti nella seguente tabella. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione della attività}
+	\end{longtable}
+
+I parametri da definire per ogni \glo{test} sono descritti nella seguente tabella.
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Ambiente} & \glo{Sistema} hardware e \glo{software} sulla quale viene eseguito il \glo{test} \\
+		\textbf{Stato iniziale} & Stato iniziale dal quale parte il \glo{test} \\
+		 \textbf{Input} & Tutti i dati ammessi in ingresso \\
+		\textbf{Output} & Tutti i dati attesi in uscita \\
+		 \textbf{Istruzioni aggiuntive} & Istruzioni opzionali che permettono di impostare come il \glo{test} deve essere eseguito e come i risultati devono essere interpretati \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Parametri dei test}
+	\end{longtable}
+
+
 Dei \glo{test} ben progettati e scritti devono:
 \begin{itemize}
 	\item essere ripetibili;
@@ -403,64 +547,63 @@ Dei \glo{test} ben progettati e scritti devono:
 	\item avvertire la presenza di effetti indesiderati nel codice;
 	\item fornire informazioni sui risultati e sull'esecuzione stessa tramite file di log.
 \end{itemize}
-Le tipologie di \glo{test} utilizzate sono le seguenti.
-\begin{itemize}
-	\item \glo{Test di \ignore{unità}};
-	\item \glo{Test di integrazione};
-	\item \glo{Test di \ignore{sistema}};
-	\item \glo{Test di regressione};
-	\item \glo{Test di accettazione}.
-\end{itemize}
-\paragraph{Codice identificativo dei test}
+
+\paragraph*{Codice identificativo dei test}
 Ogni \glo{test} viene descritto con:
 \begin{itemize}
 	\item codice identificativo;
+	\item requisito;
 	\item descrizione;
 	\item stato, che può essere:
 	\begin{itemize}
-		\item implementato;
-		\item non implementato;
-		\item non eseguito;
-		\item superato;
-		\item non superato.
+		\item \textbf{I:} implementato;
+		\item \textbf{NI:} non implementato;
+		\item \textbf{NE:} non eseguito;
+		\item \textbf{S:} superato;
+		\item \textbf{NS:} non superato.
 	\end{itemize}
 \end{itemize}
 Il codice identificativo presenta la seguente struttura:\newline
-\centerline{\textbf{T[Tipo][Id]}}
+\centerline{\textbf{T[Tipo][Priorità][Id]}}
 \newline
 Dove:
 \begin{itemize}
-	\item \textbf{T:} indica il "\glo{Test}";
-	\item \textbf{Tipo:} il tipo di \glo{test}, che può essere:
-	\begin{itemize}
-		\item \textbf{U}: \glo{test di \ignore{unità}};
-		\item \textbf{I}: \glo{test di integrazione};
-		\item \textbf{S}: \glo{test di \ignore{sistema}};
-		\item \textbf{R}: \glo{test di regressione};
-		\item \textbf{A}: \glo{test di accettazione}.
-	\end{itemize}
-	\item \textbf{Id:} rappresenta un codice identificativo.
+	\item \textbf{T:} indica il "\ignore{Test}";
+	\item \textbf{Tipo:}
+		\begin{itemize}
+			\item \textbf{U:} \glo{test di \ignore{unità}};
+			\item \textbf{I:} \glo{test di integrazione};
+			\item \textbf{S:} \glo{test di \ignore{sistema}};
+			\item \textbf{R:} \glo{test di regressione};
+			\item \textbf{A:} \glo{test di accettazione};
+		\end{itemize}
+	\item \textbf{Priorità:}
+		\begin{itemize}
+			\item \textbf{O:} \ignore{test} obbligatorio;
+			\item \textbf{D:} \ignore{test} desiderabile;
+			\item \textbf{F:} \ignore{test} facoltativo;
+		\end{itemize}
+	\item \textbf{Id:} codice identificativo.
 \end{itemize}
 
 \subsubsection{Metriche}
 Il gruppo ritiene prematuro stabilire in questa fase delle \glo{metriche} per i \glo{test} in questione. La sezione sarà opportunamente integrata.
-\subsubsection{Verifica ortografica}
-Per la \glo{verifica} ortografica dei documenti scritti in \LaTeX si utilizzerà \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker}.
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead
+		\textbf{\ignore{Verifica} ortografica} & Per la \glo{verifica} ortografica dei documenti scritti in \LaTeX si utilizzerà \glo{GNU aspell} ed il correttore automatico fornito da \glo{TexMaker} \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche processo di verifica}
+	\end{longtable}
 \subsection{Processo di validazione}
-\subsubsection{Scopo}
-Il processo di \glo{validazione} stabilisce se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se rispetta i \glo{requisiti} e le aspettative del committente.
-\subsubsection{Descrizione}
-Il processo di \glo{validazione} prende in esame il prodotto ottenuto dalla fase di \glo{Verifica} e lo restituisce garantendo che esso sia conforme ai \glo{requisiti} ed ai bisogni del committente.
-Il \RdP{} avrà la responsabilità di controllare i risultati e decidere se:
-\begin{itemize}
-	\item accettare ed approvare il prodotto;
-	\item rigettare il documento, rendendo necessario un nuovo processo di \glo{verifica} con nuove indicazioni.
-\end{itemize}
-\subsubsection{Aspettative}
-Devono essere rispettati i seguenti punti:
-\begin{itemize}
-	\item identificazione degli oggetti da validare;
-	\item elaborazione di una strategia per rendere le procedure di \glo{verifica} riutilizzabili;
-	\item valutazione dei risultati rispetto alle attese.
-\end{itemize}
+Il processo di \glo{validazione} stabilisce se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se rispetta i \glo{requisiti} e le aspettative del committente. In particolare, prende in esame il prodotto ottenuto dalla fase di \glo{verifica} e lo restituisce garantendo che esso sia conforme ai \glo{requisiti} e ai bisogni del committente. Sarà compito del \RdP{} controllare i risultati e decidere se approvare o rigettare il documento, con conseguente richiesta di un nuovo processo. Sarà quindi fondamentale l'elaborazione di una strategia per rendere riutilizzabili le procedure di \glo{verifica}. 
 
