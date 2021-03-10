@@ -1,0 +1,109 @@
+%ricordarsi di compilare più di una volta
+\documentclass[a4paper,12pt]{letteracdp}
+\usepackage{../../Stile/mercuryseven}
+\usepackage[demo]{graphicx}
+\usepackage{titlesec}
+\address{
+\begin{figure}
+\centering
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.5\linewidth]{../Stile/Unipd.png}
+  \label{fig:test1}
+\end{minipage}%
+\begin{minipage}{.5\textwidth}
+  \centering
+  \includegraphics[width=.8\linewidth]{../Stile/Logo.png}
+  \label{fig:test2}
+\end{minipage}
+\end{figure}
+
+	
+    \vspace{0.2cm}
+	Ingegneria del Software \\
+	Gruppo \textit{\gruppo} \\
+}
+
+\signature{
+	\Responsabile{} \\
+	\RdP{}\\
+	\vspace{0.2cm}
+	\includegraphics[scale=0.25]{firme_membri/firma-mp.png}\par
+}
+
+\date{10 marzo 2021}
+
+\pagenumbering{gobble}
+\begin{document}
+
+\thispagestyle{empty}
+
+\begin{letter}{
+	Prof. \Tullio{} \\
+	Prof. \Riccardo{} \\
+	Dipartimento di Matematica \\
+	Università degli Studi di Padova \\
+	Via Trieste, 63 \\
+	35121 Padova}
+	
+\opening{Egregio Professore Tullio Vardanega, \newline
+Egregio Professore Riccardo Cardin,}
+
+\begin{quotation}
+	\noindent 
+	Con la presente il gruppo \gruppo{} intende comunicarVi ufficialmente l'impegno alla Revisione di Progettazione, al fine di esporVi l'avanzamento dello sviluppo del progetto da Voi commissionato, denominato \progetto{}, proposto dall’azienda \proponente.\newline
+	Si allegano alla presente lettera i seguenti documenti:
+	\begin{itemize}
+		\item \docAdR{}\_\versAdR;
+		\item \docG{}\_\versGlo;
+		\item \docNdP{}\_\versNdP;
+		\item \docPdP{}\_\versPdP;
+		\item \docPdQ{}\_\versPdQ;
+		\item \docVI{}2021-01-28;
+		\item \docVI{}2021-02-01;
+		\item \docVI{}2021-02-20;
+		\item \docVE{}2021-02-08;
+		\item \docVE{}2021-02-18;
+		\item \docVE{}2021-03-03.
+\thispagestyle{empty}		
+	\end{itemize}
+Come descritto nel documento \docPdP{}\_\versPdP{}, il gruppo \gruppo{} ha preso l'impegno di consegnare il prodotto richiesto entro la prima data fissata per la Revisione di Accettazione, preventivando costi per un importo totale di \textbf{\EUR{13073}}. \newline
+Di seguito si riportano i nomi dei componenti del gruppo e i rispettivi numeri di matricola:
+	
+	
+\renewcommand{\arraystretch}{1}
+	\begin{table}
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzurroGruppo!10}{white}
+			\begin{tabular}{ c c c }
+				\rowcolor{AzzurroGruppo!30} 
+				\textbf{Nominativo} & \textbf{Matricola}\\
+				\toprule
+				
+				
+		\Daniele{} & \DanieleM{} \\
+		\Davide{} & \DavideM{} \\
+		\Francesco{} & \FrancescoM{} \\
+		\Giosue{} & \GiosueM{} \\
+		\Lucrezia{} & \LucreziaM{} \\
+		\Matteo{} & \MatteoM{} \\
+		\Tommaso{} & \TommasoM{} \\	
+				
+				\bottomrule
+			\end{tabular}
+		\end{center}
+	\end{table}
+	
+	Rimaniamo a Vostra completa disposizione per qualsiasi chiarimento.
+
+\vspace{0.5cm}
+\closing{ Cordiali Saluti,}
+
+\end{quotation}
+
+\end{letter}
+
+\end{document}
