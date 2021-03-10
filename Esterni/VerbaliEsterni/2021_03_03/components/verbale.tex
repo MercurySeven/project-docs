@@ -1,0 +1,70 @@
+\section{Informazioni generali}
+
+\begin{itemize}
+
+    \item \textbf{Canale di comunicazione:} Slack;
+
+    \item \textbf{Settimana:} dal 2021-03-03 al 2021-03-05;
+
+    \item \textbf{Segretario:} \Davide{};
+
+    \item \textbf{Partecipanti}: \Federico{}, rappresentante dell'azienda Zextras e i membri del gruppo \Gruppo{}:
+        \begin{itemize}
+            \item \Daniele{};
+            \item \Davide{};
+            \item \Matteo{}.
+        \end{itemize}
+
+\end{itemize}
+\section{Temi trattati durante la settimana}
+
+\begin{itemize}
+    \item\textbf{Consegna del server Zextras Drive;}
+    \item\textbf{Problemi riscontrati durante l'utilizzo delle API;}
+    \item\textbf{Problemi di sincronizzazione.}
+\end{itemize}
+\newpage
+
+
+\section{Resoconto}
+Durante la settimana del 2021-03-03 il gruppo \textit{\Gruppo{}} ha avuto contatti giornalmente con l'azienda questo perchè sono sorte molte domande relative all'integrazione delle API di Zextras Drive con l'applicazione sviluppata.
+Per avere una comunicazione molto più rapida si è deciso di aggiungere \Alessio{} e \Federico{} al gruppo Slack.
+
+\subsection{Consegna del server Zextras Drive}
+Il 2021-03-03, \Federico{} ci ha comunicato l'indirizzo web per usare il loro prodotto Zextras Drive. Ci sono stati forniti due account con cui provare le funzionalità del drive.
+Inoltre è stato fornito l'endpoint per effettuare le chiamate API con GraphQL. Al gruppo è stato mostrato inoltre, come effettuare upload e download dei file.
+
+\subsection{Problemi riscontrati durante l'utilizzo delle API}
+Sempre il 2021-03-03 il gruppo ha potuto iniziare a testare le varie chiamate API, ma sono iniziati i primi dubbi in quanto il server rispondeva sempre con l'errore 401 (Unauthorized).
+Dopo un'ora e mezza di prove per capire dove avessimo sbagliato nell'usare le API, abbiamo chiesto aiuto a \Federico{}, il quale ci ha spiegato che le API hanno bisogno di specificare i cookie di autenticazione nell'header di richiesta.
+\Federico{} ci ha comunicato che sta sviluppando un'API apposta per noi per gestire l'autenticazione e che per il momento i cookie dobbiamo recuperarli dal browser.
+
+\subsection{Problemi di sincronizzazione}
+Nei giorni seguenti il gruppo ha notato un problema presente nel server Zextras Drive, in quanto la data di ultima modifica del file viene generata nel server e non è possibile specificarla durante l'upload del file.
+Questo ha creato un grosso problema con l'algoritmo di sincronizzazione in quanto basandosi sulla data di ultima modifica la sincronizzazione non risultava possibile.
+Abbiamo immediatamente fatto presente il problema all'azienda che ci ha comunicato che lavoreranno ad una patch per consentirci di specificare la data durante la fase di upload del file.
+
+
+\newpage
+
+\section{Riepilogo delle decisioni \hfil}
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-4\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.3\freewidth} L{.7\freewidth}}
+        \toprule
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Codice} & \textbf{Decisione}\\
+        \toprule
+        \endhead
+
+        VE\_\DataMeeting{}.1 &  E' stato illustrato al gruppo come usare le API di Zextras Drive.\\
+        VE\_\DataMeeting{}.2 &  E' stato chiarito come usare le API utilizzando i cookie di autenticazione. \\
+        VE\_\DataMeeting{}.3 &  E' stato fatto notare all'azienda un problema relativo al loro server. \\
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
+}

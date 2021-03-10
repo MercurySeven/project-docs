@@ -1,0 +1,109 @@
+\section{Informazioni generali}
+
+\begin{itemize}
+
+	\item \textbf{Canale di comunicazione:} Zoom;
+	
+	\item \textbf{Data:} \DataMeeting{};
+	
+	\item \textbf{Ora inizio:} 21;
+	
+	\item \textbf{Ora fine:} 22;
+	
+	\item \textbf{Segretario:} Tommaso Poppi;
+	
+	\item \textbf{Partecipanti:}
+	
+		\begin{itemize}
+
+			\item Daniele Giachetto;
+			\item Davide Albiero;
+			\item Francesco De Marchi;
+			\item Giosuè Calgaro;
+			\item Lucrezia Gradi;
+			\item Tommaso Poppi.
+
+		\end{itemize}
+
+\end{itemize}
+
+
+
+\section{Ordine del giorno}
+
+\begin{itemize}
+
+	\item\textbf{Creazione e ristrutturazione canali Slack;}
+	
+	\item\textbf{Test automatici e CI per il codice;}
+
+	\item\textbf{Ambiente di sviluppo;}
+
+	\item\textbf{Riflessione sul workflow da utilizzare;}
+	
+	\item\textbf{Riflessione su esami e tempo libero.}
+
+\end{itemize}
+
+\newpage
+
+
+\section{Resoconto}
+
+\subsection{Creazione e ristrutturazione canali Slack}
+
+Si è deciso di cambiare la struttura di Slack, tramite l'aggiunta di nuovi canali al fine di renderlo più funzionale e preparare il tutto alla scrittura di codice. In particolare, i canali presenti sono:
+\begin{itemize}
+
+\item \textbf{annunci}: vengono segnalate le comunicazioni più importanti;
+\item \textbf{chiamate}: contiene i link alle riunioni Zoom;
+\item \textbf{date}: contiene le date e le scadenze importanti per il gruppo;
+\item \textbf{dev}: vi si discute tutto ciò che riguarda il codice e l'implementazione dei test;
+\item \textbf{documenti-vari}: contiene una selezione di documenti utili per la realizzazione del progetto;
+\item \textbf{general}: canale dove si annunciano comunicazioni di carattere generale.
+
+\end{itemize}
+Verrà opportunamente modificata la corrispondente sezione nelle \NdP{}
+
+\subsection{Test automatici e CI per il codice}
+
+Durante l'incontro è stato deciso di iniziare il setup di GitHub per la scrittura di codice. In particolare, è stato deciso di implementare il testing automatico tramite la CI di GitHub e SonarCloud, un servizio cloud che permette di effettuare analisi statica sul codice presente su GitHub. 
+
+\subsection{Ambiente di sviluppo }
+
+I membri del gruppo hanno discusso su quale ambiente di sviluppo fosse più adatto alla realizzazione dell'applicazione in modo da standardizzare l'ambiente di sviluppo. Si è deciso di utilizzare PyCharm e Visual Studio Code.
+
+\subsection{Riflessione sul workflow da utilizzare}
+
+Si è discusso sul tipo di workflow da adottare e si è deciso di utilizare Feature Branch, dove ogni nuova funzione viene implementata tramite nuovi branch. Questo rende possibile effettuare i test alla feature prima che venga fatto il merge con il main in modo da garantire qualità al codice.
+
+\subsection{Riflessione su esami e tempo libero}
+
+I membri del gruppo hanno esposto gli impegni di ognuno e gli esami da fare durante la sessione invernale. Questo ha permesso di decidere come organizzarsi nei momenti in cui ogni persona è più libera. In particolare, si è deciso di dividere in sottogruppi i membri, così da permettere sia la correzione e l'aggiornamento dei documenti, sia l'implementazione del codice. L'idea è quella di fare in modo che ci sia sempre qualcuno che lavora all'avanzamento del progetto alternandosi con gli altri.
+
+\newpage
+
+\section{Riepilogo delle decisioni \hfil}
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-4\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.3\freewidth} L{.7\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Codice} & \textbf{Decisione}\\
+		\toprule
+		\endhead
+		
+		VI\_\DataMeeting{}.1 & Si è deciso di aggiungere dei canali Slack per rendere più efficiente il lavoro\\
+		VI\_\DataMeeting{}.2 & Si è deciso di implementare il testing automatico tramite SonarCloud e la CI di GitHub\\
+		VI\_\DataMeeting{}.3 & Si è deciso di utilizzare PyCharm e Visual Studio Code come IDE\\
+		VI\_\DataMeeting{}.4 & Si è deciso di utilizzare i feature branch \\
+		VI\_\DataMeeting{}.5 & Si è deciso di continuare a lavorare sul progetto a fasi alternate durante la sessione invernale\\
+		
+		\bottomrule
+		\hiderowcolors
+	\end{longtable}
+}
