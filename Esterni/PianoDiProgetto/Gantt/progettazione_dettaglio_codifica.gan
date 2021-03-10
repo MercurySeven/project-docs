@@ -1,39 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="progettazione_dettaglio_codifica" company="" webLink="http://" view-date="2021-03-01" view-index="0" gantt-divider-location="317" resource-divider-location="300" version="2.8.11" locale="it">
+<?xml version="1.0" encoding="UTF-8"?><project name="progettazione_dettaglio_codifica" company="" webLink="http://" view-date="2021-03-08" view-index="0" gantt-divider-location="317" resource-divider-location="300" version="2.8.11" locale="en_GB">
     <description/>
     <view zooming-state="default:2" id="gantt-chart">
-        <field id="tpd3" name="Nome" width="178" order="0"/>
-        <field id="tpd4" name="Data d'inizio" width="68" order="1"/>
-        <field id="tpd5" name="Data di fine" width="67" order="2"/>
-        <option id="color.recent">
-            <![CDATA[#0000ff]]>
-        </option>
+        <field id="tpd3" name="Name" width="178" order="0"/>
+        <field id="tpd4" name="Begin date" width="68" order="1"/>
+        <field id="tpd5" name="End date" width="67" order="2"/>
+        <option id="color.recent"><![CDATA[#ffff00 #0000ff]]></option>
     </view>
     <view id="resource-table">
-        <field id="0" name="Nome" width="210" order="0"/>
-        <field id="1" name="Ruolo predefinito" width="86" order="1"/>
+        <field id="0" name="Name" width="210" order="0"/>
+        <field id="1" name="Default role" width="86" order="1"/>
     </view>
     <!-- -->
     <calendars>
         <day-types>
             <day-type id="0"/>
             <day-type id="1"/>
-            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
             <only-show-weekends value="false"/>
             <overriden-day-types/>
             <days/>
         </day-types>
-        <date year="2021" month="3" date="13" type="WORKING_DAY">
-            <![CDATA[Eccezione weekend]]>
-        </date>
-        <date year="2021" month="3" date="14" type="WORKING_DAY">
-            <![CDATA[Eccezione weekend]]>
-        </date>
-        <date year="2021" month="3" date="21" type="WORKING_DAY">
-            <![CDATA[Eccezione weekend]]>
-        </date>
-        <date year="2021" month="3" date="28" type="WORKING_DAY">
-            <![CDATA[Eccezione weekend]]>
-        </date>
+        <date year="2021" month="3" date="13" type="WORKING_DAY"><![CDATA[Eccezione weekend]]></date>
+        <date year="2021" month="3" date="14" type="WORKING_DAY"><![CDATA[Eccezione weekend]]></date>
+        <date year="2021" month="3" date="21" type="WORKING_DAY"><![CDATA[Eccezione weekend]]></date>
+        <date year="2021" month="3" date="28" type="WORKING_DAY"><![CDATA[Eccezione weekend]]></date>
     </calendars>
     <tasks empty-milestones="true">
         <taskproperties>
@@ -48,50 +38,70 @@
             <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
-        <task id="0" name="Norme di Progetto" meeting="false" start="2021-03-09" duration="7" complete="0" expand="true">
-            <task id="1" name="incremento" color="#8cb6ce" meeting="false" start="2021-03-09" duration="5" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="2" name="verifica" color="#0000ff" meeting="false" start="2021-03-11" duration="5" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
+        <task id="34" name="Sprint 8" color="#ffff00" meeting="false" start="2021-03-11" duration="15" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true">
+            <task id="38" name="Norme di Progetto" color="#8cb6ce" meeting="false" start="2021-03-11" duration="10" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="false">
+                <task id="40" name="analisi" color="#8cb6ce" meeting="false" start="2021-03-11" duration="6" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="43" name="modifiche" color="#8cb6ce" meeting="false" start="2021-03-13" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="44" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-17" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="49" name="Piano di Progetto" meeting="false" start="2021-03-11" duration="15" complete="0" expand="false">
+                <task id="50" name="analisi" color="#8cb6ce" meeting="false" start="2021-03-11" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="52" name="modifiche" color="#8cb6ce" meeting="false" start="2021-03-11" duration="15" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="54" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-16" duration="10" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="56" name="Glossario" meeting="false" start="2021-03-11" duration="15" complete="0" expand="false">
+                <task id="58" name="aggiornamento documento" color="#8cb6ce" meeting="false" start="2021-03-11" duration="15" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="59" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-12" duration="14" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="62" name="Piano di Qualifica" meeting="false" start="2021-03-11" duration="10" complete="0" expand="false">
+                <task id="63" name="analisi" color="#8cb6ce" meeting="false" start="2021-03-11" duration="5" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="64" name="modifiche" color="#8cb6ce" meeting="false" start="2021-03-16" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="65" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-12" duration="9" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="69" name="Analisi dei Requisiti" meeting="false" start="2021-03-11" duration="6" complete="0" expand="false">
+                <task id="70" name="analisi" color="#8cb6ce" meeting="false" start="2021-03-11" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="71" name="modifiche" color="#8cb6ce" meeting="false" start="2021-03-14" duration="3" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="72" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-15" duration="2" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="76" name="Product Baseline" meeting="false" start="2021-03-11" duration="11" complete="0" expand="false">
+                <task id="77" name="Design pattern" color="#8cb6ce" meeting="false" start="2021-03-11" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="78" name="Diagrammi classi" color="#8cb6ce" meeting="false" start="2021-03-15" duration="5" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="79" name="Diagrammi attività" color="#8cb6ce" meeting="false" start="2021-03-15" duration="5" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="80" name="Verifica" color="#8cb6ce" meeting="false" start="2021-03-12" duration="10" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="93" name="Manuale Sviluppatore" meeting="false" start="2021-03-22" duration="4" complete="0" expand="false">
+                <task id="94" name="redazione" color="#8cb6ce" meeting="false" start="2021-03-22" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="85" name="Sviluppo software" meeting="false" start="2021-03-11" duration="15" complete="0" expand="false">
+                <task id="86" name="scrittura test" color="#8cb6ce" meeting="false" start="2021-03-11" duration="3" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="87" name="codifica" color="#8cb6ce" meeting="false" start="2021-03-14" duration="7" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="89" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-21" duration="5" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
         </task>
-        <task id="3" name="Glossario" meeting="false" start="2021-03-09" duration="27" complete="0" expand="true">
-            <task id="4" name="incremento" color="#8cb6ce" meeting="false" start="2021-03-09" duration="22" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="5" name="verifica" color="#0000ff" meeting="false" start="2021-03-12" duration="24" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
+        <task id="36" name="Sprint 9" color="#ffff00" meeting="false" start="2021-03-26" duration="15" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true">
+            <task id="98" name="Piano di Progetto" meeting="false" start="2021-03-26" duration="7" complete="0" expand="false">
+                <task id="102" name="Modifiche" color="#8cb6ce" meeting="false" start="2021-03-26" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="103" name="Verifica" color="#8cb6ce" meeting="false" start="2021-03-26" duration="7" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="99" name="Glossario" color="#8cb6ce" meeting="false" start="2021-03-26" duration="7" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="false">
+                <task id="107" name="aggiornamento documento" color="#8cb6ce" meeting="false" start="2021-03-26" duration="7" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="109" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-26" duration="7" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="100" name="Manuale Sviluppatore" meeting="false" start="2021-03-26" duration="7" complete="0" expand="false">
+                <task id="111" name="redazione" color="#8cb6ce" meeting="false" start="2021-03-26" duration="4" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="112" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-26" duration="7" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="101" name="Manuale Utente" meeting="false" start="2021-03-30" duration="3" complete="0" expand="false">
+                <task id="115" name="redazione" color="#8cb6ce" meeting="false" start="2021-03-30" duration="3" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="116" name="verifica" color="#8cb6ce" meeting="false" start="2021-03-30" duration="3" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
+            <task id="119" name="Sviluppo software" meeting="false" start="2021-03-26" duration="15" complete="0" expand="true">
+                <task id="120" name="scrittura test" color="#8cb6ce" meeting="false" start="2021-03-26" duration="3" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="121" name="codifica" color="#8cb6ce" meeting="false" start="2021-03-29" duration="7" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+                <task id="122" name="verifica" color="#8cb6ce" meeting="false" start="2021-04-05" duration="5" complete="0" thirdDate="2021-03-01" thirdDate-constraint="0" expand="true"/>
+            </task>
         </task>
-        <task id="6" name="Piano di Progetto" meeting="false" start="2021-03-09" duration="27" complete="0" expand="true">
-            <task id="7" name="incremento" color="#8cb6ce" meeting="false" start="2021-03-09" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="9" name="consuntivo" color="#8cb6ce" meeting="false" start="2021-03-29" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="8" name="verifica" color="#0000ff" meeting="false" start="2021-03-12" duration="24" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="10" name="Analisi dei Requisiti" meeting="false" start="2021-03-09" duration="7" complete="0" expand="true">
-            <task id="11" name="incremento" color="#8cb6ce" meeting="false" start="2021-03-09" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="12" name="verifica" color="#0000ff" meeting="false" start="2021-03-12" duration="4" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="13" name="Piano di Qualifica" meeting="false" start="2021-03-09" duration="7" complete="0" expand="true">
-            <task id="14" name="incremento" color="#8cb6ce" meeting="false" start="2021-03-09" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="15" name="verifica" color="#0000ff" meeting="false" start="2021-03-12" duration="4" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="16" name="Technology Baseline" meeting="false" start="2021-03-09" duration="7" complete="0" expand="true">
-            <task id="17" name="incremento" color="#8cb6ce" meeting="false" start="2021-03-09" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="18" name="verifica" color="#0000ff" meeting="false" start="2021-03-12" duration="4" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="19" name="Product Baseline" meeting="false" start="2021-03-09" duration="12" complete="0" expand="true">
-            <task id="20" name="design pattern" color="#8cb6ce" meeting="false" start="2021-03-09" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="21" name="diagrammi classi" color="#8cb6ce" meeting="false" start="2021-03-15" duration="5" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="22" name="diagrammi attività" color="#8cb6ce" meeting="false" start="2021-03-15" duration="5" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="23" name="verifica" color="#0000ff" meeting="false" start="2021-03-12" duration="9" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="24" name="Specifica Tecnica" meeting="false" start="2021-03-22" duration="6" complete="0" expand="true">
-            <task id="25" name="stesura" color="#8cb6ce" meeting="false" start="2021-03-22" duration="5" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="26" name="verifica" color="#0000ff" meeting="false" start="2021-03-25" duration="3" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="27" name="Codifica" meeting="false" start="2021-03-22" duration="15" complete="0" expand="true">
-            <task id="28" name="scrittura" color="#8cb6ce" meeting="false" start="2021-03-22" duration="12" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="29" name="verifica" color="#0000ff" meeting="false" start="2021-03-25" duration="12" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="30" name="Manuale Utente" meeting="false" start="2021-03-29" duration="9" complete="0" expand="true">
-            <task id="31" name="redazione" color="#8cb6ce" meeting="false" start="2021-03-29" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-            <task id="32" name="verifica" color="#0000ff" meeting="false" start="2021-04-01" duration="6" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
-        </task>
-        <task id="33" name="Consegna RQ" color="#8cb6ce" meeting="true" start="2021-04-09" duration="0" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
+        <task id="33" name="Consegna RQ" color="#8cb6ce" meeting="true" start="2021-04-02" duration="0" complete="0" thirdDate="2021-01-14" thirdDate-constraint="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
