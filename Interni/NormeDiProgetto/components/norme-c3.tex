@@ -542,51 +542,42 @@ Dei \glo{test} ben progettati e scritti devono:
 	\item avvertire la presenza di effetti indesiderati nel codice;
 	\item fornire informazioni sui risultati e sull'esecuzione stessa tramite file di log.
 \end{itemize}
-Le tipologie di \glo{test} utilizzate sono le seguenti.
 
-{
-\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
-	\renewcommand{\arraystretch}{1.5}
-	\setlength{\aboverulesep}{0pt}
-	\setlength{\belowrulesep}{0pt}
-	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.2\freewidth} L{0.8\freewidth}}
-		\rowcolor{AzzurroGruppo!30}
-		\textbf{Sigla} & \textbf{Nome} \\
-		\toprule
-		\endhead		
-		\textbf{U} & \glo{test di \ignore{unità}} \\
-		\textbf{I} & \glo{test di integrazione} \\
-		 \textbf{S} & \glo{test di \ignore{sistema}}\\
-		\textbf{R} & \glo{test di regressione} \\
-		 \textbf{A} & \glo{test di accettazione} \\
-
-		\bottomrule
-		\hiderowcolors
-		\caption{Tipo di test}
-	\end{longtable}
-}
 \paragraph*{Codice identificativo dei test}
 Ogni \glo{test} viene descritto con:
 \begin{itemize}
 	\item codice identificativo;
+	\item requisito;
 	\item descrizione;
 	\item stato, che può essere:
 	\begin{itemize}
-		\item implementato;
-		\item non implementato;
-		\item non eseguito;
-		\item superato;
-		\item non superato.
+		\item \textbf{I:} implementato;
+		\item \textbf{NI:} non implementato;
+		\item \textbf{NE:} non eseguito;
+		\item \textbf{S:} superato;
+		\item \textbf{NS:} non superato.
 	\end{itemize}
 \end{itemize}
 Il codice identificativo presenta la seguente struttura:\newline
-\centerline{\textbf{T[Tipo][Id]}}
+\centerline{\textbf{T[Tipo][Priorità][Id]}}
 \newline
 Dove:
 \begin{itemize}
 	\item \textbf{T:} indica il "\ignore{Test}";
-	\item \textbf{Tipo:} tipo di \ignore{test};
+	\item \textbf{Tipo:}
+		\begin{itemize}
+			\item \textbf{U:} \glo{test di \ignore{unità}};
+			\item \textbf{I:} \glo{test di integrazione};
+			\item \textbf{S:} \glo{test di \ignore{sistema}};
+			\item \textbf{R:} \glo{test di regressione};
+			\item \textbf{A:} \glo{test di accettazione};
+		\end{itemize}
+	\item \textbf{Priorità:}
+		\begin{itemize}
+			\item \textbf{O:} \ignore{test} obbligatorio;
+			\item \textbf{D:} \ignore{test} desiderabile;
+			\item \textbf{F:} \ignore{test} facoltativo;
+		\end{itemize}
 	\item \textbf{Id:} codice identificativo.
 \end{itemize}
 
