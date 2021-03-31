@@ -34,7 +34,8 @@
     \item\textbf{Gestione del login;}
     \item\textbf{Gestione token di sessione;}
     \item\textbf{Come gestire l'eliminazione dei file;}
-    \item\textbf{Sincronizzazione.}
+    \item\textbf{Selezionare cosa sincronizzare;}
+    \item\textbf{Gestione dei test.}
 \end{itemize}
 \newpage
 
@@ -44,28 +45,34 @@
 La riunione è stata concordata il tra gruppo \textit{\Gruppo{}} e l'azienda per mostrare lo stato attuale di sviluppo dell'applicazione e per chiarire dubbi sorti durante la stesura del codice. Di seguito vengono riportati i quesiti posti e le rispettive risposte. 
 
 \subsection{Mostrare i progressi fatti con l'applicazione}
-Il gruppo ha mostato all'azienda il livello attuale di sviluppo dell'applicazione, spiegando che tra la presentazione della POC e la data dell'incontro non sono state aggiunte nuove feature, 
+Il gruppo ha mostrato all'azienda il livello attuale di sviluppo dell'applicazione, spiegando che tra la presentazione della POC e la data dell'incontro non sono state aggiunte nuove feature, 
 ma è stata ristrutturata tutta l'architettura dell'applicazione aderendo al pattern MVC.
 
 \subsection{Gestione del login}
 Il gruppo ha fatto notare che al momento la gestione del login non avviene usando delle API, ma viene fatto facendo una chiamata POST all'url di login presente su Zextras Drive.
-Ciò comporta che ogni volta venga istanziata la classe API, venga effettuato il login e scaricata la pagina web per recuperare il cookie di sessione. Questo comporta un rallentamento notevole del'applicazione, 
+Ciò comporta che ogni volta venga istanziata la classe API, venga effettuato il login e scaricata la pagina web per recuperare il cookie di sessione. Questo comporta un rallentamento notevole dell'applicazione, 
 perciò il gruppo ha chiesto se si possono avere delle API dedicate. \Federico{} ci ha risposto che hanno delle API pronte ma devono ancora essere verificate. Ci ha rassicurato che non appena ci saranno novità ci dirà come usarle.
 
 \subsection{Gestione token di sessione}
-Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessione. \Alessio{} ci ha risposto che in azienda ogni rispota ricevuta nel server viene passata ad un "bridge" che controlla:
+Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessione. \Alessio{} ci ha risposto che in azienda ogni risposta ricevuta nel server viene passata ad un "bridge" che controlla:
 \begin{itemize}
-    \item Se la rispota di una chiamata è 401 Unauthorized, l'applicazione deve rifare il login (usando le credenziali salvate), se il login è valido, viene rifatta la chiamata che aveva portato all'errore.
+    \item Se la risposta di una chiamata è 401 Unauthorized, l'applicazione deve rifare il login (usando le credenziali salvate), se il login è valido, viene rifatta la chiamata che aveva portato all'errore.
     \item Se ottengo due 401 Unauthorized consecutivi, vuol dire che l'utente ha cambiato la password e deve essere mostrata la form di login.
 \end{itemize}
 
 \subsection{Come gestire l'eliminazione dei file}
 Durante lo sviluppo dell'algoritmo di sincronizzazione il gruppo si è posto la domanda di come gestire l'eliminazione di un file sul client. Attualmente c'è il problema di come far capire agli altri client che 
-il file non è presente nel server perchè è stato eliminato e non devono effettuare l'upload ma devono eliminarlo. Il gruppo ha proposto di usare un flag presente nelle API di Zextras ovvero di marcare il file come 
-da cancellare. \Federico{} ha proposto di non marcare il file ma di eliminarlo direttamente, mentre \Alessio{} 
+il file non è presente nel server perché è stato eliminato e non devono effettuare l'upload ma devono eliminarlo. Il gruppo ha proposto di usare un flag presente nelle API di Zextras ovvero di marcare il file come 
+da cancellare. \Federico{} ha proposto di non marcare il file ma di eliminarlo direttamente, mentre \Alessio{} la pensava diversamente, ovvero di non eliminare il file anche nel server.
+Il gruppo ha concordato con l'azienda di guardare cosa fanno i competitor e vedere come viene gestita l'eliminazione.
 
-\subsection{Sincronizzazione}
-Il gruppo, riferendosi sempre all'applicativo, ha chiesto un consiglio su che finestra di tempo impostare per controllare le modifiche caricate sul server. Alessio ci dice che idealmente il controllo va effettuato una volta ogni 5 minuti, però sarebbe una buona idea renderlo configurabile dall'utente. Inoltre, è necessario, ai fini dell'azienda, forzare la sincronizzazione di un determinato file selezionato.
+\subsection{Selezionare cosa sincronizzare}
+L'azienda ci ha raccomandato di pensare a come far decidere all'utente quali file o cartelle non scaricare durante il processo di sincronizzazione.
+L'utente potrà selezionare quali nodi non verranno sincronizzati con il server e questi nodi non saranno disponibili offline.
+
+\subsection{Gestione dei test}
+Il gruppo ha voluto chiedere all'azienda come gestire i test che si occupano di comunicare con il server Zextras. \Alessio{} ci ha risposto che loro usano delle librerie che simulano il server, ci ha raccomandato di trovarne e usarle.
+
 \newpage
 
 \section{Riepilogo delle decisioni \hfil}
@@ -76,17 +83,18 @@ Il gruppo, riferendosi sempre all'applicativo, ha chiesto un consiglio su che fi
     \setlength{\belowrulesep}{0pt}
     \rowcolors{2}{AzzurroGruppo!10}{white}
     \begin{longtable}{L{.3\freewidth} L{.7\freewidth}}
-        \toprule 
+        \toprule
         \rowcolor{AzzurroGruppo!30}
         \textbf{Codice} & \textbf{Decisione}\\
         \toprule
         \endhead
 
-        VE\_\DataMeeting{}.1 &  Si è deciso che upload e download avvengano all'interno di una root directory scelta dall'utente durante il primo setup dell'applicazione.\\
-        VE\_\DataMeeting{}.2 &  Si è deciso di utilizzare la data dell'ultima modifica in locale al momento di scegliere tra la copia del file sul server e quella in locale. \\
-        VE\_\DataMeeting{}.3 &  Si è deciso di effettuare i test dell'applicazione in un server creato dai membri del gruppo nell'attesa di poterli eseguire sul server di Zextras. \\
-        VE\_\DataMeeting{}.4 &  Si è deciso di lasciar decidere all'utente il file da mantenere nel caso di conflitti.\\
-        VE\_\DataMeeting{}.5 &  Si è deciso che la finestra di tempo dopo la quale controllare il server debba poter essere decisa dall'utente mentre, di default, verrà impostata a 5 minuti.\\
+        VE\_\DataMeeting{}.1 &  L'azienda è contenta di come è stato ristrutturato l'applicazione.\\
+        VE\_\DataMeeting{}.2 &  Si è deciso di continuare ad eseguire il login con il metodo corrente, in attesa delle API.\\
+        VE\_\DataMeeting{}.3 &  Si è deciso di sistemare la parte network creando un "bridge" per gestire la scadenza del cookie.\\
+        VE\_\DataMeeting{}.4 &  Il gruppo si impegna a controllare come viene gestita l'eliminazione da parte dei competitor.\\
+        VE\_\DataMeeting{}.5 &  Si è deciso che l'utente potrà selezionare che file/cartelle scaricare.\\
+        VE\_\DataMeeting{}.5 &  Si è deciso di usare delle librerie che simulano il server.\\
         \bottomrule
         \hiderowcolors
     \end{longtable}
