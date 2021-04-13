@@ -1,9 +1,9 @@
-\subsection{UC4 - Seleziona quota disco}
+\subsection{UC4 - Scelta limite spazio occupato su disco}
 \label{UC4}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.7]{components/img/UC4.png}
-    \caption{UC4 - Seleziona quota disco}
+    \includegraphics[scale = 0.5]{components/img/UC4.png}
+    \caption{UC4 - Scelta limite spazio occupato su disco}
 \end{figure}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente autenticato;
@@ -18,9 +18,12 @@
         \end{itemize}
     \item L'utente ha cambiato lo spazio disco dedicato.
     \end{enumerate}
-\item \textbf{Estensioni:}
-    \begin{itemize}
-        \item La quota disco selezionata è minore dei file scaricati (UC11 \S{}\ref{UC11});
-        \item La quota disco selezionata è maggiore della dimensione libera del disco (UC12 \S{}\ref{UC12}).
-    \end{itemize}
+\end{itemize}
+\subsubsection{UC4.1 - Seleziona quota disco}
+\label{UC4.1}
+\begin{itemize}
+\item \textbf{Attore Primario:} Utente autenticato;
+\item \textbf{Precondizione:} L'utente vuole cambiare la dimensione disco riservata, lato client, per le interazioni con \glo{Zextras Drive};
+\item \textbf{Postcondizione:} L'utente ha cambiato lo spazio disco riservato per l'applicativo;
+\item \textbf{Scenario principale:} L'utente ha inserito un nuovo valore di quota disco.
 \end{itemize}
