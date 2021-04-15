@@ -39,8 +39,7 @@ Opzione 1:
 Questo in Python è stato realizzato tramite del codice specifico che va a definire un comportamento nel quale le varie classi possono essere instanziate solamente tramite la funzione get\_instance ed il costruttore non può essere chiamato al di fuori di questa funzione. La funzione get\_instance controlla se è la classe è già stata istanziata, se non è stato istanziata crea una nuova istanza e nelle chiamate successive si limita a restituire nuovamente la stessa.\newline{}
 
 Opzione 2:
-L'implementazione del pattern in Python è stata possibile grazie alla funzione get\_instance, che controlla se la classe è stata istanziata o meno. In caso negativo crea la nuova istanza e, nelle chiamate successive, si limita a restituire la stessa. La funzione get\_instance, quindi, chiama il costruttore delle classi aderenti al pattern e, grazie a del codice specifico, non può essere chiamato al di fuori della funzione.
-\newline{}
+L'implementazione del pattern in Python è stata possibile grazie alla funzione get\_instance, presente in ogni classe,  che controlla se essa è stata istanziata o meno. In caso negativo crea la nuova istanza e, nelle chiamate successive, si limita a restituire la stessa. Il costruttore della classe, quindi, può essere chiamato solamente all'interno di get\_instance.
 
 Il pattern singleton può provocare problemi se mal implementato. Nel nostro caso, l'implementazione è corretta in quanto l'istanza dei vari modelli è passata ai costruttori di tutti gli utilizzatori. Questo permette la realizzazione degli unit test che, altrimenti, sarebbero impossibili da implementare. 
 \begin{figure}[H]
