@@ -11,7 +11,7 @@ L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Mode
 \begin{itemize}
 	\item Rapidità nello sviluppo software dato dalla possibilità di lavoro parallelo su modello, vista e controller;
 	\item Indipendenza dei vari componenti;
-	\item Maggior facilità nella testabilità, mantenibilità e scalabilità.
+	\item Maggior facilità nella testabilità, manutenibilità e scalabilità.
 
 \end{itemize}
 \subsection{Diagramma dei pacchetti}
@@ -72,8 +72,8 @@ Questo pattern in Python è stato realizzato tramite il modulo ABC (Abstract Bas
 *PICCOLA SPIEGAZIONE SULL'USO DEI SEGNALI *
 
 \subsubsection{Strategy:}
-La scelta di uilizzare questo pattern è stata naturale poiché esso va a descrivere pienamente la realtà del \textit{capitolato C7}.\newline{}
-Attualmente si hanno due diverse politiche per la sincronizzazione che posso essere scelte a runtime e che variano il comportamento dell'algoritmo. Si ha una classe Context che fa da interfaccia comune e chiama al suo interno il metodo execute della classe attualmente scelta. Essendo Strategy una classe astratta, essa fornisce il metodo execute che deve essere implementato da tutte le classi figlie. Questo permette all' istanza di Context di poter chiamare il metodo execute di un qualsiasi oggetto Strategy di cui non conosce l'implementazione. L'adozione del suddetto pattern permette l'aggiunta di nuove politiche senza dover cambiare la logica dell'applicazione, il che semplificherà il lavoro in eventuali sviluppi futuri.
+La scelta di utilizzare questo pattern è stata naturale poiché esso va a descrivere pienamente la realtà del \textit{capitolato C7}.\newline{}
+Attualmente si hanno due diverse politiche per la sincronizzazione che posso essere scelte a runtime e che variano il comportamento dell'algoritmo. Si ha una classe CompareSnapClient che fa da interfaccia comune e chiama al suo interno il metodo execute della classe attualmente scelta. Essendo Strategy una classe astratta, essa fornisce il metodo execute che deve essere implementato da tutte le classi figlie. Questo permette all' istanza di CompareSnapClient di poter chiamare il metodo execute di un qualsiasi oggetto Strategy di cui non conosce l'implementazione. L'adozione del suddetto pattern permette l'aggiunta di nuove politiche senza dover cambiare la logica dell'applicazione, il che semplificherà il lavoro in eventuali sviluppi futuri.
 
 \begin{figure}[H]
     \centering

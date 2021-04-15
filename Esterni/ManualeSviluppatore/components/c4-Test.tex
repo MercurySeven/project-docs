@@ -6,7 +6,7 @@ In questa sezione verrà trattato il testing del codice, in particolare i framew
 
 Il framework unittest viene utilizzato per effettuare i test di unità, per eseguire i test basterà eseguire il comando 
 
-\centerline{ \textbf{python -m unittest discover -v -s "./tests/" -p "*\_ test.py"}}
+\centerline{ \textbf{python -m unittest discover -v -s "./tests/" -p "*\_test.py"}}
 
 Verranno quindi elencati tutti i test eseguiti ed il loro risultato.
 
@@ -30,7 +30,7 @@ In caso di errori verrà indicato quali sono ed in che file.
 
 \subsection{Codecov}
 
-Per svolgere l'attività di \glo{code coverage} è stato scelto di utilizzare Codecov. Per far eseguire le revisioni automatiche del codice bisogna attivare la repository di github dal sito di codecov.
+Per svolgere l'attività di \glo{code coverage} è stato scelto di utilizzare Codecov. Per far eseguire le revisioni automatiche del codice bisogna attivare la repository di GitHub dal sito di Codecov.
 
 \subsection{GitHub Actions}
-Il servizio di CI utilizzato è GitHub Actions, con dei workflow personalizzati presenti nella cartella .github. Queste action vanno a controllare staticamente il codice tramite Flake8, ad eseguire il codice ed i test su MacOS, Windows ed Ubuntu ed infine mandare una notifica della buona o cattiva riuscita sul canale predisposto di slack.
+Il servizio di CI utilizzato è GitHub Actions, con dei workflow personalizzati presenti nella cartella .github. Queste Actions vanno a controllare staticamente il codice tramite Flake8, ad eseguire il codice ed i test su MacOS, Windows ed Ubuntu ed infine mandare una notifica della buona o cattiva riuscita sul canale predisposto di Slack.
