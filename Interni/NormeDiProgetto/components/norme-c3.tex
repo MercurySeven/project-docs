@@ -146,7 +146,7 @@ Ogni documento presenta subito dopo il frontespizio il registro modifiche, esso 
 \end{figure}
 
 
-\paragraph*{Verbali}      
+\paragraph*{Verbali}
 I verbali, sia interni che esterni, presentano una struttura fissa e sono soggetti alle stesse norme strutturali degli altri argomenti, ad eccezione del fatto che, essendo informali, non sono soggetti a versionamento.
 La struttura sarà quindi la seguente:
 
@@ -159,18 +159,17 @@ La struttura sarà quindi la seguente:
 		\rowcolor{AzzurroGruppo!30}
 		\textbf{Nome} & \textbf{Descrizione} \\
 		\toprule
-		\endhead		
+		\endhead
 		\textbf{Data} & Riporta la data della riunione \\
 		\textbf{Ora inizio} & Riporta l'orario di inizio della riunione\\
-		
-		\textbf{Fine} & Riporta l'orario di fine della riunione \\
+		\textbf{Ora fine} & Riporta l'orario di fine della riunione \\
 		\textbf{Segretario} & Nome e cognome dell'incaricato alla stesura del verbale \\
-		\textbf{Partecipanti} & Contiene l'elenco dei presenti all'incontro \\  
+		\textbf{Partecipanti} & Contiene l'elenco dei presenti all'incontro \\
 		\textbf{Ordine del giorno} & Contiene l'elenco degli argomenti trattati durante la riunione \\
 		\textbf{Resoconto} & Riporta l'esito della discussione dei singoli punti inseriti nell'ordine del giorno; per i verbali esterni, questa sezione è organizzata secondo il pattern domanda-risposta \\
 		\textbf{Riepilogo delle decisioni} & Contiene una tabella che riassume tutte le decisioni avvenute durante la riunione, numerandole con un codice univoco del tipo: 
 	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}} con \textbf{X} indicante il numero progressivo della decisione, a partire da 1 \\		
-		
+
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione struttura verbali}
@@ -438,7 +437,7 @@ Il \glo{repository} inerente alla documentazione sarà composto da diversi \glo{
 	\item un \glo{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficiente per un rilascio, verrà eseguito una operazione di \glo{merge} con il \textbf{main}.
 \end{itemize}
 \paragraph*{Modifiche ai repository}
-Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
+Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{main}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il \glo{team}.
 \newpage
