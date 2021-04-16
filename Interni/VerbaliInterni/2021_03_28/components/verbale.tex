@@ -6,13 +6,13 @@
 
     \item \textbf{Data:} \DataMeeting{};
 
-    \item \textbf{Ora inizio:} 16:00;
+    \item \textbf{Ora inizio:} 21:00;
 
-    \item \textbf{Ora fine:} 18:00;
+    \item \textbf{Ora fine:} 22:00;
 
     \item \textbf{Segretario:} \ACapoRedazione{};
 
-    \item \textbf{Partecipanti}: 
+    \item \textbf{Partecipanti}:
         \begin{itemize}
             \item \Daniele{};
             \item \Davide{};
@@ -27,27 +27,25 @@
 \section{Ordine del giorno}
 
 \begin{itemize}
-    \item\textbf{Pattern e architettura;}
+    \item\textbf{Email al professor Cardin;}
     \item\textbf{Versionamento;}
-    \item\textbf{Cambio logica dell'algoritmo;}
-    \item\textbf{Obiettivi di sprint.}
+    \item\textbf{Cambio logica dell'algoritmo.}
 \end{itemize}
 \newpage
 
 
 \section{Resoconto}
-\subsection{Versionamento}
-TODO
 
+\subsection{Email al professor Cardin}
+Dopo aver discusso dei risultati della RP, si è deciso di mandare una email al professor Cardin riguardo a dei dubbi su una correzione nel documento \AdR{}.  In particolare, ci è stato segnalato nel caso d'uso UC4 come lo stesso non possa essere presente come sotto-caso nel suo diagramma, il che ha destato dubbi sui membri del gruppo in quanto non è stato segnalato in altri casi d'uso che presentano la medesima dicitura.
+
+\subsection{Versionamento}
+Sempre in relazione ai risultati della RP, si è deciso di aggiungere un indice in più al codice di versionamento. In particolare, ogni modifica in attesa di verifica verrà segnata nel registro delle modifiche con un codice numerico progressivo. Una volta avvenuta la verifica, se dovessero esserci modifiche successive il codice ripartirebbe da zero. Questo dovrebbe portare a una tracciabilità più completa delle aggiunte ai prodotti.
 
 \subsection{Cambio logica dell'algoritmo}
 Fino a ora l'algoritmo si basava sul confronto tra due liste, una contenente gli elementi del server e l'altra contenente gli elementi della cartella in locale, faceva confronti tra le due e agiva di conseguenza. Questo tipo di approccio ha i suoi difetti, che si sono manifestati soprattutto nel momento in cui si è iniziato a introdurre cartelle annidate e l'eliminazione dei file dalla cartella. Dopo la chiamata con l'azienda e dopo aver ragionato sugli argomenti trattati si è deciso di cambiare radicalmente la logica, che si baserà non più su liste, bensì su alberi. I confronti, quindi, avverranno tra alberi, il che renderà meno laboriosa la gestione degli annidamenti e delle eliminazioni.
 
-\subsection{Obiettivi di sprint}
-Si sono discussi gli obiettivi degli sprint futuri e sì è deciso di assegnare a ogni membro del gruppo una parte delle attività da svolgere per raggiungerli. 
 
-\subsection{Colloquio video con l'azienda}
-Visti i miglioramenti apportati all'applicazione, e i dubbi scaturiti da discussioni interne, il gruppo ha deciso all'unanimità di chiedere un colloquio con l'azienda, comunicandolo a quest'ultima tramite l'apposito canale su Slack.
 
 \newpage
 
@@ -65,11 +63,9 @@ Visti i miglioramenti apportati all'applicazione, e i dubbi scaturiti da discuss
         \toprule
         \endhead
 
-        VE\_\DataMeeting{}.1 &  -.\\
-        VE\_\DataMeeting{}.2 &  Si è deciso di cambiare la logica dell'algoritmo, passando dal confronto di liste al confronto di alberi.\\
-
-        VE\_\DataMeeting{}.3 &  Si è deciso come organizzare il lavoro tra i membri del gruppo.\\
-        VE\_\DataMeeting{}.4 &  Si è deciso di chiedere un colloquio video all'azienda.\\
+        VI\_\DataMeeting{}.1 &  Si è deciso di mandare una email al professor Cardin riguardante dubbi sulla correzione dell'\AdR{}.\\
+        VI\_\DataMeeting{}.2 &  Si è deciso di  aggiungere un indice al versionamento dei prodotti.\\
+        VI\_\DataMeeting{}.3 &  Si è deciso di cambiare la logica dell'algoritmo, passando dal confronto di liste al confronto di alberi.\\
         \bottomrule
         \hiderowcolors
     \end{longtable}
