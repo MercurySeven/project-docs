@@ -396,8 +396,8 @@ Il processo di gestione della configurazione ha come scopo il gestire in maniera
 \paragraph*{Codice di versionamento}
 \label{cod-versionamento}
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
-\centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline
-
+\centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline{}
+\newpage{}
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\aboverulesep}{0pt}
@@ -405,19 +405,20 @@ La storia di un prodotto realizzato dal gruppo, che questo sia un documento o co
 	\rowcolors{2}{AzzurroGruppo!10}{white}
 	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
 		\rowcolor{AzzurroGruppo!30}
-		\textbf{Nome} & \textbf{Descrizione} \\
+		\textbf{Sigla} & \textbf{Descrizione} \\
 		\toprule
 		\endhead
-		\textbf{[X]} & indica il numero incrementale di revisione del responsabile di progetto. \\
-		\textbf{[Y]} & indica il numero incrementale della \glo{verifica}. \\
-		\textbf{[Z]} & indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione. \\
-		\textbf{[a]} & indica una versione completa e funzionante del prodotto: le componenti \glo{software} implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti superati, le \glo{metriche} di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto \glo{software} non è più retrocompatibile; la numerazione parte da 0 e non viene annullata. \\
-		\textbf{[b]} & indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata. \\
+		\textbf{[X]} & Indica il numero incrementale di revisione del responsabile di progetto. \\
+		\textbf{[Y]} & Indica il numero incrementale della \glo{verifica}. \\
+		\textbf{[Z]} & Indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione. \\
+		\textbf{[a]} & Indica una versione completa e funzionante del prodotto: le componenti \glo{software} implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti superati, le \glo{metriche} di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto \glo{software} non è più retrocompatibile; la numerazione parte da 0 e non viene annullata. \\
+		\textbf{[b]} & Indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata. \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione codice di versionamento}
 	\end{longtable}
-Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate;
+Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate.\newline{}
+Le modifiche apportate in attesa di verifica vengono identificate con un codice numerico progressivo che riparte da 0 ad ogni verifica.
 \paragraph*{Tecnologie adottate}
 Per la gestione delle versioni è stato scelto di utilizzare il \glo{sistema} di versionamento distribuito \textit{\glo{Git}} con due \glo{repository} remoti presenti su \textit{\glo{GitHub}}.
 \paragraph*{Repository}
@@ -439,7 +440,7 @@ Il \glo{repository} \textbf{\repoDoc{}} è invece strutturato nel seguente modo:
 \begin{itemize}
 	\item \textbf{Tutorial:} cartella contenente un esempio di documento \LaTeX che elenca anche le basi del linguaggio e del suo utilizzo; 
 	\item \textbf{Stile:} cartella contenente i file del template in linguaggio \LaTeX usato per produrre tutti i documenti;
-	\item Una cartella per ogni documento necessario per la \textit{Revisione dei \ignore{Requisiti}}.
+	\item Una cartella per ogni documento prodotto.
 \end{itemize}
 Si è optato per questa soluzione per poter avere una documentazione in continua evoluzione, senza categorizzarla e bloccarla negli stati delle revisioni tramite sottocartelle contenenti le versioni delle documentazioni durante una specifica revisione.
 \paragraph*{Tipi di file}
