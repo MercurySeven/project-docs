@@ -9,11 +9,11 @@
 L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Model-View-Controller (MVC).} L'aderenza al pattern era un requisito obbligatorio imposto dall'azienda ma sono stati riscontrati diversi punti positivi nella sua implementazione:
 
 \begin{itemize}
-	\item Rapidità nello sviluppo software dato dalla possibilità di lavoro parallelo su modello, vista e controller;
-	\item Indipendenza dei vari componenti;
-	\item Maggior facilità nella testabilità, manutenibilità e scalabilità.
-
+    \item Rapidità nello sviluppo software dato dalla possibilità di lavoro parallelo su modello, vista e controller;
+    \item Indipendenza dei vari componenti;
+    \item Maggior facilità nella testabilità, manutenibilità e scalabilità.
 \end{itemize}
+
 \subsection{Diagramma dei pacchetti}
 \begin{figure}[H]
     \centering
@@ -53,16 +53,14 @@ Questo pattern in Python è stato realizzato tramite il modulo ABC (Abstract Bas
 \end{figure}
 \subsection{Design pattern comportamentali:}
 \subsubsection{Observer:}
+Il patter observer è stato implementato usando i segnali e slot forniti dalla libreria PySide6, vengono usati per la communicazione tra diversi oggetti.
+Segnali e slot vengono usati per le communicazioni fra model, controller e view. I segnali emessi dal model e dalla view vengono usati dalla classe Signal che chiamerà gli slot collegati ad essi. La classe view e controller ereditano dall'interfaccia Slot.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.45]{components/img/observer-implementazione.png}
     \caption{Pattern Observer con segnali e slot nel dettaglio}
     \label{fig:Pattern observer con segnali e slot}
 \end{figure}
-
-*CORREGGERE LINEE DA SLOT A VIEW/C
-
-*PICCOLA SPIEGAZIONE SULL'USO DEI SEGNALI *
 
 \subsubsection{Strategy:}
 La scelta di utilizzare questo pattern è stata naturale poiché esso va a descrivere pienamente la realtà del \textit{capitolato C7}.\newline{}
