@@ -55,7 +55,7 @@ In particolare, i documenti formali prodotti saranno:
 		\textbf{\G{}} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
 		\bottomrule
 		\hiderowcolors
-		\caption{Nome, Descrizione ed uso dei documenti formali prodotti}
+		\caption{Nome, descrizione ed uso dei documenti formali prodotti}
 	\end{longtable}
 }
 
@@ -76,7 +76,7 @@ In particolare, i documenti informali prodotti saranno:
 		\textbf{Verbali esterni} & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
 		\bottomrule
 		\hiderowcolors
-		\caption{Nome, Descrizione ed uso dei documenti informali prodotti}
+		\caption{Nome, descrizione ed uso dei documenti informali prodotti}
 	\end{longtable}
 }
 \end{itemize}
@@ -89,9 +89,8 @@ Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeD
 	\textbf{[NomeDelDocumento]\_v[X].[Y].[Z]-[a].[b]}
 	\begin{itemize}
 		\item \textbf{NomeDelDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convenzione \glo{PascalCase});
-		\item \textbf{v[X].[Y].[Z]} con \textbf{v} che abbrevia la parola versione, \textbf{[X]} indica il numero incrementale di revisione del responsabile di progetto, \textbf{[Y]} indica il numero incrementale della \glo{verifica}, \textbf{[Z]} indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione. Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate;
-		\item \textbf{[a].[b]} con \textbf{A} che indica una versione completa e funzionante del prodotto: le componenti \glo{software}
-implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti superati, le \glo{metriche} di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto \glo{software} non è più retrocompatibile; la numerazione parte da 0 e non viene annullata; \textbf{B} indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata.
+		\item \textbf{v} che abbrevia la parola versione;
+		\item \textbf{[X].[Y].[Z]-[a].[b]} è il codice di versionamento (fare riferimento a \S{} \ref{cod-versionamento}.
 	\end{itemize}
 	\item La denominazione dei verbali sarà la seguente\newline
 	\textbf{Verbale[Interno/Esterno]\_[YYYY]\_[MM]\_[DD]}\newline
@@ -146,7 +145,7 @@ Ogni documento presenta subito dopo il frontespizio il registro modifiche, esso 
 \end{figure}
 
 
-\paragraph*{Verbali}
+\paragraph*{Verbali}      
 I verbali, sia interni che esterni, presentano una struttura fissa e sono soggetti alle stesse norme strutturali degli altri argomenti, ad eccezione del fatto che, essendo informali, non sono soggetti a versionamento.
 La struttura sarà quindi la seguente:
 
@@ -159,17 +158,18 @@ La struttura sarà quindi la seguente:
 		\rowcolor{AzzurroGruppo!30}
 		\textbf{Nome} & \textbf{Descrizione} \\
 		\toprule
-		\endhead
+		\endhead		
 		\textbf{Data} & Riporta la data della riunione \\
 		\textbf{Ora inizio} & Riporta l'orario di inizio della riunione\\
+		
 		\textbf{Ora fine} & Riporta l'orario di fine della riunione \\
 		\textbf{Segretario} & Nome e cognome dell'incaricato alla stesura del verbale \\
-		\textbf{Partecipanti} & Contiene l'elenco dei presenti all'incontro \\
+		\textbf{Partecipanti} & Contiene l'elenco dei presenti all'incontro \\  
 		\textbf{Ordine del giorno} & Contiene l'elenco degli argomenti trattati durante la riunione \\
 		\textbf{Resoconto} & Riporta l'esito della discussione dei singoli punti inseriti nell'ordine del giorno; per i verbali esterni, questa sezione è organizzata secondo il pattern domanda-risposta \\
 		\textbf{Riepilogo delle decisioni} & Contiene una tabella che riassume tutte le decisioni avvenute durante la riunione, numerandole con un codice univoco del tipo: 
 	\centerline{\textbf{V[Interno/Esterno]\_[YYYY]\_[MM]\_[DD].[X]}} con \textbf{X} indicante il numero progressivo della decisione, a partire da 1 \\		
-
+		
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione struttura verbali}
@@ -397,6 +397,27 @@ Il processo di gestione della configurazione ha come scopo il gestire in maniera
 \label{cod-versionamento}
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
 \centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead
+		\textbf{[X]} & indica il numero incrementale di revisione del responsabile di progetto. \\
+		\textbf{[Y]} & indica il numero incrementale della \glo{verifica}. \\
+		\textbf{[Z]} & indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione. \\
+		\textbf{[a]} & indica una versione completa e funzionante del prodotto: le componenti \glo{software} implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti superati, le \glo{metriche} di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto \glo{software} non è più retrocompatibile; la numerazione parte da 0 e non viene annullata. \\
+		\textbf{[b]} & indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione codice di versionamento}
+	\end{longtable}
+Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate;
 \paragraph*{Tecnologie adottate}
 Per la gestione delle versioni è stato scelto di utilizzare il \glo{sistema} di versionamento distribuito \textit{\glo{Git}} con due \glo{repository} remoti presenti su \textit{\glo{GitHub}}.
 \paragraph*{Repository}
