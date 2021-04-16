@@ -50,8 +50,7 @@ ma è stata ristrutturata tutta l'architettura dell'applicazione aderendo al pat
 
 \subsection{Gestione del login}
 Il gruppo ha fatto notare che al momento la gestione del login non avviene usando delle API, ma viene fatto facendo una chiamata POST all'url di login presente su Zextras Drive.
-Ciò comporta che ogni volta venga istanziata la classe API, venga effettuato il login e scaricata la pagina web per recuperare il cookie di sessione. Questo comporta un rallentamento notevole dell'applicazione, 
-perciò il gruppo ha chiesto se si possono avere delle API dedicate. \Federico{} ci ha risposto che hanno delle API pronte ma devono ancora essere verificate. Ci ha rassicurato che non appena ci saranno novità ci dirà come usarle.
+Ciò comporta che ogni volta venga istanziata la classe API, venga effettuato il login e scaricata la pagina web per recuperare il cookie di sessione, che porta a un rallentamento notevole dell'applicazione. Per questo, il gruppo ha chiesto se si possono avere delle API dedicate. \Federico{} ci ha risposto che hanno delle API pronte ma devono ancora essere verificate. Ci ha rassicurato che non appena ci saranno novità ci dirà come usarle.
 
 \subsection{Gestione token di sessione}
 Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessione. \Alessio{} ci ha risposto che in azienda ogni risposta ricevuta nel server viene passata ad un "bridge" che controlla:
@@ -92,7 +91,7 @@ Il gruppo ha voluto chiedere all'azienda come gestire i test che si occupano di 
         VE\_\DataMeeting{}.1 &  L'azienda è contenta di come è stato ristrutturato l'applicazione.\\
         VE\_\DataMeeting{}.2 &  Si è deciso di continuare ad eseguire il login con il metodo corrente, in attesa delle API.\\
         VE\_\DataMeeting{}.3 &  Si è deciso di sistemare la parte network creando un "bridge" per gestire la scadenza del cookie.\\
-        VE\_\DataMeeting{}.4 &  Il gruppo si impegna a controllare come viene gestita l'eliminazione da parte dei competitor.\\
+        VE\_\DataMeeting{}.4 &  Si è deciso di controllare come viene gestita l'eliminazione da parte dei competitor.\\
         VE\_\DataMeeting{}.5 &  Si è deciso che l'utente potrà selezionare che file/cartelle scaricare.\\
         VE\_\DataMeeting{}.5 &  Si è deciso di usare delle librerie che simulano il server.\\
         \bottomrule
