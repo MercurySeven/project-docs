@@ -16,23 +16,7 @@ Al primo avvio dell'applicazione inoltre verrà richiesto di scegliere una carte
     \caption{Selezione del percorso da sincronizzare}
     \label{fig:Selezione del percorso da sincronizzare}
 \end{figure}
-\subsection{Impostazioni}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.15]{components/img/settings.png}
-    \caption{Vista delle impostazioni}
-    \label{fig:Vista delle impostazioni}
-\end{figure}
-\begin{enumerate}
-	\item Pulsante utilizzato per cambiare il percorso della cartella sincronizzata (maggiori informazioni a \S{}\ref{sec:selezionepath});
-	\item Pulsanti mutualmente esclusivi, il pulsante premuto indica la politica di sincronizzazione:
-	\begin{itemize}
-		\item \textbf{Client}: indica la politica nel quale i file presenti nel client hanno sempre la priorità sui file nel server, vengono scaricati solamente file non presenti nel client;
-		\item \textbf{Manuale}: indica la politica nella quale se è presente un conflitto tra la versione del file locale con quella del server allora viene richiesta l'interazione dell'utente.
-	\end{itemize}
-	\item Barra indicante lo spazio occupato. Viene mostrato graficamente quanto spazio la cartella da sincronizzare selezionata pesa sullo spazio riservato nel punto 4;
-	\item Campo utilizzato per impostare quanto spazio del disco locale può essere occupato al massimo dal programma di sincronizzazione.
-\end{enumerate}
+
 \subsection{Visualizzazione file nel percorso scelto}
 \begin{figure}[H]
     \centering
@@ -40,3 +24,27 @@ Al primo avvio dell'applicazione inoltre verrà richiesto di scegliere una carte
     \caption{Vista dei file nel path}
     \label{fig:Vista dei file nel percorso scelto}
 \end{figure}
+\begin{enumerate}
+	\item Pulsante utilizzato per aprire l'esplora risorse del proprio sistema operativo nella cartella attuale;
+	\item Pulsante per attivare o disattivare la sincronizzazione della cartella selezionata;
+	\item Pulsante per visualizzare i file nel percorso scelto;
+	\item Pulsante per aprire la vista di impostazioni (maggiori informazioni a \S{} \ref{sec:impostazioni})
+\end{enumerate}
+
+\subsection{Impostazioni} \label{sec:impostazioni}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.30]{components/img/settings.png}
+    \caption{Vista delle impostazioni}
+    \label{fig:Vista delle impostazioni}
+\end{figure}
+\begin{enumerate}
+	\item Pulsante utilizzato per cambiare il percorso della cartella sincronizzata (maggiori informazioni a \S{}\ref{sec:selezionepath});
+	\item Pulsanti mutualmente esclusivi, il pulsante premuto indica la politica di sincronizzazione:
+	\begin{itemize}
+		\item \textbf{Client}: indica la politica nel quale i file presenti in locale hanno sempre la priorità sui file nel \glo{server}, vengono scaricati solamente file non presenti localmente;
+		\item \textbf{Manuale}: indica la politica nella quale se è presente un conflitto tra la versione del file locale con quella del \glo{server} allora viene richiesta l'interazione dell'utente.
+	\end{itemize}
+	\item Barra indicante lo spazio occupato. Viene mostrato graficamente quanto spazio la cartella da sincronizzare selezionata pesa sullo spazio riservato nel punto 4;
+	\item Campo utilizzato per impostare quanto spazio del disco locale può essere occupato al massimo dal programma di sincronizzazione.
+\end{enumerate}
