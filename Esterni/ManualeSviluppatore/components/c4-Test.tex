@@ -3,23 +3,21 @@
 In questa sezione verrà trattato il testing del codice, in particolare i framework utilizzati e l'automatizzazione dello svolgimento dei test.
 
 \subsection{unittest — Unit testing framework}
-
 Il framework unittest viene utilizzato per effettuare i test di unità, per eseguire i test basterà eseguire il comando: \newline{}
 \centerline{ \textbf{python -m unittest discover -v -s "./tests/" -p "*\_test.py"}}\newline{}
 Verranno quindi elencati tutti i test eseguiti ed il loro risultato.
+
 \subsection{Analisi statica}
 \subsubsection{pre-commit}
 Per essere sicuri che codice non conforme agli standard di qualità finisca nel repository si è utilizzato il plugin pre-commit. Esso dovrà essere attivato con il comando: \newline{}
 \centerline{\textbf{pre-commit install}}\newline{}
 Dopo aver eseguito questo comando ad ogni commit il codice verrà formattato automaticamente tramite autopep8 e non sarà possibile eseguire con successo il commit se non supera i test statici di Flake8
 \subsubsection{Flake8}
-
 I test di analisi statica del codice vengono effettuati tramite lo strumento Flake8. Per effettuare i test sul codice è necessario eseguire il comando\newline{}
 \centerline{\textbf{Run flake8}}\newline{}
-In caso di errori verrà indicato quali sono ed in che file. 
+In caso di errori verrà indicato quali sono ed in che file.
 
 \subsection{Codecov}
-
 Per svolgere l'attività di \gloman{code coverage} è stato scelto di utilizzare Codecov. Per far eseguire le revisioni automatiche del codice bisogna attivare il repository di GitHub dal sito di Codecov.
 
 \subsection{GitHub Actions}
