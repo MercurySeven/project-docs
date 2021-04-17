@@ -6,7 +6,7 @@
     \caption{Diagramma pattern MVC}
     \label{fig:diagramma MVC generico}
 \end{figure}
-L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Model-View-Controller (MVC).} L'aderenza al pattern era un requisito obbligatorio imposto dall'azienda ma sono stati riscontrati diversi punti positivi nella sua implementazione:
+L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Model-View-Controller (MVC).} L'aderenza al pattern è un requisito obbligatorio imposto dall'azienda, il gruppo ha trovato i seguenti vantaggi nella sua implementazione:
 
 \begin{itemize}
     \item Rapidità nello sviluppo software dato dalla possibilità di lavoro parallelo su modello, vista e controller;
@@ -32,9 +32,9 @@ L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Mode
 
 \subsection{Design pattern creazionali: Singleton}
 
-Le classi mostrate in figura 3 rispettano il pattern singleton, il che le porta ad avere una sola loro istanza all'interno del programma.
+Le classi mostrate in figura \S{}\ref{fig:Diagramma delle classi nel model} rispettano il pattern singleton, il che porta ad avere una sola loro istanza all'interno del programma.
 \newline{}
-L'implementazione del pattern in Python è stata possibile grazie alla funzione get\_instance, presente in ogni classe,  che controlla se essa è stata istanziata o meno. In caso negativo crea la nuova istanza e, nelle chiamate successive, si limita a restituire la stessa. Il costruttore della classe, quindi, può essere chiamato solamente all'interno di get\_instance. \newline{}
+L'implementazione del pattern in Python è stata possibile grazie alla funzione get\_instance, presente in ogni classe,  che controlla se essa sia stata istanziata o meno. In caso negativo crea la nuova istanza e, nelle chiamate successive, si limita a restituire la stessa. Il costruttore della classe, quindi, può essere chiamato solamente all'interno di get\_instance. \newline{}
 Il pattern singleton può provocare problemi se mal implementato. Nel nostro caso, l'implementazione è corretta in quanto l'istanza dei vari modelli è passata ai costruttori di tutti gli utilizzatori. Questo permette la realizzazione degli unit test che, altrimenti, sarebbero impossibili da implementare. 
 \begin{figure}[H]
     \centering
@@ -64,7 +64,7 @@ Segnali e slot vengono usati per le comunicazioni fra model, controller e view. 
 
 \subsubsection{Strategy:}
 La scelta di utilizzare questo pattern è stata naturale poiché esso va a descrivere pienamente la realtà del \textit{capitolato C7}.\newline{}
-Attualmente si hanno due diverse politiche per la sincronizzazione che posso essere scelte a runtime e che variano il comportamento dell'algoritmo. Si ha una classe CompareSnapClient che fa da interfaccia comune e chiama al suo interno il metodo execute della classe attualmente scelta. Essendo Strategy una classe astratta, essa fornisce il metodo execute che deve essere implementato da tutte le classi figlie. Questo permette all' istanza di CompareSnapClient di poter chiamare il metodo execute di un qualsiasi oggetto Strategy di cui non conosce l'implementazione. L'adozione del suddetto pattern permette l'aggiunta di nuove politiche senza dover cambiare la logica dell'applicazione, il che semplificherà il lavoro in eventuali sviluppi futuri.
+Attualmente si hanno due diverse politiche per la sincronizzazione che possono essere scelte a runtime e che variano il comportamento dell'algoritmo. Si ha una classe CompareSnapClient che fa da interfaccia comune e chiama al suo interno il metodo execute della classe attualmente scelta. Essendo Strategy una classe astratta, essa fornisce il metodo execute che deve essere implementato da tutte le classi figlie. Questo permette all' istanza di CompareSnapClient di poter chiamare il metodo execute di un qualsiasi oggetto Strategy di cui non conosce l'implementazione. L'adozione del suddetto pattern permette l'aggiunta di nuove politiche senza dover cambiare la logica dell'applicazione, il che semplificherà il lavoro in eventuali sviluppi futuri.
 
 \begin{figure}[H]
     \centering
