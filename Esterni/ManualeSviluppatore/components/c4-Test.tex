@@ -4,23 +4,14 @@ In questa sezione verrà trattato il testing del codice, in particolare i framew
 
 \subsection{unittest — Unit testing framework}
 
-Il framework unittest viene utilizzato per effettuare i test di unità, per eseguire i test basterà eseguire il comando 
-
-\centerline{ \textbf{python -m unittest discover -v -s "./tests/" -p "*\_test.py"}}
-
+Il framework unittest viene utilizzato per effettuare i test di unità, per eseguire i test basterà eseguire il comando: \newline{}
+\centerline{ \textbf{python -m unittest discover -v -s "./tests/" -p "*\_test.py"}}\newline{}
 Verranno quindi elencati tutti i test eseguiti ed il loro risultato.
-
-
 \subsection{Analisi statica}
-
 \subsubsection{pre-commit}
-
-Per essere sicuri che codice non conforme agli standard di qualità finisca nel repository si è utilizzato il plugin pre-commit. Esso dovrà essere attivato con il comando
-
-\centerline{\textbf{pre-commit install}}
-
+Per essere sicuri che codice non conforme agli standard di qualità finisca nel repository si è utilizzato il plugin pre-commit. Esso dovrà essere attivato con il comando: \newline{}
+\centerline{\textbf{pre-commit install}}\newline{}
 Dopo aver eseguito questo comando ad ogni commit il codice verrà formattato automaticamente tramite autopep8 e non sarà possibile eseguire con successo il commit se non supera i test statici di Flake8
-
 \subsubsection{Flake8}
 
 I test di analisi statica del codice vengono effettuati tramite lo strumento Flake8. Per effettuare i test sul codice è necessario eseguire il comando\newline{}
