@@ -57,6 +57,9 @@ Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessi
     \item Se ottengo due 401 Unauthorized consecutivi, vuol dire che l'utente ha cambiato la password e deve essere mostrata la form di login.
 \end{itemize}
 
+\subsection{Confronto con i prodotti dei competitor}
+Per poter ragionare più nel dettaglio sulla logica dell'applicazione e le scelte che dovrà effettuare, si è deciso insieme all'azienda di confrontare il prodotto fino ad ora realizzato con i prodotti offerti dai competitor del settore.
+
 \subsection{Come gestire l'eliminazione dei file}
 Durante lo sviluppo dell'algoritmo di sincronizzazione il gruppo si è posto la domanda di come gestire l'eliminazione di un file sul client. Attualmente c'è il problema di come far capire agli altri client che 
 il file non è presente nel server perché è stato eliminato e non devono effettuare l'upload ma devono eliminarlo. Il gruppo ha proposto di usare un flag presente nelle API di Zextras ovvero di marcare il file come 
@@ -68,7 +71,7 @@ L'azienda ci ha raccomandato di pensare a come far decidere all'utente quali fil
 L'utente potrà selezionare quali nodi non verranno sincronizzati con il server e questi nodi non saranno disponibili offline.
 
 \subsection{Gestione dei test}
-Il gruppo ha voluto chiedere all'azienda come gestire i test che si occupano di comunicare con il server Zextras. \textit{\Alessio{}} ci ha risposto che loro usano delle librerie che simulano il server, ci ha raccomandato di trovarne e usarle.
+Il gruppo ha esposto all'azienda il proprio modus operandi per la gestione dei test. L'azienda si è mostrata soddisfatta ed ha consigliato delle metodologie e tecnologie aggiuntive per poter correttamente testare la comunicazione con i propri server.
 
 \newpage
 
