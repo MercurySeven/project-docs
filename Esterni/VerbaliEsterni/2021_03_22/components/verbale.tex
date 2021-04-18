@@ -31,47 +31,23 @@
 
 \begin{itemize}
     \item\textbf{Mostrare i progressi fatti con l'applicazione;}
-    \item\textbf{Gestione del login;}
-    \item\textbf{Gestione token di sessione;}
     \item\textbf{Come gestire l'eliminazione dei file;}
     \item\textbf{Selezionare cosa sincronizzare;}
-    \item\textbf{Gestione dei test.}
 \end{itemize}
 \newpage
 
 
 \section{Resoconto}
-
-La riunione è stata concordata il tra gruppo \textit{\Gruppo{}} e l'azienda per mostrare lo stato attuale di sviluppo dell'applicazione e per chiarire dubbi sorti durante la stesura del codice.
-Nello specifico, in questa riunione il gruppo ha informato l'azienda che tra la presentazione del POC e l'incontro sostenuto, non sono state aggiunte nuove funzioni ma è stata ristrutturata tutta l'architettura dell'applicazione aderendo al pattern MVC. \\
-Di seguito vengono riportati i quesiti posti e le rispettive risposte.
-
-\subsection{Gestione del login}
-Il gruppo ha fatto notare che al momento la gestione del login non avviene usando delle API, ma viene fatto facendo una chiamata POST all'url di login presente su Zextras Drive.
-Ciò comporta che ogni volta venga istanziata la classe API, venga effettuato il login e scaricata la pagina web per recuperare il cookie di sessione, che porta a un rallentamento notevole dell'applicazione. Per questo, il gruppo ha chiesto se si possono avere delle API dedicate. \textit{\Federico{}} ci ha risposto che hanno delle API pronte ma devono ancora essere verificate. Ci ha rassicurato che non appena ci saranno novità ci dirà come usarle.
-
-\subsection{Gestione token di sessione}
-Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessione. \textit{\Alessio{}} ci ha risposto che in azienda ogni risposta ricevuta nel server viene passata ad un "bridge" che controlla:
-\begin{itemize}
-    \item Se la risposta di una chiamata è 401 Unauthorized, l'applicazione deve rifare il login (usando le credenziali salvate), se il login è valido, viene rifatta la chiamata che aveva portato all'errore.
-    \item Se ottengo due 401 Unauthorized consecutivi, vuol dire che l'utente ha cambiato la password e deve essere mostrata la form di login.
-\end{itemize}
-
 \subsection{Confronto con i prodotti dei competitor}
 Per poter ragionare più nel dettaglio sulla logica dell'applicazione e le scelte che dovrà effettuare, si è deciso insieme all'azienda di confrontare il prodotto fino ad ora realizzato con i prodotti offerti dai competitor del settore.
 
 \subsection{Come gestire l'eliminazione dei file}
-Durante lo sviluppo dell'algoritmo di sincronizzazione il gruppo si è posto la domanda di come gestire l'eliminazione di un file sul client. Attualmente c'è il problema di come far capire agli altri client che 
-il file non è presente nel server perché è stato eliminato e non devono effettuare l'upload ma devono eliminarlo. Il gruppo ha proposto di usare un flag presente nelle API di Zextras ovvero di marcare il file come 
-da cancellare. \textit{\Federico{}} ha proposto di non marcare il file ma di eliminarlo direttamente, mentre \textit{\Alessio{}} la pensava diversamente, ovvero di non eliminare il file anche nel server.
-Il gruppo ha concordato con l'azienda di guardare cosa fanno i competitor e vedere come viene gestita l'eliminazione.
+Durante lo sviluppo dell'algoritmo di sincronizzazione il gruppo si è posto la domanda di come gestire l'eliminazione di un file sul client. Attualmente il problema è far capire agli altri client che il file non è presente nel server perché è stato eliminato e non devono effettuare l'upload ma devono eliminarlo. Il gruppo ha suggerito di usare un flag presente nelle API di Zextras ovvero di marcare il file come 
+da cancellare. \textit{\Federico{}} ha proposto di non marcare il file ma di eliminarlo direttamente, mentre \textit{\Alessio{}} la pensava diversamente, ovvero di non eliminare il file anche nel server. Basandosi sul confronto avvenuto in precedenza con i prodotti dei competitor, si è deciso di adottare la soluzione di \textit{\Federico{}} con l'intenzione di rielaborarla in una successiva riunione interna.
 
 \subsection{Selezionare cosa sincronizzare}
 L'azienda ci ha raccomandato di pensare a come far decidere all'utente quali file o cartelle non scaricare durante il processo di sincronizzazione.
 L'utente potrà selezionare quali nodi non verranno sincronizzati con il server e questi nodi non saranno disponibili offline.
-
-\subsection{Gestione dei test}
-Il gruppo ha esposto all'azienda il proprio modus operandi per la gestione dei test. L'azienda si è mostrata soddisfatta ed ha consigliato delle metodologie e tecnologie aggiuntive per poter correttamente testare la comunicazione con i propri server.
 
 \newpage
 
@@ -89,11 +65,9 @@ Il gruppo ha esposto all'azienda il proprio modus operandi per la gestione dei t
         \toprule
         \endhead
 
-        VE\_\DataMeeting{}.1 &  Si è deciso di continuare ad eseguire il login con il metodo corrente, in attesa delle API.\\
-        VE\_\DataMeeting{}.2 &  Si è deciso di sistemare la parte network creando un "bridge" per gestire la scadenza del cookie.\\
-        VE\_\DataMeeting{}.3 &  Si è deciso di controllare come viene gestita l'eliminazione da parte dei competitor.\\
-        VE\_\DataMeeting{}.4 &  Si è deciso che l'utente potrà selezionare che file/cartelle scaricare.\\
-        VE\_\DataMeeting{}.5 &  Si è deciso di usare delle librerie che simulano il server.\\
+        VE\_\DataMeeting{}.1 &  Si è deciso di confrontare il prodotto con quello dei competitor.\\
+        VE\_\DataMeeting{}.2 &  Si è deciso di rielaborare in una riunione interna la logica di eliminazione.\\
+        VE\_\DataMeeting{}.3 &  Si è deciso che l'utente potrà selezionare che file/cartelle scaricare.\\
         \bottomrule
         \hiderowcolors
     \end{longtable}
