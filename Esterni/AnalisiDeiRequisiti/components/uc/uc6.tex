@@ -2,12 +2,11 @@
 \label{UC6}
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.7]{components/img/UC6.png}
+    \includegraphics[scale = 0.6]{components/img/UC6.png}
     \caption{UC6 - Visualizza dettagli file}
 \end{figure}
 \begin{itemize}
 \item \textbf{Attore Primario:} Utente autenticato;
-\item \textbf{Attore Secondario:} \glo{Zextras Drive};
 \item \textbf{Precondizione:} L'utente ha selezionato la cartella root e sono presenti file al suo interno;
 \item \textbf{Postcondizione:} L'utente ha informazioni riguardo al file;
 \item \textbf{Scenario principale:} L'utente può visualizzare le informazioni riguardanti i file all'interno della cartella root selezionata.
@@ -47,18 +46,4 @@
 \item \textbf{Precondizione:} L'utente ha effettuato dei trasferimenti da o verso il server;
 \item \textbf{Postcondizione:} L'utente è informato sullo stato dei file sincronizzati e non;
 \item \textbf{Scenario principale:} L'utente può visualizzare lo stato corrente dei file.
-\end{itemize}
-
-\subsubsection{UC6.5 - Seleziona file da condividere ad altre persone}
-\label{UC6.5}
-\begin{itemize}
-\item \textbf{Attore Primario:} Utente autenticato;
-\item \textbf{Attore Secondario:} \glo{Zextras Drive};
-\item \textbf{Precondizione:} L'utente ha effettuato dei trasferimenti verso il server;
-\item \textbf{Postcondizione:} L'utente ottiene un link che gli consente di convdividere dei documenti ad altre persone;
-\item \textbf{Scenario principale:}
-    \begin{enumerate}
-    \item L'utente seleziona il file che vuole condividere ad altre persone;
-    \item L'applicazione farà una richiesta tramite \glo{API} a \glo{Zextras Drive} per ottenere un link da dare all'utente.
-    \end{enumerate}
 \end{itemize}
