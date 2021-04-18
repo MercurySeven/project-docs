@@ -27,7 +27,23 @@ def main() -> None:
 
     filepaths = Path(".").glob("**/*.tex")
 
-    blacklist = ["informazioni.tex","registro_modifiche.tex","Glossario.tex","LetteraDiPresentazione.tex","verbale.tex","LetteraDiCorrezioneErroriRR.tex"]
+    blacklist = ["informazioni.tex",
+                "registro_modifiche.tex",
+                "Glossario.tex",
+                "LetteraDiPresentazione.tex",
+                "verbale.tex",
+                "LetteraDiCorrezioneErroriRR.tex",
+                "c1-Introduzione-MS.tex",
+                "c2-Tecnologie_librerie-MS.tex",
+                "c3-Setup_ide-MS.tex",
+                "c4-Test-MS.tex",
+                "c5-Architettura-MS.tex",
+                "glossario-MS.tex",
+                "c1-Introduzione-MU.tex",
+                "c2-Requisiti_minimi_sistema-MU.tex",
+                "c3-Installazione-MU.tex",
+                "c4-Istruzioni_per_utilizzo-MU.tex",
+                "glossario-MU.tex"]
 
     result = [file for file in filepaths if os.path.basename(file) not in blacklist]
 
