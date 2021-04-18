@@ -9,7 +9,7 @@ Verranno quindi elencati tutti i test eseguiti ed il loro risultato.
 
 \subsection{Analisi statica}
 \subsubsection{pre-commit}
-Per essere sicuri che codice non conforme agli standard di qualità finisca nel repository si è utilizzato il plugin pre-commit. Esso dovrà essere attivato con il comando: \newline{}
+Per essere sicuri che codice non conforme agli standard di qualità finisca nel \gloman{repository} si è utilizzato il plugin pre-commit. Esso dovrà essere attivato con il comando: \newline{}
 \centerline{\textbf{pre-commit install}}\newline{}
 Dopo aver eseguito questo comando ad ogni commit il codice verrà formattato automaticamente tramite autopep8 e non sarà possibile eseguire con successo il commit se non supera i test statici di Flake8
 \subsubsection{Flake8}
@@ -18,7 +18,7 @@ I test di analisi statica del codice vengono effettuati tramite lo strumento Fla
 In caso di errori verrà indicato quali sono ed in che file.
 
 \subsection{Codecov}
-Per svolgere l'attività di \gloman{code coverage} è stato scelto di utilizzare Codecov. Per far eseguire le revisioni automatiche del codice bisogna attivare il repository di GitHub dal sito di Codecov.
+Per svolgere l'attività di \gloman{code coverage} è stato scelto di utilizzare Codecov. Per far eseguire le revisioni automatiche del codice bisogna attivare il \gloman{repository} di GitHub dal sito di Codecov.
 
 \subsection{GitHub Actions}
 Il servizio di CI utilizzato è GitHub Actions, con dei workflow personalizzati presenti nella cartella .github. Queste Actions vanno a controllare staticamente il codice tramite Flake8, ad eseguire il codice ed i test su macOS, Windows ed Ubuntu ed infine mandare una notifica della buona o cattiva riuscita sul canale predisposto di Slack.

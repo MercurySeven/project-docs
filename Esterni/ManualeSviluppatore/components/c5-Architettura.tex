@@ -9,7 +9,7 @@
 L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Model-View-Controller (MVC).} L'aderenza al pattern è un requisito obbligatorio imposto dall'azienda, il gruppo ha trovato i seguenti vantaggi nella sua implementazione:
 
 \begin{itemize}
-    \item Rapidità nello sviluppo software dato dalla possibilità di lavoro parallelo su modello, vista e controller;
+    \item Rapidità nello sviluppo \gloman{software} dato dalla possibilità di lavoro parallelo su modello, vista e controller;
     \item Indipendenza dei vari componenti;
     \item Maggior facilità nella testabilità, manutenibilità e scalabilità.
 \end{itemize}
@@ -34,7 +34,7 @@ L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Mode
 
 Le classi mostrate in figura \S{}\ref{fig:Diagramma delle classi nel model} rispettano il pattern singleton, il che porta ad avere una sola loro istanza all'interno del programma.
 \newline{}
-L'implementazione del pattern in Python è stata possibile grazie alla funzione get\_instance, presente in ogni classe,  che controlla se essa sia stata istanziata o meno. In caso negativo crea la nuova istanza e, nelle chiamate successive, si limita a restituire la stessa. Il costruttore della classe, quindi, può essere chiamato solamente all'interno di get\_instance. \newline{}
+L'implementazione del pattern in \gloman{Python} è stata possibile grazie alla funzione get\_instance, presente in ogni classe,  che controlla se essa sia stata istanziata o meno. In caso negativo crea la nuova istanza e, nelle chiamate successive, si limita a restituire la stessa. Il costruttore della classe, quindi, può essere chiamato solamente all'interno di get\_instance. \newline{}
 Il pattern singleton può provocare problemi se mal implementato. Nel nostro caso, l'implementazione è corretta in quanto l'istanza dei vari modelli è passata ai costruttori di tutti gli utilizzatori. Questo permette la realizzazione degli unit test che, altrimenti, sarebbero impossibili da implementare. 
 \begin{figure}[H]
     \centering
@@ -44,7 +44,7 @@ Il pattern singleton può provocare problemi se mal implementato. Nel nostro cas
 \end{figure}
 \subsection{Design pattern strutturali: Virtual Proxy}
 Il pattern Proxy viene utilizzato per evitare chiamate di rete non necessarie, permettendo la \gloman{lazy initialization}.\newline{}
-Questo pattern in Python è stato realizzato tramite il modulo ABC (Abstract Base Classes) realizzando la classe astratta API che viene ereditata da NetworkModel e da APIImplementation. In questo modo si vanno a definire dei metodi base che entrambe le classi condividono. Quando verrà effettuata una chiamata di rete si passa per NetworkModel che, dopo controlli aggiuntivi, potrà decidere se passare la chiamata ad APIImplementation. Facendo riferimento al modello del pattern, NetworkModel è il nostro proxy e APIImplementation il nostro realsubject.
+Questo pattern in \gloman{Python} è stato realizzato tramite il modulo ABC (Abstract Base Classes) realizzando la classe astratta API che viene ereditata da NetworkModel e da APIImplementation. In questo modo si vanno a definire dei metodi base che entrambe le classi condividono. Quando verrà effettuata una chiamata di rete si passa per NetworkModel che, dopo controlli aggiuntivi, potrà decidere se passare la chiamata ad APIImplementation. Facendo riferimento al modello del pattern, NetworkModel è il nostro proxy e APIImplementation il nostro realsubject.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.45]{components/img/proxy-model.png}
