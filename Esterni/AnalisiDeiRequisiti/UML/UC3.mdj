@@ -62,7 +62,7 @@
 											"top": 411,
 											"width": 171,
 											"height": 26,
-											"text": "UC 3 Sincronizzazione file da server a client",
+											"text": "UC 3.1 Selezione file presenti nel server",
 											"wordWrap": true
 										},
 										{
@@ -650,6 +650,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": -16,
 											"height": 13
 										},
 										{
@@ -659,11 +660,11 @@
 												"$ref": "AAAAAAF3Y/e7g9gJufA="
 											},
 											"font": "Arial;13;1",
-											"left": 245,
+											"left": 237,
 											"top": 199,
 											"width": 534,
 											"height": 13,
-											"text": "SSD"
+											"text": "UC 3"
 										},
 										{
 											"_type": "LabelView",
@@ -673,6 +674,7 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": -16,
 											"width": 73.67724609375,
 											"height": 13,
 											"text": "(from Model)"
@@ -685,12 +687,13 @@
 											},
 											"visible": false,
 											"font": "Arial;13;0",
+											"left": -16,
 											"height": 13,
 											"horizontalAlignment": 1
 										}
 									],
 									"font": "Arial;13;0",
-									"left": 240,
+									"left": 232,
 									"top": 192,
 									"width": 544,
 									"height": 25,
@@ -709,10 +712,10 @@
 								}
 							],
 							"font": "Arial;13;0",
-							"left": 240,
+							"left": 232,
 							"top": 192,
 							"width": 544,
-							"height": 505,
+							"height": 289,
 							"nameCompartment": {
 								"$ref": "AAAAAAF3Y/e7g9gJufA="
 							}
@@ -1804,331 +1807,6 @@
 							"propertyLabel": {
 								"$ref": "AAAAAAF4FrZywmYTitE="
 							}
-						},
-						{
-							"_type": "UMLUseCaseView",
-							"_id": "AAAAAAF4FraR9GZLh9k=",
-							"_parent": {
-								"$ref": "AAAAAAF3Y/NFgNaXxYM="
-							},
-							"model": {
-								"$ref": "AAAAAAF4FraR8mZJ/bs="
-							},
-							"subViews": [
-								{
-									"_type": "UMLNameCompartmentView",
-									"_id": "AAAAAAF4FraR9WZM5NE=",
-									"_parent": {
-										"$ref": "AAAAAAF4FraR9GZLh9k="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FraR8mZJ/bs="
-									},
-									"subViews": [
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAF4FraR9WZNj90=",
-											"_parent": {
-												"$ref": "AAAAAAF4FraR9WZM5NE="
-											},
-											"visible": false,
-											"font": "Arial;13;0",
-											"left": -128,
-											"top": 80,
-											"height": 13
-										},
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAF4FraR9mZOPAs=",
-											"_parent": {
-												"$ref": "AAAAAAF4FraR9WZM5NE="
-											},
-											"font": "Arial;13;1",
-											"left": 411,
-											"top": 620,
-											"width": 177,
-											"height": 39,
-											"text": "UC 15 Visualizza messaggio di opzione per il file in conflitto",
-											"wordWrap": true
-										},
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAF4FraR9mZP/js=",
-											"_parent": {
-												"$ref": "AAAAAAF4FraR9WZM5NE="
-											},
-											"visible": false,
-											"font": "Arial;13;0",
-											"left": -128,
-											"top": 80,
-											"width": 73.67724609375,
-											"height": 13,
-											"text": "(from Model)"
-										},
-										{
-											"_type": "LabelView",
-											"_id": "AAAAAAF4FraR9mZQWZI=",
-											"_parent": {
-												"$ref": "AAAAAAF4FraR9WZM5NE="
-											},
-											"visible": false,
-											"font": "Arial;13;0",
-											"left": -128,
-											"top": 80,
-											"horizontalAlignment": 1,
-											"wordWrap": true
-										}
-									],
-									"font": "Arial;13;0",
-									"left": 406,
-									"top": 613,
-									"width": 187,
-									"height": 51,
-									"stereotypeLabel": {
-										"$ref": "AAAAAAF4FraR9WZNj90="
-									},
-									"nameLabel": {
-										"$ref": "AAAAAAF4FraR9mZOPAs="
-									},
-									"namespaceLabel": {
-										"$ref": "AAAAAAF4FraR9mZP/js="
-									},
-									"propertyLabel": {
-										"$ref": "AAAAAAF4FraR9mZQWZI="
-									}
-								},
-								{
-									"_type": "UMLAttributeCompartmentView",
-									"_id": "AAAAAAF4FraR9mZRHDA=",
-									"_parent": {
-										"$ref": "AAAAAAF4FraR9GZLh9k="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FraR8mZJ/bs="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": -64,
-									"top": 40,
-									"width": 10,
-									"height": 10
-								},
-								{
-									"_type": "UMLOperationCompartmentView",
-									"_id": "AAAAAAF4FraR92ZSacQ=",
-									"_parent": {
-										"$ref": "AAAAAAF4FraR9GZLh9k="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FraR8mZJ/bs="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": -64,
-									"top": 40,
-									"width": 10,
-									"height": 10
-								},
-								{
-									"_type": "UMLReceptionCompartmentView",
-									"_id": "AAAAAAF4FraR92ZTYNc=",
-									"_parent": {
-										"$ref": "AAAAAAF4FraR9GZLh9k="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FraR8mZJ/bs="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": -64,
-									"top": 40,
-									"width": 10,
-									"height": 10
-								},
-								{
-									"_type": "UMLTemplateParameterCompartmentView",
-									"_id": "AAAAAAF4FraR92ZUAUE=",
-									"_parent": {
-										"$ref": "AAAAAAF4FraR9GZLh9k="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FraR8mZJ/bs="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": -64,
-									"top": 40,
-									"width": 10,
-									"height": 10
-								},
-								{
-									"_type": "UMLExtensionPointCompartmentView",
-									"_id": "AAAAAAF4FraR+GZVAQU=",
-									"_parent": {
-										"$ref": "AAAAAAF4FraR9GZLh9k="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FraR8mZJ/bs="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": -64,
-									"top": 40,
-									"width": 10,
-									"height": 10
-								}
-							],
-							"font": "Arial;13;0",
-							"containerChangeable": true,
-							"left": 367,
-							"top": 591,
-							"width": 265,
-							"height": 96,
-							"nameCompartment": {
-								"$ref": "AAAAAAF4FraR9WZM5NE="
-							},
-							"wordWrap": true,
-							"suppressAttributes": true,
-							"suppressOperations": true,
-							"attributeCompartment": {
-								"$ref": "AAAAAAF4FraR9mZRHDA="
-							},
-							"operationCompartment": {
-								"$ref": "AAAAAAF4FraR92ZSacQ="
-							},
-							"receptionCompartment": {
-								"$ref": "AAAAAAF4FraR92ZTYNc="
-							},
-							"templateParameterCompartment": {
-								"$ref": "AAAAAAF4FraR92ZUAUE="
-							},
-							"extensionPointCompartment": {
-								"$ref": "AAAAAAF4FraR+GZVAQU="
-							}
-						},
-						{
-							"_type": "UMLExtendView",
-							"_id": "AAAAAAF4FrfJI2fFEok=",
-							"_parent": {
-								"$ref": "AAAAAAF3Y/NFgNaXxYM="
-							},
-							"model": {
-								"$ref": "AAAAAAF4FrfJI2fDs1M="
-							},
-							"subViews": [
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAF4FrfJI2fGw/E=",
-									"_parent": {
-										"$ref": "AAAAAAF4FrfJI2fFEok="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FrfJI2fDs1M="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": 484,
-									"top": 519,
-									"height": 13,
-									"alpha": 1.5707963267948966,
-									"distance": 15,
-									"hostEdge": {
-										"$ref": "AAAAAAF4FrfJI2fFEok="
-									},
-									"edgePosition": 1
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAF4FrfJI2fHS58=",
-									"_parent": {
-										"$ref": "AAAAAAF4FrfJI2fFEok="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FrfJI2fDs1M="
-									},
-									"font": "Arial;13;0",
-									"left": 443,
-									"top": 519,
-									"width": 53.49169921875,
-									"height": 13,
-									"alpha": 1.5707963267948966,
-									"distance": 30,
-									"hostEdge": {
-										"$ref": "AAAAAAF4FrfJI2fFEok="
-									},
-									"edgePosition": 1,
-									"text": "«extend»"
-								},
-								{
-									"_type": "EdgeLabelView",
-									"_id": "AAAAAAF4FrfJI2fIMC8=",
-									"_parent": {
-										"$ref": "AAAAAAF4FrfJI2fFEok="
-									},
-									"model": {
-										"$ref": "AAAAAAF4FrfJI2fDs1M="
-									},
-									"visible": false,
-									"font": "Arial;13;0",
-									"left": 513,
-									"top": 520,
-									"height": 13,
-									"alpha": -1.5707963267948966,
-									"distance": 15,
-									"hostEdge": {
-										"$ref": "AAAAAAF4FrfJI2fFEok="
-									},
-									"edgePosition": 1
-								}
-							],
-							"font": "Arial;13;0",
-							"head": {
-								"$ref": "AAAAAAF3Y/OHTdaiJxQ="
-							},
-							"tail": {
-								"$ref": "AAAAAAF4FraR9GZLh9k="
-							},
-							"lineStyle": 1,
-							"points": "499:590;499:462",
-							"showVisibility": true,
-							"nameLabel": {
-								"$ref": "AAAAAAF4FrfJI2fGw/E="
-							},
-							"stereotypeLabel": {
-								"$ref": "AAAAAAF4FrfJI2fHS58="
-							},
-							"propertyLabel": {
-								"$ref": "AAAAAAF4FrfJI2fIMC8="
-							}
-						},
-						{
-							"_type": "UMLNoteView",
-							"_id": "AAAAAAF4FrfQ5mfyKGk=",
-							"_parent": {
-								"$ref": "AAAAAAF3Y/NFgNaXxYM="
-							},
-							"font": "Arial;13;0",
-							"left": 553,
-							"top": 488,
-							"width": 168,
-							"height": 73,
-							"text": "Solo in caso l'utente abbia scelto la politica \"decisione manuale\""
-						},
-						{
-							"_type": "UMLNoteLinkView",
-							"_id": "AAAAAAF4FrfQ+mgBya4=",
-							"_parent": {
-								"$ref": "AAAAAAF3Y/NFgNaXxYM="
-							},
-							"font": "Arial;13;0",
-							"head": {
-								"$ref": "AAAAAAF4FrfQ5mfyKGk="
-							},
-							"tail": {
-								"$ref": "AAAAAAF4FrfJI2fFEok="
-							},
-							"lineStyle": 1,
-							"points": "499:526;552:525"
 						}
 					]
 				},
@@ -2138,7 +1816,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF3Y/NFf9aWsGs="
 					},
-					"name": "UC 3 Sincronizzazione file da server a client",
+					"name": "UC 3.1 Selezione file presenti nel server",
 					"ownedElements": [
 						{
 							"_type": "UMLAssociation",
@@ -2247,7 +1925,7 @@
 					"_parent": {
 						"$ref": "AAAAAAF3Y/NFf9aWsGs="
 					},
-					"name": "SSD"
+					"name": "UC 3"
 				},
 				{
 					"_type": "UMLActor",
