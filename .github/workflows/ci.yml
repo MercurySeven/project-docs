@@ -60,8 +60,12 @@ jobs:
           - working_directory: Esterni/Glossario
             root_file: "Glossario"
 
+          - working_directory: Esterni/ManualeUtente
+            root_file: "ManualeUtente"
+
           - working_directory: Esterni/ManualeSviluppatore
             root_file: "ManualeSviluppatore"
+
 
           #- working_directory: LetteraDiPresentazione
           #  root_file: "LetteraDiPresentazione"
