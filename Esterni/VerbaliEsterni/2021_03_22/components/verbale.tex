@@ -1,0 +1,74 @@
+\section{Informazioni generali}
+
+\begin{itemize}
+
+    \item \textbf{Canale di comunicazione:} Zoom;
+
+    \item \textbf{Data:} \DataMeeting{};
+
+    \item \textbf{Ora inizio:} 16:00;
+
+    \item \textbf{Ora fine:} 17:00;
+
+    \item \textbf{Segretario:} \ACapoRedazione{};
+
+    \item \textbf{Partecipanti}: Due rappresentanti dell'azienda Zextras, \textit{\Alessio{}} e \textit{\Federico{}}, e i membri del gruppo \Gruppo{}:
+        \begin{itemize}
+            \item \Daniele{};
+            \item \Davide{};
+            \item \Francesco{};
+            \item \Giosue{};
+            \item \Lucrezia{};
+            \item \Matteo{}.
+        \end{itemize}
+    \item \textbf{Membri assenti}:
+        \begin{itemize}
+            \item \Tommaso{}.
+        \end{itemize}
+\end{itemize}
+
+\section{Ordine del giorno}
+
+\begin{itemize}
+    \item\textbf{Confronto con i prodotti dei competitor;}
+    \item\textbf{Come gestire l'eliminazione dei file;}
+    \item\textbf{Selezionare cosa sincronizzare.}
+\end{itemize}
+\newpage
+
+
+\section{Resoconto}
+\subsection{Confronto con i prodotti dei competitor}
+Per poter ragionare più nel dettaglio sulla logica dell'applicazione e le scelte che dovrà effettuare, si è deciso insieme all'azienda di confrontare il prodotto fino ad ora realizzato con i prodotti offerti dai competitor del settore.
+
+\subsection{Come gestire l'eliminazione dei file}
+Durante lo sviluppo dell'algoritmo di sincronizzazione il gruppo si è posto la domanda di come gestire l'eliminazione di un file sul client. Attualmente il problema è far capire agli altri client che il file non è presente nel server perché è stato eliminato e non devono effettuare l'upload ma devono eliminarlo. Il gruppo ha suggerito di usare un flag presente nelle API di Zextras ovvero di marcare il file come 
+da cancellare. \textit{\Federico{}} ha proposto di non marcare il file ma di eliminarlo direttamente, mentre \textit{\Alessio{}} la pensava diversamente, ovvero di non eliminare il file anche nel server. Basandosi sul confronto avvenuto in precedenza con i prodotti dei competitor, si è deciso di adottare la soluzione di \textit{\Federico{}} con l'intenzione di rielaborarla in una successiva riunione interna.
+
+\subsection{Selezionare cosa sincronizzare}
+L'azienda ci ha raccomandato di pensare a come far decidere all'utente quali file o cartelle non scaricare durante il processo di sincronizzazione.
+L'utente potrà selezionare quali nodi non verranno sincronizzati con il server e questi nodi non saranno disponibili offline.
+
+\newpage
+
+\section{Riepilogo delle decisioni \hfil}
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-4\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.3\freewidth} L{.7\freewidth}}
+        \toprule
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Codice} & \textbf{Decisione}\\
+        \toprule
+        \endhead
+
+        VE\_\DataMeeting{}.1 &  Si è deciso di confrontare il prodotto con quello dei competitor.\\
+        VE\_\DataMeeting{}.2 &  Si è deciso di rielaborare in una riunione interna la logica di eliminazione.\\
+        VE\_\DataMeeting{}.3 &  Si è deciso che l'utente potrà selezionare che file/cartelle scaricare.\\
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
+}
