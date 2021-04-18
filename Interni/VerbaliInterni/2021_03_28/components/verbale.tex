@@ -37,13 +37,13 @@
 \section{Resoconto}
 
 \subsection{Email al professor Cardin}
-Dopo aver discusso dei risultati della RP, si è deciso di mandare una email al professor Cardin riguardo a dei dubbi su una correzione nel documento \AdR{}.  In particolare, ci è stato segnalato nel caso d'uso UC4 come lo stesso non possa essere presente come sotto-caso nel suo diagramma, il che ha destato dubbi sui membri del gruppo in quanto non è stato segnalato in altri casi d'uso che presentano la medesima dicitura.
+Dopo aver discusso dei risultati della RP, si è deciso di inviare una email al professor Cardin riguardo a dei dubbi su una correzione nel documento \AdR{}.  In particolare, ci è stato segnalato nel caso d'uso UC4 come lo stesso non possa essere presente come sotto-caso nel suo diagramma, il che ha destato dubbi sui membri del gruppo in quanto non è stato segnalato in altri casi d'uso che presentano la medesima dicitura.
 
 \subsection{Versionamento}
-Sempre in relazione ai risultati della RP, si è deciso di aggiungere un indice in più al codice di versionamento. In particolare, ogni modifica in attesa di verifica verrà segnata nel registro delle modifiche con un codice numerico progressivo. Una volta avvenuta la verifica, se dovessero esserci modifiche successive il codice ripartirebbe da zero. Questo dovrebbe portare a una tracciabilità più completa delle aggiunte ai prodotti.
+Sempre in relazione ai risultati della RP, si è deciso di modificare il codice di versionamento, legando ogni modifica univocamente con una verifica. Questo dovrebbe portare a una tracciabilità più completa delle aggiunte ai prodotti.
 
 \subsection{Cambio logica dell'algoritmo}
-Fino a ora l'algoritmo si basava sul confronto tra due liste, una contenente gli elementi del server e l'altra contenente gli elementi della cartella in locale, faceva confronti tra le due e agiva di conseguenza. Questo tipo di approccio ha i suoi difetti, che si sono manifestati soprattutto nel momento in cui si è iniziato a introdurre cartelle annidate e l'eliminazione dei file dalla cartella. Dopo la chiamata con l'azienda e dopo aver ragionato sugli argomenti trattati si è deciso di cambiare radicalmente la logica, che si baserà non più su liste, bensì su alberi. I confronti, quindi, avverranno tra alberi, il che renderà meno laboriosa la gestione degli annidamenti e delle eliminazioni.
+Fino a ora l'algoritmo si basava sul confronto tra due liste, una contenente gli elementi del server e l'altra contenente gli elementi della cartella in locale, faceva confronti tra le due e agiva di conseguenza. Questo tipo di approccio ha i suoi difetti, che si sono manifestati soprattutto nel momento in cui il grado di complessità dell'algoritmo aumentava. Dopo la chiamata con l'azienda e dopo aver ragionato sugli argomenti trattati si è deciso di cambiare radicalmente la logica, che si baserà non più su liste, bensì su alberi. I confronti, quindi, avverranno tra alberi, il che renderà meno laboriosa la gestione degli annidamenti e delle eliminazioni.
 
 
 
@@ -64,7 +64,7 @@ Fino a ora l'algoritmo si basava sul confronto tra due liste, una contenente gli
         \endhead
 
         VI\_\DataMeeting{}.1 &  Si è deciso di mandare una email al professor Cardin riguardante dubbi sulla correzione dell'\AdR{}.\\
-        VI\_\DataMeeting{}.2 &  Si è deciso di  aggiungere un indice al versionamento dei prodotti.\\
+        VI\_\DataMeeting{}.2 &  Si è deciso di cambiare le condizioni per lo scatto di versione.\\
         VI\_\DataMeeting{}.3 &  Si è deciso di cambiare la logica dell'algoritmo, passando dal confronto di liste al confronto di alberi.\\
         \bottomrule
         \hiderowcolors
