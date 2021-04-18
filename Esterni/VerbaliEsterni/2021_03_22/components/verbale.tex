@@ -12,7 +12,7 @@
 
     \item \textbf{Segretario:} \ACapoRedazione{};
 
-    \item \textbf{Partecipanti}: Due rappresentanti dell'azienda Zextras, \Alessio{} e \Federico{}, e i membri del gruppo \Gruppo{}:
+    \item \textbf{Partecipanti}: Due rappresentanti dell'azienda Zextras, \textit{\Alessio{}} e \textit{\Federico{}}, e i membri del gruppo \Gruppo{}:
         \begin{itemize}
             \item \Daniele{};
             \item \Davide{};
@@ -48,10 +48,10 @@ Di seguito vengono riportati i quesiti posti e le rispettive risposte.
 
 \subsection{Gestione del login}
 Il gruppo ha fatto notare che al momento la gestione del login non avviene usando delle API, ma viene fatto facendo una chiamata POST all'url di login presente su Zextras Drive.
-Ciò comporta che ogni volta venga istanziata la classe API, venga effettuato il login e scaricata la pagina web per recuperare il cookie di sessione, che porta a un rallentamento notevole dell'applicazione. Per questo, il gruppo ha chiesto se si possono avere delle API dedicate. \Federico{} ci ha risposto che hanno delle API pronte ma devono ancora essere verificate. Ci ha rassicurato che non appena ci saranno novità ci dirà come usarle.
+Ciò comporta che ogni volta venga istanziata la classe API, venga effettuato il login e scaricata la pagina web per recuperare il cookie di sessione, che porta a un rallentamento notevole dell'applicazione. Per questo, il gruppo ha chiesto se si possono avere delle API dedicate. \textit{\Federico{}} ci ha risposto che hanno delle API pronte ma devono ancora essere verificate. Ci ha rassicurato che non appena ci saranno novità ci dirà come usarle.
 
 \subsection{Gestione token di sessione}
-Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessione. \Alessio{} ci ha risposto che in azienda ogni risposta ricevuta nel server viene passata ad un "bridge" che controlla:
+Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessione. \textit{\Alessio{}} ci ha risposto che in azienda ogni risposta ricevuta nel server viene passata ad un "bridge" che controlla:
 \begin{itemize}
     \item Se la risposta di una chiamata è 401 Unauthorized, l'applicazione deve rifare il login (usando le credenziali salvate), se il login è valido, viene rifatta la chiamata che aveva portato all'errore.
     \item Se ottengo due 401 Unauthorized consecutivi, vuol dire che l'utente ha cambiato la password e deve essere mostrata la form di login.
@@ -60,7 +60,7 @@ Il gruppo ha chiesto dei consigli su come gestire la scadenza del token di sessi
 \subsection{Come gestire l'eliminazione dei file}
 Durante lo sviluppo dell'algoritmo di sincronizzazione il gruppo si è posto la domanda di come gestire l'eliminazione di un file sul client. Attualmente c'è il problema di come far capire agli altri client che 
 il file non è presente nel server perché è stato eliminato e non devono effettuare l'upload ma devono eliminarlo. Il gruppo ha proposto di usare un flag presente nelle API di Zextras ovvero di marcare il file come 
-da cancellare. \Federico{} ha proposto di non marcare il file ma di eliminarlo direttamente, mentre \Alessio{} la pensava diversamente, ovvero di non eliminare il file anche nel server.
+da cancellare. \textit{\Federico{}} ha proposto di non marcare il file ma di eliminarlo direttamente, mentre \textit{\Alessio{}} la pensava diversamente, ovvero di non eliminare il file anche nel server.
 Il gruppo ha concordato con l'azienda di guardare cosa fanno i competitor e vedere come viene gestita l'eliminazione.
 
 \subsection{Selezionare cosa sincronizzare}
@@ -68,7 +68,7 @@ L'azienda ci ha raccomandato di pensare a come far decidere all'utente quali fil
 L'utente potrà selezionare quali nodi non verranno sincronizzati con il server e questi nodi non saranno disponibili offline.
 
 \subsection{Gestione dei test}
-Il gruppo ha voluto chiedere all'azienda come gestire i test che si occupano di comunicare con il server Zextras. \Alessio{} ci ha risposto che loro usano delle librerie che simulano il server, ci ha raccomandato di trovarne e usarle.
+Il gruppo ha voluto chiedere all'azienda come gestire i test che si occupano di comunicare con il server Zextras. \textit{\Alessio{}} ci ha risposto che loro usano delle librerie che simulano il server, ci ha raccomandato di trovarne e usarle.
 
 \newpage
 
