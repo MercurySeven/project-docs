@@ -43,7 +43,7 @@ Il pattern singleton può provocare problemi se mal implementato. Nel nostro cas
     \label{fig:Diagramma del pattern singleton}
 \end{figure}
 \subsection{Design pattern strutturali: Virtual Proxy}
-Il pattern Proxy viene utilizzato per evitare chiamate di rete non necessarie, permettendo la lazy initialization.\newline{}
+Il pattern Proxy viene utilizzato per evitare chiamate di rete non necessarie, permettendo la \gloman{lazy initialization}.\newline{}
 Questo pattern in Python è stato realizzato tramite il modulo ABC (Abstract Base Classes) realizzando la classe astratta API che viene ereditata da NetworkModel e da APIImplementation. In questo modo si vanno a definire dei metodi base che entrambe le classi condividono. Quando verrà effettuata una chiamata di rete si passa per NetworkModel che, dopo controlli aggiuntivi, potrà decidere se passare la chiamata ad APIImplementation. Facendo riferimento al modello del pattern, NetworkModel è il nostro proxy e APIImplementation il nostro realsubject.
 \begin{figure}[H]
     \centering
