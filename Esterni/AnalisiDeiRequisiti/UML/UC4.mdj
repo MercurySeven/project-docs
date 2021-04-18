@@ -66,10 +66,10 @@
 											},
 											"font": "Arial;13;1",
 											"left": 499.5,
-											"top": 336,
+											"top": 329.5,
 											"width": 98,
-											"height": 26,
-											"text": "UC 4 Seleziona quota disco",
+											"height": 39,
+											"text": "UC 4.1 Seleziona quota disco",
 											"wordWrap": true
 										},
 										{
@@ -98,9 +98,9 @@
 									],
 									"font": "Arial;13;0",
 									"left": 494.5,
-									"top": 329,
+									"top": 322.5,
 									"width": 108,
-									"height": 38,
+									"height": 51,
 									"stereotypeLabel": {
 										"$ref": "AAAAAAF3bGt36QDOvBU="
 									},
@@ -657,7 +657,7 @@
 											"top": 279,
 											"width": 455,
 											"height": 13,
-											"text": "SSD"
+											"text": "UC 4"
 										},
 										{
 											"_type": "LabelView",
@@ -1359,7 +1359,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "UC 4 Seleziona quota disco"
+					"name": "UC 4.1 Seleziona quota disco"
 				},
 				{
 					"_type": "UMLUseCase",
@@ -1413,7 +1413,7 @@
 					"_parent": {
 						"$ref": "AAAAAAFF+qBWK6M3Z8Y="
 					},
-					"name": "SSD"
+					"name": "UC 4"
 				},
 				{
 					"_type": "UMLActor",

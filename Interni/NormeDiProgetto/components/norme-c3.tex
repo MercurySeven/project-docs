@@ -1,5 +1,5 @@
 \section{Processi di supporto}
-\subsection{Processo di documentazione}
+\subsection{Documentazione}
 Il processo di documentazione comprende le attività di stesura e aggiornamento di tutti i documenti creati durante il ciclo di vita del \glo{software} in modo da renderli formalmente concordi. In particolare, in questa sezione ne vengono normate le attività, comprendenti stesura, \glo{verifica} e approvazione. 
 \subsubsection{Ciclo di vita di un documento}
 Ogni documento redatto passa per le seguenti fasi:
@@ -55,7 +55,7 @@ In particolare, i documenti formali prodotti saranno:
 		\textbf{\G{}} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
 		\bottomrule
 		\hiderowcolors
-		\caption{Nome, Descrizione ed uso dei documenti formali prodotti}
+		\caption{Nome, descrizione ed uso dei documenti formali prodotti}
 	\end{longtable}
 }
 
@@ -76,7 +76,7 @@ In particolare, i documenti informali prodotti saranno:
 		\textbf{Verbali esterni} & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
 		\bottomrule
 		\hiderowcolors
-		\caption{Nome, Descrizione ed uso dei documenti informali prodotti}
+		\caption{Nome, descrizione ed uso dei documenti informali prodotti}
 	\end{longtable}
 }
 \end{itemize}
@@ -89,9 +89,8 @@ Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeD
 	\textbf{[NomeDelDocumento]\_v[X].[Y].[Z]-[a].[b]}
 	\begin{itemize}
 		\item \textbf{NomeDelDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convenzione \glo{PascalCase});
-		\item \textbf{v[X].[Y].[Z]} con \textbf{v} che abbrevia la parola versione, \textbf{[X]} indica il numero incrementale di revisione del responsabile di progetto, \textbf{[Y]} indica il numero incrementale della \glo{verifica}, \textbf{[Z]} indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione. Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate;
-		\item \textbf{[a].[b]} con \textbf{A} che indica una versione completa e funzionante del prodotto: le componenti \glo{software}
-implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti superati, le \glo{metriche} di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto \glo{software} non è più retrocompatibile; la numerazione parte da 0 e non viene annullata; \textbf{B} indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata.
+		\item \textbf{v} che abbrevia la parola versione;
+		\item \textbf{[X].[Y].[Z]-[a].[b]} è il codice di versionamento (fare riferimento a \S{} \ref{cod-versionamento}.
 	\end{itemize}
 	\item La denominazione dei verbali sarà la seguente\newline
 	\textbf{Verbale[Interno/Esterno]\_[YYYY]\_[MM]\_[DD]}\newline
@@ -163,7 +162,7 @@ La struttura sarà quindi la seguente:
 		\textbf{Data} & Riporta la data della riunione \\
 		\textbf{Ora inizio} & Riporta l'orario di inizio della riunione\\
 		
-		\textbf{Fine} & Riporta l'orario di fine della riunione \\
+		\textbf{Ora fine} & Riporta l'orario di fine della riunione \\
 		\textbf{Segretario} & Nome e cognome dell'incaricato alla stesura del verbale \\
 		\textbf{Partecipanti} & Contiene l'elenco dei presenti all'incontro \\  
 		\textbf{Ordine del giorno} & Contiene l'elenco degli argomenti trattati durante la riunione \\
@@ -383,8 +382,8 @@ Le seguenti tabelle riassumono tutte le sigle utilizzate e la loro descrizione. 
 		\caption{Strumenti utilizzati durante il processo di documentazione}
 	\end{longtable}
 
-\subsection{Processo di configurazione}
-Il processo di configurazione ha come scopo il gestire in maniera ordinata e sistematica la produzione di documenti e codice. In particolare, un elemento sottoposto a configurazione ha una collocazione, una denominazione e uno stato definiti, oltre che avere garantite modifica normata e versionamento. Le attività coinvolte sono:
+\subsection{Gestione della configurazione}
+Il processo di gestione della configurazione ha come scopo il gestire in maniera ordinata e sistematica la produzione di documenti e codice. In particolare, un elemento sottoposto a configurazione ha una collocazione, una denominazione e uno stato definiti, oltre che avere garantite modifica normata e versionamento. Le attività coinvolte sono:
 \begin{enumerate}
 	\item implementazione del processo;
 	\item identificazione della configurazione;
@@ -397,7 +396,29 @@ Il processo di configurazione ha come scopo il gestire in maniera ordinata e sis
 \paragraph*{Codice di versionamento}
 \label{cod-versionamento}
 La storia di un prodotto realizzato dal gruppo, che questo sia un documento o codice, deve poter essere sempre ricostruibile attraverso le sue versioni. Il codice di una versione è nel formato\newline
-\centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline
+\centerline{\textbf{[X].[Y].[Z]-[a].[b]}}\newline{}
+\newpage{}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Sigla} & \textbf{Descrizione} \\
+		\toprule
+		\endhead
+		\textbf{[X]} & Indica il numero incrementale di revisione del responsabile di progetto. \\
+		\textbf{[Y]} & Indica il numero incrementale della \glo{verifica}. \\
+		\textbf{[Z]} & Indica il numero di modifiche apportate al documento, che riparte da 0 dopo ogni \glo{verifica} ed approvazione. \\
+		\textbf{[a]} & Indica una versione completa e funzionante del prodotto: le componenti \glo{software} implementano tutti i \glo{requisiti} obbligatori, i \glo{test} sono stati tutti superati, le \glo{metriche} di qualità soddisfatte e sono presenti versioni approvate di tutti i documenti richiesti per il prodotto finale. Viene incrementato quando il prodotto \glo{software} non è più retrocompatibile; la numerazione parte da 0 e non viene annullata. \\
+		\textbf{[b]} & Indica un incremento nello sviluppo totale del prodotto: la numerazione incrementa ad ogni \glo{sprint}, partendo da 1 e non venendo mai annullata. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione codice di versionamento}
+	\end{longtable}
+Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate.\newline{}
+Le modifiche apportate in attesa di \glo{verifica} vengono identificate con un codice numerico progressivo che riparte da 0 ad ogni \glo{verifica}.
 \paragraph*{Tecnologie adottate}
 Per la gestione delle versioni è stato scelto di utilizzare il \glo{sistema} di versionamento distribuito \textit{\glo{Git}} con due \glo{repository} remoti presenti su \textit{\glo{GitHub}}.
 \paragraph*{Repository}
@@ -419,7 +440,7 @@ Il \glo{repository} \textbf{\repoDoc{}} è invece strutturato nel seguente modo:
 \begin{itemize}
 	\item \textbf{Tutorial:} cartella contenente un esempio di documento \LaTeX che elenca anche le basi del linguaggio e del suo utilizzo; 
 	\item \textbf{Stile:} cartella contenente i file del template in linguaggio \LaTeX usato per produrre tutti i documenti;
-	\item Una cartella per ogni documento necessario per la \textit{Revisione dei \ignore{Requisiti}}.
+	\item Una cartella per ogni documento prodotto.
 \end{itemize}
 Si è optato per questa soluzione per poter avere una documentazione in continua evoluzione, senza categorizzarla e bloccarla negli stati delle revisioni tramite sottocartelle contenenti le versioni delle documentazioni durante una specifica revisione.
 \paragraph*{Tipi di file}
@@ -438,13 +459,13 @@ Il \glo{repository} inerente alla documentazione sarà composto da diversi \glo{
 	\item un \glo{branch} per ogni documento, usato per le modifiche minori effettuate tra i vari rilasci. Una volta che un documento ha raggiunto una maturità sufficiente per un rilascio, verrà eseguito una operazione di \glo{merge} con il \textbf{main}.
 \end{itemize}
 \paragraph*{Modifiche ai repository}
-Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{master}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
+Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo quelli presenti nel ramo \textbf{main}. Per apportare cambiamenti a questo ramo, come già citato in precedenza (\S{}\ref{NormeBranching}), è necessaria una \textit{pull request}, con conseguente approvazione di \textbf{almeno} un altro elemento del gruppo.\newline
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il \glo{team}.
 \newpage
-\subsection{Gestione della qualità}
+\subsection{Accertamento della qualità}
 
-Il processo di gestione della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}, documento che fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
+Il processo di accertamento della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}, documento che fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
 \subsubsection{Controllo di qualità}
 Il gruppo \textit{\Gruppo{}} ritiene fondamentale stabilire delle regole che tutti i membri vadano a rispettare per il pieno raggiungimento di un \glo{sistema} di qualità predisposto al miglioramento continuo.
 Le attività che ciascun membro deve svolgere sono:
@@ -484,7 +505,7 @@ Con il perseguimento della qualità in mente, il gruppo \textit{\Gruppo{}} ha de
 	\item ogni processo deve essere pianificato correttamente tramite una opportuna analisi dei rischi;
 	\item ogni processo al termine della pianificazione deve avere una durata ben definita.
 \end{itemize}
-\subsection{Processo di verifica}
+\subsection{Verifica}
 Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi e di \glo{test} (\S{}\ref{veractivity}); per questo, il corretto funzionamento del processo è garantito dal rispetto delle seguenti regole: 
 \begin{itemize}
 	\item seguire procedure definite;
@@ -604,6 +625,6 @@ Il gruppo ritiene prematuro stabilire in questa fase delle \glo{metriche} per i 
 		\hiderowcolors
 		\caption{Metriche processo di verifica}
 	\end{longtable}
-\subsection{Processo di validazione}
+\subsection{Validazione}
 Il processo di \glo{validazione} stabilisce se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se rispetta i \glo{requisiti} e le aspettative del committente. In particolare, prende in esame il prodotto ottenuto dalla fase di \glo{verifica} e lo restituisce garantendo che esso sia conforme ai \glo{requisiti} e ai bisogni del committente. Sarà compito del \RdP{} controllare i risultati e decidere se approvare o rigettare il documento, con conseguente richiesta di un nuovo processo. Sarà quindi fondamentale l'elaborazione di una strategia per rendere riutilizzabili le procedure di \glo{verifica}. 
 

@@ -6,7 +6,7 @@ Le \glo{metriche} e gli obiettivi definiti di seguito dovranno essere integrate 
 \subsubsection{Descrizione}
 In questa sezione vengono definite le caratteristiche di cui i membri del gruppo \gruppo{} dovranno tenere conto durante la creazione dei prodotti.
 \subsubsection{Qualità dei documenti}
-
+\label{QualitàDoc}
 \paragraph{Comprensibilità}
 I documenti prodotti devono essere facilmente leggibili e accessibili a tutti i membri del progetto. \\
 
@@ -19,11 +19,13 @@ I documenti prodotti devono essere facilmente leggibili e accessibili a tutti i 
 \textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MDC01 Indice di Gulpease;
-\item MDC02 Correttezza ortografica.
+\item MDC02 Indice di Flesch-Vacca
+\item MDC03 Correttezza ortografica.
 \end{itemize}
 
-\subsubsection{Qualità del software}
 
+\subsubsection{Qualità del software}
+\label{QualitàSW}
 \paragraph{Funzionalità}
 
 Il prodotto deve fornire tutte le funzionalità determinate nel documento di \AdR{} \versAdR{}. \\
@@ -124,8 +126,9 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
 				\toprule
-				MDC01 & Indice di Gulpease & $ 50 < x < 100$ & $60 < x < 100$ giorni \\
-				MDC02 & Correttezza ortografica & $ 95 \%$ privi di errori & $ 100\%$ privi di errori \\
+				MDC01 & Indice di Gulpease & $ 50 < x < 100$ & $60 < x < 100$ \\
+				MDC02 & Indice di Flesch-Vacca & $ 50 < x < 100$ & $60 < x < 100$\\
+				MDC03 & Correttezza ortografica & $ 95 \%$ privi di errori & $ 100\%$ privi di errori \\
 				\bottomrule
 			\end{tabular}
 			\caption{Tabella delle metriche e degli obiettivi relativi alla documentazione}
@@ -169,17 +172,17 @@ Questo tipo di approccio allo sviluppo è composto da due fasi alternate:
 \item Refactoring
 \end{itemize}
 \subsection{Code driven testing}
-L'obbiettivo di questa fase è di assicurarsi che il codice creato soddisfi i \glo{requisiti} qualitativi imposti dalle \glo{metriche}. Viene quindi scritto il \glo{test} assicurandosi che esso non sia soddisfatto dal codice presente al momento della creazione del \glo{test}. Una volta sviluppato il \glo{test} si procede a scrivere la quantità minima di codice necessaria per soddisfare il \glo{test}, si passa poi alla fase di refactoring.
-\subsection{Refactoring} 
-L'obbiettivo di questa fase è migliorare la struttura del codice per allinearla con gli standard di codifica delineati, rendere più efficace ed efficiente lo svolgimento della funzione implementata e assicurarsi una maggiore manutenibilità. Una volta passato il \glo{test} il codice viene ristrutturato in base alle necessità e agli standard di codifica e testato nuovamente, eventualmente aggiornando i \glo{test} per prevenire regressione, fino al raggiungimento di uno standard qualitativo soddisfacente. \newline{}
+L'obiettivo di questa fase è di assicurarsi che il codice creato soddisfi i \glo{requisiti} qualitativi imposti dalle \glo{metriche}. Viene quindi scritto il \glo{test} assicurandosi che esso non sia soddisfatto dal codice presente al momento della sua creazione. Una volta sviluppato il \glo{test} si procede a scrivere la quantità minima di codice necessaria per soddisfarlo.
+\subsection{Refactoring}
+L'obiettivo di questa fase è migliorare la struttura del codice per allinearla con gli standard di codifica delineati, rendere più efficace ed efficiente lo svolgimento della funzione implementata e assicurarsi una maggiore manutenibilità. Una volta passato il \glo{test} il codice viene ristrutturato in base alle necessità e agli standard di codifica e testato nuovamente, eventualmente aggiornando i \glo{test} per prevenire regressione, fino al raggiungimento di uno standard qualitativo soddisfacente. \newline{}
 \newline{}
 Queste due fasi si devono ripetere ciclicamente per ogni nuovo \glo{test} e per raffinare il codice, allo scopo di evitare che scelte sub ottimali effettuate in un primo momento, con lo scopo di superare i \glo{test}, si possano consolidare nella codebase.
 \input{components/test_sistema.tex}
 
 \subsection{Test di accettazione}
-I \glo{test} di accettazione devono dimostrare che il \glo{software} sviluppato soddisfi i \glo{requisiti} del capitolato concordati con il \glo{proponente}, essi vengono eseguiti durante il collaudo finale.
-Si compongono essenzialmente dei \glo{test} di \glo{sistema} però eseguiti in sede aziendale.
+I \glo{test di accettazione} devono dimostrare che il \glo{software} sviluppato soddisfi i \glo{requisiti} del capitolato concordati con il \glo{proponente}, essi vengono eseguiti durante il collaudo finale.
+Si compongono essenzialmente dei \glo{test di \ignore{sistema}} però eseguiti in sede aziendale.
 
 \subsection{Test di unità}
-Hanno lo scopo di testare le parti più piccole e autonome dell'applicazione sowftware. Servono per far emergere eventuali difetti, in modo che essi possano essere corretti il prima possibile.
+Hanno lo scopo di testare le parti più piccole e autonome dell'applicazione \glo{software}. Servono per far emergere eventuali difetti, in modo che essi possano essere corretti il prima possibile.
 I \glo{test} verranno sviluppati seguendo la proprietà ATRIP.
