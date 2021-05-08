@@ -107,7 +107,8 @@ Questa folder contiene tutti i file utilizzati per la resa grafica della applica
     \caption{Struttura della cartella assets}
     \label{fig:Struttura della cartella assets}
 \end{figure}   
-\subsubsection{docs}    
+\subsubsection{docs} 
+La cartella docs contiene al suo interno le principali guide che vengono stilate dal team di sviluppo.  
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.5]{components/img/struttura-cartella-docs.png}
@@ -115,13 +116,36 @@ Questa folder contiene tutti i file utilizzati per la resa grafica della applica
     \label{fig:Struttura della cartella docs}
 \end{figure}    
 \subsubsection{src} \label{sec:cartelle-src}
+Il codice sorgente è stato diviso logicamente in diverse cartelle, descritte nella seguente tabella:
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Cartella} & \textbf{Descrizione}\\
+		\toprule
+		\endhead	
+		algorithm & Contiene tutte le classi che contengono la logica di sincronizzazione del programma. La logica dell'algoritmo è parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata.\\
+		controllers & Contiene tutte le classi facenti parte del controller.\\
+		model & Contiene tutte le classi facenti parte del model e non strettamente legate alla logica di sincronizzazione o alla gestione di rete.\\
+		network & Contiene tutte le classi utilizzate per effettuare le varie chiamate di rete e per strutturare le query \gloman{graphql}. Anche questa come l'algoritmo è logicamente parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata. \\
+		view & Contiene tutte le classi facenti parte della view. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Nome e descrizione cartelle contenute in src}
+	\end{longtable}
+}
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.5]{components/img/struttura-cartella-src.png}
     \caption{Struttura della cartella src}
     \label{fig:Struttura della cartella src}
 \end{figure}    
-\subsubsection{tests}    
+\subsubsection{tests}
+Per la cartella contenente tutti i test di unità è stato scelto, per mantenere uno standard di consistenza elevato e per quindi avere sempre chiaro dove le varie componenti sono, di utilizzare la stessa struttura presente nella cartella src descritta a \S{}\ref{sec:cartelle-src}.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.5]{components/img/struttura-cartella-tests.png}
