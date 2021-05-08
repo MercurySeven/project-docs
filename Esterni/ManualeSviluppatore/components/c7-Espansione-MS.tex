@@ -22,7 +22,7 @@ Per aggiungere una nuova parte del controller bisogna creare una nuova classe al
 
 \subsubsection{Collegamento componenti}
 Dopo aver creato le strutture di ogni componente della nuova tripletta mvc il controller viene utilizzato per collegare il tutto. 
-Si deve quindi collegare il segnale emanato dalla nuova vista ad ogni cambiamento al metodo con decorator Slot precedentemente creato nel controller e il segnale emanato dal model ad ogni cambiamento al metodo con decorator Slot precedentemente creato nella vista. Il collegamento avviene utilizzando la sintassi mostrata nella seguente immagine:
+Si deve quindi collegare il segnale emanato dalla nuova vista ad ogni cambiamento al metodo con decorator @Slot() precedentemente creato nel controller e il segnale emanato dal model ad ogni cambiamento al metodo con decorator @Slot() precedentemente creato nella vista. Il collegamento avviene nel costruttore del controller utilizzando la sintassi mostrata nella seguente immagine:
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.50]{components/img/collegamento-segnali-mvc.png}
