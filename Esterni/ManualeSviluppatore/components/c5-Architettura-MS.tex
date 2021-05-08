@@ -43,6 +43,16 @@ Il pattern singleton può provocare problemi se mal implementato. Nel nostro cas
     \caption{Pattern Singleton nel dettaglio}
     \label{fig:Diagramma del pattern singleton}
 \end{figure}
+
+\subsubsection{Implementazione del pattern Singleton con Python}\label{sec:singleton-python}
+Esistono diverse soluzioni per poter implementare questo pattern in Python, nel progetto è stata scelta la seguente:
+\begin{itemize}
+	\item Creare una variabile "\textit{\_\_create\_key}" ed assegnarle un nuovo object: \texttt{\_\_create\_key = object()};
+	\item Creare un metodo di classe chiamato "\textit{get\_instance} con argomento una chiave. Il metodo si occupa di creare l'istanza della classe se essa non esiste passando al costruttore la chiave ricevuta;
+	\item All'interno del costruttore "\textit{\_\_init\_\_(self, key)}" avere la seguente istruzione \texttt{assert(key == \_\_create\_key)}. In questo modo il costruttore potrà essere chiamato solamente all'interno della classe stessa e sarà get\_istance a fare da unico punto d'accesso pubblico esterno.
+\end{itemize}
+Se si volesse avere anche un Singleton thread-safe si deve implementare un sistema di lock (\url{https://docs.python.org/3/library/threading.html}) all'interno del metodo get\_istance evitando che due metodi si contendano il suo utilizzo.
+
 \subsection{Design pattern strutturali: Virtual Proxy}
 Il pattern Proxy viene utilizzato per evitare chiamate di rete non necessarie, permettendo la \gloman{lazy initialization}.\newline{}
 Questo pattern in \gloman{Python} è stato realizzato tramite il modulo ABC (Abstract Base Classes) realizzando la classe astratta API che viene ereditata da NetworkModel e da APIImplementation. In questo modo si vanno a definire dei metodi base che entrambe le classi condividono. Quando verrà effettuata una chiamata di rete si passa per NetworkModel che, dopo controlli aggiuntivi, potrà decidere se passare la chiamata ad APIImplementation. Facendo riferimento al modello del pattern, NetworkModel è il nostro proxy e APIImplementation il nostro realsubject.
