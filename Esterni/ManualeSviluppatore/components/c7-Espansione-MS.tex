@@ -16,9 +16,17 @@ Questa aggiunta viene mostrata con una sottolineatura nella seguente immagine:
     \caption{Codice per inserimento nuova view nella main view}
     \label{fig:Codice per inserimento nuova view nella main view}
 \end{figure}
-
-
-
+La view deve inoltre esporre un metodo per ricevere segnali dal modello, questo lo si realizza marcando il metodo in questione con il decorator "\textit{@Slot()}".
 \subsubsection{Aggiunta controller}
+Per aggiungere una nuova parte del controller bisogna creare una nuova classe all'interno della cartella "controllers". Il controller deve inoltre esporre un metodo per ricevere segnali dalla vista, questo lo si realizza marcando il metodo in questione con il decorator "\textit{@Slot()}".
 
 \subsubsection{Collegamento componenti}
+Dopo aver creato le strutture di ogni componente della nuova tripletta mvc il controller viene utilizzato per collegare il tutto. 
+Si deve quindi collegare il segnale emanato dalla nuova vista ad ogni cambiamento al metodo con decorator Slot precedentemente creato nel controller e il segnale emanato dal model ad ogni cambiamento al metodo con decorator Slot precedentemente creato nella vista. Il collegamento avviene utilizzando la sintassi mostrata nella seguente immagine:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.50]{components/img/collegamento-segnali-mvc.png}
+    \caption{Collegamento componenti mvc}
+    \label{fig:Collegamento componenti mvc}
+\end{figure}
+Il metodo connect può essere solo invocato su segnali e come argomento devono avere il riferimento al metodo con decorator @Slot().
