@@ -144,7 +144,7 @@ Il codice sorgente è stato diviso logicamente in diverse cartelle, descritte ne
     \caption{Struttura della cartella src}
     \label{fig:Struttura della cartella src}
 \end{figure}    
-\subsubsection{tests}
+\subsubsection{tests} \label{sec:cartelle-tests}
 Per la cartella contenente tutti i test di unità è stato scelto, per mantenere uno standard di consistenza elevato e per quindi avere sempre chiaro dove le varie componenti sono, di utilizzare la stessa struttura presente nella cartella src descritta a \S{}\ref{sec:cartelle-src}.
 \begin{figure}[H]
     \centering
@@ -152,3 +152,9 @@ Per la cartella contenente tutti i test di unità è stato scelto, per mantenere
     \caption{Struttura della cartella tests}
     \label{fig:Struttura della cartella tests}
 \end{figure}
+
+\subsection{Manutenzione dei test}
+Data la loro natura i test possono dover cambiare di comportamento all'aggiornamento di librerie ed è quindi necessario spiegare come essi sono strutturati. La struttura organizzativa delle cartelle viene descritta a \S{}\ref{sec:cartelle-tests}.
+\subsubsection{Classe base di ogni test: la classe DefaultCode}
+Questa classe eredita dalla classe base "\textit{unittest.TestCase}". Esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato di modificarla con cura ed attenzione per evitare di rompere ogni test.
+I metodi contenuti in questa classe sono elencati nella seguente tabella:
