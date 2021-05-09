@@ -155,6 +155,48 @@ Per la cartella contenente tutti i test di unità è stato scelto, per mantenere
 
 \subsection{Manutenzione dei test}
 Data la loro natura i test possono dover cambiare di comportamento all'aggiornamento di librerie ed è quindi necessario spiegare come essi sono strutturati. La struttura organizzativa delle cartelle viene descritta a \S{}\ref{sec:cartelle-tests}.
-\subsubsection{Classe base di ogni test: la classe DefaultCode}
-Questa classe eredita dalla classe base "\textit{unittest.TestCase}". Esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato di modificarla con cura ed attenzione per evitare di rompere ogni test.
-I metodi contenuti in questa classe sono elencati nella seguente tabella:
+\subsubsection{Modulo base utilizzato da ogni test: default code}
+Questo modulo contiene diverse classi utilizzate a scopo di testing. Le classi contenute in questo modulo sono elencate nella seguente tabella:
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome classe} & \textbf{Descrizione classe}\\
+		\toprule
+		\endhead	
+		DefaultCode & Classe fondamentale contenuta nel modulo, eredita dalla classe base "\textit{unittest.TestCase}". Questa classe esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato modificarla con cura ed attenzione per evitare di rompere ogni test.\\
+		ResultObj & Imita la decisione dello strategy su un nodo, viene utilizzato quando si utilizzano mock. Offre la possibilità di iterare su di esso. \\
+		FakeLogger & Utizzata per effettuare il mock delle chiamate ai vari logger presenti nel codice. \\
+		NodeMetadata &  Utilizzata per simulare le chiamate richiedenti info sui metadati dei file.\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Nome e descrizione delle classi contenute nel modulo default\_code}
+	\end{longtable}
+}
+
+\paragraph{Metodi dalla classe DefaultCode}
+La classe DefaultCode presenta due metodi che vengono ereditati dalla classe base "\textit{unittest.TestCase}". Questi due metodi vengono meglio descritti nella seguente tabella:
+
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome classe} & \textbf{Descrizione classe}\\
+		\toprule
+		\endhead	
+		SetUp & Metodo che viene automaticamente eseguito prima di ogni test. Salva lo stato delle variabili di ambiente attuali e crea eventuali cartelle utilizzate a scopo di test.\\
+		TearDown & Metodo che viene automaticamente eseguito in seguito ad ogni test. Rispristina lo stato delle variabili di ambiente prima del test ed elimina eventuali cartelle create a scopo di test.\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Nome e descrizione dei metodi contenuti nella classe DefaultCode}
+	\end{longtable}
+}
+ 
