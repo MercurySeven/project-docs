@@ -1,15 +1,25 @@
 \section{Istruzioni per l'utilizzo}
-\subsection{Autenticazione}
-All'avvio verrà mostrata una schermata che servirà ad autenticarsi, nella quale bisognerà inserire nome utente e password del proprio account \gloman{Zextras Drive}. In caso di successo dell'operazione si avvierà il \gloman{software}, altrimenti verrà visualizzato un messaggio di errore e chiesto di reinserire le credenziali.
+
+\subsection{Primo avvio}
+\subsubsection{Autenticazione}
+\label{sec:autenticazione}
+All'avvio verrà mostrata una schermata che servirà ad autenticarsi, nella quale bisognerà inserire nome utente e password del proprio account \gloman{Zextras Drive} (Figura 4). In caso di successo dell'operazione si avvierà il \gloman{software}, altrimenti verrà visualizzato un messaggio di errore e chiesto di reinserire le credenziali (Figura 5).  \newline
+Ai prossimi avvii del software l'account verrà automaticamente caricato, a meno che non venga effettuato il logout (paragrafo x.x.x).
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.50]{components/img/login.png}
-    \caption{Vista del login}
+    \caption{Login}
     \label{fig:Vista del login}
 \end{figure}
-\subsection{Selezione del percorso da sincronizzare}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.50]{components/img/err-login.png}
+    \caption{Errore di autenticazione}
+    \label{fig:Vista del login}
+\end{figure}
+\subsubsection{Selezione del percorso da sincronizzare}
 \label{sec:selezionepath}
-Al primo avvio dell'applicazione verrà richiesto di scegliere una cartella, nella quale verranno sincronizzati tutti i file. Non si deve scegliere la stessa cartella nella quale è contenuto il programma.
+Verrà richiesto di scegliere una cartella nella quale verranno sincronizzati tutti i file. Non si deve scegliere la stessa cartella nella quale è contenuto il programma.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.30]{components/img/selezione-path.png}
@@ -17,34 +27,132 @@ Al primo avvio dell'applicazione verrà richiesto di scegliere una cartella, nel
     \label{fig:Selezione del percorso da sincronizzare}
 \end{figure}
 
-\subsection{Visualizzazione file nel percorso scelto}
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.30]{components/img/file-view.png}
-    \caption{Vista dei file nella cartella scelta}
-    \label{fig:Vista dei file nel percorso scelto}
-\end{figure}
-\begin{enumerate}
-	\item Pulsante utilizzato per aprire l'esplora risorse del proprio sistema operativo nella cartella attuale;
-	\item Pulsante per attivare o disattivare la sincronizzazione della cartella selezionata;
-	\item Pulsante per visualizzare i file nel percorso scelto;
-	\item Pulsante per aprire la vista di impostazioni (maggiori informazioni a \S{}\ref{sec:impostazioni}).
-\end{enumerate}
 
-\subsection{Impostazioni} \label{sec:impostazioni}
+\subsection{Finestra principale}
+
 \begin{figure}[H]
     \centering
-    \includegraphics[scale = 0.30]{components/img/settings.png}
-    \caption{Vista delle impostazioni}
-    \label{fig:Vista delle impostazioni}
+    \includegraphics[scale = 0.7]{components/img/Principale.png}
+    \caption{Vista schermata principale}
+    \label{fig:fileSync}
 \end{figure}
-\begin{enumerate}
-	\item Pulsante utilizzato per cambiare il percorso della cartella sincronizzata (maggiori informazioni a \S{}\ref{sec:selezionepath});
-	\item Pulsanti mutualmente esclusivi, il pulsante premuto indica la politica di sincronizzazione:
-	\begin{itemize}
-		\item \textbf{Client}: questa politica di sincronizzazione dà la priorità ai file locali. Se un file è stato modificato nel \gloman{server} e nel \gloman{client}, la priorità viene data al file presente in locale, che verrà caricato nel \gloman{server};
-		\item \textbf{Manuale}: questa politica di sincronizzazione richiede l'interazione dell'utente in caso di \gloman{conflitto} tra file nel \gloman{server} e file nella cartella locale.
-	\end{itemize}
-	\item Barra indicante lo spazio occupato. Viene mostrato graficamente quanto spazio la cartella da sincronizzare selezionata pesa sullo spazio riservato nel punto 4;
-	\item Campo utilizzato per impostare quanto spazio del disco locale può essere occupato al massimo dal programma di sincronizzazione.
-\end{enumerate}
+
+Una volta avviato il software si aprirà una finestra, nella quale verranno visualizzati il menù laterale [1] (\S{}\ref{sec:menu}) e la cartella locale [2] (\S{}\ref{sec:fileSincronizzati}).
+\subsubsection{Menù laterale}
+\label{sec:menu}
+
+Il menù laterale, rappresentato nel punto 1 della Figura 7 è posizionato a sinistra della vista e presenta quattro pulsanti:
+\begin{itemize}
+\item \textbf{Pulsante di sincronizzazione}: attiva e disattiva la sincronizzazione della cartella locale con il server; \
+\end{itemize}
+
+\begin{figure}[H]
+\centering
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[scale=0.5]{components/img/SyncA.png}
+\caption{Sincronizzazione attivata}
+\label{fig:syncA}
+\end{minipage}
+\quad
+\begin{minipage}[b]{0.45\linewidth}
+\centering
+\includegraphics[scale=0.5]{components/img/SyncD.png}
+\caption{Sincronizzazione disattivata}
+\label{fig:syncD}
+\end{minipage}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Pulsante file sincronizzati}: mostra la cartella locale sincronizzata (\S{}\ref{sec:fileSincronizzati}); \
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1]{components/img/pulsanteFileS.png}
+    \caption{Pulsante file sincronizzati}
+    \label{fig:fileSync}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Pulsante file remoti}: mostra i file presenti sul server (\S{}\ref{sec:fileRemoti}); \
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1]{components/img/pulsanteFileR.png}
+    \caption{Pulsante file remoti}
+    \label{fig:fileRem}
+\end{figure}
+
+\begin{itemize}
+\item \textbf{Pulsante delle impostazioni}: mostra le impostazioni del software (\S{}\ref{sec:impostazioni}). \
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1]{components/img/pulsanteImpostazioni.png}
+    \caption{Pulsante impostazioni}
+    \label{fig:fileSync}
+\end{figure}
+
+\subsubsection{File sincronizzati}
+\label{sec:fileSincronizzati}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{components/img/fileLocali.png}
+    \caption{Vista file locali}
+    \label{fig:fileSync}
+\end{figure}
+
+La vista si compone di una serie di icone che rappresentanoo i file o le cartelle presenti nella cartella condivisa. Le icone possono rappresentare:
+
+\begin{itemize}
+\item \textbf{Cartella [1]};\
+\item \textbf{File di testo [2]};\
+\item \textbf{File video [3]};\
+\item \textbf{File immagine [4]};\
+\item \textbf{File generico [5]};\
+\item \textbf{File audio [6]}.\
+\end{itemize}
+
+In alto a sinistra è presente un pulsante [7] che apre la cartella sincronizzata col file manager del computer.
+
+
+
+\subsubsection{File remoti}
+\label{sec:fileRemoti}
+spiega la vista
+
+\subsubsection{Azioni sui file}
+
+\subsubsection*{Doppio click su un file}
+
+\subsubsection*{Doppio click su una cartella}
+
+\subsubsection*{Inserire file nella cartella locale}
+Per far si che un file venga correttamente visualizzato all'interno del software, l'utente può:
+\begin{itemize}
+\item Creare il file nella cartella; \
+\item Spostare nella cartella un file già esistente.
+\end{itemize}
+
+\subsubsection*{Sincronizzare file dal server}
+
+\subsubsection*{Refresh del server}
+
+\subsubsection*{Modifica di un file sincronizzato}
+
+\subsubsection*{Cancellazione di un file sincronizzato}
+
+\subsubsection{Impostazioni}
+\label{sec:impostazioni}
+spiega la vista \newline
+modifica path cartella \newline
+modifica policy \newline
+modifica finestra temporale \newline
+modifica spazio di archiviazione (notifica spazio insufficiente) \newline
+logout
+
+
