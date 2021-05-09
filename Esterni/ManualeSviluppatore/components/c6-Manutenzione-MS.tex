@@ -1,7 +1,6 @@
 \section{Manutenzione}
 
-\subsection{Aggiunta e aggiornamento librerie}
-
+\subsection{Aggiunta librerie}
 L'elenco delle librerie è presente nella cartella di root del progetto, nel file: "\textit{requirements.txt}".
 
 \begin{figure}[H]
@@ -18,7 +17,20 @@ Per poter installare una nuova libreria il procedimento è semplice:
 	\item Aggiungere la nuova libreria.
 \end{itemize}
 La sintassi per l'aggiunta della libreria è la seguente:
-\newline{} \centerline{\textbf{nome\_libreria==numero\_versione}}\newline{} 
+\newline{} \centerline{\textbf{nome\_libreria==numero\_versione}}\newline{}
+Per rendere effettivi i cambiamenti, bisogna usare il seguente comando:
+\newline{}\centerline{\textbf{pip install -r requirements.txt}}\newline{}
+
+\subsection{Aggioramento librerie}
+Per cercare gli eventuali aggiornamenti delle librerie si consiglia di usare il seguente comando:
+\newline{}\centerline{\textbf{pip list --outdated}}\newline{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{components/img/requirements_updates.png}
+    \caption{Struttura del file contenente le librerie}
+    \label{fig:Lista di aggiornamenti disponibili per le librerie}
+\end{figure}
+
 \subsection{Struttura progetto}
 Il progetto segue la seguente struttura:
 \begin{figure}[H]
