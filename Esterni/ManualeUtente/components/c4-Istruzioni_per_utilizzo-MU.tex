@@ -96,8 +96,8 @@ Il menù laterale, rappresentato nel punto 1 della Fig. \ref{fig:principale}, è
 \end{figure}
 
 
-\subsection{File sincronizzati}
-\label{sec:fileSincronizzati}
+\subsection{File locali}
+\label{sec:fileLocali}
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{components/img/fileLocali.png}
@@ -136,14 +136,22 @@ icona rossa \newline
 \label{sec:fileActions}
 
 \subsubsection*{Doppio click su un file}
+Eseguendo un doppio click su un file nella vista File locali (\ref{sec:fileLocali}) il file verrà aperto dall'applicazione designata dal sistema.
+\subsubsection*{Click destro su un file}
+Eseguendo un click destro su un file nella vista File remoti (\ref{sec:fileRemoti}) è possibile aggiungere o rimuovere un file dalla lista di sincronizzazione.
 \subsubsection*{Doppio click su una cartella}
+Eseguendo un doppio click su di una cartella, sia nella vista File locali che in quella File remoti, si scenderà di un livello, visualizzando il contenuto della cartella selezionata.
 \subsubsection*{Inserire file nella cartella locale}
+Per inserire file nella cartella locale è necessario aprire il file manager utilizzando l'apposito pulsante e aggiungere file da esso.
 \subsubsection*{Sincronizzare file dal server}
 notifica scaricamento file \newline
 notifica spazio insufficiente
 \subsubsection*{Refresh del server}
+Per aggiornare la lista dei file visualizzati nella vista \ref{sec:fileRemoti} con le ultime modifiche avvenute nel server bisogna premere il pulsante [1]("refresh").
 \subsubsection*{Modifica di un file sincronizzato}
+La modifica di un file sincronizzato avviene in maniera analoga alla modifica di un qualsiasi file locale, dopo aver effettuato i cambiamenti necessari è sufficiente salvare il documento e questo verrà automaticamente sincronizzato con il server.
 \subsubsection*{Cancellazione di un file sincronizzato}
+L'eliminazione di un file sincronizzato avviene analogamente all'eliminazione di un qualsiasi file locale, dopo aver eliminato il file dalla cartella sincronizzata questa modifica verrà propagata sul server seguendo la politica di sincronizzazione selezionata dall'utente.
 
 \subsection{Impostazioni}
 \label{sec:impostazioni}
