@@ -68,7 +68,7 @@ Il menù laterale, rappresentato nel punto 1 della Fig. \ref{fig:principale}, è
 \end{minipage}
 \end{figure}
 \begin{itemize}
-\item \textbf{Pulsante file sincronizzati}: mostra la cartella locale sincronizzata (\S{}\ref{sec:fileSincronizzati}); \
+\item \textbf{Pulsante file sincronizzati}: mostra la cartella locale sincronizzata (\S{}\ref{sec:fileLocali}); \
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -128,11 +128,20 @@ La vista si compone di una serie di icone che rappresentano i file o le cartelle
 
 \subsection{Icone di sincronizzazione}
 \label{sec:iconeSync}
-\subsubsection*{Spunta su sfondo verde}
+\subsubsection{Spunta su sfondo verde}
+
+immagine icona verde\newline
+
 Quando sull'icona del file è presente una spunta su sfondo verde nell'angolo in basso a destra il file è sincronizzato con il server.
-\subsubsection*{Frecce su sfondo blu}
+\subsubsection{Frecce su sfondo blu}
+
+immagine icona blu\newline
+
 Quando sull'icona del file sono presenti due frecce su sfondo blu il file sta venendo sincronizzato con il server.
-\subsubsection*{Croce su sfondo rosso}
+\subsubsection{Croce su sfondo rosso}
+
+immagine icona rossa\newline
+
 Quando sull'icona del file è presente una croce su sfondo rosso il file non risulta sincronizzato con il server.
 
 \subsection{Azioni sui file}
@@ -140,20 +149,20 @@ Quando sull'icona del file è presente una croce su sfondo rosso il file non ris
 
 \subsubsection*{Doppio click su un file}
 Eseguendo un doppio click su un file nella vista File locali (\ref{sec:fileLocali}) il file verrà aperto dall'applicazione designata dal sistema.
-\subsubsection*{Click destro su un file}
+\subsubsection{Click destro su un file}
 Eseguendo un click destro su un file nella vista File remoti (\ref{sec:fileRemoti}) è possibile aggiungere o rimuovere un file dalla lista di sincronizzazione.
-\subsubsection*{Doppio click su una cartella}
+\subsubsection{Doppio click su una cartella}
 Eseguendo un doppio click su di una cartella, sia nella vista File locali che in quella File remoti, si scenderà di un livello, visualizzando il contenuto della cartella selezionata.
-\subsubsection*{Inserire file nella cartella locale}
+\subsubsection{Inserire file nella cartella locale}
 Per inserire file nella cartella locale è necessario aprire il file manager utilizzando l'apposito pulsante e aggiungere file da esso.
-\subsubsection*{Sincronizzare file dal server}
+\subsubsection{Sincronizzare file dal server}
 notifica scaricamento file \newline
 notifica spazio insufficiente
-\subsubsection*{Refresh del server}
+\subsubsection{Refresh del server}
 Per aggiornare la lista dei file visualizzati nella vista \ref{sec:fileRemoti} con le ultime modifiche avvenute nel server bisogna premere il pulsante [1]("refresh").
-\subsubsection*{Modifica di un file sincronizzato}
+\subsubsection{Modifica di un file sincronizzato}
 La modifica di un file sincronizzato avviene in maniera analoga alla modifica di un qualsiasi file locale, dopo aver effettuato i cambiamenti necessari è sufficiente salvare il documento e questo verrà automaticamente sincronizzato con il server.
-\subsubsection*{Cancellazione di un file sincronizzato}
+\subsubsection{Cancellazione di un file sincronizzato}
 L'eliminazione di un file sincronizzato avviene analogamente all'eliminazione di un qualsiasi file locale, dopo aver eliminato il file dalla cartella sincronizzata questa modifica verrà propagata sul server seguendo la politica di sincronizzazione selezionata dall'utente.
 
 \subsection{Impostazioni}
@@ -181,10 +190,10 @@ In questa sezione delle impostazioni è possibile modificare il percorso della c
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.4]{components/img/ImpPolicy.png}
-    \caption{Modifica politica di sincronizzazione}
+    \caption{Modifica politica di risoluzione conflitti}
     \label{fig:policy}
 \end{figure}
-In questa sezione è possibile scegliere la politica di sincronizzazione dei file. Ci sono due opzioni:
+In questa sezione è possibile scegliere la politica di risoluzione dei conflitti. Ci sono due opzioni:
 \begin{itemize}
 \item\textbf{Client:} selezionando questa opzione le modifiche effettuate in locale andranno a sovrascrivere quelle caricate sul server;\
 \item\textbf{Manuale:} selezionando questa opzione, ogni volta che il file in locale differisce dal file presente sul server verranno salvate entrambe le versioni in locale e sarà l'utente a decidere quale mantenere.\
