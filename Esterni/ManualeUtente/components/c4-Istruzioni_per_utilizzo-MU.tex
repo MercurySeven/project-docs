@@ -3,8 +3,8 @@
 \subsection{Primo avvio}
 \subsubsection{Autenticazione}
 \label{sec:autenticazione}
-All'avvio verrà mostrata una schermata che servirà ad autenticarsi, nella quale bisognerà inserire nome utente e password del proprio account \gloman{Zextras Drive} (Figura 4). In caso di successo dell'operazione si avvierà il \gloman{software}, altrimenti verrà visualizzato un messaggio di errore e chiesto di reinserire le credenziali (Figura 5).  \newline
-Ai prossimi avvii del software l'account verrà automaticamente caricato, a meno che non venga effettuato il logout (paragrafo x.x.x).
+All'avvio verrà mostrata una schermata che servirà ad autenticarsi, nella quale bisognerà inserire nome utente e password del proprio account \gloman{Zextras Drive} (Fig. \ref{fig:Vista del login}). In caso di successo dell'operazione si avvierà il \gloman{software}, altrimenti verrà visualizzato un messaggio di errore e chiesto di reinserire le credenziali (Fig. \ref{fig:errore login}).  \newline
+Ai prossimi avvii del software l'account verrà automaticamente caricato, a meno che non venga effettuato il logout (\S{}\ref{sec:profilo}).
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.50]{components/img/login.png}
@@ -15,8 +15,10 @@ Ai prossimi avvii del software l'account verrà automaticamente caricato, a meno
     \centering
     \includegraphics[scale = 0.50]{components/img/err-login.png}
     \caption{Errore di autenticazione}
-    \label{fig:Vista del login}
+    \label{fig:errore login}
 \end{figure}
+
+
 \subsubsection{Selezione del percorso da sincronizzare}
 \label{sec:selezionepath}
 Verrà richiesto di scegliere una cartella nella quale verranno sincronizzati tutti i file. Non si deve scegliere la stessa cartella nella quale è contenuto il programma.
@@ -29,85 +31,80 @@ Verrà richiesto di scegliere una cartella nella quale verranno sincronizzati tu
 
 
 \subsection{Finestra principale}
-
+\label{sec:principale}
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{components/img/Principale.png}
     \caption{Vista schermata principale}
-    \label{fig:fileSync}
+    \label{fig:principale}
 \end{figure}
+Una volta avviato il software si aprirà una finestra,  mostrata in Fig. \ref{fig:principale}, nella quale verranno visualizzati: 
+\begin{enumerate}
+\item Menù laterale (\S{}\ref{sec:menu});\
+\item Finestra principale, che cambia in base al pulsante selezionato nel menù.\
+\end{enumerate}
 
-Una volta avviato il software si aprirà una finestra, nella quale verranno visualizzati il menù laterale [1] (\S{}\ref{sec:menu}) e la cartella locale [2] (\S{}\ref{sec:fileSincronizzati}).
+
 \subsubsection{Menù laterale}
 \label{sec:menu}
-
-Il menù laterale, rappresentato nel punto 1 della Figura 7 è posizionato a sinistra della vista e presenta quattro pulsanti:
+Il menù laterale, rappresentato nel punto 1 della Fig. \ref{fig:principale}, è posizionato a sinistra della vista e presenta quattro pulsanti:
 \begin{itemize}
 \item \textbf{Pulsante di sincronizzazione}: attiva e disattiva la sincronizzazione della cartella locale con il server; \
 \end{itemize}
-
 \begin{figure}[H]
 \centering
 \begin{minipage}[b]{0.45\linewidth}
 \centering
 \includegraphics[scale=0.5]{components/img/SyncA.png}
 \caption{Sincronizzazione attivata}
-\label{fig:syncA}
+\label{fig:PsyncA}
 \end{minipage}
 \quad
 \begin{minipage}[b]{0.45\linewidth}
 \centering
 \includegraphics[scale=0.5]{components/img/SyncD.png}
 \caption{Sincronizzazione disattivata}
-\label{fig:syncD}
+\label{fig:PsyncD}
 \end{minipage}
 \end{figure}
-
 \begin{itemize}
 \item \textbf{Pulsante file sincronizzati}: mostra la cartella locale sincronizzata (\S{}\ref{sec:fileSincronizzati}); \
 \end{itemize}
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 1]{components/img/pulsanteFileS.png}
     \caption{Pulsante file sincronizzati}
-    \label{fig:fileSync}
+    \label{fig:PfileSync}
 \end{figure}
-
 \begin{itemize}
 \item \textbf{Pulsante file remoti}: mostra i file presenti sul server (\S{}\ref{sec:fileRemoti}); \
 \end{itemize}
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 1]{components/img/pulsanteFileR.png}
     \caption{Pulsante file remoti}
-    \label{fig:fileRem}
+    \label{fig:PfileRem}
 \end{figure}
-
 \begin{itemize}
 \item \textbf{Pulsante delle impostazioni}: mostra le impostazioni del software (\S{}\ref{sec:impostazioni}). \
 \end{itemize}
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 1]{components/img/pulsanteImpostazioni.png}
     \caption{Pulsante impostazioni}
-    \label{fig:fileSync}
+    \label{fig:PImp}
 \end{figure}
 
-\subsubsection{File sincronizzati}
-\label{sec:fileSincronizzati}
 
+\subsection{File sincronizzati}
+\label{sec:fileSincronizzati}
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.7]{components/img/fileLocali.png}
     \caption{Vista file locali}
     \label{fig:fileSync}
 \end{figure}
-
-La vista si compone di una serie di icone che rappresentanoo i file o le cartelle presenti nella cartella condivisa. Le icone possono rappresentare:
-
+La vista si compone di una serie di icone che rappresentano i file o le cartelle presenti nella cartella condivisa. Le icone possono rappresentare:
 \begin{itemize}
 \item \textbf{Cartella [1]};\
 \item \textbf{File di testo [2]};\
@@ -116,43 +113,117 @@ La vista si compone di una serie di icone che rappresentanoo i file o le cartell
 \item \textbf{File generico [5]};\
 \item \textbf{File audio [6]}.\
 \end{itemize}
-
 In alto a destra è presente un pulsante [7] che apre la cartella sincronizzata col file manager del computer.
 
 
-
-\subsubsection{File remoti}
+\subsection{File remoti}
 \label{sec:fileRemoti}
-spiega la vista
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.8]{components/img/fileRem.png}
+    \caption{Vista file remoti}
+    \label{fig:fileRem}
+\end{figure}
+La vista si compone di una serie di icone che rappresentano i file o le cartelle presenti nella cartella remota. In alto a destra è presente un pulsante [1] che permette di effettuare il refresh della cartella remota e di sincronizzarla con quella locale.
 
-\subsubsection{Azioni sui file}
+\subsection{Icone di sincronizzazione}
+\label{sec:iconeSync}
+icona verde \newline
+icona blu \newline
+icona rossa \newline
+
+\subsection{Azioni sui file}
+\label{sec:fileActions}
 
 \subsubsection*{Doppio click su un file}
-
 \subsubsection*{Doppio click su una cartella}
-
 \subsubsection*{Inserire file nella cartella locale}
-Per far si che un file venga correttamente visualizzato all'interno del software, l'utente può:
-\begin{itemize}
-\item Creare il file nella cartella; \
-\item Spostare nella cartella un file già esistente.
-\end{itemize}
-
 \subsubsection*{Sincronizzare file dal server}
-
+notifica scaricamento file \newline
+notifica spazio insufficiente
 \subsubsection*{Refresh del server}
-
 \subsubsection*{Modifica di un file sincronizzato}
-
 \subsubsection*{Cancellazione di un file sincronizzato}
 
-\subsubsection{Impostazioni}
+\subsection{Impostazioni}
 \label{sec:impostazioni}
-spiega la vista \newline
-modifica path cartella \newline
-modifica policy \newline
-modifica finestra temporale \newline
-modifica spazio di archiviazione (notifica spazio insufficiente) \newline
-logout
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{components/img/vistaImp.png}
+    \caption{Vista impostazioni}
+    \label{fig:impostazioni}
+\end{figure}
+La vista mostra una serie di riquadri con i quali è possibile interagire per modificare le impostazioni legate al software. Tramite l'apposita barra posizionata sulla destra è possibile visualizzare l'intera pagina delle impostazioni.
 
+\subsubsection{Modifica path cartella}
+\label{sec:cartella}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1]{components/img/ImpCartella.png}
+    \caption{Modifica percorso cartella}
+    \label{fig:cartella}
+\end{figure}
+In questa sezione delle impostazioni è possibile modificare il percorso della cartella sincronizzata. Premendo il pulsante "Cambia" si aprirà una finestra che permetterà di cambiare il percorso (\S{}\ref{sec:selezionepath}).
+
+\subsubsection{Modifica policy}
+\label{sec:policy}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.4]{components/img/ImpPolicy.png}
+    \caption{Modifica politica di sincronizzazione}
+    \label{fig:policy}
+\end{figure}
+In questa sezione è possibile scegliere la politica di sincronizzazione dei file. Ci sono due opzioni:
+\begin{itemize}
+\item\textbf{Client:} selezionando questa opzione le modifiche effettuate in locale andranno a sovrascrivere quelle caricate sul server;\
+\item\textbf{Manuale:} selezionando questa opzione, ogni volta che il file in locale differisce dal file presente sul server verranno salvate entrambe le versioni in locale e sarà l'utente a decidere quale mantenere.\
+\end{itemize}
+
+\subsubsection{Modifica finestra temporale}
+\label{sec:finestra temporale}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.65]{components/img/ImpFinTempA.png}
+    \caption{Modifica finestra temporale}
+    \label{fig:finTempA}
+\end{figure}
+In questa sezione è possibile modificare ogni quanto tempo avviare la sincronizzazione dal server alla cartella condivisa. Cliccando sull'apposita freccia a destra (Fig. \ref{fig:finTempC}) apparirà un elenco di possibili finestre temporali. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.65]{components/img/ImpFinTempC.png}
+    \caption{Vista dopo aver cliccato sulla freccia}
+    \label{fig:finTempC}
+\end{figure}
+
+\subsubsection{Modifica spazio di archiviazione}
+\label{sec:quota}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.8]{components/img/ImpQuota.png}
+    \caption{Modifica quota disco}
+    \label{fig:quota}
+\end{figure}
+In questa sezione è possibile modificare lo spazio di archiviazione dedicato alla cartella locale. In particolare, seguendo i numeri in Fig. \ref{fig:quota}:
+\begin{enumerate}
+\item permette di scrivere quanto spazio far occupare alla cartella;\
+\item permette di decidere l'estensione del numero scritto (Fig. \ref{fig:quotazoom});\
+\item pulsante che modifica lo spazio di archiviazione.\
+\end{enumerate}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 1]{components/img/ImpQuota2.png}
+    \caption{Vista dopo aver cliccato sulla freccia}
+    \label{fig:quotazoom}
+\end{figure}
+
+
+\subsubsection{Profilo}
+\label{sec:profilo}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.65]{components/img/ImpLogout.png}
+    \caption{Vista logout}
+    \label{fig:fileRem}
+\end{figure}
+In questa sezione è possibile visualizzare il profilo collegato alle credenziali inserite. Inoltre, premendo il pulsante "Logout", è possibile disconnettere il profilo dal software: quest'ultimo si chiuderà e, al prossimo avvio, mostrerà la schermata di login (\S{}\ref{sec:autenticazione})
 
