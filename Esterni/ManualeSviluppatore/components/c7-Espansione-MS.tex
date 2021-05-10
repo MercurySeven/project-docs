@@ -30,3 +30,28 @@ Si deve quindi collegare il segnale emanato dalla nuova vista ad ogni cambiament
     \label{fig:Collegamento componenti mvc}
 \end{figure}
 Il metodo connect può essere solo invocato su segnali e come argomento devono avere il riferimento al metodo con decorator @Slot().
+
+\subsection{Aggiunta nuovi test}
+\subsubsection{Creazione del file di test}
+La creazione del nuovo file di test deve avvenire nella corretta folder seguendo la struttura definita a \S{}\ref{sec:cartelle-tests}. Il nome del file deve seguire la seguente sintassi: \newline{} \centerline{\textbf{nome\_test.py}.} La sintassi è esplicata nella seguente tabella:
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Parola chiave} & \textbf{Descrizione}\\
+		\toprule
+		\endhead	
+		nome & Il nome scelto per identificare la classe testata. Di norma viene utilizzato il nome della classe testata.\\
+		\_ & Separatore da utilizzare tra il nome della classe testata e la parola test.\\
+		test & Parola di obbligo utilizzo per permettere l'esecuzione automatica del test. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione della sintassi utilizzata per creare file di test}
+	\end{longtable}
+}
+Se la parola "test" non dovesse essere trovata nel nome del file o non dovesse essere separata correttamente tramite il carattere "\_" il test non verrà eseguito automaticamente all'esecuzione del comando indicato a \S{} \ref{sec:unittest}.
+
