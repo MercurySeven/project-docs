@@ -47,11 +47,49 @@ La creazione del nuovo file di test deve avvenire nella corretta folder seguendo
 		\endhead	
 		nome & Il nome scelto per identificare la classe testata. Di norma viene utilizzato il nome della classe testata.\\
 		\_ & Separatore da utilizzare tra il nome della classe testata e la parola test.\\
-		test & Parola di obbligo utilizzo per permettere l'esecuzione automatica del test. \\
+		test & Parola di utilizzo obbligatorio per permettere l'esecuzione automatica del test. \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione della sintassi utilizzata per creare file di test}
 	\end{longtable}
 }
 Se la parola "test" non dovesse essere trovata nel nome del file o non dovesse essere separata correttamente tramite il carattere "\_" il test non verrà eseguito automaticamente all'esecuzione del comando indicato a \S{} \ref{sec:unittest}.
-
+\subsubsection{Creazione della classe di test}
+La creazione della nuova classe di test segue la seguente sintassi: \newline{} \centerline{\textbf{NomeTest.py}.} La sintassi è esplicata nella seguente tabella:
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Parola chiave} & \textbf{Descrizione}\\
+		\toprule
+		\endhead	
+		Nome & Il nome scelto per identificare la classe testata. Di norma viene utilizzato il nome della classe testata.\\
+		Test & Parola utilizzata per esplicitare la funzione di test della classe. Il suo uso non è obbligatorio ma permette una maggiore chiarezza nel codice. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione della sintassi utilizzata per creare classi di test}
+	\end{longtable}
+}
+Questa nuova classe deve ereditare dalla classe base di ogni test "\textit{DefaultCode}" ed implementare correttamente i metodi "SetUp" e "TearDown" come mostrato nella seguente tabella:
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Parola chiave} & \textbf{Descrizione}\\
+		\toprule
+		\endhead	
+		SetUp & Metodo eseguito automaticamente prima di ogni test. Deve sempre, come prima istruzione, chiamare il metodo SetUp della classe base DefaultCode.\\
+		TearDown & Metodo eseguito automaticamente dopo ogni test. Deve sempre, come prima istruzione, chiamare il metodo TearDown della classe base DefaultCode.\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione della corretta implementazione dei metodi SetUp e TearDown}
+	\end{longtable}
+}
