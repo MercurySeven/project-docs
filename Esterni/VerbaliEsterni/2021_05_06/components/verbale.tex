@@ -1,0 +1,76 @@
+\section{Informazioni generali}
+
+\begin{itemize}
+
+    \item \textbf{Canale di comunicazione:} Zoom;
+
+    \item \textbf{Settimana:} dal 2021-04-21 al 2021-05-9;
+
+    \item \textbf{Segretario:} \ACapoRedazione{};
+
+    \item \textbf{Partecipanti}: Due rappresentanti dell'azienda Zextras, \textit{\Alessio{}} e \textit{\Federico{}}, e i membri del gruppo \Gruppo{}:
+        \begin{itemize}
+            \item \Daniele{};
+            \item \Davide{};
+            \item \Francesco{};
+            \item \Tommaso{};
+            \item \Lucrezia{};  
+            \item \Matteo{}.
+            \item \Giosue{}.
+        \end{itemize}
+\end{itemize}
+
+\section{Ordine del giorno}
+
+\begin{itemize}
+    \item\textbf{Gestione finestra temporale di sincronizzazione;}
+    \item\textbf{Gestione logout;}
+    \item\textbf{Gestione della selezione file da sincronizzare da server a client;}
+        \item\textbf{Gestione della visualizzazione dei file;}
+    \item\textbf{Gestione della sincronizzazione da locale a remoto;}
+    \item\textbf{Gestione creazione eseguibili;}
+\end{itemize}
+\newpage
+
+
+\section{Resoconto}
+\subsection{Gestione finestra temporale di sincronizzazione}
+Il gruppo ha mostrato al proponente Zexstras Drive i miglioramenti e le modifiche apportate alla sezione impostazioni dell'applicativo, concentrandosi sulla scelta data all'utente per la decisione della finestra temporale che indica ogni quanto l'applicativo deve aggiornarsi con il server. Il proponente ha approvato la decisione del gruppo di non impostare un tempo fisso per la sincronizzazione, consigliando però di non dare come opzione tempi troppo brevi, che possono portare problemi ai server dell'azienda.
+
+\subsection{Gestione logout}
+Il gruppo ha esposto il funzionamento del logout. A fine esposizione \textit{\Alessio{}} ha espresso la necessità da parte dell'utente di una conferma di logout, questo per impedire involontarie uscite dal programma che potrebbe comportare a perdite di copie di file in locale e di file non ancora sincronizzati con il server.
+
+\subsection{Gestione della selezione file da sincronizzare da server a client}
+Il gruppo ha esposto la modalità con cui vengono selezionati i file da sincronizzare dal server al client (la selezione viene fatta tramite doppio click sui files). \textit{\Alessio{}} è intervenuto proponendo di cambiare modalità, aggiungendo quindi un menu contestuale per la selezione dei file, e mantenendo il doppio click per funzionalità aggiuntive future. 
+
+\subsection{Gestione della visualizzazione dei file}
+Il gruppo ha mostrato come vengono visualizzati i file locali e nel cloud tramite l'applicativo. \textit{\Alessio{}} ha chiesto di introdurre la possibilità di distinguere nel cloud i file già sincronizzati in locale (sincronizzati con ultima versione) con quelli sincronizzati ma non aggiornati con l'ultima versione disponibile. L'icona che indica il non aggiornamento all'ultima versione dovrà essere utilizzata anche per indicare i file aggiunti in locale ma non ancora sincronizzati con il server. 
+
+\subsection{Gestione della sincronizzazione file da locale a remoto}
+Il gruppo ha esposto la logica di sincronizzazione file dal locale al remoto, questa avviene seguendo la finestra di temporizzazione scelta dall'utente. \textit{\Alessio{}} ha fatto notare che ci sono vari motivi per non utilizzare una sincronizzazione temporizzata, l'azienda preferisce temporazziare solo il download mentre, per l'upload di nuovi file, vorebbe che questi fossero caricarti subito nel server appena l'algoritmo in locale scopre che il filesystem è cambiato.
+\subsection{Gestione creazione eseguibili}
+Il gruppo ha trovato difficoltà nella creazione dei pacchetti eseguibili per la distribuzione del prodotto, dovuto principalmente ad errori di linking delle librerie. Il proponente ha indicato alcune proceduta per tentare di risolvere il problema (come ad esempio provare il downgrade ad una release più vecchia di Qt). Il gruppo si promette di provare le diverse soluzioni proposte dall'azienda.
+\newpage
+
+\section{Riepilogo delle decisioni \hfil}
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-4\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.3\freewidth} L{.7\freewidth}}
+        \toprule
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Codice} & \textbf{Decisione}\\
+        \toprule
+        \endhead
+
+        VE\_\DataMeeting{}.1 &  Si è deciso di introdurre una finestra che permetta all'utente di confermare la richiesta di logout.\\
+        VE\_\DataMeeting{}.2 &  Si è deciso di cambiare modalità di di selezione dei file da sincronizzare da server a client, sostituendo quella esistente con un menu contestuale.\\
+        VE\_\DataMeeting{}.3 &  Si è deciso di introdurre icone diverse che permettano una veloce comprensione, da parte dell'utente, dello stato corrente dei file sia in locale che in remoto.\\
+        VE\_\DataMeeting{}.4 &  Si è deciso di eseguire l'upload dei nuovi file dal client al server appena questi vengono aggiunti nella cartella di root che l'utente ha precedentemente selezionato.\\
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
+}
