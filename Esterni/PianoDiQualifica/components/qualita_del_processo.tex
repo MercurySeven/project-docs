@@ -11,6 +11,22 @@ L'obbiettivo di questo approccio è quello di garantire la centralità del prodo
 In questa sezione vengono definiti i macro-processi per il controllo della qualità.
 Questa sezione verrà aggiornata durante lo svolgimento del progetto tramite l'aggiunta dei processi di \ignore{verifica} che si riterranno necessari.
 
+\subsubsection{Sviluppo}
+\paragraph{Obbiettivi}
+\begin{itemize}
+\item \textbf{Accoppiamento}: Assicurarsi che l'architettura abbia un basso grado di accoppiamento;
+\item \textbf{Annidamento}: Assicurarsi che i metodi abbiano un basso livello di annidamento;
+\item \textbf{Parametri per metodo}: Salvaguardare la complessità dei metodi limitando il numero di parametri a 10.
+\end{itemize}
+
+\paragraph{Metriche}
+Per tenere traccia di questi elementi vengono utilizzate le seguenti \glo{metriche}:
+\begin{itemize}
+\item Coupling Between Objects;
+\item Livello di Annidamento;
+\item Numero di Parametri per Metodo.
+\end{itemize}
+
 \subsubsection{Pianificazione di progetto}
 Il macro-processo di pianificazione di progetto ha come scopo quello di definire dei piani di sviluppo per il raggiungimento degli obbiettivi richiesti dal committente, nel tempo disponibile, senza un consumo eccessivo di risorse.
 
@@ -18,14 +34,17 @@ Il macro-processo di pianificazione di progetto ha come scopo quello di definire
 Il gruppo \gruppo{} deve quindi strutturare la pianificazione attorno ai seguenti elementi:
 \begin{itemize}
 \item \textbf{\ignore{Timeline}}: Assicurarsi che il progetto rispetti le scadenze imposte dal committente;
-\item \textbf{Budget}: Assicurarsi che gli elementi e i tempi definiti nel piano rispettino le risorse disponibili.
+\item \textbf{Budget}: Assicurarsi che gli elementi e i tempi definiti nel piano rispettino le risorse disponibili;
 \end{itemize}
 
 \paragraph{Metriche}%
 Per tenere traccia di questi elementi vengono utilizzate le seguenti \glo{metriche}:
 \begin{itemize}
-\item MPR01 Schedule Variance;
-\item MPR02 Budget Variance.
+\item MPR01 ACWP: Actual Cost of Work Performed;
+\item MPR02 BCWS: Budgeted Cost of Work Scheduled;
+\item MPR03 BCWP: Budgeted Cost of Work Performed;
+\item MPR04 SV: Schedule Variance;
+\item MPR05 BV: Budget Variance.
 \end{itemize}
 
 \subsubsection{Tabella riassuntiva delle metriche}%
@@ -40,8 +59,14 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
 				\toprule
-				MPR01 & Monitoraggio del rispetto della \glo{timeline} da parte del gruppo \gruppo{} & $ x \leq -7$ giorni & $0$ giorni \\
-				MPR02 & Monitoraggio dell'utilizzo eccessivo di risorse fuori budget & $ x \leq 10 \%$ & $0 \%$ \\
+				M & Monitoraggio dell'accoppiamento tra classi & $ 0 \leq x \leq 6$ & $ 0 \leq x \leq 1$  \\
+				M & Monitoraggio del livello di annidamento nei vari metodi & $1 \leq x \leq 7 $ & $1 \leq x \leq 3$ \\
+				M & Monitoraggio del numero dei paramentri per metodo & $x \leq 5$ & $x \leq 3 $\\ 	
+				MPR01 & Monitoraggio del denaro speso fino al momento del calcolo & $ x \leq $ BCWS & $x \leq $Budget Totale  \\
+				MPR02 & Monitoraggio del costo pianificato fino al momento del calcolo & $ x \geq 0$ & $x \geq 0$\\
+				MPR03 & Monitoraggio del lavoro fatto fino al momento del calcolo & $ x \geq 0 $ & $ x \geq 0 $ \\
+				MPR04 & Monitoraggio del rispetto della \glo{timeline} da parte del gruppo \gruppo{} & x = 0 & x > 0 \\
+				MPR05 & Monitoraggio dell'utilizzo eccessivo di risorse fuori budget & $ x \leq$ ACWP & $ x \leq$ Budget Totale \\
 				\bottomrule
 			\end{tabular}
 			\caption{Tabella delle metriche e degli obiettivi relativi al processo di pianificazione}
