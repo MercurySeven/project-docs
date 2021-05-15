@@ -47,7 +47,7 @@ Una volta avviato il software si aprirà una finestra,  mostrata in Fig. \ref{fi
 
 \subsubsection{Menù laterale}
 \label{sec:menu}
-Il menù laterale, rappresentato nel punto 1 della Fig. \ref{fig:principale}, è posizionato a sinistra della vista e presenta quattro pulsanti:
+Il menù laterale è posizionato a sinistra della vista e presenta quattro pulsanti:
 \begin{itemize}
 \item \textbf{Pulsante di sincronizzazione}: attiva e disattiva la sincronizzazione della cartella locale con il server; \
 \end{itemize}
@@ -113,7 +113,11 @@ La vista si compone di una serie di icone che rappresentano i file o le cartelle
 \item \textbf{File generico [5]};\
 \item \textbf{File audio [6]}.\
 \end{itemize}
-In alto a destra è presente un pulsante [7] che apre la cartella sincronizzata col file manager del computer.
+In alto a destra ci sono due pulsanti:
+\begin{itemize}
+\item \textbf{Sincronizza ora [7]}: permette di forzare la sincronizzazione col server;\
+\item \textbf{Apri file manager [8]}: apre la cartella rappresentata tramite il file manager del computer.\
+\end{itemize}
 
 
 \subsection{File remoti}
@@ -124,10 +128,11 @@ In alto a destra è presente un pulsante [7] che apre la cartella sincronizzata 
     \caption{Vista file remoti}
     \label{fig:fileRem}
 \end{figure}
-La vista si compone di una serie di icone che rappresentano i file o le cartelle presenti nella cartella remota. In alto a destra è presente un pulsante [1] che permette di effettuare il refresh della cartella remota e di sincronizzarla con quella locale.
+La vista si compone di una serie di icone che rappresentano i file o le cartelle presenti nella cartella remota. In alto a destra è presente un pulsante \textbf{[1]} che permette di effettuare il refresh della cartella remota e di sincronizzarla con quella locale.
 
 \subsection{Icone di sincronizzazione}
 \label{sec:iconeSync}
+Per far sì che l'utente capisca a colpo d'occhio lo stato dei file ci sono tre icone che appariranno a seconda del caso in questione.
 \subsubsection{Spunta su sfondo verde}
 
 \begin{figure}[H]
@@ -137,7 +142,7 @@ La vista si compone di una serie di icone che rappresentano i file o le cartelle
     \label{fig:greenI}
 \end{figure}
 
-Quando sull'icona del file è presente una spunta su sfondo verde nell'angolo in basso a destra il file è sincronizzato con il server.
+L'icona rappresentata in figura apparirà sui file presenti nella cartella locale e significa che il file è sincronizzato col server.
 \subsubsection{Frecce su sfondo blu}
 
 \begin{figure}[H]
@@ -147,7 +152,7 @@ Quando sull'icona del file è presente una spunta su sfondo verde nell'angolo in
     \label{fig:bluedownI}
 \end{figure}
 
-Quando sull'icona del file sono presenti due frecce su sfondo blu il file sta venendo sincronizzato con il server.
+L'icona rappresentata in figura apparirà sui file presenti nella cartella locale e significa che il file sta venendo sincronizzato col server.
 
 \subsubsection{Freccia verso il basso su sfondo blu}
 
@@ -158,24 +163,22 @@ Quando sull'icona del file sono presenti due frecce su sfondo blu il file sta ve
     \label{fig:greenI}
 \end{figure}
 
-Quando sull'icona dei file remoti è presente una freccia su sfondo blu che punta in basso, significa che quel file verrà aggiornato ogni volta che nel server sono presenti delle modifiche.
+
+L'icona rappresentata in figura apparirà sui file presenti nella cartella remota e significa che quel file verrà aggiornato ogni volta che nel server sono presenti delle modifiche.
 
 \subsection{Azioni sui file}
 \label{sec:fileActions}
 
-\subsubsection*{Doppio click su un file}
+\subsubsection{Doppio click su un file}
 Eseguendo un doppio click su un file nella vista File locali (\ref{sec:fileLocali}) il file verrà aperto dall'applicazione designata dal sistema.
 \subsubsection{Click destro su un file}
-Eseguendo un click destro su un file nella vista File remoti (\ref{sec:fileRemoti}) è possibile aggiungere o rimuovere un file dalla lista di sincronizzazione.
+Eseguendo un click destro su un file nella vista File remoti (\ref{sec:fileRemoti}) è possibile aggiungere o rimuovere un file dalla lista di sincronizzazione.  
 \subsubsection{Doppio click su una cartella}
 Eseguendo un doppio click su di una cartella, sia nella vista File locali che in quella File remoti, si scenderà di un livello, visualizzando il contenuto della cartella selezionata.
 \subsubsection{Inserire file nella cartella locale}
 Per inserire file nella cartella locale è necessario aprire il file manager utilizzando l'apposito pulsante e aggiungere file da esso.
-\subsubsection{Sincronizzare file dal server}
-notifica scaricamento file \newline
-notifica spazio insufficiente
 \subsubsection{Refresh del server}
-Per aggiornare la lista dei file visualizzati nella vista \ref{sec:fileRemoti} con le ultime modifiche avvenute nel server bisogna premere il pulsante [1]("refresh").
+Per aggiornare la lista dei file visualizzati nella vista \ref{sec:fileRemoti} con le ultime modifiche avvenute nel server bisogna premere il pulsante "Refresh".
 \subsubsection{Modifica di un file sincronizzato}
 La modifica di un file sincronizzato avviene in maniera analoga alla modifica di un qualsiasi file locale, dopo aver effettuato i cambiamenti necessari è sufficiente salvare il documento e questo verrà automaticamente sincronizzato con il server.
 \subsubsection{Cancellazione di un file sincronizzato}
