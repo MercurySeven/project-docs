@@ -296,6 +296,11 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\textbf{MCD05} & Code coverage & Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi & Code coverage >= 80\% \\
 		\textbf{MCD06} & Lunghezza della riga di codice & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica & lunghezza riga <= 100 caratteri\\
 		\textbf{MCD07} & Brevità dei metodi & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva & blocco di codice <=50 righe \\
+		\textbf{MCD08} & Fan-in & Indica quante componenti utilizzano un modulo. & Fan-in $\leq 5$ \\
+		\textbf{MCD09} & Fan-out & Indica quante componenti vengono utilizzate dalla componente in esame. & Fan-out $\geq 1$ \\
+		\textbf{MCD10} & Coupling Between Object. & Misura il numero di classi che sono accoppiate a una particolare classe. Un accoppiamento eccessivo rende il sistema più difficile da gestire e riutilizzare quindi più è alto il grado di coupling della classe e più il sistema è difficile da mantenere. & CBO = numero delle dipendenze \\
+		\textbf{MCD11} & Numero di parametri per metodo. & Un elevato numero di parametri presenti all'interno dello stesso metodo indica il bisogno di ridurre le funzionalità associate a tale metodo. Più è elevato questo valore e più aumenta la possibilità di commettere errori progettuali. & NPM= numero dei paramentri \\
+		\textbf{MCD12} & Livello di annidamento. & Indica il livello di annidamento di un metodo. Un alto livello di annidamento porta a un codice di difficile manutenzione, aumentandone la complessità, in questo caso conviene dividere il metodo in più metodi distinti. & LA = livello di annidamento \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione delle metriche}\\

@@ -618,12 +618,19 @@ Dove:
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
 				\toprule
-				MPR03 & Soddisfazione \glo{requisiti} obbligatori & $100 \%$ & $100 \%$ \\
-				MPR04 & Soddisfazione \glo{requisiti} opzionali & $ 0 \%$ & $ 100\%$ \\
+				MPR01 & Actual cost of work performed, denaro speso fino al momento del calcolo. & ACWP $\leq BCWS$ & ACWP $\leq budget totale$\\
+				MPR02 & Budgeted Cost of Work Scheduled, costo pianificato per realizzare le attività di progetto fino al momento del calcolo. & BCWS $\geq 0 $& BCWS $\geq 0$ \\
+				MPR03 & Budgeted Cost of Work Performed, costo del lavoro fatto fino al momento del calcolo. & BCWP $\geq 0$ & BCWP $\geq 0$ \\
+				MPR04 & Schedule variance, indica se si è in linea, in anticipo oppure in ritardo rispetto alla pianificazione delle attività di progetto. & SV = 0 & SV $\geq 0$ \\
+				MPR05 & Budget variance, indica se alla data corrente si è speso di più o di meno rispetto al budget totale pianificato. & BV $\leq ACWP$ & BV$ \leq Budget totale$ \\
+				MPR06 & Soddisfazione \glo{requisiti} obbligatori & $100 \%$ & $100 \%$ \\
+				MPR07 & Soddisfazione \glo{requisiti} opzionali & $ 0 \%$ & $ 100\%$ \\
 				MVR01 & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti & $ 0\%$  & $0\%$ \\
 				MCD01 & Percentuale degli errori gestiti & $ 95\%$ - $100\% $ & $100\%$ \\
 				MVR02 & Comprensibilità delle funzionalità offerte & $ 80\%$ - $100\% $ & $100\%$ \\
 				MVR03 & Facilità di apprendimento e di utilizzo del prodotto & $10$-$15$ minuti & $5$-$10$ minuti \\
+				MVR04 & Passed Test Cases Percentage, rappresenta la percentuale dei test superati sul totale dei test eseguiti. & $90\%$ - $100\% $& $100\%$ \\
+				MVR05 & Failed Test Cases Percentage, rappresenta la percentuale dei test falliti sul totale dei test eseguiti. &$ 0\%$ - $10\%$ & $0\%$\\
 				MCD02 & Complessità ciclomatica & $0$ - $15$ & $0$ - $10$ \\
 				MCD03 & Variabili non utilizzate & $0$ & $0$ \\
 				MCD04 & Rapporto linee di codice e linee commentate & $5$ - $3$ & $3$ - $1$\\
