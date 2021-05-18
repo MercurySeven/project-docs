@@ -227,6 +227,33 @@ Devono essere descritti i design pattern utilizzati per realizzare l'architettur
 }
 \paragraph*{Test}
 Ogni \prog{} avrà il compito di definire \glo{test} opportuni, che dovranno essere accompagnati da eventuali classi utili ad individuare errori ed anomalie.
+
+\subsubsection*{Metriche}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.10\freewidth} L{.5\freewidth} L{.250\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Codice} & \textbf{Descrizione} & \textbf{Formula}\\
+		\toprule
+		\endhead		
+		\textbf{MPR01} & & -\\
+		\textbf{MPR02} & & -\\
+		\textbf{MPR03} & & -\\
+		\textbf{MPR04} & & -\\
+		\textbf{MPR05} & & -\\
+		\textbf{MPR06} & & -\\
+		\textbf{MPR07} & & -\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle metriche}\\
+	\end{longtable}
+
+
+
 \subsubsection{Codifica}
 La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{software} richiesto. Tramite questa attività si concretizza l'architettura di alto livello pensata dai \progs{} nel documento \PdQ{}. I \progrs{} dovranno attenersi a queste norme durante la fase di programmazione e implementazione. L'uso di norme e convenzioni è fondamentale per permettere la generazione di codice leggibile e uniforme, agevolare la manutenzione e i processi di \glo{verifica} e \glo{validazione}.
 \paragraph*{Convenzioni per i nomi}
@@ -279,38 +306,40 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\caption{Descrizione delle norme delle pratiche di codifica}
 	\end{longtable}
 }
-\subsubsection{Metriche}
-{
+\subsubsection*{Metriche}
+
 	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\aboverulesep}{0pt}
 	\setlength{\belowrulesep}{0pt}
 	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.1\freewidth} L{.15\freewidth} L{.4\freewidth} L{.2\freewidth}}
+	\begin{longtable}{L{.10\freewidth} L{.5\freewidth} L{.250\freewidth}}
 		\rowcolor{AzzurroGruppo!30}
-		\textbf{Codice} & \textbf{Nome} & \textbf{Descrizione metrica} & \textbf{Formula/Valore}\\
+		\textbf{Codice} & \textbf{Descrizione} & \textbf{Formula}\\
 		\toprule
 		\endhead		
-		\textbf{MCD03} & Variabili non utilizzate & Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice & numero variabili inutilizzate == 0\\
-		\textbf{MCD04} & Facilità di comprensione & Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice & \small{R=$\frac{n^\circ\ linee\ commento}{n^\circ\ linee\ codice}$}  \\
-		\textbf{MCD05} & Code coverage & Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi & Code coverage >= 80\% \\
-		\textbf{MCD06} & Lunghezza della riga di codice & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica & lunghezza riga <= 100 caratteri\\
-		\textbf{MCD07} & Brevità dei metodi & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva & blocco di codice <=50 righe \\
-		\textbf{MCD08} & Fan-in & Indica quante componenti utilizzano un modulo. & Fan-in $\geq 0$ \\
-		\textbf{MCD09} & Fan-out & Indica quante componenti vengono utilizzate dalla componente in esame. & Fan-out $\leq 6 $ \\
-		\textbf{MCD10} & Coupling Between Object. & Misura il numero di classi che sono accoppiate a una particolare classe. Un accoppiamento eccessivo rende il sistema più difficile da gestire e riutilizzare quindi più è alto il grado di coupling della classe e più il sistema è difficile da mantenere. & CBO = numero delle dipendenze \\
-		\textbf{MCD11} & Numero di parametri per metodo. & Un elevato numero di parametri presenti all'interno dello stesso metodo indica il bisogno di ridurre le funzionalità associate a tale metodo. Più è elevato questo valore e più aumenta la possibilità di commettere errori progettuali. & NPM= numero dei paramentri \\
-		\textbf{MCD12} & Livello di annidamento. & Indica il livello di annidamento di un metodo. Un alto livello di annidamento porta a un codice di difficile manutenzione, aumentandone la complessità, in questo caso conviene dividere il metodo in più metodi distinti. & LA = livello di annidamento \\
+		\textbf{MCD01} & Rappresenta la percentuale degli errori gestiti nel codice. Un valore elevato indica la solidità del codice. & -\\
+		\textbf{MCD02} & Usata per valutare la complessità dell'algoritmo, è basata sulla struttura del grafo che lo rappresenta. & \small{C=$(n^\circ\ archi)-(n^\circ\ nodi)+(2*n^\circ\ componentiDisconnesse)$} \\
+		\textbf{MCD03} & Il codice non deve avere variabili inutilizzate, esse andrebbero ad intaccare le performance e la facilità di manutenzione del codice. & -\\
+		\textbf{MCD04} & Indice che riporta la facilità con cui l'utente riesce a comprendere cosa fa il codice, rappresentata mediante il numero di linee di commento nel codice. & \small{R=$\frac{n^\circ\ linee\ commento}{n^\circ\ linee\ codice}$}  \\
+		\textbf{MCD05} &  Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi. & - \\
+		\textbf{MCD06} & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica. & -\\
+		\textbf{MCD07} & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva. & - \\
+		\textbf{MCD08}  & Indica quante componenti utilizzano un modulo. & -\\
+		\textbf{MCD09} & Indica quante componenti vengono utilizzate dalla componente in esame. & - \\
+		\textbf{MCD10}& Misura il numero di classi che sono accoppiate a una particolare classe. Un accoppiamento eccessivo rende il sistema più difficile da gestire e riutilizzare. & - \\
+		\textbf{MCD11} & Un elevato numero di parametri presenti all'interno dello stesso metodo indica il bisogno di ridurre le funzionalità associate a tale metodo. Più è elevato questo valore e più aumenta la possibilità di commettere errori progettuali. & - \\
+		\textbf{MCD12} & Indica il livello di annidamento di un metodo. Un valore alto porta a un codice di difficile manutenzione, aumentandone la complessità.& - \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione delle metriche}\\
 	\end{longtable}
-}
+
 
 \subsubsection{Strumenti}
 {
 	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
-	\renewcommand{\arraystretch}{1.5}
+	\renewcommand{\arraystretch}{1}
 	\setlength{\aboverulesep}{0pt}
 	\setlength{\belowrulesep}{0pt}
 	\rowcolors{2}{AzzurroGruppo!10}{white}
