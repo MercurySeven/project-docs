@@ -166,6 +166,29 @@ L'icona rappresentata in figura apparirà sui file presenti nella cartella local
 
 L'icona rappresentata in figura apparirà sui file presenti nella cartella remota e significa che quel file verrà aggiornato ogni volta che nel server sono presenti delle modifiche.
 
+\subsection{Operazioni comuni}
+In questa sezione vengono elencati i passaggi necessari per eseguire le operazioni più comuni previste dal programma.
+\subsubsection{Scaricare un file dal server}
+\begin{itemize}
+\item Attivare la sincronizzazione cliccando il pulsante di sincronizzazione (\ref{fig:PsyncD});
+\item Cliccare sul pulsante per visualizzare i file remoti (\ref{fig:PfileRem});
+\item Navigare fino al file desiderato ed eseguire un click destro su di esso, quindi selezionare la voce "aggiungi a sync" dal menu contestuale;
+\item Il file verrà sincronizzato allo scadere dell'intervallo di tempo di sincronizzazione selezionato, nel caso si volesse sincronizzare immediatamente il file è necessario cliccare sul pulsante per visualizzare i file sincronizzati (\ref{fig:PfileSync}) e cliccare sul pulsante "sincronizza ora".
+\end{itemize}
+\subsubsection{Eliminare un file dal server}
+\begin{itemize}
+\item Attivare la sincronizzazione cliccando il pulsante di sincronizzazione (\ref{fig:PsyncD});
+\item Cliccare sul pulsante per visualizzare i file sincronizzati (\ref{fig:PfileSync});
+\item Cliccare il pulsante "apri file manager";
+\item Eliminare il file desiderato dal file manager;
+\item Premere il pulsante "sincronizza ora" per aggiornare il server con i file locali, eliminando quindi il file eliminato in locale dal server.
+\end{itemize}
+\subsubsection{Rimuovere un file dalla sincronizzazione}
+\begin{itemize}
+\item Cliccare sul pulsante per visualizzare i file remoti (\ref{fig:PfileRem});
+\item Navigare fino al file sincronizzato desiderato ed eseguire un click destro su di esso, quindi selezionare la voce "rimuovi da sync" dal menu contestuale. Il file verrà conservato in locale ma gli aggiornamenti ad esso non verranno più sincronizzati con il server e viceversa.
+\end{itemize}
+
 \subsection{Azioni sui file}
 \label{sec:fileActions}
 
