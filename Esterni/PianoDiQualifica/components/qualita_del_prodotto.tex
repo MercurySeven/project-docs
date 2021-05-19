@@ -19,7 +19,7 @@ I documenti prodotti devono essere facilmente leggibili e accessibili a tutti i 
 \textbf{\ignore{Metriche}}
 \begin{itemize}
 \item MDC01 Indice di Gulpease;
-\item MDC02 Indice di Flesch-Vacca
+\item MDC02 Indice di Flesch-Vacca;
 \item MDC03 Correttezza ortografica.
 \end{itemize}
 
@@ -41,8 +41,8 @@ Il prodotto deve fornire tutte le funzionalità determinate nel documento di \Ad
 \begin{itemize}
 \item MPR03 Soddisfazione \glo{requisiti} obbligatori;
 \item MPR04 Soddisfazione \glo{requisiti} opzionali;
-\item MPR05 Passed Test Cases Percentage;
-\item MPR06 Failed Test Cases Percentage.
+\item MVR04 Passed Test Cases Percentage;
+\item MVR05 Failed Test Cases Percentage.
 \end{itemize}
 
 \paragraph{Affidabilità}
@@ -130,9 +130,9 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
 				\toprule
-				MDC01 & Indice di Gulpease & $ 50 < x < 100$ & $60 < x < 100$ \\
-				MDC02 & Indice di Flesch-Vacca & $ 50 < x < 100$ & $60 < x < 100$\\
-				MDC03 & Correttezza ortografica & $ 95 \%$ privi di errori & $ 100\%$ privi di errori \\
+				MDC01 & Indice di Gulpease. & $ 50 < x < 100$ & $60 < x < 100$ \\
+				MDC02 & Indice di Flesch-Vacca. & $ 50 < x < 100$ & $60 < x < 100$\\
+				MDC03 & Correttezza ortografica. & $ 95 \%$ privi di errori & $ 100\%$ privi di errori \\
 				\bottomrule
 			\end{tabular}
 			\caption{Tabella delle metriche e degli obiettivi relativi alla documentazione}
@@ -150,22 +150,22 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
 				\toprule
-				MPR06 & Soddisfazione \glo{requisiti} obbligatori & $100 \%$ & $100 \%$ \\
-				MPR07 & Soddisfazione \glo{requisiti} opzionali & $ 0 \%$ & $ 100\%$ \\
-				MVR01 & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti & $ 0\%$  & $0\%$ \\
-				MCD01 & Percentuale degli errori gestiti & $ 95\%$ - $100\% $ & $100\%$ \\
-				MVR02 & Comprensibilità delle funzionalità offerte & $ 80\%$ - $100\% $ & $100\%$ \\
-				MVR03 & Facilità di apprendimento e di utilizzo del prodotto & $10$-$15$ minuti & $5$-$10$ minuti \\
-				MVR04 & Passed Test Cases Percentage & $90\% \leq x \leq 100\% $& $100\%$ \\
-				MVR05 & Failed Test Cases Percentage & $0\% \leq x \leq 10\% $& $0\%$ \\				
-				MCD02 & Complessità ciclomatica & $0$ - $15$ & $0$ - $10$ \\
-				MCD03 & Variabili non utilizzate & $0$ & $0$ \\
-				MCD04 & Rapporto linee di codice e linee commentate & $5$ - $3$ & $3$ - $1$\\
-				MCD05 & Code coverage & $80\%$-$100\%$ & $100\%$ \\
-				MCD06 & Lunghezza della riga di codice & $0$-$100$ caratteri & $0$-$80$ caratteri \\
-				MCD07 & Brevità dei metodi & $0$-$50$ istruzioni & $0$-$50$ istruzioni \\
-				MCD08 & Structural fan-in & $ x \geq 0 $ & $ x \geq 1 $ \\
-				MCD09 & Structural fan-out & $ x \leq 6 $ & $ x = 0 $ \\
+				MPR03 & Soddisfazione \glo{requisiti} obbligatori. & $100 \%$ & $100 \%$ \\
+				MPR04 & Soddisfazione \glo{requisiti} opzionali. & $ 0 \%$ & $ 100\%$ \\
+				MVR01 & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti. & $ 0\%$  & $0\%$ \\
+				MCD01 & Percentuale degli errori gestiti. & $ 95\%$ - $100\% $ & $100\%$ \\
+				MVR02 & Comprensibilità delle funzionalità offerte. & $ 80\%$ - $100\% $ & $100\%$ \\
+				MVR03 & Facilità di apprendimento e di utilizzo del prodotto. & $10$-$15$ minuti & $5$-$10$ minuti \\
+				MVR04 & Passed Test Cases Percentage. & $90\% \leq x \leq 100\% $& $100\%$ \\
+				MVR05 & Failed Test Cases Percentage. & $0\% \leq x \leq 10\% $& $0\%$ \\				
+				MCD02 & Complessità ciclomatica. & $0$ - $15$ & $0$ - $10$ \\
+				MCD03 & Variabili non utilizzate. & $0$ & $0$ \\
+				MCD04 & Rapporto linee di codice e linee commentate. & $5$ - $3$ & $3$ - $1$\\
+				MCD05 & Code coverage. & $80\%$-$100\%$ & $100\%$ \\
+				MCD06 & Lunghezza della riga di codice. & $0$-$100$ caratteri & $0$-$80$ caratteri \\
+				MCD07 & Brevità dei metodi. & $0$-$50$ istruzioni & $0$-$50$ istruzioni \\
+				MCD08 & Structural fan-in. & $ x \geq 0 $ & $ x \geq 1 $ \\
+				MCD09 & Structural fan-out. & $ x \leq 6 $ & $ x = 0 $ \\
 				\bottomrule
 			\end{tabular}
 			\caption{Tabella delle metriche e degli obiettivi relativi al prodotto}
