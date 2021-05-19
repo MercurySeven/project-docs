@@ -1,10 +1,22 @@
 \section{Istruzioni per l'utilizzo}
 
 \subsection{Primo avvio}
+\subsubsection{Selezione del percorso da sincronizzare}
+\label{sec:selezionepath}
+Al primo avvio, verrà richiesto di scegliere una cartella dove verranno salvati i file presenti nel server e dove l'utente inserirà i nuovi file che vorrà sincronizzare.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.50]{components/img/selezione-path.png}
+    \caption{Selezione del percorso da sincronizzare}
+    \label{fig:Selezione del percorso da sincronizzare}
+\end{figure}
+
+
 \subsubsection{Autenticazione}
 \label{sec:autenticazione}
-All'avvio verrà mostrata una schermata che servirà ad autenticarsi, nella quale bisognerà inserire nome utente e password del proprio account \gloman{Zextras Drive} (Fig. \ref{fig:Vista del login}). In caso di successo dell'operazione si avvierà il \gloman{software}, altrimenti verrà visualizzato un messaggio di errore e chiesto di reinserire le credenziali (Fig. \ref{fig:errore login}).  \newline
-Ai prossimi avvii del software l'account verrà automaticamente caricato, a meno che non venga effettuato il logout (\S{}\ref{sec:profilo}).
+Successivamente verrà mostrata una form di login, nella quale bisognerà inserire nome utente e password del proprio account \gloman{Zextras Drive} (Fig. \ref{fig:Vista del login}).
+Se il login è completato con successo, si avvierà il \gloman{software}, altrimenti verrà visualizzato un messaggio di errore e chiesto di reinserire le credenziali (Fig. \ref{fig:errore login}). \newline
+Negli avvii successivi, il login verrà effettuato automaticamente, a meno che non sia stato effettuato il logout (\S{}\ref{sec:profilo}) o la password dell'account sia stata cambiata.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.50]{components/img/login.png}
@@ -19,17 +31,6 @@ Ai prossimi avvii del software l'account verrà automaticamente caricato, a meno
 \end{figure}
 
 
-\subsubsection{Selezione del percorso da sincronizzare}
-\label{sec:selezionepath}
-Verrà richiesto di scegliere una cartella nella quale verranno sincronizzati tutti i file. Non si deve scegliere la stessa cartella nella quale è contenuto il programma.
-\begin{figure}[H]
-    \centering
-    \includegraphics[scale = 0.30]{components/img/selezione-path.png}
-    \caption{Selezione del percorso da sincronizzare}
-    \label{fig:Selezione del percorso da sincronizzare}
-\end{figure}
-
-
 \subsection{Finestra principale}
 \label{sec:principale}
 \begin{figure}[H]
@@ -38,7 +39,7 @@ Verrà richiesto di scegliere una cartella nella quale verranno sincronizzati tu
     \caption{Vista schermata principale}
     \label{fig:principale}
 \end{figure}
-Una volta avviato il software si aprirà una finestra,  mostrata in Fig. \ref{fig:principale}, nella quale verranno visualizzati: 
+Una volta avviato il software si aprirà una finestra,  mostrata in Fig. \ref{fig:principale}, nella quale verranno visualizzati:
 \begin{enumerate}
 \item Menù laterale (\S{}\ref{sec:menu});\
 \item Finestra principale, che cambia in base al pulsante selezionato nel menù.\
@@ -115,7 +116,7 @@ La vista si compone di una serie di icone che rappresentano i file o le cartelle
 \end{itemize}
 In alto a destra ci sono due pulsanti:
 \begin{itemize}
-\item \textbf{Sincronizza ora [7]}: permette di forzare la sincronizzazione col server;\
+\item \textbf{Sincronizza ora [7]}: permette di forzare la sincronizzazione con il server;\
 \item \textbf{Apri file manager [8]}: apre la cartella rappresentata tramite il file manager del computer.\
 \end{itemize}
 
@@ -128,7 +129,7 @@ In alto a destra ci sono due pulsanti:
     \caption{Vista file remoti}
     \label{fig:fileRem}
 \end{figure}
-La vista si compone di una serie di icone che rappresentano i file o le cartelle presenti nella cartella remota. In alto a destra è presente un pulsante \textbf{[1]} che permette di effettuare il refresh della cartella remota e di sincronizzarla con quella locale.
+La vista si compone di una serie di icone che rappresentano i file o le cartelle presenti nella cartella remota. In alto a destra è presente un pulsante \textbf{[1]} che permette di effettuare il refresh della cartella remota.
 
 \subsection{Icone di sincronizzazione}
 \label{sec:iconeSync}
@@ -142,7 +143,7 @@ Per far sì che l'utente capisca a colpo d'occhio lo stato dei file ci sono tre 
     \label{fig:greenI}
 \end{figure}
 
-L'icona rappresentata in figura apparirà sui file presenti nella cartella locale e significa che il file è sincronizzato col server.
+L'icona rappresentata in figura apparirà sui file presenti nella cartella locale e significa che il file è sincronizzato con il server.
 \subsubsection{Frecce su sfondo blu}
 
 \begin{figure}[H]
@@ -152,7 +153,7 @@ L'icona rappresentata in figura apparirà sui file presenti nella cartella local
     \label{fig:bluedownI}
 \end{figure}
 
-L'icona rappresentata in figura apparirà sui file presenti nella cartella locale e significa che il file sta venendo sincronizzato col server.
+L'icona rappresentata in figura apparirà sui file presenti nella cartella locale e significa che il file sta venendo sincronizzato con il server.
 
 \subsubsection{Freccia verso il basso su sfondo blu}
 
