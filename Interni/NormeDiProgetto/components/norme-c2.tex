@@ -1,5 +1,6 @@
 \section{Processi primari}
 \subsection{Fornitura}
+\subsubsection{Descrizione}
 
 Il processo di fornitura viene svolto al fine di comprendere al meglio la richiesta di appalto del \glo{proponente}: viene svolta un'analisi approfondita che ne stabilisce criticità e punti di forza, i quali verranno spiegati nello \SdF{}. Per sancire il legame tra \glo{proponente} e fornitore è necessaria la definizione di un contratto, che formalizza le fasi della realizzazione del prodotto finale, tra cui consegna e manutenzione. Per instaurare un rapporto di collaborazione proficuo, il gruppo intende mantenere un dialogo costante col \glo{proponente} in modo da accordarsi sugli aspetti che il prodotto dovrà soddisfare, definendo vincoli e \glo{requisiti} e stimandone costi e tempistiche.
 Le fasi che compongono il suddetto processo sono: 
@@ -12,7 +13,10 @@ Le fasi che compongono il suddetto processo sono:
 	\item revisione e valutazione;
 	\item consegna e completamento.
 \end{itemize}
+\subsubsection{Scopo e aspettative}
+
 Il documento include le norme a cui i membri del gruppo \Gruppo{} devono fare riferimento al fine di ottenere il ruolo di fornitori del \glo{proponente} \proponente{} e dei committenti \textit{Prof. Tullio Vardanega} e \textit{Prof. Riccardo Cardin}. Ognuno è tenuto ad attenersi a quanto scritto nella suddetta sezione durante tutte le fasi di sviluppo del capitolato \textit{C7}.
+Per ottenere un riscontro efficace sul lavoro svolto, il gruppo \gruppo{} si propone di instaurare e mantenere un dialogo continuo e un costante rapporto collaborativo con l'azienda \proponente{}.
 
 \subsubsection{Studio di fattibilità}
 L'attività di Studio di fattibilità, che sfocia nell'omonimo documento, serve a trovare le motivazioni per la scelta di un capitolato tra quelli proposti.
@@ -56,7 +60,29 @@ Il gruppo fornisce all'azienda \proponente{} e ai committenti \textit{Prof. Tull
 
 
 \subsection{Sviluppo}
+\subsubsection{Descrizione}
 Durante il processo di sviluppo vengono descritte tutte le attività e i compiti che devono essere svolti in modo da realizzare al meglio il prodotto richiesto dal \glo{proponente}: una volta definiti i \glo{requisiti} di sviluppo, i vincoli tecnologici e i vincoli di design ci si aspetta di realizzare un prodotto finale che, oltre a superare i \glo{test}, soddisfi i \glo{requisiti} e le richieste del \glo{proponente}. Le attività coinvolte riguardano l'Analisi dei \ignore{Requisiti}, la progettazione e la codifica.
+\subsubsection{Scopo e aspettative}
+Lo scopo del processo di Sviluppo è descrivere i compiti e le attività da svolgere relative al prodotto software da sviluppare.
+Le attese sono le seguenti:
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.90\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Attesa} \\
+		\toprule
+		\endhead
+		Stabilire gli obiettivi di sviluppo. \\
+		Stabilire i vincoli tecnologici. \\
+		Stabilire i vincoli di design. \\
+		Realizzare un prodotto finale che superi i test, che soddisfi i requisiti e le richieste del proponente. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Attese del processo di Sviluppo}
+	\end{longtable}
 \subsubsection{Analisi dei requisiti}
 L'analisi dei \glo{requisiti} è un'attività, che sfocia nell'omonimo documento,dove vengono individuati tutti i \glo{requisiti} che il \glo{proponente} richiede per la realizzazione del prodotto.\newline{}
 Il documento \AdR{} va steso in maniera efficace ed è molto importante in quanto coinvolto in diverse fasi della realizzazione del prodotto: oltre che definire funzionalità e \glo{requisiti} individuati e concordati col cliente, fornisce ai \progs{} riferimenti precisi e affidabili, ai \vers{} riferimenti per il processo di \glo{verifica} ed è la base dalla quale partire per eventuali raffinamenti successivi, garantendo un continuo miglioramento del prodotto. 
@@ -228,33 +254,6 @@ Devono essere descritti i design pattern utilizzati per realizzare l'architettur
 \paragraph*{Test}
 Ogni \prog{} avrà il compito di definire \glo{test} opportuni, che dovranno essere accompagnati da eventuali classi utili ad individuare errori ed anomalie.
 
-\subsubsection*{Metriche}
-
-	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
-	\renewcommand{\arraystretch}{1}
-	\setlength{\aboverulesep}{0pt}
-	\setlength{\belowrulesep}{0pt}
-	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.10\freewidth} L{.5\freewidth} L{.350\freewidth}}
-		\rowcolor{AzzurroGruppo!30}
-		\textbf{Codice} & \textbf{Descrizione} & \textbf{Formula}\\
-		\toprule
-		\endhead		
-		
-		\textbf{MPR01} & Indica se si è in linea, in anticipo oppure in ritardo rispetto alla pianificazione delle attività di progetto. & \small{P01=$P07-P06$}\\
-		\textbf{MPR02} & Indica se alla data corrente si è speso di più o di meno rispetto al budget totale pianificato. & \small{P02=$P06-P05$}\\
-		\textbf{MPR03} & Indica la percentuale dei \glo{requisiti} obbligatori soddisfatti & \small{P03=$\frac{n^\circ\ r. obbligatori\ soddisfatti*100}{n^\circ\ totale\ r. obbligatori}$}\\
-		\textbf{MPR04} & Indica la percentuale dei \glo{requisiti} opzionali soddisfatti & \small{P04=$\frac{n^\circ\ r. opzionali\ soddisfatti*100}{n^\circ\ totale\ r. opzionali}$}\\\\
-		\textbf{MPR05} & Indica il denaro speso fino al momento del calcolo & \small{P05=$\sum (ore\ lavorative*corrispondente\ costo\ orario)$}\\ 
-		\textbf{MPR06} & Rappresenta il costo pianificato per realizzare le attività di progetto fino al momento del calcolo. & \small{P06=$\% lavoro\ pianificato*tot. budget$}\\
-		\textbf{MPR07} & Indica il costo del lavoro effettuato fino al momento del calcolo. & \small{P07=$\% lavoro\ svolto*tot. budget$} \\	
-		
-		\bottomrule
-		\hiderowcolors
-		\caption{Descrizione metriche per il processo di progettazione}\\
-	\end{longtable}
-
-
 
 \subsubsection{Codifica}
 La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{software} richiesto. Tramite questa attività si concretizza l'architettura di alto livello pensata dai \progs{} nel documento \PdQ{}. I \progrs{} dovranno attenersi a queste norme durante la fase di programmazione e implementazione. L'uso di norme e convenzioni è fondamentale per permettere la generazione di codice leggibile e uniforme, agevolare la manutenzione e i processi di \glo{verifica} e \glo{validazione}.
@@ -308,7 +307,30 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\caption{Descrizione delle norme delle pratiche di codifica}
 	\end{longtable}
 }
-\subsubsection*{Metriche}
+
+\subsubsection{Strumenti}
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{StarUML} & Strumento utilizzato per la creazione di diagrammi UML. Offre molte agevolazioni che permettono una produzione veloce dei diagrammi e risulta uno strumento di semplice apprendimento e uso.\\ 
+					
+		\bottomrule
+		\hiderowcolors
+		\caption{Strumenti utilizzati nel processo di sviluppo}
+	\end{longtable}
+	
+	
+\subsubsection{Metriche}
+
+\subsubsection*{Metriche Codifica}
 
 	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -336,23 +358,30 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\hiderowcolors
 		\caption{Descrizione metriche per il processo di codifica}\\
 	\end{longtable}
+	
+	
+\subsubsection*{Metriche Progettazione}
 
-
-\subsubsection{Strumenti}
-{
 	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1}
 	\setlength{\aboverulesep}{0pt}
 	\setlength{\belowrulesep}{0pt}
 	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+	\begin{longtable}{L{.10\freewidth} L{.5\freewidth} L{.350\freewidth}}
 		\rowcolor{AzzurroGruppo!30}
-		\textbf{Nome} & \textbf{Descrizione} \\
+		\textbf{Codice} & \textbf{Descrizione} & \textbf{Formula}\\
 		\toprule
 		\endhead		
-		\textbf{StarUML} & Strumento utilizzato per la creazione di diagrammi UML. Offre molte agevolazioni che permettono una produzione veloce dei diagrammi e risulta uno strumento di semplice apprendimento e uso.\\ 
-					
+		
+		\textbf{MPR01} & Indica se si è in linea, in anticipo oppure in ritardo rispetto alla pianificazione delle attività di progetto. & \small{P01=$P07-P06$}\\
+		\textbf{MPR02} & Indica se alla data corrente si è speso di più o di meno rispetto al budget totale pianificato. & \small{P02=$P06-P05$}\\
+		\textbf{MPR03} & Indica la percentuale dei \glo{requisiti} obbligatori soddisfatti & \small{P03=$\frac{n^\circ\ r. obbligatori\ soddisfatti*100}{n^\circ\ totale\ r. obbligatori}$}\\
+		\textbf{MPR04} & Indica la percentuale dei \glo{requisiti} opzionali soddisfatti & \small{P04=$\frac{n^\circ\ r. opzionali\ soddisfatti*100}{n^\circ\ totale\ r. opzionali}$}\\\\
+		\textbf{MPR05} & Indica il denaro speso fino al momento del calcolo & \small{P05=$\sum (ore\ lavorative*corrispondente\ costo\ orario)$}\\ 
+		\textbf{MPR06} & Rappresenta il costo pianificato per realizzare le attività di progetto fino al momento del calcolo. & \small{P06=$\% lavoro\ pianificato*tot. budget$}\\
+		\textbf{MPR07} & Indica il costo del lavoro effettuato fino al momento del calcolo. & \small{P07=$\% lavoro\ svolto*tot. budget$} \\	
+		
 		\bottomrule
 		\hiderowcolors
-		\caption{Strumenti utilizzati nel processo di sviluppo}
+		\caption{Descrizione metriche per il processo di progettazione}\\
 	\end{longtable}
