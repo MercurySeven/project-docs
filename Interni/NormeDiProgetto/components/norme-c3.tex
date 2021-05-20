@@ -1,7 +1,12 @@
 \section{Processi di supporto}
 \subsection{Documentazione}
+\subsubsection{Descrizione}
 Il processo di documentazione comprende le attività di stesura e aggiornamento di tutti i documenti creati durante il ciclo di vita del \glo{software} in modo da renderli formalmente concordi. In particolare, in questa sezione ne vengono normate le attività, comprendenti stesura, \glo{verifica} e approvazione. 
-\subsubsection{Ciclo di vita di un documento}
+\subsubsection{Scopo e aspettative}
+Ogni processo e attività significativi per lo sviluppo del progetto dovranno essere documentati. Nella presente sezione verranno descritte le regole e gli standard che disciplineranno il processo di Documentazione.
+Le attese del team per questo processo sono individuare una struttura comune per tutti i prodotti del processo e raccogliere tutte le norme comuni per la stesura dei documenti.
+\subsubsection{Design e sviluppo}
+\subsubsection*{Ciclo di vita di un documento}
 Ogni documento redatto passa per le seguenti fasi:
 
 {
@@ -25,64 +30,9 @@ Ogni documento redatto passa per le seguenti fasi:
 		\hiderowcolors
 		\caption{Descrizione fasi di vita del documento}
 	\end{longtable}
-
-\subsubsection{Documenti prodotti \hfil}
-
-I documenti prodotti saranno di due tipi:
-\begin{itemize}
-	\item \textbf{Formali}: sono caratterizzati da storico delle versioni prodotte e da approvazione della versione definitiva da parte del \textit{Responsabile di Progetto}. Possono essere:
-	\begin{itemize}
-		\item \textbf{interni}: riguardanti le dinamiche del gruppo;
-		\item \textbf{esterni}: di interesse ai committenti e al \glo{proponente}, vengono consegnati nell'ultima versione approvata.
-	\end{itemize} 
-In particolare, i documenti formali prodotti saranno:
-{
-	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
-	\renewcommand{\arraystretch}{1.5}
-	\setlength{\aboverulesep}{0pt}
-	\setlength{\belowrulesep}{0pt}
-	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
-		\rowcolor{AzzurroGruppo!30}
-		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
-		\toprule
-		\endhead		
-		\textbf{\NdP{}} & Contiene tutte le regole stabilite dai membri alle quali attenersi durante l'intera durata del progetto. & Interno \\ 
-		\textbf{\PdP{}} & Contiene la pianificazione di tutte le attività previste, comprendente il preventivo delle spese e una previsione dell'impegno in ore per ogni membro del gruppo. & Esterno \\
-		\textbf{\PdQ{}} & Descrive i criteri di valutazione della qualità impiegate dal gruppo & Esterno \\ 
-		\textbf{\SdF{}} & Contiene l'analisi dei capitolati messi a disposizione, evidenziandone pregi e difetti. Contiene, inoltre, il capitolato scelto dal gruppo & Interno \\
-		\textbf{\AdR{}} & Descrive i \glo{requisiti} che il prodotto dovrà possedere per essere in linea con le richieste dei committenti. & Esterno \\ 	
-		\textbf{\G{}} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
-		\bottomrule
-		\hiderowcolors
-		\caption{Nome, descrizione ed uso dei documenti formali prodotti}
-	\end{longtable}
-}
-
-\item \textbf{Informali}: sono documenti non soggetti a versionamento o che non sono ancora stati approvati dal \RdP{}. \newline 
-In particolare, i documenti informali prodotti saranno:
-{
-	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
-	\renewcommand{\arraystretch}{1.5}
-	\setlength{\aboverulesep}{0pt}
-	\setlength{\belowrulesep}{0pt}
-	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
-		\rowcolor{AzzurroGruppo!30}
-		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
-		\toprule
-		\endhead		
-		\textbf{Verbali interni} & Contengono le informazioni e le decisioni prese durante gli incontri tra i membri del gruppo. & Interno \\ 
-		\textbf{Verbali esterni} & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
-		\bottomrule
-		\hiderowcolors
-		\caption{Nome, descrizione ed uso dei documenti informali prodotti}
-	\end{longtable}
-}
-\end{itemize}
-\subsubsection{Directory di un documento}
-Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeDelDocumento}. Questa viene poi collocata, a seconda del tipo di contenuto, in una delle directory \textbf{Interni} o \textbf{Esterni}. 
-\subsubsection{Struttura dei documenti}
+	
+	
+\subsubsection*{Struttura dei documenti}
 \paragraph*{Attribuzione del nome}
 \begin{itemize}
 	\item La denominazione dei documenti formali sarà la seguente \newline
@@ -175,8 +125,7 @@ La struttura sarà quindi la seguente:
 		\caption{Descrizione struttura verbali}
 	\end{longtable}
 
-
-\subsubsection{Norme tipografiche}
+\subsubsection*{Norme tipografiche}
 \paragraph*{Convenzioni di denominazione}   
 I nomi delle cartelle e dei file relativi ai documenti adottano la convenzione \glo{PascalCase}, ossia il nome del file presenta l'iniziale di ogni parola che lo compone in maiuscolo, senza nessun separatore. Per file e cartelle legati alla struttura del documento i nomi non contengono caratteri maiuscoli. 
 \paragraph*{Stili di testo} 
@@ -318,7 +267,8 @@ Le seguenti tabelle riassumono tutte le sigle utilizzate e la loro descrizione. 
 		\hiderowcolors
 		\caption{Sigle relative alle revisioni di progetto}
 	\end{longtable}	
-\subsubsection{Elementi grafici}
+
+\subsubsection*{Elementi grafici}
 
 	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -338,7 +288,86 @@ Le seguenti tabelle riassumono tutte le sigle utilizzate e la loro descrizione. 
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione elementi grafici}
-	\end{longtable}	
+	\end{longtable}
+	
+\subsubsection{Produzione}	
+
+\subsubsection*{Documenti prodotti \hfil}
+
+I documenti prodotti saranno di due tipi:
+\begin{itemize}
+	\item \textbf{Formali}: sono caratterizzati da storico delle versioni prodotte e da approvazione della versione definitiva da parte del \textit{Responsabile di Progetto}. Possono essere:
+	\begin{itemize}
+		\item \textbf{interni}: riguardanti le dinamiche del gruppo;
+		\item \textbf{esterni}: di interesse ai committenti e al \glo{proponente}, vengono consegnati nell'ultima versione approvata.
+	\end{itemize} 
+In particolare, i documenti formali prodotti saranno:
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
+		\toprule
+		\endhead		
+		\textbf{\NdP{}} & Contiene tutte le regole stabilite dai membri alle quali attenersi durante l'intera durata del progetto. & Interno \\ 
+		\textbf{\PdP{}} & Contiene la pianificazione di tutte le attività previste, comprendente il preventivo delle spese e una previsione dell'impegno in ore per ogni membro del gruppo. & Esterno \\
+		\textbf{\PdQ{}} & Descrive i criteri di valutazione della qualità impiegate dal gruppo & Esterno \\ 
+		\textbf{\SdF{}} & Contiene l'analisi dei capitolati messi a disposizione, evidenziandone pregi e difetti. Contiene, inoltre, il capitolato scelto dal gruppo & Interno \\
+		\textbf{\AdR{}} & Descrive i \glo{requisiti} che il prodotto dovrà possedere per essere in linea con le richieste dei committenti. & Esterno \\ 	
+		\textbf{\G{}} & Elenco di tutti i termini presenti nella documentazione che, secondo i membri, necessitano una definizione al fine di chiarirne il significato e rimuovere eventuali ambivalenze. & Esterno \\  			
+		\bottomrule
+		\hiderowcolors
+		\caption{Nome, descrizione ed uso dei documenti formali prodotti}
+	\end{longtable}
+}
+
+\item \textbf{Informali}: sono documenti non soggetti a versionamento o che non sono ancora stati approvati dal \RdP{}. \newline 
+In particolare, i documenti informali prodotti saranno:
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} & \textbf{Uso}\\
+		\toprule
+		\endhead		
+		\textbf{Verbali interni} & Contengono le informazioni e le decisioni prese durante gli incontri tra i membri del gruppo. & Interno \\ 
+		\textbf{Verbali esterni} & Comprendono le informazioni ed i chiarimenti ricevuti durante gli incontri tra i membri ed il committente. & Esterno \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Nome, descrizione ed uso dei documenti informali prodotti}
+	\end{longtable}
+}
+\end{itemize}
+\subsubsection*{Directory di un documento}
+Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeDelDocumento}. Questa viene poi collocata, a seconda del tipo di contenuto, in una delle directory \textbf{Interni} o \textbf{Esterni}. 
+
+\subsubsection{Strumenti di stesura}
+
+	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.75\freewidth} L{.080\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{\LaTeX} & Linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti. \\
+		\textbf{Texmaker} & Editor intuitivo che permette una facile compilazione e visualizzazione dei documenti. \newline \url{(https://www.xm1math.net/texmaker/)}\\
+		\bottomrule
+		\hiderowcolors
+		\caption{Strumenti utilizzati durante il processo di documentazione}
+	\end{longtable}
+
 
 \subsubsection{Metriche}
 
@@ -363,28 +392,9 @@ Le seguenti tabelle riassumono tutte le sigle utilizzate e la loro descrizione. 
 	\end{longtable}
 }
 
-
-\subsubsection{Strumenti di stesura}
-
-	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
-	\renewcommand{\arraystretch}{1.5}
-	\setlength{\aboverulesep}{0pt}
-	\setlength{\belowrulesep}{0pt}
-	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.210\freewidth} L{.75\freewidth} L{.080\freewidth}}
-		\rowcolor{AzzurroGruppo!30}
-		\textbf{Nome} & \textbf{Descrizione} \\
-		\toprule
-		\endhead		
-		\textbf{\LaTeX} & Linguaggio compilato che permette un facile versionamento, la produzione coerente, ordinata, templetizzata e collaborativa dei documenti. \\
-		\textbf{Texmaker} & Editor intuitivo che permette una facile compilazione e visualizzazione dei documenti. \newline \url{(https://www.xm1math.net/texmaker/)}\\
-		\bottomrule
-		\hiderowcolors
-		\caption{Strumenti utilizzati durante il processo di documentazione}
-	\end{longtable}
-
 \subsection{Gestione della configurazione}
-Il processo di gestione della configurazione ha come scopo il gestire in maniera ordinata e sistematica la produzione di documenti e codice. In particolare, un elemento sottoposto a configurazione ha una collocazione, una denominazione e uno stato definiti, oltre che avere garantite modifica normata e versionamento. Le attività coinvolte sono:
+\subsubsection{Descrizione}
+Il processo è composto dalle seguenti attività:
 \begin{enumerate}
 	\item implementazione del processo;
 	\item identificazione della configurazione;
@@ -393,6 +403,9 @@ Il processo di gestione della configurazione ha come scopo il gestire in maniera
 	\item valutazione della configurazione;
 	\item gestione del rilascio e consegna.
 \end{enumerate}
+
+\subsubsection{Scopo e aspettative}
+Il processo di gestione della configurazione ha come scopo il gestire in maniera ordinata e sistematica la produzione di documenti e codice. In particolare, un elemento sottoposto a configurazione ha una collocazione, una denominazione e uno stato definiti, oltre che avere garantite modifica normata e versionamento. 
 \subsubsection{Versionamento}
 \paragraph*{Codice di versionamento}
 \label{cod-versionamento}
@@ -463,9 +476,31 @@ Tutti i membri del gruppo possono apportare modifiche ai file elaborati, salvo q
 Per modifiche minori ai file ogni singolo membro può operare con libero arbitrio, mentre per modifiche più sostanziose deve essere contattato il \RdP{} per il file in questione.\newline
 Ogni modifica deve poter essere giustificata davanti a tutto il \glo{team}.
 \newpage
+\subsubsection{Strumenti}
 \subsection{Accertamento della qualità}
+\subsubsection{Descrizione}
+Per l'accertamento della qualità è dedicato il documento \PdQ{}, descrivente le metriche e le modalità usate per valutare il livello di qualità di prodotti e processi. Il documento fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
 
-Il processo di accertamento della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}, documento che fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
+\subsubsection{Scopo e aspettative}
+Il processo di accertamento della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}. Le aspettative di questo processo sono:
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.90\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Aspettativa} \\
+		\toprule
+		\endhead
+		Conseguimento della qualità nel prodotto, secondo le richieste del proponente. \\
+		Prova oggettiva della qualità del prodotto. \\
+		Conseguimento della qualità nell'organizzazione delle attività del gruppo e dei processi. \\
+		Raggiungimento della piena soddisfazione del proponente. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Aspettative del processo di accertamento della qualità}
+	\end{longtable}
 \subsubsection{Controllo di qualità}
 Il gruppo \textit{\Gruppo{}} ritiene fondamentale stabilire delle regole che tutti i membri vadano a rispettare per il pieno raggiungimento di un \glo{sistema} di qualità predisposto al miglioramento continuo.
 Le attività che ciascun membro deve svolgere sono:
@@ -506,17 +541,33 @@ Con il perseguimento della qualità in mente, il gruppo \textit{\Gruppo{}} ha de
 	\item ogni processo al termine della pianificazione deve avere una durata ben definita.
 \end{itemize}
 \subsection{Verifica}
-Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi e di \glo{test} (\S{}\ref{veractivity}); per questo, il corretto funzionamento del processo è garantito dal rispetto delle seguenti regole: 
-\begin{itemize}
-	\item seguire procedure definite;
-	\item seguire criteri chiari ed affidabili;
-	\item passaggio del prodotto attraverso fasi successive opportunamente verificate;
-	\item il prodotto deve trovarsi in uno stato stabile dopo la \glo{verifica};
-	\item alla fine del processo deve essere possibile procedere alla fase di \glo{validazione}.
-\end{itemize}
+\subsubsection{Descrizione}
+Il processo di \glo{verifica} viene applicato su ogni processo in esecuzione al raggiungimento di un livello di maturità sufficiente e successivamente a cambiamenti inerenti lo stato.
+\subsubsection{Scopo e aspettative}
+Il processo di \glo{verifica} si occupa di determinare se i prodotti di una data attività sono corretti, coesi e completi e di individuare eventuali errori introdotti nella fase di sviluppo. Si compone di due attività che permettono di verificare che il prodotto sia conforme alle aspettative di analisi e di \glo{test} (\S{}\ref{veractivity}); le aspettative, per il corretto funzionamento del processo, sono le seguenti: 
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.90\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Aspettativa} \\
+		\toprule
+		\endhead
+		Seguire procedure definite. \\
+		Seguire criteri chiari ed affidabili. \\
+		Passaggio del prodotto attraverso fasi successive opportunamente verificate. \\
+		Il prodotto deve trovarsi in uno stato stabile dopo la \glo{verifica}. \\
+		Alla fine del processo deve essere possibile procedere alla fase di \glo{validazione}. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Aspettative del processo di accertamento della qualità}
+	\end{longtable}
 Sono soggetti a \glo{verifica} sia il \glo{software} che la documentazione. 
 
-\subsubsection{Attività} \label{veractivity}
+\subsubsection{Analisi} \label{veractivity}
 
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -606,6 +657,8 @@ Dove:
 		\end{itemize}
 	\item \textbf{Id:} codice identificativo.
 \end{itemize}
+
+\subsubsection{Strumenti}
 
 \subsubsection{Metriche}
 
