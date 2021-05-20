@@ -38,7 +38,7 @@ Il progetto segue la seguente struttura:
     \includegraphics[scale = 0.5]{components/img/struttura-cartella-ssd.png}
     \caption{Struttura del progetto}
     \label{fig:Struttura del progetto}
-\end{figure}  
+\end{figure}
 \subsubsection{.github}
 La cartella .github contiene tutte le informazioni necessarie per la \gloman{CI}. Essa è strutturata nel seguente modo:
 \begin{figure}[H]
@@ -58,7 +58,7 @@ Il file "codecov.yml" posizionato dentro la cartella .github serve per poter imp
         \rowcolor{AzzurroGruppo!30}
         \textbf{Keyword} & \textbf{Descrizione}\\
         \toprule
-        \endhead	
+        \endhead
         Precision & La precisione delle cifre dopo la virgola della percentuale di codice coperto da test.\\
         Round & Come viene arrotondata la cifra dopo la troncatura determinata dalla precisione selezionata.\\
         Range & Il valore minimo e massimo della percentuale di codice coperto da test, valori esclusi da questo intervallo faranno fallire la \gloman{CI}. \\
@@ -72,7 +72,7 @@ Il file "codecov.yml" posizionato dentro la cartella .github serve per poter imp
     \includegraphics[scale = 0.5]{components/img/contenuto-github-codecov.png}
     \caption{Contenuto file codecov.yml}
     \label{fig:Contenuto file codecov.yml}
-\end{figure}  
+\end{figure}
 I file contenuti dentro la folder "workflows" invece specificano diverse regole per la configurazione della \gloman{CI}, meglio riassunte nella seguente tabella:
 {
     \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
@@ -84,7 +84,7 @@ I file contenuti dentro la folder "workflows" invece specificano diverse regole 
         \rowcolor{AzzurroGruppo!30}
         \textbf{File} & \textbf{Descrizione}\\
         \toprule
-        \endhead	
+        \endhead
         ci.yml & Configurazione delle \gloman{actions} di GitHub. Si ha una prima fase di setup dei vari sistemi operativi, vengono poi indicate le azioni che dovranno essere eseguite ed infine l'ultima azione comunica nell'apposito canale slack il successo della \gloman{CI}.\\
         codecov.yml & Configurazione della \gloman{CI} nel sito codecov che servirà a tenere traccia della percentuale di codice coperta da test.\\
         lint.yml & Configurazione dell'analisi statica che avverrà ad ogni commit. \\
@@ -93,7 +93,7 @@ I file contenuti dentro la folder "workflows" invece specificano diverse regole 
         \caption{Nome e descrizione delle configurazioni per la CI}
     \end{longtable}
 }
-\subsubsection{assets}    
+\subsubsection{assets}
 Questa folder contiene tutti i file utilizzati per la resa grafica della applicazione. Nella tabella vengono esplicitate le funzioni principali:
 {
     \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
@@ -105,7 +105,7 @@ Questa folder contiene tutti i file utilizzati per la resa grafica della applica
         \rowcolor{AzzurroGruppo!30}
         \textbf{Nome} & \textbf{Descrizione}\\
         \toprule
-        \endhead	
+        \endhead
         icons & Icone utilizzate nell'applicazione, i nomi sono esplicativi della loro funzione ed ogni immagine è realizzata dal team, priva quindi di copyright.\\
         style.qss & Configurazione della resa estetica dell'applicazione. È l'equivalente del css di un sito web.\\
         \bottomrule
@@ -118,15 +118,15 @@ Questa folder contiene tutti i file utilizzati per la resa grafica della applica
     \includegraphics[scale = 0.5]{components/img/struttura-cartella-assets.png}
     \caption{Struttura della cartella assets}
     \label{fig:Struttura della cartella assets}
-\end{figure}   
-\subsubsection{docs} 
-La cartella docs contiene al suo interno le principali guide che vengono stilate dal team di sviluppo.  
+\end{figure}
+\subsubsection{docs}
+La cartella docs contiene al suo interno le principali guide che vengono stilate dal team di sviluppo.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.5]{components/img/struttura-cartella-docs.png}
     \caption{Struttura della cartella docs}
     \label{fig:Struttura della cartella docs}
-\end{figure}    
+\end{figure}
 \subsubsection{src} \label{sec:cartelle-src}
 Il codice sorgente è stato diviso logicamente in diverse cartelle, descritte nella seguente tabella:
 {
@@ -139,7 +139,7 @@ Il codice sorgente è stato diviso logicamente in diverse cartelle, descritte ne
         \rowcolor{AzzurroGruppo!30}
         \textbf{Cartella} & \textbf{Descrizione}\\
         \toprule
-        \endhead	
+        \endhead
         algorithm & Contiene tutte le classi che contengono la logica di sincronizzazione del programma. La logica dell'algoritmo è parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata.\\
         controllers & Contiene tutte le classi facenti parte del controller.\\
         model & Contiene tutte le classi facenti parte del model e non strettamente legate alla logica di sincronizzazione o alla gestione di rete.\\
@@ -155,7 +155,7 @@ Il codice sorgente è stato diviso logicamente in diverse cartelle, descritte ne
     \includegraphics[scale = 0.5]{components/img/struttura-cartella-src.png}
     \caption{Struttura della cartella src}
     \label{fig:Struttura della cartella src}
-\end{figure}    
+\end{figure}
 \subsubsection{tests} \label{sec:cartelle-tests}
 Per la cartella contenente tutti i test di unità è stato scelto, per mantenere uno standard di consistenza elevato e per quindi avere sempre chiaro dove le varie componenti sono, di utilizzare la stessa struttura presente nella cartella src descritta a \S{}\ref{sec:cartelle-src}.
 \begin{figure}[H]
@@ -179,11 +179,11 @@ Questo modulo contiene diverse classi utilizzate a scopo di testing. Le classi c
         \rowcolor{AzzurroGruppo!30}
         \textbf{Nome classe} & \textbf{Descrizione classe}\\
         \toprule
-        \endhead	
+        \endhead
         DefaultCode & Classe fondamentale contenuta nel modulo, eredita dalla classe base "\textit{unittest.TestCase}". Questa classe esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato modificarla con cura ed attenzione per evitare di rompere ogni test.\\
         ResultObj & Imita la decisione dello strategy su un nodo, viene utilizzato quando si utilizzano mock. Offre la possibilità di iterare su di esso. \\
         FakeLogger & Utizzata per effettuare il mock delle chiamate ai vari logger presenti nel codice. \\
-        NodeMetadata &  Utilizzata per simulare le chiamate richiedenti info sui metadati dei file.\\
+        NodeMetadata & Utilizzata per simulare le chiamate richiedenti info sui metadati dei file.\\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione delle classi contenute nel modulo default\_code}
@@ -203,7 +203,7 @@ La classe DefaultCode presenta due metodi che vengono ereditati dalla classe bas
         \rowcolor{AzzurroGruppo!30}
         \textbf{Nome classe} & \textbf{Descrizione classe}\\
         \toprule
-        \endhead	
+        \endhead
         SetUp & Metodo che viene automaticamente eseguito prima di ogni test. Salva lo stato delle variabili di ambiente attuali e crea eventuali cartelle utilizzate a scopo di test.\\
         TearDown & Metodo che viene automaticamente eseguito in seguito ad ogni test. Rispristina lo stato delle variabili di ambiente prima del test ed elimina eventuali cartelle create a scopo di test.\\
         \bottomrule
@@ -211,4 +211,3 @@ La classe DefaultCode presenta due metodi che vengono ereditati dalla classe bas
         \caption{Nome e descrizione dei metodi contenuti nella classe DefaultCode}
     \end{longtable}
 }
- 
