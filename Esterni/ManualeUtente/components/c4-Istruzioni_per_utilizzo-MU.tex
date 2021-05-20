@@ -208,6 +208,29 @@ La modifica di un file sincronizzato avviene in maniera analoga alla modifica di
 \subsubsection{Cancellazione di un file sincronizzato}
 L'eliminazione di un file sincronizzato avviene analogamente all'eliminazione di un qualsiasi file locale, dopo aver eliminato il file dalla cartella sincronizzata questa modifica verrà propagata anche sul server.
 
+\subsection{Notifiche}
+L'applicazione può inviare all'utente le seguenti notifiche:
+\begin{itemize}
+    \item Uno o più file sono stati scaricati;
+    \item Uno o più file sono stati aggiornati;
+    \item L'applicazione non è in grado di connettersi ad internet;
+    \item L'utente ha esaurito la quota disco, quindi i file non possono essere scaricati;
+    \item Le credenziali sono state cambiate, l'utente deve aggiornarle all'interno dell'applicazione.
+\end{itemize}
+Le notifiche che l'utente vedrà più spesso sono quelle relative ai file aggiornati e scaricati.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{components/img/notifica_download_new_file.png}
+    \caption{Notifica di un nuovo file che è stato scaricato}
+    \label{fig:impostazioni}
+\end{figure}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{components/img/notifica_download_update_file.png}
+    \caption{Notifica di un file che è stato aggiornato}
+    \label{fig:impostazioni}
+\end{figure}
+
 \subsection{Impostazioni}
 \label{sec:impostazioni}
 \begin{figure}[H]
