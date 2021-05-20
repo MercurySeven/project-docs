@@ -21,7 +21,7 @@ La sintassi per l'aggiunta della libreria è la seguente:
 Per rendere effettivi i cambiamenti, bisogna usare il seguente comando:
 \newline{}\centerline{\textbf{pip install -r requirements.txt}}\newline{}
 
-\subsection{Aggioramento librerie}
+\subsection{Aggiornamento librerie}
 Per cercare gli eventuali aggiornamenti delle librerie si consiglia di usare il seguente comando:
 \newline{}\centerline{\textbf{pip list --outdated}}\newline{}
 \begin{figure}[H]
@@ -85,7 +85,7 @@ I file contenuti dentro la folder "workflows" invece specificano diverse regole 
         \textbf{File} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        ci.yml & Configurazione delle \gloman{actions} di GitHub. Si ha una prima fase di setup dei vari sistemi operativi, vengono poi indicate le azioni che dovranno essere eseguite ed infine l'ultima azione comunica nell'apposito canale slack il successo della \gloman{CI}.\\
+        ci.yml & Configurazione delle \gloman{actions} di GitHub. Si ha una prima fase di setup dei vari sistemi operativi, vengono poi indicate le azioni che dovranno essere eseguite ed infine l'ultima azione comunica nell'apposito canale Slack il successo della \gloman{CI}.\\
         codecov.yml & Configurazione della \gloman{CI} nel sito codecov che servirà a tenere traccia della percentuale di codice coperta da test.\\
         lint.yml & Configurazione dell'analisi statica che avverrà ad ogni commit. \\
         \bottomrule
@@ -107,7 +107,7 @@ Questa folder contiene tutti i file utilizzati per la resa grafica della applica
         \toprule
         \endhead
         icons & Icone utilizzate nell'applicazione, i nomi sono esplicativi della loro funzione ed ogni immagine è realizzata dal team, priva quindi di copyright.\\
-        style.qss & Configurazione della resa estetica dell'applicazione. È l'equivalente del css di un sito web.\\
+        style.qss & Configurazione della resa estetica dell'applicazione. È l'equivalente del CSS di un sito web.\\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione assets}
@@ -184,7 +184,7 @@ Questo modulo contiene diverse classi utilizzate a scopo di testing. Le classi c
         \endhead
         DefaultCode & Classe fondamentale contenuta nel modulo, eredita dalla classe base "\textit{unittest.TestCase}". Questa classe esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato modificarla con cura ed attenzione per evitare di rompere ogni test.\\
         ResultObj & Imita la decisione dello strategy su un nodo, viene utilizzato quando si utilizzano mock. Offre la possibilità di iterare su di esso. \\
-        FakeLogger & Utizzata per effettuare il mock delle chiamate ai vari logger presenti nel codice. \\
+        FakeLogger & Utilizzata per effettuare il mock delle chiamate ai vari logger presenti nel codice. \\
         NodeMetadata & Utilizzata per simulare le chiamate richiedenti info sui metadati dei file.\\
         \bottomrule
         \hiderowcolors
@@ -207,7 +207,7 @@ La classe DefaultCode presenta due metodi che vengono ereditati dalla classe bas
         \toprule
         \endhead
         SetUp & Metodo che viene automaticamente eseguito prima di ogni test. Salva lo stato delle variabili di ambiente attuali e crea eventuali cartelle utilizzate a scopo di test.\\
-        TearDown & Metodo che viene automaticamente eseguito in seguito ad ogni test. Rispristina lo stato delle variabili di ambiente prima del test ed elimina eventuali cartelle create a scopo di test.\\
+        TearDown & Metodo che viene automaticamente eseguito in seguito ad ogni test. Ripristina lo stato delle variabili di ambiente prima del test ed elimina eventuali cartelle create a scopo di test.\\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione dei metodi contenuti nella classe DefaultCode}

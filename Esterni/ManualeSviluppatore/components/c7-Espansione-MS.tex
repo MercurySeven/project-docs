@@ -1,7 +1,7 @@
 \section{Espansione}
 
 \subsection{Aggiunta tripletta model-view-controller} \label{sec:aggiuntamvc}
-Per inserire una tripletta mvc i passaggi verranno elencati prima nello specifico di ogni componente ed infine verrà esplicitato come collegare correttamente ogni componente. Per maggiori informazioni sulla struttura del codice fare riferimento a \S{}\ref{sec:cartelle-src}
+Per inserire una tripletta MVC i passaggi verranno elencati prima nello specifico di ogni componente ed infine verrà esplicitato come collegare correttamente ogni componente. Per maggiori informazioni sulla struttura del codice fare riferimento a \S{}\ref{sec:cartelle-src}
 
 \subsubsection{Aggiunta model}
 Per aggiungere un nuovo model bisogna creare una nuova classe all'interno della cartella "model" che erediti dalla classe "\textit{QObject}". Se esso deve implementare il pattern singleton fare riferimento a \S{}\ref{sec:singleton-python}. La nuova componente del modello dovrà avere un segnale al suo interno per comunicare i cambiamenti del suo stato, il segnale è una variabile di classe istanziata con il seguente codice: \texttt{Sg\_model\_changed = Signal()} e ad ogni cambiamento di stato del modello deve essere segnalato emettendo un segnale così: \texttt{self.Sg\_model\_changed.emit()}.
@@ -21,13 +21,13 @@ La view deve inoltre esporre un metodo per ricevere segnali dal modello, questo 
 Per aggiungere una nuova parte del controller bisogna creare una nuova classe all'interno della cartella "controllers". Il controller deve inoltre esporre un metodo per ricevere segnali dalla vista, questo lo si realizza marcando il metodo in questione con il decorator "\textit{@Slot()}".
 
 \subsubsection{Collegamento componenti}
-Dopo aver creato le strutture di ogni componente della nuova tripletta mvc il controller viene utilizzato per collegare il tutto. 
+Dopo aver creato le strutture di ogni componente della nuova tripletta MVC il controller viene utilizzato per collegare il tutto. 
 Si deve quindi collegare il segnale emanato dalla nuova vista ad ogni cambiamento al metodo con decorator @Slot() precedentemente creato nel controller e il segnale emanato dal model ad ogni cambiamento al metodo con decorator @Slot() precedentemente creato nella vista. Il collegamento avviene nel costruttore del controller utilizzando la sintassi mostrata nella seguente immagine:
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.50]{components/img/collegamento-segnali-mvc.png}
-    \caption{Collegamento componenti mvc}
-    \label{fig:Collegamento componenti mvc}
+    \caption{Collegamento componenti MVC}
+    \label{fig:Collegamento componenti MVC}
 \end{figure}
 Il metodo connect può essere solo invocato su segnali e come argomento devono avere il riferimento al metodo con decorator @Slot().
 
@@ -135,7 +135,7 @@ La sintassi del controllo dei risultati è meglio descritta nella seguente tabel
         \textbf{Parola chiave} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        self.assertEqual & Metodo ereditato dalla classe base DefaultCode che lo eredita a sua volta da unittest.TestCase. Questo metodo confronta i due argomenti a lui dati e nel caso in cui non siano uguali fà fallire il test.\\
+        self.assertEqual & Metodo ereditato dalla classe base DefaultCode che lo eredita a sua volta da unittest.TestCase. Questo metodo confronta i due argomenti a lui dati e nel caso in cui non siano uguali fa fallire il test.\\
         result & Il risultato del metodo da noi chiamato. \\
         risultato\_previsto & Il risultato che ci aspettiamo il metodo restituisca.\\
         \bottomrule

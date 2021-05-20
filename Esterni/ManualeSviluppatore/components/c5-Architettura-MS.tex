@@ -50,9 +50,9 @@ Esistono diverse soluzioni per poter implementare questo pattern in Python, nel 
 \begin{itemize}
     \item Creare una variabile di classe "\textit{\_\_create\_key}" ed assegnarle un nuovo object: \texttt{\_\_create\_key = object()};
     \item Creare un metodo di classe chiamato "\textit{get\_instance}" con argomento una chiave. Il metodo si occupa di creare l'istanza della classe se essa non esiste passando al costruttore la chiave ricevuta;
-    \item All'interno del costruttore "\textit{\_\_init\_\_(self, key)}" avere la seguente istruzione \texttt{assert(key == \_\_create\_key)}. In questo modo il costruttore potrà essere chiamato solamente all'interno della classe stessa e sarà il metodo "\textit{get\_istance}" a fare da unico punto d'accesso pubblico esterno.
+    \item All'interno del costruttore "\textit{\_\_init\_\_(self, key)}" avere la seguente istruzione \texttt{assert(key == \_\_create\_key)}. In questo modo il costruttore potrà essere chiamato solamente all'interno della classe stessa e sarà il metodo "\textit{get\_instance}" a fare da unico punto d'accesso pubblico esterno.
 \end{itemize}
-Se si volesse avere anche un Singleton thread-safe si deve implementare un sistema di lock (\url{https://docs.python.org/3/library/threading.html}) all'interno del metodo "\textit{get\_istance}" evitando che due metodi si contendano il suo utilizzo.
+Se si volesse avere anche un Singleton thread-safe si deve implementare un sistema di lock (\url{https://docs.python.org/3/library/threading.html}) all'interno del metodo "\textit{get\_instance}" evitando che due metodi si contendano il suo utilizzo.
 
 \subsection{Design pattern strutturali: Virtual Proxy}
 Il pattern Proxy viene utilizzato per evitare chiamate di rete non necessarie, permettendo la \gloman{lazy initialization}.\newline{}
