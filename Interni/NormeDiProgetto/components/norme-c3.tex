@@ -90,7 +90,7 @@ Le directory prendono il nome dal documento contenuto, nella forma \textbf{NomeD
 	\begin{itemize}
 		\item \textbf{NomeDelDocumento} è il nome ufficiale del documento, senza spazi tra le parole e con solamente le iniziali di ogni parola in maiuscolo (convenzione \glo{PascalCase});
 		\item \textbf{v} che abbrevia la parola versione;
-		\item \textbf{[X].[Y].[Z]-[a].[b]} è il codice di versionamento (fare riferimento a \S{} \ref{cod-versionamento}.
+		\item \textbf{[X].[Y].[Z]-[a].[b]} è il codice di versionamento (fare riferimento a \S{} \ref{cod-versionamento}).
 	\end{itemize}
 	\item La denominazione dei verbali sarà la seguente\newline
 	\textbf{Verbale[Interno/Esterno]\_[YYYY]\_[MM]\_[DD]}\newline
@@ -354,7 +354,8 @@ Le seguenti tabelle riassumono tutte le sigle utilizzate e la loro descrizione. 
 		\toprule
 		\endhead		
 		\textbf{MDC01} & Indice di Gulpease & Indice che riporta il grado di leggibilità di un testo redatto in lingua italiana & \small{$Ig= 89 + \frac{300 * (n\ frasi) - 10 * (n\ lettere)}{n\ parole}$} \\
-		\textbf{MDC02} & Correttezza Ortografica & Indice che riporta la correttezza ortografica del testo. Questo valore deve essere il più elevato possibile come indicato nel \PdQ{} & Correttezza >= 95\% \\
+		\textbf{MDC02} & Indice di Flesch-Vacca & Indice che riporta il grado di leggibilità di un testo & \small{$Ifv = 206-0.65 * (sillabe di 100 parole) - (media di parole per frase)$}\\
+		\textbf{MDC03} & Correttezza Ortografica & Indice che riporta la correttezza ortografica del testo. Questo valore deve essere il più elevato possibile come indicato nel \PdQ{} & Correttezza >= 95\% \\
 		
 		\bottomrule
 		\hiderowcolors
@@ -417,8 +418,7 @@ La storia di un prodotto realizzato dal gruppo, che questo sia un documento o co
 		\hiderowcolors
 		\caption{Descrizione codice di versionamento}
 	\end{longtable}
-Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate.\newline{}
-Le modifiche apportate in attesa di \glo{verifica} vengono identificate con un codice numerico progressivo che riparte da 0 ad ogni \glo{verifica}.
+Ogni incremento deve essere associato ad una \glo{verifica} delle modifiche apportate.
 \paragraph*{Tecnologie adottate}
 Per la gestione delle versioni è stato scelto di utilizzare il \glo{sistema} di versionamento distribuito \textit{\glo{Git}} con due \glo{repository} remoti presenti su \textit{\glo{GitHub}}.
 \paragraph*{Repository}
@@ -608,7 +608,33 @@ Dove:
 \end{itemize}
 
 \subsubsection{Metriche}
-Il gruppo ritiene prematuro stabilire in questa fase delle \glo{metriche} per i \glo{test} in questione. La sezione sarà opportunamente integrata.
+\begin{table}[H]
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzurroGruppo!10}{white}
+			\begin{tabular}{ c C{6cm} C{3cm} C{3cm} }
+				\rowcolor{AzzurroGruppo!30} 
+				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
+				\toprule
+				MPR03 & Soddisfazione \glo{requisiti} obbligatori & $100 \%$ & $100 \%$ \\
+				MPR04 & Soddisfazione \glo{requisiti} opzionali & $ 0 \%$ & $ 100\%$ \\
+				MVR01 & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti & $ 0\%$  & $0\%$ \\
+				MCD01 & Percentuale degli errori gestiti & $ 95\%$ - $100\% $ & $100\%$ \\
+				MVR02 & Comprensibilità delle funzionalità offerte & $ 80\%$ - $100\% $ & $100\%$ \\
+				MVR03 & Facilità di apprendimento e di utilizzo del prodotto & $10$-$15$ minuti & $5$-$10$ minuti \\
+				MCD02 & Complessità ciclomatica & $0$ - $15$ & $0$ - $10$ \\
+				MCD03 & Variabili non utilizzate & $0$ & $0$ \\
+				MCD04 & Rapporto linee di codice e linee commentate & $5$ - $3$ & $3$ - $1$\\
+				MCD05 & Code coverage & $80\%$-$100\%$ & $100\%$ \\
+				MCD06 & Lunghezza della riga di codice & $0$-$100$ caratteri & $0$-$80$ caratteri \\
+				MCD07 & Brevità dei metodi & $0$-$50$ istruzioni & $0$-$50$ istruzioni \\
+				\bottomrule
+			\end{tabular}
+			\caption{Tabella delle metriche e degli obiettivi relativi al prodotto}
+		\end{center}
+	\end{table}
 
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
