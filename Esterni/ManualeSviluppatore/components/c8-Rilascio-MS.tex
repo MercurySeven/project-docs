@@ -3,7 +3,7 @@
 \subsection{Come eseguire il rilascio su Windows}
 Per generare l'eseguibile su Windows è necessario eseguire il file:
 \newline{}\centerline{\textbf{win-dist.bat}}\newline{}
-Viene generato un virtual environment di Python (se non presente), successivamente dopo aver installato tutte le librerie viene generato l'eseguibile all'interno della cartella \textit{dist} con il nome \textit{SSD.exe}\\
+Viene generato un virtual environment di Python (se non presente), successivamente dopo aver installato tutte le librerie viene generato l'eseguibile all'interno della cartella \textit{dist} con il nome \textit{SSD.exe}.\\
 Per leggere gli eventuali messaggi di errore, è necessario rimuovere il flag \textit{--windowed} dal file \textit{win-dist.bat}. Una volta lanciato il programma comparirà una finestra del terminale dove poter leggere gli errori presenti.
 \begin{figure}[H]
     \centering
@@ -11,3 +11,18 @@ Per leggere gli eventuali messaggi di errore, è necessario rimuovere il flag \t
     \caption{File win-dist.bat}
     \label{fig:File win-dist.bat}
 \end{figure}
+
+\subsection{Come eseguire il rilascio su Linux}
+Per generare l'eseguibile su Linux è necessario entrare nel virtual enviroment dell'ambiente di sviluppo con il comando da terminale:
+\newline{}\centerline{\texttt{source venv/bin/activate}}\newline{}
+ed in seguito dare i permessi di esecuzione ed eseguire il file:
+\newline{}\centerline{\textbf{linux-dist.sh}}\newline{}
+Viene così creata una AppImage nella cartella \textit{dist} con il nome SSD.AppImage. \\
+Questa AppImage contiene al suo interno tutte le librerie ed il file può essere trasferito a piacimento nello stesso computer ed essere anche distribuito in altri computer con sistema operativo linux.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.2]{components/img/linux-deploy-script.png}
+    \caption{File linux-dist.sh}
+    \label{fig:File win-dist.bat}
+\end{figure}
+
