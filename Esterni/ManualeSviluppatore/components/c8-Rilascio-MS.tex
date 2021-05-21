@@ -13,10 +13,11 @@ Per leggere gli eventuali messaggi di errore, è necessario rimuovere il flag \t
 \end{figure}
 
 \subsection{Come eseguire il rilascio su Linux}
-Per generare l'eseguibile su Linux è necessario entrare nel virtual enviroment dell'ambiente di sviluppo con il comando da terminale:
+Per effettuare il rilascio su Linux è necessario entrare nel virtual enviroment dell'ambiente di sviluppo con il comando da terminale:
 \newline{}\centerline{\texttt{source venv/bin/activate}}\newline{}
-ed in seguito dare i permessi di esecuzione ed eseguire il file:
-\newline{}\centerline{\textbf{linux-dist.sh}}\newline{}
+in seguito bisogna dare i permessi di esecuzione ed eseguire il seguente file:
+\newline{}\centerline{\texttt{chmod +x linux-dist.sh}}
+\newline{}\centerline{\texttt{./linux-dist.sh}}\newline{}
 Viene così creata una AppImage nella cartella \textit{dist} con il nome \textit{SSD.AppImage}. \\
 Questa AppImage contiene al suo interno tutte le librerie ed il file può essere trasferito a piacimento nello stesso computer ed essere anche distribuito in altri computer con sistema operativo Linux.
 \begin{figure}[H]
@@ -25,4 +26,18 @@ Questa AppImage contiene al suo interno tutte le librerie ed il file può essere
     \caption{File linux-dist.sh}
     \label{fig:File win-dist.bat}
 \end{figure}
+
+\subsection{Come eseguire il rilascio su macOS}
+Per effettuare il rilascio su macOS è necessario tramite terminale andare nella cartella di root del progetto, dare i permessi di esecuzione ed eseguire il seguente file:
+\newline{}\centerline{\texttt{chmod +x mac-dist.sh}}
+\newline{}\centerline{\texttt{./mac-dist.sh}}\newline{}
+Viene così creato uno zip nella cartella \textit{macOS} con il nome \textit{SSD\_macOS.zip}. \\
+Questo zip contiene al suo interno la AppImage e il file sh utilizzato per far partire correttamente l'applicazione.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/macos-deploy-script.png}
+    \caption{File macos-dist.sh}
+    \label{fig:File win-dist.bat}
+\end{figure}
+
 
