@@ -4,6 +4,7 @@
 \subsubsection{Selezione del percorso dove sincronizzare}
 \label{sec:selezionepath}
 Al primo avvio, verrà chiesto di scegliere una cartella dove verranno salvati i file presenti nel server e dove l'utente inserirà i nuovi file che vorrà sincronizzare.
+L'utente è obbligato a dover scegliere una cartella, in caso chiudesse la finestra senza aver selezionato una cartella valida, l'applicazione si chiuderà.
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.50]{components/img/selezione-path.png}
@@ -78,7 +79,7 @@ Il menù laterale è posizionato a sinistra della vista e presenta quattro pulsa
     \label{fig:PfileSync}
 \end{figure}
 \begin{itemize}
-\item \textbf{Pulsante file remoti}: mostra i file presenti sul server (\S{}\ref{sec:fileRemoti}); \
+\item \textbf{Pulsante file remoti}: mostra i file presenti nel server (\S{}\ref{sec:fileRemoti}); \
 \end{itemize}
 \begin{figure}[H]
     \centering
@@ -206,7 +207,7 @@ Per aggiornare la lista dei file visualizzati nella vista \ref{sec:fileRemoti} c
 \subsubsection{Modifica di un file sincronizzato}
 La modifica di un file sincronizzato avviene in maniera analoga alla modifica di un qualsiasi file locale, dopo aver effettuato i cambiamenti necessari è sufficiente salvare il documento e questo verrà automaticamente sincronizzato con il server.
 \subsubsection{Cancellazione di un file sincronizzato}
-L'eliminazione di un file sincronizzato avviene analogamente all'eliminazione di un qualsiasi file locale, dopo aver eliminato il file dalla cartella sincronizzata questa modifica verrà propagata anche sul server.
+L'eliminazione di un file sincronizzato avviene analogamente all'eliminazione di un qualsiasi file locale, dopo aver eliminato il file dalla cartella sincronizzata questa modifica verrà propagata anche nel server.
 
 \subsection{Notifiche}
 L'applicazione può inviare all'utente le seguenti notifiche:
@@ -261,8 +262,8 @@ In questa sezione delle impostazioni è possibile modificare il percorso della c
 \end{figure}
 In questa sezione è possibile scegliere la politica di risoluzione dei conflitti. Ci sono due opzioni:
 \begin{itemize}
-\item\textbf{Client:} selezionando questa opzione le modifiche effettuate in locale andranno a sovrascrivere quelle caricate sul server;\
-\item\textbf{Manuale:} selezionando questa opzione, ogni volta che il file in locale differisce dal file presente sul server verranno salvate entrambe le versioni in locale e sarà l'utente a decidere quale mantenere.\
+\item\textbf{Client:} selezionando questa opzione le modifiche effettuate in locale andranno a sovrascrivere quelle caricate nel server;\
+\item\textbf{Manuale:} selezionando questa opzione, ogni volta che il file in locale differisce dal file presente nel server verranno salvate entrambe le versioni in locale e sarà l'utente a decidere quale mantenere.\
 \end{itemize}
 
 \subsubsection{Modifica finestra temporale}
