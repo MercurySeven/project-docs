@@ -221,7 +221,7 @@ Le seguenti tabelle contengono i dati del consuntivo per lo \glo{sprint} 10. La 
 			\setlength{\belowrulesep}{0pt}
 			\setlength{\extrarowheight}{.75ex}
 			\rowcolors{2}{AzzurroGruppo!10}{white}
-			\begin{tabular}{ c c c c c c c c }
+			\begin{tabular}{ l c c c c c c c }
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Obiettivo} & \textbf{Stato} \\
 				\toprule
@@ -276,7 +276,7 @@ Le seguenti tabelle contengono i dati del consuntivo per lo \glo{sprint} 11. La 
 			\setlength{\belowrulesep}{0pt}
 			\setlength{\extrarowheight}{.75ex}
 			\rowcolors{2}{AzzurroGruppo!10}{white}
-			\begin{tabular}{ c c c c c c c c }
+			\begin{tabular}{ l c c c c c c c }
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Obiettivo} & \textbf{Stato} \\
 				\toprule
@@ -286,6 +286,7 @@ Le seguenti tabelle contengono i dati del consuntivo per lo \glo{sprint} 11. La 
 				Aggiunta messaggio di errore del login. & \xmark{} \\
 				Aggiunta messaggio di conferma per il logout & \checkmark{} \\
 				Aggiornamento \textit{Piano di Progetto}. & \checkmark{} \\
+				Aggiornamento \textit{Norme di Progetto}. & \checkmark{} \\
 				Aggiornamento \textit{Manuale Sviluppatore}. & \checkmark{} \\
 				Aggiornamento \textit{Manuale Utente}. & \checkmark{} \\
 				Aggiornamento del \textit{Glossario}. & \checkmark{} \\
@@ -333,7 +334,7 @@ Le seguenti tabelle contengono i dati del consuntivo per lo \glo{sprint} 12. La 
 			\setlength{\belowrulesep}{0pt}
 			\setlength{\extrarowheight}{.75ex}
 			\rowcolors{2}{AzzurroGruppo!10}{white}
-			\begin{tabular}{ c c c c c c c c }
+			\begin{tabular}{ l c c c c c c c }
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Obiettivo} & \textbf{Stato} \\
 				\toprule
@@ -380,8 +381,50 @@ Le seguenti tabelle contengono i dati del consuntivo per lo \glo{sprint} 12. La 
 
 
 \subsubsection{Consuntivo di periodo}
+Le seguenti tabelle contengono i dati del consuntivo per il periodo di progettazione di validazione e collaudo, riassumendo le tabelle di consuntivo dello \glo{sprint} 10, 11 e 12. La prima tabella contiene il consuntivo degli obiettivi, con \checkmark{} indicante gli obiettivi completati e \xmark{} per indicare gli obiettivi non completati. La seconda tabella invece contiene i dati economici del consuntivo.\newline{}
+Le seguenti tabelle contengono i dati del consuntivo per il periodo di progettazione di validazione e collaudo, riassumendo le tabelle di consuntivo dello \glo{sprint} 10, 11 e 12:
 
-La seguente tabella contiene i dati del consuntivo per il periodo di progettazione di validazione e collaudo, riassumendo le tabelle di consuntivo dello \glo{sprint} 10, 11 e 12:
+\begin{table}[H]
+		\begin{center}
+			\setlength{\aboverulesep}{0pt}
+			\setlength{\belowrulesep}{0pt}
+			\setlength{\extrarowheight}{.75ex}
+			\rowcolors{2}{AzzurroGruppo!10}{white}
+			\begin{tabular}{ l c c c c c c c }
+				\rowcolor{AzzurroGruppo!30} 
+				\textbf{Obiettivo} & \textbf{Stato} \\
+				\toprule
+				
+				Rifattorizzazione della architettura del codice. & \checkmark{} \\
+				Implementazione strategia manuale. & \checkmark{} \\
+				Miglioramento sistema di notifiche. & \checkmark{} \\
+				Implementazione scelta intervallo di sincronizzazione. & \checkmark{} \\
+				Aggiornamento \textit{Piano di Qualifica}. & \checkmark{} \\	
+				Aggiornamento \textit{Norme di Progetto}. & \checkmark{} \\		
+				
+				Implementazione whitelist per la selezione dei file da sincronizzare. & \checkmark{} \\
+				Implementazione del sistema di logout. & \checkmark{} \\
+				Miglioramento selezione della quota disco. & \checkmark{} \\
+				Aggiunta messaggio di conferma per il logout & \checkmark{} \\
+				Aggiornamento \textit{Piano di Progetto}. & \checkmark{} \\
+				Aggiornamento \textit{Manuale Sviluppatore}. & \checkmark{} \\
+				Aggiornamento \textit{Manuale Utente}. & \checkmark{} \\
+				Aggiornamento del \textit{Glossario}. & \checkmark{} \\				
+				
+				Aggiunta messaggio di errore del login. & \checkmark{} \\
+				Implementazione icona di file sincronizzato. & \checkmark{} \\
+				Implementazione icona di file in sincronizzazione. & \checkmark{} \\
+				Implementazione e superamento di tutti i test di unità & \checkmark{} \\
+				Superamento dei test di sistema. & \checkmark{} \\ 
+				Rilascio eseguibile multipiattaforma. & \checkmark{} \\
+				Verifica ed approvazione finale di tutti i documenti. & \checkmark{} \\
+				\bottomrule
+			\end{tabular}
+			\caption{Consuntivo obiettivi del periodo di validazione e collaudo}
+		\end{center}
+	\end{table}
+
+
 \begin{table}[H]
 		\begin{center}
 			\setlength{\aboverulesep}{0pt}
@@ -405,6 +448,7 @@ La seguente tabella contiene i dati del consuntivo per il periodo di progettazio
 	\end{table}
 	
 \begin{itemize}
+	\item \textbf{Stato obiettivi:} Tutti gli obiettivi preventivati sono stati realizzati;
 	\item \textbf{Differenza oraria:} +2 ore (sono servite ore in più del previsto), per un investimento totale di 142 ore;
 	\item \textbf{Differenza economica:} +30 \euro{} (sono stati spesi soldi in più del previsto), per un investimento totale di 2528 \euro{}.
 \end{itemize}
