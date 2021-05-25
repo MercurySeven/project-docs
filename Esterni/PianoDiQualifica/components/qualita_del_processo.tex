@@ -12,41 +12,94 @@ In questa sezione vengono definiti i macro-processi per il controllo della quali
 Questa sezione verrà aggiornata durante lo svolgimento del progetto tramite l'aggiunta dei processi di \ignore{verifica} che si riterranno necessari.
 
 \subsubsection{Sviluppo}
-\paragraph{Obbiettivi}
-\begin{itemize}
-\item \textbf{Accoppiamento}: Assicurarsi che l'architettura abbia un basso grado di accoppiamento;
-\item \textbf{Annidamento}: Assicurarsi che i metodi abbiano un basso livello di annidamento;
-\item \textbf{Parametri per metodo}: Salvaguardare la complessità dei metodi limitando il numero di parametri a 5.
-\end{itemize}
+\paragraph{Obiettivi}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Accoppiamento} & Assicurarsi che l'architettura abbia un basso grado di accoppiamento. \\
+		\textbf{Annidamento} & Assicurarsi che i metodi abbiano un basso livello di annidamento. \\
+		\textbf{Parametri per metodo} & Salvaguardare la complessità dei metodi limitando il numero di parametri a 5. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi di sviluppo}
+	\end{longtable}
 
 \paragraph{Metriche}
 Per tenere traccia di questi elementi vengono utilizzate le seguenti \glo{metriche}:
-\begin{itemize}
-\item MCD08 Coupling between objects;
-\item MCD09 Numero di parametri per metodo;
-\item MCD10 Livello di annidamento.
-
-\end{itemize}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MCD08} & Accoppiamento tra oggetti. \\
+		\textbf{MCD09} & Numero di parametri per metodo. \\
+		\textbf{MCD10} & Livello di annidamento. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche di sviluppo}
+	\end{longtable}
 
 \subsubsection{Pianificazione di progetto}
 Il macro-processo di pianificazione di progetto ha come scopo quello di definire dei piani di sviluppo per il raggiungimento degli obbiettivi richiesti dal committente, nel tempo disponibile, senza un consumo eccessivo di risorse.
 
 \paragraph{Obiettivi}
 Il gruppo \gruppo{} deve quindi strutturare la pianificazione attorno ai seguenti elementi:
-\begin{itemize}
-\item \textbf{\ignore{Timeline}}: Assicurarsi che il progetto rispetti le scadenze imposte dal committente;
-\item \textbf{Budget}: Assicurarsi che gli elementi e i tempi definiti nel piano rispettino le risorse disponibili.
-\end{itemize}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{\ignore{Timeline}} & Assicurarsi che il progetto rispetti le scadenze imposte dal committente. \\
+		\textbf{Budget} & Assicurarsi che gli elementi e i tempi definiti nel piano rispettino le risorse disponibili. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi della pianificazione di progetto}
+	\end{longtable}
 
 \paragraph{Metriche}%
 Per tenere traccia di questi elementi vengono utilizzate le seguenti \glo{metriche}:
 \begin{itemize}
-\item MPR01 Schedule variance;
-\item MPR02 Budget variance;
-\item MPR05 Actual cost of work performed;
-\item MPR06 Budgeted cost of work scheduled.
-
+\item  ;
+\item  ;
+\item  ;
+\item  .
 \end{itemize}
+
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MPR01} & Variazione della schedule. \\
+		\textbf{MPR02} & Variazione del budget. \\
+		\textbf{MPR05} & Costo effettivo del lavoro realizzato. \\
+		\textbf{MPR06} & Costo del lavoro pianificato nel budget. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche della pianificazione di progetto}
+	\end{longtable}
 
 \subsubsection{Tabella riassuntiva delle metriche}%
 Di seguito sono riportate le \glo{metriche} in forma di tabella.
