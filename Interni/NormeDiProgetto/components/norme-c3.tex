@@ -175,6 +175,30 @@ Al fine di evitare ambiguità fra i termini è stato realizzato un documento den
 }
 Ogni voce contenuta all'interno degli elenchi puntati inizia con la lettera maiuscola. Le voci che corrispondono allo schema NomeElemento-descrizione presentano il primo termine in grassetto, il secondo invece nel formato normale.
 Gli elenchi puntati dovranno essere usati solo quando necessario, preferendo le tabelle ad essi quando possibile.
+
+\paragraph*{Tabelle}
+Ogni tabella deve seguire le seguenti regole:
+\
+{
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.25\freewidth} L{.75\freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Elemento} & \textbf{Regola e descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Prima riga (quella più in alto)} & Il testo contenuto nella prima riga deve essere in grassetto. \\ 
+		\textbf{Prima colonna (quella più a sinistra)} & Il testo contenuto nella prima colonna deve essere in grassetto.  \\
+		\textbf{Caption} & Ogni tabella deve essere identificata da un numero univoco ed essere accompagnata da una breve descrizione. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Descrizione delle convenzioni usate nelle tabelle}
+\end{longtable}
+}
+
 \paragraph*{Formato data e ora} 
 Le date vengono indicato usato il formato stabilito dallo standard ISO 8601:\newline
 \centerline{\textbf{[YYYY]\-[MM]\-[DD]}}
