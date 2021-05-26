@@ -1,42 +1,38 @@
 \section{Setup}
 \subsection{Requisiti minimi di sistema}
 \subsubsection{Requisiti Hardware}
-Non sono presenti requisiti minimi per l'\gloman{hardware,} il carico di lavoro aumenta a seconda della quantità di file da sincronizzare.
+Non sono presenti requisiti minimi per l'\gloman{hardware}, il carico di lavoro aumenta a seconda della quantità di file da sincronizzare.
 \subsubsection{Requisiti Software}
-Il programma è multipiattaforma, in seguito sono elencati i sistemi operativi in cui il funzionamento del \gloman{Software} è stato testato e la loro versione. Altri sistemi operativi potrebbero comunque funzionare.
+Il programma è multipiattaforma, in seguito sono elencati i sistemi operativi in cui il funzionamento del \gloman{Software} è stato testato e la loro versione.
 
 {
-	\setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
-	\renewcommand{\arraystretch}{1.5}
-	\setlength{\aboverulesep}{0pt}
-	\setlength{\belowrulesep}{0pt}
-	\rowcolors{2}{AzzurroGruppo!10}{white}
-	\begin{longtable}{L{.210\freewidth} C{.68\freewidth}}
-		\rowcolor{AzzurroGruppo!30}
-		\textbf{Sistema operativo} & \textbf{Versione minima testata} \\
-		\toprule
-		\endhead		
-		Windows & 10 \\ 
-		MacOS & 11.0 \\ 
-		Ubuntu & 20.04 \\	
-				
-		\bottomrule
-		\hiderowcolors
-		\caption{Sistemi operativi testati}
-	\end{longtable}
+    \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.210\freewidth} C{.68\freewidth}}
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Sistema operativo} & \textbf{Versione minima testata} \\
+        \toprule
+        \endhead
+        Windows & 10 \\
+        macOS & 11.0 \\
+        Ubuntu & 20.10 \\
+
+        \bottomrule
+        \hiderowcolors
+        \caption{Sistemi operativi supportati}
+    \end{longtable}
 }
+
 \subsection{Installazione}
-
 \subsubsection{Ambiente di lavoro}
-
-Per il setup degli IDE è consigliato l'utilizzo di PyCharm o Visual Studio Code, le guide per la loro installazione sono presenti sui corrispettivi siti ed anche nel nostro \gloman{Repository} al seguente link
-
-\centerline{\url{https://github.com/MercurySeven/project-SSD/tree/main/docs}}
+Per il setup degli IDE è consigliato l'utilizzo di PyCharm o Visual Studio Code, le guide per la loro installazione sono presenti sui corrispettivi siti ed anche nel nostro \gloman{Repository} al seguente link:
+\newline{}\centerline{\url{https://github.com/MercurySeven/project-SSD/tree/main/docs}}
 \subsubsection{Librerie}
 \label{sec:Librerie}
 Per installare tutte le librerie si può utilizzare il seguente comando all'interno della cartella principale del progetto:\newline{}
 \centerline{\textbf{pip install -r requirements.txt}}
-	
-
-
-
+Il gruppo consiglia l'installazione delle librerie su un virtual environment di \gloman{Python}, la cui guida si trova nel link sopra riportato o al seguente indirizzo:
+\newline{}\centerline{\url{https://docs.python.org/3/tutorial/venv.html}}
