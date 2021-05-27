@@ -1,0 +1,65 @@
+\section{Informazioni generali}
+
+\begin{itemize}
+
+    \item \textbf{Canale di comunicazione:} Slack;
+
+    \item \textbf{Settimana:} dal 2021-05-10 al 2021-05-20;
+
+    \item \textbf{Segretario:} \ACapoRedazione{};
+
+    \item \textbf{Partecipanti}: Due rappresentanti dell'azienda Zextras, \textit{\Alessio{}} e \textit{\Federico{}}, e i membri del gruppo \Gruppo{}:
+        \begin{itemize}
+            \item \Daniele{};
+            \item \Davide{};
+            \item \Francesco{};
+            \item \Tommaso{};
+            \item \Lucrezia{};
+            \item \Matteo{};
+            \item \Giosue{}.
+        \end{itemize}
+\end{itemize}
+
+\section{Ordine del giorno}
+
+\begin{itemize}
+    \item\textbf{Gestione dell'upload continuo;}
+    \item\textbf{Discussione sulla data e sui contenuti della \textit{Revisione di Accettazione}.}
+\end{itemize}
+\newpage
+
+
+\section{Resoconto}
+\subsection{Gestione dell'upload continuo}
+Il gruppo ha esposto lo studio di fattibilità realizzato per la nuova feature proposta da \textit{\Alessio{}}. I problemi maggiori rilevati sono:
+\begin{itemize}
+	\item l'utilizzo di soluzioni multithread risultano complesse dato l'accesso concorrente dei vari thread di upload sullo snapshot locale, rischiando di avere uno snapshot corrotto;
+	\item impossibilità con il sistema attuale di capire se un file è stato aggiunto da file system o se è stato scaricato, la risoluzione porterebbe ad un refactor importante della logica dell'algoritmo.
+\end{itemize}
+L'azienda con il gruppo rimane d'accordo che questi cambiamenti richiederebbero troppo impegno nella fase finale andando quindi a non attuare queste modifiche.
+
+\subsection{Discussione sulla data e sui contenuti della \textit{Revisione di Accettazione}}
+Il gruppo ha esposto la struttura della \textit{Revisione di Accettazione} di questo anno. L'azienda è stata dunque informata di dover partecipare e ci si è accordati per stabilire una data.
+
+\newpage
+
+\section{Riepilogo delle decisioni \hfil}
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-4\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.3\freewidth} L{.7\freewidth}}
+        \toprule
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Codice} & \textbf{Decisione}\\
+        \toprule
+        \endhead
+
+        VE\_\DataMeeting{}.1 & Non si implementerà l'upload continuo dei file.\\
+        VE\_\DataMeeting{}.2 & Scelta la data per la \textit{Revisione di Accettazione}.\\
+        \bottomrule
+        \hiderowcolors
+    \end{longtable}
+}
