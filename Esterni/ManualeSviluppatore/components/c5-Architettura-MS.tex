@@ -13,6 +13,7 @@ L'architettura del capitolato C7 aderisce al pattern architetturale \textit{Mode
     \item Indipendenza dei vari componenti;
     \item Maggior facilità nella testabilità, manutenibilità e scalabilità.
 \end{itemize}
+Per informazioni su come aggiungere una tripletta \textit{model-view-controller} fare riferimento a \S{}\ref{sec:aggiuntamvc}
 
 \subsection{Diagramma dei pacchetti}
 \begin{figure}[H]
@@ -42,6 +43,17 @@ Il pattern singleton può provocare problemi se mal implementato. Nel nostro cas
     \caption{Pattern Singleton nel dettaglio}
     \label{fig:Diagramma del pattern singleton}
 \end{figure}
+
+\subsubsection{Implementazione del pattern Singleton con Python}
+\label{sec:singleton-python}
+Esistono diverse soluzioni per poter implementare questo pattern in \gloman{Python}, nel progetto è stata scelta la seguente:
+\begin{itemize}
+    \item Creare una variabile di classe "\textit{\_\_create\_key}" ed assegnarle un nuovo object: \texttt{\_\_create\_key = object()};
+    \item Creare un metodo di classe chiamato "\textit{get\_instance}" con argomento una chiave. Il metodo si occupa di creare l'istanza della classe se essa non esiste passando al costruttore la chiave ricevuta;
+    \item All'interno del costruttore "\textit{\_\_init\_\_(self, key)}" avere la seguente istruzione \texttt{assert(key == \_\_create\_key)}. In questo modo il costruttore potrà essere chiamato solamente all'interno della classe stessa e sarà il metodo "\textit{get\_instance}" a fare da unico punto d'accesso pubblico esterno.
+\end{itemize}
+Se si volesse avere anche un Singleton thread-safe si deve implementare un sistema di lock (\url{https://docs.python.org/3/library/threading.html}) all'interno del metodo "\textit{get\_instance}" evitando che due metodi si contendano il suo utilizzo.
+
 \subsection{Design pattern strutturali: Virtual Proxy}
 Il pattern Proxy viene utilizzato per evitare chiamate di rete non necessarie, permettendo la \gloman{lazy initialization}.\newline{}
 Questo pattern in \gloman{Python} è stato realizzato tramite il modulo ABC (Abstract Base Classes) realizzando la classe astratta API che viene ereditata da NetworkModel e da APIImplementation. In questo modo si vanno a definire dei metodi base che entrambe le classi condividono. Quando verrà effettuata una chiamata di rete si passa per NetworkModel che, dopo controlli aggiuntivi, potrà decidere se passare la chiamata ad APIImplementation. Facendo riferimento al modello del pattern, NetworkModel è il nostro proxy e APIImplementation il nostro realsubject.
@@ -51,8 +63,8 @@ Questo pattern in \gloman{Python} è stato realizzato tramite il modulo ABC (Abs
     \caption{Pattern Proxy nel dettaglio}
     \label{fig:Pattern proxy nel dettaglio}
 \end{figure}
-\subsection{Design pattern comportamentali:}
-\subsubsection{Observer:}
+\subsection{Design pattern comportamentali}
+\subsubsection{Observer}
 Il pattern observer è stato implementato usando i segnali e slot forniti dalla libreria PySide6, vengono usati per la comunicazione tra diversi oggetti.
 Segnali e slot vengono usati per le comunicazioni fra model, controller e view. I segnali emessi dal model e dalla view vengono usati dalla classe Signal che chiamerà gli slot collegati ad essi. La classe view e controller ereditano dall'interfaccia Slot.
 \begin{figure}[H]
@@ -62,13 +74,14 @@ Segnali e slot vengono usati per le comunicazioni fra model, controller e view. 
     \label{fig:Pattern observer con segnali e slot}
 \end{figure}
 
-\subsubsection{Strategy:}
+\subsubsection{Strategy}
 La scelta di utilizzare questo pattern è stata naturale poiché esso va a descrivere pienamente la realtà del capitolato \textit{C7}.\newline{}
 Attualmente si hanno due diverse politiche per la sincronizzazione che possono essere scelte a runtime e che variano il comportamento dell'algoritmo. Si ha una classe CompareSnapClient che fa da interfaccia comune e chiama al suo interno il metodo execute della classe attualmente scelta. Essendo Strategy una classe astratta, essa fornisce il metodo execute che deve essere implementato da tutte le classi figlie. Questo permette all' istanza di CompareSnapClient di poter chiamare il metodo execute di un qualsiasi oggetto Strategy di cui non conosce l'implementazione. L'adozione del suddetto pattern permette l'aggiunta di nuove politiche senza dover cambiare la logica dell'applicazione, il che semplificherà il lavoro in eventuali sviluppi futuri.
-
 \begin{figure}[H]
     \centering
     \includegraphics[scale = 0.38]{components/img/strategy-model.png}
     \caption{Pattern Strategy nel dettaglio}
-    \label{fig:Pattern proxy nel dettaglio}
+    \label{fig:Pattern Strategy nel dettaglio}
 \end{figure}
+\paragraph{Aggiunta di un nuovo componente di Strategy}
+L'aggiunta di un nuovo componente di Strategy avviene ereditando dalla classe base Strategy ed implementando il metodo execute con il nuovo comportamento desiderato.

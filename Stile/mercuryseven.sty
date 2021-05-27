@@ -136,6 +136,7 @@
 			}
 			node at (\textwidth-\textwidth/2,0.2){
 				\begin{tabular}{R{\textwidth}}			
+					\hiderowcolors
 					\leftmark \\
 				\end{tabular}
 			}		
@@ -148,13 +149,16 @@
 		\begin{tikzpicture}
 			\draw[rounded corners, overlay] (\textwidth- 0.25cm,0.5) -- (\textwidth - 1cm,0.5) -- (\textwidth - 1cm,0) -- (\textwidth,0) -- (\textwidth,1) -- (0,1)
 			node at (\textwidth - 0.5cm, 0.475){
+				\renewcommand{\arraystretch}{1.2}
 				\begin{tabular}{C{0.6cm}}
+					\hiderowcolors
 					\thepage{} \\
 					\pageref{LastPage}\\
 				\end{tabular}
 			}
 			node at (0+\textwidth/4,0.6){
-				\begin{tabular}{L{\textwidth/2}}			
+				\begin{tabular}{L{\textwidth/2}}
+					\hiderowcolors			
 					\Titolo{} \ - \textit{\Gruppo{}} \\
 				\end{tabular}
 			};
@@ -271,14 +275,14 @@
 \newcommand{\ignore}[1]{#1}
 
 %----Versioni---
-\newcommand{\versAdR}{\textit{v4.0.0-0.9}}
-\newcommand{\versGlo}{\textit{v3.0.0-0.9}}
-\newcommand{\versNdP}{\textit{v3.0.0-0.9}}
-\newcommand{\versPdP}{\textit{v3.0.0-0.9}}
-\newcommand{\versSdF}{\textit{v1.0.0-0.3}}
-\newcommand{\versPdQ}{\textit{v3.0.0-0.9}}
-\newcommand{\versMU}{\textit{v1.0.0-0.9}}
-\newcommand{\versMS}{\textit{v1.0.0-0.10}}
+\newcommand{\versAdR}{\textit{v4.0.0-1.9}}
+\newcommand{\versGlo}{\textit{v4.0.0-1.12}}
+\newcommand{\versNdP}{\textit{v4.0.0-1.12}}
+\newcommand{\versPdP}{\textit{v4.0.0-1.12}}
+\newcommand{\versSdF}{\textit{v1.0.0-1.3}}
+\newcommand{\versPdQ}{\textit{v4.0.0-1.12}}
+\newcommand{\versMU}{\textit{v2.0.0-1.12}}
+\newcommand{\versMS}{\textit{v2.0.0-1.12}}
 
 
 %-----package per la LINGUA---- 
@@ -322,6 +326,14 @@
 
 %---- simbolo euro ---
 \usepackage{eurosym}
+
+%---- simbolo checkmark ---
+\usepackage{tikz}
+\usepackage{pifont}% http://ctan.org/pkg/pifont
+\def\checkmark{\tikz\fill[scale=0.4](0,.35) -- (.25,0) -- (1,.7) -- (.25,.15) -- cycle;}
+\newcommand{\cmark}{\ding{51}}%
+%---- simbolo not checkmark ---
+\newcommand{\xmark}{\ding{55}}% 
 
 %-----per il glossario-----
 \newcommand{\gloSection}[1]{\subsection*{#1} \addcontentsline{toc}{subsection}{#1}}

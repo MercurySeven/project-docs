@@ -1,0 +1,215 @@
+\section{Manutenzione}
+
+\subsection{Aggiunta librerie}
+L'elenco delle librerie è presente nella cartella di root del progetto, nel file: "\textit{requirements.txt}".
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/requirements.png}
+    \caption{Struttura del file contenente le librerie}
+    \label{fig:Struttura del file contentente le librerie}
+\end{figure}
+Per poter installare una nuova libreria il procedimento è semplice:
+\begin{itemize}
+    \item Aprire il file "\textit{requirements.txt}";
+    \item Posizionarsi a fine file;
+    \item Aggiungere una nuova riga;
+    \item Aggiungere la nuova libreria.
+\end{itemize}
+La sintassi per l'aggiunta della libreria è la seguente:
+\newline{} \centerline{\textbf{nome\_libreria==numero\_versione}}\newline{}
+Per rendere effettivi i cambiamenti, bisogna usare il seguente comando:
+\newline{}\centerline{\textbf{pip install -r requirements.txt}}\newline{}
+
+\subsection{Aggiornamento librerie}
+Per cercare gli eventuali aggiornamenti delle librerie si consiglia di usare il seguente comando:
+\newline{}\centerline{\textbf{pip list --outdated}}\newline{}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.7]{components/img/requirements_updates.png}
+    \caption{Struttura del file contenente le librerie}
+    \label{fig:Lista di aggiornamenti disponibili per le librerie}
+\end{figure}
+
+\subsection{Struttura progetto}
+Il progetto segue la seguente struttura:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/struttura-cartella-ssd.png}
+    \caption{Struttura del progetto}
+    \label{fig:Struttura del progetto}
+\end{figure}
+\subsubsection{.github}
+La cartella .github contiene tutte le informazioni necessarie per la \gloman{CI}. Essa è strutturata nel seguente modo:
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/struttura-cartella-dotgithub.png}
+    \caption{Struttura della cartella .github}
+    \label{fig:Struttura della cartella .github}
+\end{figure}
+Il file "codecov.yml" posizionato dentro la cartella .github serve per poter impostare le regole generali per il controllo del valore della percentuale di test. Nella seguente tabella vengono riportate le \gloman{keyword} utilizzate con la loro descrizione:
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.15\freewidth} L{.60\freewidth}}
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Keyword} & \textbf{Descrizione}\\
+        \toprule
+        \endhead
+        \textbf{Precision} & La precisione delle cifre dopo la virgola della percentuale di codice coperto da test.\\
+        \textbf{Round} & Come viene arrotondata la cifra dopo la troncatura determinata dalla precisione selezionata.\\
+        \textbf{Range} & Il valore minimo e massimo della percentuale di codice coperto da test, valori esclusi da questo intervallo faranno fallire la \gloman{CI}. \\
+        \bottomrule
+        \hiderowcolors
+        \caption{Parole chiave per file codecov.yml di configurazione generale}
+    \end{longtable}
+}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/contenuto-github-codecov.png}
+    \caption{Contenuto file codecov.yml}
+    \label{fig:Contenuto file codecov.yml}
+\end{figure}
+I file contenuti dentro la folder "workflows" invece specificano diverse regole per la configurazione della \gloman{CI}, meglio riassunte nella seguente tabella:
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{File} & \textbf{Descrizione}\\
+        \toprule
+        \endhead
+        \textbf{ci.yml} & Configurazione delle \gloman{actions} di GitHub. Si ha una prima fase di setup dei vari sistemi operativi, vengono poi indicate le azioni che dovranno essere eseguite ed infine l'ultima azione comunica nell'apposito canale Slack il successo della \gloman{CI}.\\
+        \textbf{codecov.yml} & Configurazione della \gloman{CI} nel sito codecov che servirà a tenere traccia della percentuale di codice coperta da test.\\
+        \textbf{lint.yml} & Configurazione dell'analisi statica che avverrà ad ogni commit. \\
+        \bottomrule
+        \hiderowcolors
+        \caption{Nome e descrizione delle configurazioni per la CI}
+    \end{longtable}
+}
+\subsubsection{assets}
+Questa folder contiene tutti i file utilizzati per la resa grafica della applicazione. Nella tabella vengono esplicitate le funzioni principali:
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Nome} & \textbf{Descrizione}\\
+        \toprule
+        \endhead
+        \textbf{icons} & Icone utilizzate nell'applicazione, i nomi sono esplicativi della loro funzione ed ogni immagine è realizzata dal team, priva quindi di copyright.\\
+        \textbf{style.qss} & Configurazione della resa estetica dell'applicazione. È l'equivalente del CSS di un sito web.\\
+        \bottomrule
+        \hiderowcolors
+        \caption{Nome e descrizione assets}
+    \end{longtable}
+}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/struttura-cartella-assets.png}
+    \caption{Struttura della cartella assets}
+    \label{fig:Struttura della cartella assets}
+\end{figure}
+\subsubsection{docs}
+La cartella docs contiene al suo interno le principali guide che vengono stilate dal team di sviluppo.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/struttura-cartella-docs.png}
+    \caption{Struttura della cartella docs}
+    \label{fig:Struttura della cartella docs}
+\end{figure}
+\subsubsection{src}
+\label{sec:cartelle-src}
+Il codice sorgente è stato diviso logicamente in diverse cartelle, descritte nella seguente tabella:
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Cartella} & \textbf{Descrizione}\\
+        \toprule
+        \endhead
+        \textbf{algorithm} & Contiene tutte le classi che contengono la logica di sincronizzazione del programma. La logica dell'algoritmo è parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata.\\
+        \textbf{controllers} & Contiene tutte le classi facenti parte del controller.\\
+        \textbf{model} & Contiene tutte le classi facenti parte del model e non strettamente legate alla logica di sincronizzazione o alla gestione di rete.\\
+        \textbf{network} & Contiene tutte le classi utilizzate per effettuare le varie chiamate di rete e per strutturare le query \gloman{GraphQL}. Anche questa come l'algoritmo è logicamente parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata. \\
+        \textbf{view} & Contiene tutte le classi facenti parte della view. \\
+        \bottomrule
+        \hiderowcolors
+        \caption{Nome e descrizione cartelle contenute in src}
+    \end{longtable}
+}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/struttura-cartella-src.png}
+    \caption{Struttura della cartella src}
+    \label{fig:Struttura della cartella src}
+\end{figure}
+\subsubsection{tests}
+\label{sec:cartelle-tests}
+Per la cartella contenente tutti i test di unità è stato scelto, per mantenere uno standard di consistenza elevato e per quindi avere sempre chiaro dove le varie componenti sono, di utilizzare la stessa struttura presente nella cartella src descritta a \S{}\ref{sec:cartelle-src}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{components/img/struttura-cartella-tests.png}
+    \caption{Struttura della cartella tests}
+    \label{fig:Struttura della cartella tests}
+\end{figure}
+
+\subsection{Manutenzione dei test}
+Data la loro natura i test possono dover cambiare di comportamento all'aggiornamento di librerie ed è quindi necessario spiegare come essi sono strutturati. La struttura organizzativa delle cartelle viene descritta a \S{}\ref{sec:cartelle-tests}.
+\subsubsection{Modulo base utilizzato da ogni test: default code}
+Questo modulo contiene diverse classi utilizzate a scopo di testing. Le classi contenute in questo modulo sono elencate nella seguente tabella:
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Nome classe} & \textbf{Descrizione classe}\\
+        \toprule
+        \endhead
+        \textbf{DefaultCode} & Classe fondamentale contenuta nel modulo, eredita dalla classe base "\textit{unittest.TestCase}". Questa classe esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato modificarla con cura ed attenzione per evitare di rompere ogni test.\\
+        \textbf{ResultObj} & Imita la decisione dello strategy su un nodo, viene utilizzato quando si utilizzano mock. Offre la possibilità di iterare su di esso. \\
+        \textbf{FakeLogger} & Utilizzata per effettuare il mock delle chiamate ai vari logger presenti nel codice. \\
+        \textbf{NodeMetadata} & Utilizzata per simulare le chiamate richiedenti info sui metadati dei file.\\
+        \bottomrule
+        \hiderowcolors
+        \caption{Nome e descrizione delle classi contenute nel modulo default\_code}
+    \end{longtable}
+}
+
+\paragraph{Metodi dalla classe DefaultCode}
+La classe DefaultCode presenta due metodi che vengono ereditati dalla classe base "\textit{unittest.TestCase}". Questi due metodi vengono meglio descritti nella seguente tabella:
+
+{
+    \setlength{\freewidth}{\dimexpr\textwidth-1\tabcolsep}
+    \renewcommand{\arraystretch}{1.5}
+    \setlength{\aboverulesep}{0pt}
+    \setlength{\belowrulesep}{0pt}
+    \rowcolors{2}{AzzurroGruppo!10}{white}
+    \begin{longtable}{L{.15\freewidth} L{.85\freewidth}}
+        \rowcolor{AzzurroGruppo!30}
+        \textbf{Nome classe} & \textbf{Descrizione classe}\\
+        \toprule
+        \endhead
+        \textbf{SetUp} & Metodo che viene automaticamente eseguito prima di ogni test. Salva lo stato delle variabili di ambiente attuali e crea eventuali cartelle utilizzate a scopo di test.\\
+        \textbf{TearDown} & Metodo che viene automaticamente eseguito in seguito ad ogni test. Ripristina lo stato delle variabili di ambiente prima del test ed elimina eventuali cartelle create a scopo di test.\\
+        \bottomrule
+        \hiderowcolors
+        \caption{Nome e descrizione dei metodi contenuti nella classe DefaultCode}
+    \end{longtable}
+}

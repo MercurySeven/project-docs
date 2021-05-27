@@ -10,108 +10,249 @@ In questa sezione vengono definite le caratteristiche di cui i membri del gruppo
 \paragraph{Comprensibilità}
 I documenti prodotti devono essere facilmente leggibili e accessibili a tutti i membri del progetto. \\
 
-\textbf{Obiettivi}
-\begin{itemize}
-\item \textbf{Leggibilità}: i documenti devono essere leggibili e comprensibili;
-\item \textbf{Correttezza ortografica}: i documenti non devono presentare errori ortografici.
-\end{itemize}
-
-\textbf{\ignore{Metriche}}
-\begin{itemize}
-\item MDC01 Indice di Gulpease;
-\item MDC02 Indice di Flesch-Vacca
-\item MDC03 Correttezza ortografica.
-\end{itemize}
-
-
+\paragraph*{Obiettivi}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Leggibilità} & I documenti devono essere leggibili e comprensibili. \\
+		\textbf{Correttezza ortografica} & I documenti non devono presentare errori ortografici. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi di comprensibilità}
+	\end{longtable}
+\paragraph*{\ignore{Metriche}}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MDC01} & Indice di Gulpease. \\
+		\textbf{MDC02} & Indice di Flesch-Vacca. \\
+		\textbf{MDC03} & Correttezza ortografica. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche di comprensibilità}
+	\end{longtable}
 \subsubsection{Qualità del software}
 \label{QualitàSW}
 \paragraph{Funzionalità}
 
 Il prodotto deve fornire tutte le funzionalità determinate nel documento di \AdR{} \versAdR{}. \\
 
-\textbf{Obiettivi}
-\begin{itemize}
-\item \textbf{Accuratezza}: le funzionalità del prodotto soddisfano le richieste del committente;
-\item \textbf{Adeguatezza}: le funzionalità del prodotto hanno il comportamento aspettato;
-\item \textbf{Sicurezza}: il prodotto garantisce la sicurezza dei dati sensibili gestiti.
-\end{itemize}
+\paragraph*{Obiettivi}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Accuratezza} & Le funzionalità del prodotto soddisfano le richieste del committente. \\
+		\textbf{Adeguatezza} & Le funzionalità del prodotto hanno il comportamento aspettato. \\
+		\textbf{Sicurezza} & Il prodotto garantisce la sicurezza dei dati sensibili gestiti. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi di funzionalità}
+	\end{longtable}
 
-\textbf{\ignore{Metriche}}
-\begin{itemize}
-\item MPR03 Soddisfazione \glo{requisiti} obbligatori;
-\item MPR04 Soddisfazione \glo{requisiti} opzionali.
-\end{itemize}
+\paragraph*{\ignore{Metriche}}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MPR03} & Soddisfazione \glo{requisiti} obbligatori. \\
+		\textbf{MPR04} & Soddisfazione \glo{requisiti} opzionali. \\
+		\textbf{MVR04} & Percentuale dei \glo{test} passati. \\
+		\textbf{MVR05} & Percentuale dei \glo{test} falliti. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche di funzionalità}
+	\end{longtable}
 
 \paragraph{Affidabilità}
 
 Durante l'utilizzo del prodotto non si devono riscontrare errori durante l'utilizzo delle funzionalità da parte dell'utente. Eventuali errori devono essere adeguatamente gestiti. \\
 
-\textbf{Obiettivi}
-\begin{itemize}
-\item \textbf{Maturità}: il prodotto non deve avere malfunzionamenti;
-\item \textbf{Tolleranza agli errori}: capacità del prodotto di gestire casi di errore.
-\end{itemize}
+\paragraph*{Obiettivi}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Maturità} & Il prodotto non deve avere malfunzionamenti. \\
+		\textbf{Tolleranza agli errori} & Capacità del prodotto di gestire casi di errore. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi di affidabilità}
+	\end{longtable}
 
-\textbf{\ignore{Metriche}}
-\begin{itemize}
-\item MVR01 Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti;
-\item MCD01 Percentuale degli errori gestiti.
-\end{itemize}
-
+\paragraph{\ignore{Metriche}}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MVR01} & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti. \\
+		\textbf{MCD01} & Percentuale degli errori gestiti. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche di affidabilità}
+	\end{longtable}
 \paragraph{Usabilità}
-
 Il prodotto deve essere intuitivo e pratico. \\
 
-\textbf{Obiettivi}
-\begin{itemize}
-\item \textbf{Comprensibilità}: il prodotto deve essere quanto più intuitivo possibile per garantire che l'utente sia in grado di riconoscere e utilizzare le funzionalità offerte con uno sforzo e un investimento di tempo minimo;
-\item \textbf{Apprendibilità}: presenza di documentazione per l'utente;
-\item \textbf{Operabilità}: le funzionalità offerte dal prodotto sono in linea con le aspettative dell'utente;
-\item \textbf{Attrattiva}: il prodotto deve essere utilizzabile facilmente e avere una presentazione attraente per l'utente.
-\end{itemize}
+\paragraph*{Obiettivi}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Comprensibilità} & Il prodotto deve essere quanto più intuitivo possibile per garantire che l'utente sia in grado di riconoscere e utilizzare le funzionalità offerte con uno sforzo e un investimento di tempo minimo. \\
+		\textbf{Apprendibilità} & Presenza di documentazione per l'utente. \\
+		\textbf{Operabilità} & Le funzionalità offerte dal prodotto sono in linea con le aspettative dell'utente. \\
+		\textbf{Attrattiva} & Il prodotto deve essere utilizzabile facilmente e avere una presentazione attraente per l'utente. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi di usabilità}
+	\end{longtable}
 
-\textbf{\ignore{Metriche}}
-\begin{itemize}
-\item MVR02 Comprensibilità delle funzionalità offerte;
-\item MVR03 Facilità di apprendimento e di utilizzo del prodotto.
-\end{itemize}
+\paragraph*{\ignore{Metriche}}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MVR02} & Comprensibilità delle funzionalità offerte. \\
+		\textbf{MVR03} & Facilità di apprendimento e di utilizzo del prodotto. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche di usabilità}
+	\end{longtable}
 
 \paragraph{Efficienza}
 
 La quantità di risorse utilizzate deve essere ottimale. \\
 
-\textbf{Obiettivi}
-\begin{itemize}
-\item \textbf{Complessità delle funzioni}: le funzioni codificate devono rimanere al di sotto di una specifica soglia di complessità.
-\item \textbf{Utilizzo delle risorse}: il prodotto deve essere efficiente e consumare la quantità ottimale di risorse.
-\end{itemize}
-
-\textbf{\ignore{Metriche}}
-\begin{itemize}
-\item MCD02 Complessità ciclomatica;
-\item MCD05 Code coverage;
-\item MCD06 Lunghezza della riga di codice;
-\item MCD07 Brevità dei metodi.
-\end{itemize}
+\paragraph*{Obiettivi}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Complessità delle funzioni} & Le funzioni codificate devono rimanere al di sotto di una specifica soglia di complessità. \\
+		\textbf{Utilizzo delle risorse} & Il prodotto deve essere efficiente e consumare la quantità ottimale di risorse. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi di efficienza}
+	\end{longtable}
+\newpage{}
+\paragraph*{\ignore{Metriche}}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MCD02} & Complessità ciclomatica. \\
+		\textbf{MCD05} & Code coverage. \\
+		\textbf{MCD06} & Lunghezza della riga di codice. \\
+		\textbf{MCD07} & Brevità dei metodi. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche di efficienza}
+	\end{longtable}
 
 \paragraph{Manutenibilità}
 
 Il prodotto deve essere facilmente estendibile e adattabile. \\
 
-\textbf{Obiettivi}
-\begin{itemize}
-\item \textbf{Stabilità}: la codifica del prodotto deve essere chiara e robusta così da facilitare l'aggiunta di funzionalità;
-\item \textbf{Testabilità}: il prodotto deve essere nella condizione di poter essere testato in modo facile e veloce;
-\item \textbf{Modificabilità}: la codifica del prodotto deve essere facilmente estensibile;
-\item \textbf{Analizzabilità}: la struttura del prodotto deve facilitare la ricerca delle cause di eventuali malfunzionamenti.
-\end{itemize}
+\paragraph*{Obiettivi}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{Stabilità} & La codifica del prodotto deve essere chiara e robusta così da facilitare l'aggiunta di funzionalità. \\
+		\textbf{Testabilità} & Il prodotto deve essere nella condizione di poter essere testato in modo facile e veloce. \\
+		\textbf{Modificabilità} & La codifica del prodotto deve essere facilmente estensibile. \\
+		\textbf{Analizzabilità} & La struttura del prodotto deve facilitare la ricerca delle cause di eventuali malfunzionamenti. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Obiettivi di manutenibilità}
+	\end{longtable}
 
-\textbf{\ignore{Metriche}}
-\begin{itemize}
-\item MCD03 Variabili non utilizzate;
-\item MCD04 Rapporto linee di codice e linee commentate.
-\end{itemize}
+\paragraph*{\ignore{Metriche}}
+\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.365\freewidth} L{.6 \freewidth}}
+		\rowcolor{AzzurroGruppo!30}
+		\textbf{Nome} & \textbf{Descrizione} \\
+		\toprule
+		\endhead		
+		\textbf{MCD03} & Variabili non utilizzate. \\
+		\textbf{MCD04} & Rapporto linee di codice e linee commentate. \\
+		\bottomrule
+		\hiderowcolors
+		\caption{Metriche di manutenibilità}
+	\end{longtable}
 
 \subsubsection{Tabella riassuntiva delle metriche}
 \paragraph{Documenti}
@@ -126,9 +267,9 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
 				\toprule
-				MDC01 & Indice di Gulpease & $ 50 < x < 100$ & $60 < x < 100$ \\
-				MDC02 & Indice di Flesch-Vacca & $ 50 < x < 100$ & $60 < x < 100$\\
-				MDC03 & Correttezza ortografica & $ 95 \%$ privi di errori & $ 100\%$ privi di errori \\
+				MDC01 & Indice di Gulpease. & $ 50 < x < 100$ & $60 < x < 100$ \\
+				MDC02 & Indice di Flesch-Vacca. & $ 50 < x < 100$ & $60 < x < 100$\\
+				MDC03 & Correttezza ortografica. & $ 95 \%$ privi di errori & $ 100\%$ privi di errori \\
 				\bottomrule
 			\end{tabular}
 			\caption{Tabella delle metriche e degli obiettivi relativi alla documentazione}
@@ -146,19 +287,20 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 				\rowcolor{AzzurroGruppo!30} 
 				\textbf{Metrica} & \textbf{Obiettivo} & \textbf{Valori accettati} & \textbf{Valori ottimali}  \\
 				\toprule
-				MPR03 & Soddisfazione \glo{requisiti} obbligatori & $100 \%$ & $100 \%$ \\
-				MPR04 & Soddisfazione \glo{requisiti} opzionali & $ 0 \%$ & $ 100\%$ \\
-				MVR01 & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti & $ 0\%$  & $0\%$ \\
-				MCD01 & Percentuale degli errori gestiti & $ 95\%$ - $100\% $ & $100\%$ \\
-				MVR02 & Comprensibilità delle funzionalità offerte & $ 80\%$ - $100\% $ & $100\%$ \\
-				MVR03 & Facilità di apprendimento e di utilizzo del prodotto & $10$-$15$ minuti & $5$-$10$ minuti \\
-				MCD02 & Complessità ciclomatica & $0$ - $15$ & $0$ - $10$ \\
-				MCD03 & Variabili non utilizzate & $0$ & $0$ \\
-				MCD04 & Rapporto linee di codice e linee commentate & $5$ - $3$ & $3$ - $1$\\
-				MCD05 & Code coverage & $80\%$-$100\%$ & $100\%$ \\
-				MCD06 & Lunghezza della riga di codice & $0$-$100$ caratteri & $0$-$80$ caratteri \\
-				MCD07 & Brevità dei metodi & $0$-$50$ istruzioni & $0$-$50$ istruzioni \\
-				\bottomrule
+				MPR03 & Soddisfazione \glo{requisiti} obbligatori. & $100 \%$ & $100 \%$ \\
+				MPR04 & Soddisfazione \glo{requisiti} opzionali. & $ 0 \%$ & $ 100\%$ \\
+				MVR01 & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti. & $ 0\%$  & $0\%$ \\
+				MCD01 & Percentuale degli errori gestiti. & $ 95\%$ - $100\% $ & $100\%$ \\
+				MVR02 & Comprensibilità delle funzionalità offerte. & $ 80\%$ - $100\% $ & $100\%$ \\
+				MVR03 & Facilità di apprendimento e di utilizzo del prodotto. & $10$-$15$ minuti & $5$-$10$ minuti \\
+				MVR04 & Percentuale dei \glo{test} passati. & $90\% \leq x \leq 100\% $& $100\%$ \\
+				MVR05 & Percentuale dei \glo{test} falliti. & $0\% \leq x \leq 10\% $& $0\%$ \\				
+				MCD02 & Complessità ciclomatica. & $0$ - $15$ & $0$ - $10$ \\
+				MCD03 & Variabili non utilizzate. & $0$ & $0$ \\
+				MCD04 & Rapporto linee di codice e linee commentate. & $5$ - $3$ & $3$ - $1$\\
+				MCD05 & Code coverage. & $80\%$-$100\%$ & $100\%$ \\
+				MCD06 & Lunghezza della riga di codice. & $0$-$100$ caratteri & $0$-$80$ caratteri \\
+				MCD07 & Brevità dei metodi. & $0$-$50$ istruzioni & $0$-$50$ istruzioni \\
 			\end{tabular}
 			\caption{Tabella delle metriche e degli obiettivi relativi al prodotto}
 		\end{center}
@@ -168,8 +310,8 @@ Di seguito sono riportate le \glo{metriche} in forma di tabella.
 Per rendere lo sviluppo più efficace e garantire una applicazione migliore dei principi \glo{agile} è stato deciso di adottare un' approccio \glo{test} driven allo sviluppo (TDD). \\
 Questo tipo di approccio allo sviluppo è composto da due fasi alternate:
 \begin{itemize}
-\item Code driven testing
-\item Refactoring
+\item code driven testing;
+\item refactoring.
 \end{itemize}
 \subsection{Code driven testing}
 L'obiettivo di questa fase è di assicurarsi che il codice creato soddisfi i \glo{requisiti} qualitativi imposti dalle \glo{metriche}. Viene quindi scritto il \glo{test} assicurandosi che esso non sia soddisfatto dal codice presente al momento della sua creazione. Una volta sviluppato il \glo{test} si procede a scrivere la quantità minima di codice necessaria per soddisfarlo.
