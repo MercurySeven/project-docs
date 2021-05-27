@@ -47,7 +47,7 @@ Il gruppo fornisce all'azienda \proponente{} e ai committenti \textit{Prof. Tull
 		\textbf{\docAdR{}\_\versAdR{}} & Documento che contiene l'analisi approfondita del capitolato scelto, comprendente tutti i \glo{requisiti} e i \glo{casi d'uso} individuati. \\
 		\textbf{\docPdP{}\_\versPdP{}} & Documento nel quale viene pianificato nel dettaglio il modo di lavorare del gruppo, contenente un preventivo riguardante tempistiche, l'analisi dei rischi, la pianificazione delle attività e il consuntivo. \\
 		\textbf{\docPdQ{}\_\versPdQ{}} & Documento dove vengono stabilite e descritte le modalità di \glo{verifica} e \glo{validazione}, in modo da garantire la qualità del prodotto. \\
-		\textbf{Proof of Concept e Technology Baseline} & Definiscono una panoramica ad alto livello dell'applicazione che il gruppo realizzerà e delle tecnologie impiegate. \\
+		\textbf{\glo{Proof of Concept} e Technology Baseline} & Definiscono una panoramica ad alto livello dell'applicazione che il gruppo realizzerà e delle tecnologie impiegate. \\
 		\textbf{Product Baseline} & Definisce l'insieme di classi, metodi, attributi e scelte implementative a livello tecnico. \\
 		\bottomrule
 		\hiderowcolors
@@ -78,13 +78,13 @@ Il gruppo fornisce all'azienda \proponente{} e ai committenti \textit{Prof. Tull
 \subsubsection{Descrizione}
 Durante il processo di sviluppo vengono descritte tutte le attività e i compiti che devono essere svolti in modo da realizzare al meglio il prodotto richiesto dal \glo{proponente}: una volta definiti i \glo{requisiti} di sviluppo, i vincoli tecnologici e i vincoli di design ci si aspetta di realizzare un prodotto finale che, oltre a superare i \glo{test}, soddisfi i \glo{requisiti} e le richieste del \glo{proponente}. Le attività coinvolte riguardano l'Analisi dei \ignore{Requisiti}, la progettazione e la codifica.
 \subsubsection{Scopo e aspettative}
-Lo scopo del processo di Sviluppo è descrivere i compiti e le attività da svolgere relative al prodotto software da sviluppare.
+Lo scopo del processo di Sviluppo è descrivere i compiti e le attività da svolgere relative al prodotto \glo{software} da sviluppare.
 Le attese sono le seguenti:
 \begin{itemize}
 	\item stabilire gli obiettivi di sviluppo;
 	\item stabilire i vincoli tecnologici;
 	\item stabilire i vincoli di design;
-	\item realizzare un prodotto finale che superi i test, che soddisfi i requisiti e le richieste del proponente. 
+	\item realizzare un prodotto finale che superi i \glo{test}, che soddisfi i \glo{requisiti} e le richieste del \glo{proponente}. 
 \end{itemize}
 \subsubsection{Analisi dei requisiti}
 L'analisi dei \glo{requisiti} è un'attività, che sfocia nell'omonimo documento,dove vengono individuati tutti i \glo{requisiti} che il \glo{proponente} richiede per la realizzazione del prodotto.\newline{}
@@ -102,8 +102,8 @@ La struttura che contraddistingue l'\AdR{} è:
 	\item \textbf{\ignore{Casi d'uso}}: vengono identificati gli attori che interagiscono con le componenti del \glo{sistema} e le interazioni tra \glo{sistema}, attori ed elementi esterni.
 	\item \textbf{\ignore{Requisiti}}: rappresentati in una tabella che contiene:
 	\begin{itemize}
- 		\item tracciamento dei \glo{requisiti}, suddivisi in obbligatori, desiderabili e opzionali, individuati nel \glo{sistema} durante l'analisi; 
-		\item tracciamento fonte-\ignore{requisiti} e \ignore{requisiti}-fonte. 
+ 		\item \glo{tracciamento} dei \glo{requisiti}, suddivisi in obbligatori, desiderabili e opzionali, individuati nel \glo{sistema} durante l'analisi; 
+		\item \glo{tracciamento} fonte-\ignore{requisiti} e \ignore{requisiti}-fonte. 
 	\end{itemize}
 \end{itemize} 
 \paragraph*{Classificazione dei requisiti} 
@@ -334,7 +334,7 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 	
 \subsubsection{Metriche}
 
-\subsubsection*{Metriche Codifica}
+\subsubsection*{\ignore{Metriche} Codifica}
 
 	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -353,7 +353,7 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 		\textbf{MCD05} &  Metrica che riporta la quantità di codice coperta da \glo{test}. Più questo valore aumenta e più il codice può ricevere implementazioni ed il cliente utilizzarlo senza incorrere in problemi. & - \\
 		\textbf{MCD06} & Per facilitare la lettura e la riduzione della complessità di una singola riga di codice non sarà possibile avere righe di codice più lunghe di quanto stabilito dalla metrica. & -\\
 		\textbf{MCD07} & I metodi devono generalmente essere brevi per poter assicurare che la loro complessità non risulti eccessiva. & - \\
-		\textbf{MCD08}& Misura il numero di classi che sono accoppiate a una particolare classe. Un accoppiamento eccessivo rende il sistema più difficile da gestire e riutilizzare. & - \\
+		\textbf{MCD08}& Misura il numero di classi che sono accoppiate a una particolare classe. Un accoppiamento eccessivo rende il \glo{sistema} più difficile da gestire e riutilizzare. & - \\
 		\textbf{MCD09} & Un elevato numero di parametri presenti all'interno dello stesso metodo indica il bisogno di ridurre le funzionalità associate a tale metodo. Più è elevato questo valore e più aumenta la possibilità di commettere errori progettuali. & - \\
 		\textbf{MCD10} & Indica il livello di annidamento di un metodo. Un valore alto porta a un codice di difficile manutenzione, aumentandone la complessità.& - \\
 		\bottomrule
@@ -362,7 +362,7 @@ La codifica ha lo scopo di normare l'effettiva realizzazione del prodotto \glo{s
 	\end{longtable}
 	
 \newpage{}
-\subsubsection*{Metriche Progettazione}
+\subsubsection*{\ignore{Metriche} Progettazione}
 
 	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1}

@@ -4,7 +4,7 @@
 Il processo di documentazione comprende le attività di stesura e aggiornamento di tutti i documenti creati durante il ciclo di vita del \glo{software} in modo da renderli formalmente concordi. In particolare, in questa sezione ne vengono normate le attività, comprendenti stesura, \glo{verifica} e approvazione. 
 \subsubsection{Scopo e aspettative}
 Ogni processo e attività significativi per lo sviluppo del progetto dovranno essere documentati. Nella presente sezione verranno descritte le regole e gli standard che disciplineranno il processo di Documentazione.
-Le attese del team per questo processo sono individuare una struttura comune per tutti i prodotti del processo e raccogliere tutte le norme comuni per la stesura dei documenti.
+Le attese del \glo{team} per questo processo sono individuare una struttura comune per tutti i prodotti del processo e raccogliere tutte le norme comuni per la stesura dei documenti.
 \subsubsection{Design e sviluppo}
 \subsubsection*{Ciclo di vita di un documento}
 Ogni documento redatto passa per le seguenti fasi:
@@ -513,7 +513,7 @@ Per la gestione della configurazione il gruppo utilizza i seguenti client \glo{G
 		\textbf{Nome} & \textbf{Descrizione} \\
 		\toprule
 		\endhead
-		\textbf{GitHub Desktop} & Client ufficiale di \glo{GitHub} utilizzato per la gestione delle \glo{repository} \glo{Git}. \\
+		\textbf{\ignore{GitHub} Desktop} & Client ufficiale di \glo{GitHub} utilizzato per la gestione delle \glo{repository} \glo{Git}. \\
 		\textbf{GitKraken} & Client compatibile con Linux utilizzato per la gestione delle \glo{repository} \glo{Git}. \\
 		\textbf{GitFiend} & Client compatibile con Linux utilizzato per la gestione delle \glo{repository} \glo{Git}. \\
 		\bottomrule
@@ -524,15 +524,15 @@ Per la gestione della configurazione il gruppo utilizza i seguenti client \glo{G
 
 \subsection{Accertamento della qualità}
 \subsubsection{Descrizione}
-Per l'accertamento della qualità è dedicato il documento \PdQ{}, descrivente le metriche e le modalità usate per valutare il livello di qualità di prodotti e processi. Il documento fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
+Per l'accertamento della qualità è dedicato il documento \PdQ{}, descrivente le \glo{metriche} e le modalità usate per valutare il livello di qualità di prodotti e processi. Il documento fissa i \glo{requisiti} qualitativi e le \glo{metriche} relative ai processi impiegati e ai prodotti sviluppati. Quest'ultimo viene costantemente aggiornato per tenere traccia di eventuali cambiamenti ed è strutturato in modo tale da distinguere la parte riguardante la documentazione e quella riguardante il \glo{software}.
 
 \subsubsection{Scopo e aspettative}
 Il processo di accertamento della qualità ha lo scopo di garantire la qualità del prodotto finale, cioè che rispetti i \glo{requisiti} di qualità individuati dagli \glo{stakeholder} e che le esigenze espresse dal \glo{proponente} vengano soddisfatte. Le strategie di sviluppo e gli standard adottati per assicurare la qualità della documentazione e del prodotto vengono formalizzati nel \PdQ{}. Le aspettative di questo processo sono:
 \begin{itemize}
-	\item conseguimento della qualità nel prodotto, secondo le richieste del proponente. \\
+	\item conseguimento della qualità nel prodotto, secondo le richieste del \glo{proponente}. \\
 		Prova oggettiva della qualità del prodotto;
 	\item conseguimento della qualità nell'organizzazione delle attività del gruppo e dei processi;
-	\item raggiungimento della piena soddisfazione del proponente.
+	\item raggiungimento della piena soddisfazione del \glo{proponente}.
 \end{itemize}
 \subsubsection{Controllo di qualità}
 Il gruppo \textit{\Gruppo{}} ritiene fondamentale stabilire delle regole che tutti i membri vadano a rispettare per il pieno raggiungimento di un \glo{sistema} di qualità predisposto al miglioramento continuo.
@@ -679,7 +679,7 @@ Dove:
 \end{itemize}
 
 \subsubsection{Strumenti}
-Gli strumenti che il gruppo ha scelto di utilizzare per la verifica automatica del codice sono:
+Gli strumenti che il gruppo ha scelto di utilizzare per la \glo{verifica} automatica del codice sono:
 
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -692,8 +692,8 @@ Gli strumenti che il gruppo ha scelto di utilizzare per la verifica automatica d
 		\toprule
 		\endhead
 		\textbf{Flake8} & Strumento utilizzato per effettuare l'analisi statica del codice. \\
-		\textbf{Codecov} & Servizio online per l'analisi del codice. Effettua l'analisi dinamica del codice ad ogni push. Restituisce grafici e informazioni inerenti la quantità di codice coperto da test. \\
-		\textbf{unittest} & Framework di test \textit{Python}, utilizzato per effettuare test dinamici sul codice, in particolare test di unità e di integrazione. \\
+		\textbf{Codecov} & Servizio online per l'analisi del codice. Effettua l'analisi dinamica del codice ad ogni push. Restituisce grafici e informazioni inerenti la quantità di codice coperto da \glo{test}. \\
+		\textbf{unittest} & Framework di \glo{test} \textit{Python}, utilizzato per effettuare \glo{test} dinamici sul codice, in particolare \glo{test di \ignore{unità}} e di integrazione. \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Strumenti utilizzati nel processo di verifica}
@@ -715,8 +715,8 @@ Gli strumenti che il gruppo ha scelto di utilizzare per la verifica automatica d
 				\textbf{MVR01} & Percentuale di malfunzionamenti del programma in rapporto ai \glo{test} eseguiti. & - \\
 				\textbf{MVR02} & Comprensibilità delle funzionalità offerte. & - \\
 				\textbf{MVR03} & Facilità di apprendimento e di utilizzo del prodotto. &-  \\
-				\textbf{MVR04} & Rappresenta la percentuale dei test superati sul totale dei test eseguiti. &  \small{V04=$\frac{n^\circ\  test\ superati*100}{n^\circ\  test\ eseguiti}$} \\
-				\textbf{MVR05} & Failed Test Cases Percentage, rappresenta la percentuale dei test falliti sul totale dei test eseguiti. & \small{V05=$\frac{n^\circ\  test\ non\ superati*100}{n^\circ\  test\ eseguiti}$}\\
+				\textbf{MVR04} & Rappresenta la percentuale dei \glo{test} superati sul totale dei \glo{test} eseguiti. &  \small{V04=$\frac{n^\circ\  \ignore{test}\ superati*100}{n^\circ\  \ignore{test}\ eseguiti}$} \\
+				\textbf{MVR05} & Failed \glo{Test} Cases Percentage, rappresenta la percentuale dei \glo{test} falliti sul totale dei \glo{test} eseguiti. & \small{V05=$\frac{n^\circ\  \ignore{test}\ non\ superati*100}{n^\circ\  \ignore{test}\ eseguiti}$}\\
 		\bottomrule
 		\hiderowcolors
 		\caption{Descrizione metriche per il processo di verifica}
@@ -727,17 +727,17 @@ Gli strumenti che il gruppo ha scelto di utilizzare per la verifica automatica d
 Il processo di \glo{validazione} prende in esame il prodotto ottenuto dalla fase di \glo{verifica} e lo restituisce garantendo che esso sia conforme ai \glo{requisiti} e ai bisogni del committente. Sarà compito del \RdP{} controllare i risultati e decidere se approvare o rigettare il documento, con conseguente richiesta di un nuovo processo. 
 
 \subsection{Scopo e aspettative}
-Lo scopo del processo di validazione è determinare se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se rispetta i \glo{requisiti} e le aspettative del committente. Dovranno essere rispettate le seguenti aspettative:
+Lo scopo del processo di \glo{validazione} è determinare se il prodotto è in grado di soddisfare il compito per il quale è stato creato e se rispetta i \glo{requisiti} e le aspettative del committente. Dovranno essere rispettate le seguenti aspettative:
 
 \begin{itemize}
 	\item gli oggetti da validare sono stati identificati;
-	\item avere ed applicare una strategia con procedure di validazione utili per rendere le procedure di verifica riutilizzabili;
+	\item avere ed applicare una strategia con procedure di \glo{validazione} utili per rendere le procedure di \glo{verifica} riutilizzabili;
 	\item valutazione dei risultati ottenuti rispetto a quelli attesi. 
 \end{itemize}
 
 \newpage{}
 \subsubsection{Attività di validazione}
-La validazione del codice si compone di due attività:
+La \glo{validazione} del codice si compone di due attività:
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
 	\setlength{\aboverulesep}{0pt}
@@ -748,23 +748,23 @@ La validazione del codice si compone di due attività:
 		\textbf{Attività} & \textbf{Descrizione} \\
 		\toprule
 		\endhead
-		\textbf{Test di validazione} & Insieme delle attività svolte internamente al gruppo.\\
-		\textbf{Collaudo} & Attività di controllo che si svolge con la presenza del committente durante la \emph{Revisione di Accettazione}. Il gruppo deve quindi dimostrare di aver implementato tutti i requisiti, in questo senso, per una corretta e facile verifica, è fondamentale il \glo{tracciamento} dei test e dei requisiti che validano.\\
+		\textbf{\glo{Test} di \glo{validazione}} & Insieme delle attività svolte internamente al gruppo.\\
+		\textbf{Collaudo} & Attività di controllo che si svolge con la presenza del committente durante la \emph{Revisione di Accettazione}. Il gruppo deve quindi dimostrare di aver implementato tutti i \glo{requisiti}, in questo senso, per una corretta e facile \glo{verifica}, è fondamentale il \glo{tracciamento} dei \glo{test} e dei \glo{requisiti} che validano.\\
 		\bottomrule
 		\hiderowcolors
 		\caption{Attività del processo di validazione del codice}
 	\end{longtable}
 
-Il processo di Validazione è composto dalle seguenti attività:
+Il processo di \glo{Validazione} è composto dalle seguenti attività:
 \begin{itemize}
-	\item pianificazione e tracciamento dei test da eseguire sul codice prodotto;
-	\item esecuzione dei test;
+	\item pianificazione e \glo{tracciamento} dei \glo{test} da eseguire sul codice prodotto;
+	\item esecuzione dei \glo{test};
 	\item aggiornamento del \PdQ{};
-	\item controllare che il sistema soddisfi i requisiti.
+	\item controllare che il \glo{sistema} soddisfi i \glo{requisiti}.
 \end{itemize}
 
 \subsubsection{Responsabilità dei test}
-I soggetti coinvolti nell'ambito dei test di validazione sono:
+I soggetti coinvolti nell'ambito dei \glo{test} di \glo{validazione} sono:
 
 \setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
 	\renewcommand{\arraystretch}{1.5}
@@ -776,9 +776,9 @@ I soggetti coinvolti nell'ambito dei test di validazione sono:
 		\textbf{Soggetto} & \textbf{Responsabilità} \\
 		\toprule
 		\endhead
-		\textbf{\progs{}} & Si occupano della pianificazione e implementazione dei test.\\
-		\textbf{\vers{}} & Eseguono i test sul software e aggiornano il \PdQ{} con i risultati ottenuti.\\
-		\textbf{\RdP{}} & Osserva i risultati ottenuti per mezzo del \PdQ e decide se accettare il risultato ottenuto, nel caso in cui i risultati dei test risultano sufficienti, oppure ripetere. \\
+		\textbf{\progs{}} & Si occupano della pianificazione e implementazione dei \glo{test}.\\
+		\textbf{\vers{}} & Eseguono i \glo{test} sul \glo{software} e aggiornano il \PdQ{} con i risultati ottenuti.\\
+		\textbf{\RdP{}} & Osserva i risultati ottenuti per mezzo del \PdQ e decide se accettare il risultato ottenuto, nel caso in cui i risultati dei \glo{test} risultano sufficienti, oppure ripetere. \\
 		\bottomrule
 		\hiderowcolors
 		\caption{Attività del processo di validazione del codice}
