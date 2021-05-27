@@ -107,3 +107,44 @@ In questa sezione vengono mostrate, sotto forma di tabella, tutte le contromisur
 		\caption{Attualizzazione per rischi legati all'organizzazione nel periodo di progettazione di dettaglio e codifica }
 	\end{longtable}
 	
+\subsection{Validazione e collaudo}
+	
+	\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.1\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\multicolumn{3}{c}{Rischi legati alle tecnologie}\\
+		\toprule
+		\textbf{Rischio} & \textbf{Mitigazione} & \textbf{Efficacia}\\
+		\hline
+		Problematiche Hardware & Sono stati riscontrati malfunzionamenti sull'unico computer avente come sistema operativo macOS. Questo poteva intaccare lo sviluppo e testing in locale su quel sistema operativo. Fortunatamente le problematiche erano note al gruppo da tempo e si è riusciti a procurare un computer di ricambio poco dopo la rottura del primo.  & Alta\\
+		Problematiche Software & Per rilasciare l'eseguibile dell'applicativo per i vari sistemi operativi ci si è imbattuti in diverse problematiche con i programmi utilizzati per effettuare il rilascio. Si sono presentati diversi problemi nati dall'utilizzo di Qt6 ed il gruppo ha dovuto dedicare diverse ore per studiare metodi alternativi per il rilascio, riuscendo infine ad effettuarlo gestendo manualmente le librerie da utilizzare.  & Alta\\
+		\endhead		
+		\hiderowcolors
+		\caption{Attualizzazione per rischi legati alle tecnologie nel periodo di validazione e collaudo }
+	\end{longtable}
+	
+	
+		\setlength{\freewidth}{\dimexpr\textwidth-0\tabcolsep}
+	\renewcommand{\arraystretch}{1.5}
+	\setlength{\aboverulesep}{0pt}
+	\setlength{\belowrulesep}{0pt}
+	\rowcolors{2}{AzzurroGruppo!10}{white}
+	\begin{longtable}{L{.210\freewidth} L{.6\freewidth} L{.1\freewidth}}
+		\toprule 
+		\rowcolor{AzzurroGruppo!30}
+		\multicolumn{3}{c}{Rischi legati alle persone}\\
+		\toprule
+		\textbf{Rischio} & \textbf{Mitigazione} & \textbf{Efficacia}\\
+		\hline
+		Impegni personali & Durante questo periodo alcuni membri del gruppo, per via di impegni personali e lavorativi, non sono riusciti a dedicare abbastanza tempo al progetto; questo ha fatto si che il lavoro si accumulasse. Per risolvere è stato ridistribuito il lavoro tra i membri con più disponibilità.& Alta\\
+		
+		\endhead		
+		\hiderowcolors
+		\caption{Attualizzazione per rischi legati alle persone nel periodo di validazione e collaudo }
+	\end{longtable}
+	
