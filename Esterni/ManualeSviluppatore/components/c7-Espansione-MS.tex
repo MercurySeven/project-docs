@@ -47,9 +47,9 @@ La sintassi è esplicata nella seguente tabella:
         \textbf{Parola chiave} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        nome & Il nome scelto per identificare la classe testata. Di norma viene utilizzato il nome della classe testata.\\
-        \_ & Separatore da utilizzare tra il nome della classe testata e la parola test.\\
-        test & Parola chiave di utilizzo obbligatorio per permettere l'esecuzione automatica del test. \\
+        \textbf{nome} & Il nome scelto per identificare la classe testata. Di norma viene utilizzato il nome della classe testata.\\
+        \textbf{\_} & Separatore da utilizzare tra il nome della classe testata e la parola test.\\
+        \textbf{test} & Parola chiave di utilizzo obbligatorio per permettere l'esecuzione automatica del test. \\
         \bottomrule
         \hiderowcolors
         \caption{Descrizione della sintassi utilizzata per creare file di test}
@@ -70,8 +70,8 @@ La sintassi è esplicata nella seguente tabella:
         \textbf{Parola chiave} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        Nome & Il nome scelto per identificare la classe testata. Di norma viene utilizzato il nome della classe testata.\\
-        Test & Parola chiave utilizzata per esplicitare la funzione di test della classe. Il suo uso non è obbligatorio ma permette una maggiore chiarezza nel codice. \\
+        \textbf{Nome} & Il nome scelto per identificare la classe testata. Di norma viene utilizzato il nome della classe testata.\\
+        \textbf{Test} & Parola chiave utilizzata per esplicitare la funzione di test della classe. Il suo uso non è obbligatorio ma permette una maggiore chiarezza nel codice. \\
         \bottomrule
         \hiderowcolors
         \caption{Descrizione della sintassi utilizzata per creare classi di test}
@@ -89,8 +89,8 @@ Questa nuova classe deve ereditare dalla classe base di ogni test "\textit{Defau
         \textbf{Parola chiave} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        SetUp & Metodo eseguito automaticamente prima di ogni test. Deve sempre, come prima istruzione, chiamare il metodo SetUp della classe base DefaultCode.\\
-        TearDown & Metodo eseguito automaticamente dopo ogni test. Deve sempre, come prima istruzione, chiamare il metodo TearDown della classe base DefaultCode.\\
+        \textbf{SetUp} & Metodo eseguito automaticamente prima di ogni test. Deve sempre, come prima istruzione, chiamare il metodo SetUp della classe base DefaultCode.\\
+        \textbf{TearDown} & Metodo eseguito automaticamente dopo ogni test. Deve sempre, come prima istruzione, chiamare il metodo TearDown della classe base DefaultCode.\\
         \bottomrule
         \hiderowcolors
         \caption{Descrizione della corretta implementazione dei metodi SetUp e TearDown}
@@ -111,9 +111,9 @@ Dove:
         \textbf{Parola chiave} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        test & Parola chiave che deve obbligatoriamente essere presente all'inizio del nome del metodo per poter essere eseguito automaticamente.\\
-        \_ & Separatore da utilizzare tra le parole.\\
-        nome & Il nome della funzionalità testata.\\
+       \textbf{test} & Parola chiave che deve obbligatoriamente essere presente all'inizio del nome del metodo per poter essere eseguito automaticamente.\\
+        \textbf{\_} & Separatore da utilizzare tra le parole.\\
+        \textbf{nome} & Il nome della funzionalità testata.\\
         \bottomrule
         \hiderowcolors
         \caption{Descrizione della corretta denominazione di nuovi metodi di test}
@@ -139,9 +139,9 @@ La sintassi del controllo dei risultati è meglio descritta nella seguente tabel
         \textbf{Parola chiave} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        self.assertEqual & Metodo ereditato dalla classe base DefaultCode che lo eredita a sua volta da unittest.TestCase. Questo metodo confronta i due argomenti a lui dati e nel caso in cui non siano uguali fa fallire il test.\\
-        result & Il risultato del metodo da noi chiamato. \\
-        risultato\_previsto & Il risultato che ci aspettiamo il metodo restituisca.\\
+        \textbf{self.assertEqual} & Metodo ereditato dalla classe base DefaultCode che lo eredita a sua volta da unittest.TestCase. Questo metodo confronta i due argomenti a lui dati e nel caso in cui non siano uguali fa fallire il test.\\
+        \textbf{result} & Il risultato del metodo da noi chiamato. \\
+        \textbf{risultato\_previsto} & Il risultato che ci aspettiamo il metodo restituisca.\\
         \bottomrule
         \hiderowcolors
         \caption{Descrizione della logica di base dei metodi di test.}

@@ -59,9 +59,9 @@ Il file "codecov.yml" posizionato dentro la cartella .github serve per poter imp
         \textbf{Keyword} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        Precision & La precisione delle cifre dopo la virgola della percentuale di codice coperto da test.\\
-        Round & Come viene arrotondata la cifra dopo la troncatura determinata dalla precisione selezionata.\\
-        Range & Il valore minimo e massimo della percentuale di codice coperto da test, valori esclusi da questo intervallo faranno fallire la \gloman{CI}. \\
+        \textbf{Precision} & La precisione delle cifre dopo la virgola della percentuale di codice coperto da test.\\
+        \textbf{Round} & Come viene arrotondata la cifra dopo la troncatura determinata dalla precisione selezionata.\\
+        \textbf{Range} & Il valore minimo e massimo della percentuale di codice coperto da test, valori esclusi da questo intervallo faranno fallire la \gloman{CI}. \\
         \bottomrule
         \hiderowcolors
         \caption{Parole chiave per file codecov.yml di configurazione generale}
@@ -85,9 +85,9 @@ I file contenuti dentro la folder "workflows" invece specificano diverse regole 
         \textbf{File} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        ci.yml & Configurazione delle \gloman{actions} di GitHub. Si ha una prima fase di setup dei vari sistemi operativi, vengono poi indicate le azioni che dovranno essere eseguite ed infine l'ultima azione comunica nell'apposito canale Slack il successo della \gloman{CI}.\\
-        codecov.yml & Configurazione della \gloman{CI} nel sito codecov che servirà a tenere traccia della percentuale di codice coperta da test.\\
-        lint.yml & Configurazione dell'analisi statica che avverrà ad ogni commit. \\
+        \textbf{ci.yml} & Configurazione delle \gloman{actions} di GitHub. Si ha una prima fase di setup dei vari sistemi operativi, vengono poi indicate le azioni che dovranno essere eseguite ed infine l'ultima azione comunica nell'apposito canale Slack il successo della \gloman{CI}.\\
+        \textbf{codecov.yml} & Configurazione della \gloman{CI} nel sito codecov che servirà a tenere traccia della percentuale di codice coperta da test.\\
+        \textbf{lint.yml} & Configurazione dell'analisi statica che avverrà ad ogni commit. \\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione delle configurazioni per la CI}
@@ -106,8 +106,8 @@ Questa folder contiene tutti i file utilizzati per la resa grafica della applica
         \textbf{Nome} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        icons & Icone utilizzate nell'applicazione, i nomi sono esplicativi della loro funzione ed ogni immagine è realizzata dal team, priva quindi di copyright.\\
-        style.qss & Configurazione della resa estetica dell'applicazione. È l'equivalente del CSS di un sito web.\\
+        \textbf{icons} & Icone utilizzate nell'applicazione, i nomi sono esplicativi della loro funzione ed ogni immagine è realizzata dal team, priva quindi di copyright.\\
+        \textbf{style.qss} & Configurazione della resa estetica dell'applicazione. È l'equivalente del CSS di un sito web.\\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione assets}
@@ -141,11 +141,11 @@ Il codice sorgente è stato diviso logicamente in diverse cartelle, descritte ne
         \textbf{Cartella} & \textbf{Descrizione}\\
         \toprule
         \endhead
-        algorithm & Contiene tutte le classi che contengono la logica di sincronizzazione del programma. La logica dell'algoritmo è parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata.\\
-        controllers & Contiene tutte le classi facenti parte del controller.\\
-        model & Contiene tutte le classi facenti parte del model e non strettamente legate alla logica di sincronizzazione o alla gestione di rete.\\
-        network & Contiene tutte le classi utilizzate per effettuare le varie chiamate di rete e per strutturare le query \gloman{GraphQL}. Anche questa come l'algoritmo è logicamente parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata. \\
-        view & Contiene tutte le classi facenti parte della view. \\
+        \textbf{algorithm} & Contiene tutte le classi che contengono la logica di sincronizzazione del programma. La logica dell'algoritmo è parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata.\\
+        \textbf{controllers} & Contiene tutte le classi facenti parte del controller.\\
+        \textbf{model} & Contiene tutte le classi facenti parte del model e non strettamente legate alla logica di sincronizzazione o alla gestione di rete.\\
+        \textbf{network} & Contiene tutte le classi utilizzate per effettuare le varie chiamate di rete e per strutturare le query \gloman{GraphQL}. Anche questa come l'algoritmo è logicamente parte del model ma è stato scelto, per migliorare la facilità di manutenzione, di tenerla in una cartella separata. \\
+        \textbf{view} & Contiene tutte le classi facenti parte della view. \\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione cartelle contenute in src}
@@ -182,10 +182,10 @@ Questo modulo contiene diverse classi utilizzate a scopo di testing. Le classi c
         \textbf{Nome classe} & \textbf{Descrizione classe}\\
         \toprule
         \endhead
-        DefaultCode & Classe fondamentale contenuta nel modulo, eredita dalla classe base "\textit{unittest.TestCase}". Questa classe esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato modificarla con cura ed attenzione per evitare di rompere ogni test.\\
-        ResultObj & Imita la decisione dello strategy su un nodo, viene utilizzato quando si utilizzano mock. Offre la possibilità di iterare su di esso. \\
-        FakeLogger & Utilizzata per effettuare il mock delle chiamate ai vari logger presenti nel codice. \\
-        NodeMetadata & Utilizzata per simulare le chiamate richiedenti info sui metadati dei file.\\
+        \textbf{DefaultCode} & Classe fondamentale contenuta nel modulo, eredita dalla classe base "\textit{unittest.TestCase}". Questa classe esegue dei compiti fondamentali per il corretto funzionamento di ogni test, è quindi consigliato modificarla con cura ed attenzione per evitare di rompere ogni test.\\
+        \textbf{ResultObj} & Imita la decisione dello strategy su un nodo, viene utilizzato quando si utilizzano mock. Offre la possibilità di iterare su di esso. \\
+        \textbf{FakeLogger} & Utilizzata per effettuare il mock delle chiamate ai vari logger presenti nel codice. \\
+        \textbf{NodeMetadata} & Utilizzata per simulare le chiamate richiedenti info sui metadati dei file.\\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione delle classi contenute nel modulo default\_code}
@@ -206,8 +206,8 @@ La classe DefaultCode presenta due metodi che vengono ereditati dalla classe bas
         \textbf{Nome classe} & \textbf{Descrizione classe}\\
         \toprule
         \endhead
-        SetUp & Metodo che viene automaticamente eseguito prima di ogni test. Salva lo stato delle variabili di ambiente attuali e crea eventuali cartelle utilizzate a scopo di test.\\
-        TearDown & Metodo che viene automaticamente eseguito in seguito ad ogni test. Ripristina lo stato delle variabili di ambiente prima del test ed elimina eventuali cartelle create a scopo di test.\\
+        \textbf{SetUp} & Metodo che viene automaticamente eseguito prima di ogni test. Salva lo stato delle variabili di ambiente attuali e crea eventuali cartelle utilizzate a scopo di test.\\
+        \textbf{TearDown} & Metodo che viene automaticamente eseguito in seguito ad ogni test. Ripristina lo stato delle variabili di ambiente prima del test ed elimina eventuali cartelle create a scopo di test.\\
         \bottomrule
         \hiderowcolors
         \caption{Nome e descrizione dei metodi contenuti nella classe DefaultCode}
