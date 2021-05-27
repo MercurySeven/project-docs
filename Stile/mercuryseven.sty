@@ -149,13 +149,16 @@
 		\begin{tikzpicture}
 			\draw[rounded corners, overlay] (\textwidth- 0.25cm,0.5) -- (\textwidth - 1cm,0.5) -- (\textwidth - 1cm,0) -- (\textwidth,0) -- (\textwidth,1) -- (0,1)
 			node at (\textwidth - 0.5cm, 0.475){
+				\renewcommand{\arraystretch}{1.2}
 				\begin{tabular}{C{0.6cm}}
+					\hiderowcolors
 					\thepage{} \\
 					\pageref{LastPage}\\
 				\end{tabular}
 			}
 			node at (0+\textwidth/4,0.6){
-				\begin{tabular}{L{\textwidth/2}}			
+				\begin{tabular}{L{\textwidth/2}}
+					\hiderowcolors			
 					\Titolo{} \ - \textit{\Gruppo{}} \\
 				\end{tabular}
 			};
@@ -272,11 +275,11 @@
 \newcommand{\ignore}[1]{#1}
 
 %----Versioni---
-\newcommand{\versAdR}{\textit{v4.0.0-0.9}}
-\newcommand{\versGlo}{\textit{v3.0.0-0.9}}
+\newcommand{\versAdR}{\textit{v4.0.0-1.9}}
+\newcommand{\versGlo}{\textit{v4.0.0-1.12}}
 \newcommand{\versNdP}{\textit{v4.0.0-1.12}}
 \newcommand{\versPdP}{\textit{v4.0.0-1.12}}
-\newcommand{\versSdF}{\textit{v1.0.0-0.3}}
+\newcommand{\versSdF}{\textit{v1.0.0-1.3}}
 \newcommand{\versPdQ}{\textit{v4.0.0-1.12}}
 \newcommand{\versMU}{\textit{v2.0.0-1.12}}
 \newcommand{\versMS}{\textit{v2.0.0-1.12}}
