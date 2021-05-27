@@ -63,8 +63,8 @@ Questo pattern in \gloman{Python} è stato realizzato tramite il modulo ABC (Abs
     \caption{Pattern Proxy nel dettaglio}
     \label{fig:Pattern proxy nel dettaglio}
 \end{figure}
-\subsection{Design pattern comportamentali:}
-\subsubsection{Observer:}
+\subsection{Design pattern comportamentali}
+\subsubsection{Observer}
 Il pattern observer è stato implementato usando i segnali e slot forniti dalla libreria PySide6, vengono usati per la comunicazione tra diversi oggetti.
 Segnali e slot vengono usati per le comunicazioni fra model, controller e view. I segnali emessi dal model e dalla view vengono usati dalla classe Signal che chiamerà gli slot collegati ad essi. La classe view e controller ereditano dall'interfaccia Slot.
 \begin{figure}[H]
@@ -74,7 +74,7 @@ Segnali e slot vengono usati per le comunicazioni fra model, controller e view. 
     \label{fig:Pattern observer con segnali e slot}
 \end{figure}
 
-\subsubsection{Strategy:}
+\subsubsection{Strategy}
 La scelta di utilizzare questo pattern è stata naturale poiché esso va a descrivere pienamente la realtà del capitolato \textit{C7}.\newline{}
 Attualmente si hanno due diverse politiche per la sincronizzazione che possono essere scelte a runtime e che variano il comportamento dell'algoritmo. Si ha una classe CompareSnapClient che fa da interfaccia comune e chiama al suo interno il metodo execute della classe attualmente scelta. Essendo Strategy una classe astratta, essa fornisce il metodo execute che deve essere implementato da tutte le classi figlie. Questo permette all' istanza di CompareSnapClient di poter chiamare il metodo execute di un qualsiasi oggetto Strategy di cui non conosce l'implementazione. L'adozione del suddetto pattern permette l'aggiunta di nuove politiche senza dover cambiare la logica dell'applicazione, il che semplificherà il lavoro in eventuali sviluppi futuri.
 \begin{figure}[H]

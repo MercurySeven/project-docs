@@ -42,14 +42,14 @@ jobs:
     strategy:
       matrix:
         include:
-          #- working_directory: Interni/StudioDiFattibilità
-          #  root_file: "StudioDiFattibilità"
+          - working_directory: Interni/StudioDiFattibilità
+            root_file: "StudioDiFattibilità"
 
           - working_directory: Interni/NormeDiProgetto
             root_file: "NormeDiProgetto"
 
-          # - working_directory: Esterni/AnalisiDeiRequisiti
-          #  root_file: "AnalisiDeiRequisiti"
+          - working_directory: Esterni/AnalisiDeiRequisiti
+            root_file: "AnalisiDeiRequisiti"
 
           - working_directory: Esterni/PianoDiProgetto
             root_file: "PianoDiProgetto"
@@ -65,10 +65,6 @@ jobs:
 
           - working_directory: Esterni/ManualeSviluppatore
             root_file: "ManualeSviluppatore"
-
-
-          #- working_directory: LetteraDiPresentazione
-          #  root_file: "LetteraDiPresentazione"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
